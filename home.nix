@@ -29,6 +29,7 @@
           # Languages
           nix.enable = true;
         };
+        lsp.formatOnSave = true;
       };
     };
   };
