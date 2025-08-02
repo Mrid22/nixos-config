@@ -23,6 +23,12 @@
       vim = {
         viAlias = true;
 	vimAlias = true;
+        langauges = {
+          enableFormat = true;
+
+          # Languages
+          nix.enable = true;
+        };
       };
     };
   };
@@ -32,6 +38,12 @@
     policies = {};
   };
   
+
+
+
+
+
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
