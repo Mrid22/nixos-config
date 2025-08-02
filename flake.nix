@@ -13,6 +13,11 @@
        url = "github:0xc000022070/zen-browser-flake";
        inputs.nixpkgs.follows = "nixpkgs";
      };
+
+     obsidan-nvim = {
+       url = "github:epwalsh/obsidian.nvim";
+       inputs.nixpkgs.follows = "nixpkgs";
+     };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
