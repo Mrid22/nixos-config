@@ -25,6 +25,7 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+        lineNumberMode = "none";
         withPython3 = true;
         options = {
           shiftwidth = 2;
