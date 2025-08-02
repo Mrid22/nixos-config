@@ -38,7 +38,7 @@
           transparent = true;
         };
         statusline.lualine.enable = true;
-        telecope.enable = true;
+        telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
         languages = {
           enableFormat = true;
