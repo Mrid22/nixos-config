@@ -45,7 +45,7 @@
           codecompanion-nvim.enable = true;
           copilot = {
             enable = true;
-            cmp-enable = true;
+            cmp.enable = true;
           };
         };
         languages = {
