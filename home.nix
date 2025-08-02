@@ -25,7 +25,7 @@
 	vimAlias = true;
         languages = {
           enableFormat = true;
-          enableTreeSitter = true;
+          enableTreesitter = true;
           enableExtraDiagnostics = true;
           enableDAP = true;
 
