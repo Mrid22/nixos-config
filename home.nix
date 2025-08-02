@@ -55,6 +55,9 @@
           formatOnSave = true;
           inlayHints.enable = true;
           lightbulb.enable = true;
+          lspSignature.enable = true;
+          lspkind.enable = true;
+          lspsaga.enable = true;
           mappings = {
             codeAction = "<leader>ca";
           };
