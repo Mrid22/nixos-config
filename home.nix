@@ -45,7 +45,7 @@
           enable = true;
           formatOnSave = true;
           inlayHints.enable = true;
-          lightbuld.enable = true;
+          lightbulb.enable = true;
           mappings = {
             codeAction = "<leader>ca";
           };
