@@ -37,6 +37,7 @@
           style = "storm";
           transparent = true;
         };
+        statusline.lualine.enable = true;
         autocomplete.nvim-cmp.enable = true;
         languages = {
           enableFormat = true;
