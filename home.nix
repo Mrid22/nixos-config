@@ -3,6 +3,7 @@
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
+    inputs.nvf.homeManagerModules.default
   ];
   home.username = "mridula";
   home.homeDirectory = "/home/mridula";
@@ -69,6 +70,16 @@
     enable = true;
     flake = "/etc/nixos/";
     clean.enable = true;
+  };
+
+  programs.nvf = {
+    enable = true;
+    settings = {
+      vim {
+        viAlias = true;
+	vimAlias = true;
+      };
+    };
   };
 
   programs.zen-browser = {
