@@ -23,6 +23,10 @@
     enable = true;
     settings = {
       vim = {
+        options = {
+          shiftwidth = 2;
+          tabstop = 2;
+        };
         viAlias = true;
         vimAlias = true;
         withPython3 = true;
