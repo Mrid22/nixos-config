@@ -3,62 +3,64 @@
   pkgs,
   ...
 }: {
-  programs.git = {
-    enable = true;
-    userName = "Mrid22";
-    userEmail = "mridulaga@outlook.com";
-    delta.enable = true;
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
-
-  programs.kitty = {
-    enable = true;
-    shellIntegration.enableZshIntegration = true;
-    enableGitIntegration = true;
-    settings = {
-      background_opacity = 0.5;
-    };
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-    autosuggestion.enable = true;
-    oh-my-zsh = {
+  programs = {
+    git = {
       enable = true;
-      plugins = ["git" "sudo"];
+      userName = "Mrid22";
+      userEmail = "mridulaga@outlook.com";
+      delta.enable = true;
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
-  };
 
-  programs.oh-my-posh = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+    kitty = {
+      enable = true;
+      shellIntegration.enableZshIntegration = true;
+      enableGitIntegration = true;
+      settings = {
+        background_opacity = 0.5;
+      };
+    };
 
-  programs.pay-respects.enable = true;
-  programs.atuin.enable = true;
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-    options = [
-      "--cmd cd"
-    ];
-  };
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+    zsh = {
+      enable = true;
+      enableCompletion = true;
+      syntaxHighlighting.enable = true;
+      autosuggestion.enable = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = ["git" "sudo"];
+      };
+    };
 
-  programs.cava = {
-    enable = true;
-  };
+    oh-my-posh = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
-  programs.nh = {
-    enable = true;
-    flake = "/etc/nixos/";
-    clean.enable = true;
+    pay-respects.enable = true;
+    atuin.enable = true;
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    cava = {
+      enable = true;
+    };
+
+    nh = {
+      enable = true;
+      flake = "/etc/nixos/";
+      clean.enable = true;
+    };
   };
 }
