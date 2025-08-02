@@ -31,6 +31,12 @@
           shiftwidth = 2;
           tabstop = 2;
         };
+        theme = {
+          enable = true;
+          name = "tokyonight";
+          style = "storm";
+          transparent = true;
+        };
         autocomplete.nvim-cmp.enable = true;
         languages = {
           enableFormat = true;
