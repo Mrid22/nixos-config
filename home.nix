@@ -41,7 +41,13 @@
         statusline.lualine.enable = true;
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
-        assistant.codecompanion-nvim.enable = true;
+        assistant = {
+          codecompanion-nvim.enable = true;
+          copilot = {
+            enable = true;
+            cmp-enable = true;
+          };
+        };
         languages = {
           enableFormat = true;
           enableTreesitter = true;
