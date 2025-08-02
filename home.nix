@@ -4,15 +4,18 @@
   imports = [
     inputs.zen-browser.homeModules.twilight
     inputs.nvf.homeManagerModules.default
+    ./terminal.nix
   ];
-  home.username = "mridula";
-  home.homeDirectory = "/home/mridula";
 
-  home.stateVersion = "25.05";
+  home = {
+    username = "mridula";
+    homeDirectory = "/home/mridula";
+    stateVersion = "25.05";
+    packages = with pkgs; [
+      spotdl
+    ];
+  };
 
-  home.packages = with pkgs; [
-    spotdl
-  ];
   programs.git = {
     enable = true;
     userName = "Mrid22";
