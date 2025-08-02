@@ -25,6 +25,7 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+        withPython3 = true;
         languages = {
           enableFormat = true;
           enableTreesitter = true;
@@ -33,6 +34,7 @@
 
           # Languages
           nix.enable = true;
+          python.enable = true;
         };
         lsp = {
           enable = true;
