@@ -25,11 +25,14 @@
 	vimAlias = true;
         languages = {
           enableFormat = true;
+          enableTreeSitter = true;
+          enableExtraDiagnostics = true;
+          enableDAP = true;
 
           # Languages
           nix.enable = true;
         };
-        lsp.formatOnSave = true;
+        lsp = {enable = true;formatOnSave = true;};
       };
     };
   };
