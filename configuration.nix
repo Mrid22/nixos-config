@@ -47,7 +47,6 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -103,10 +102,8 @@
   };
 nix.settings.experimental-features = ["nix-command" "flakes"];
   # Install firefox.
-programs.firefox.enable = true;
 programs.neovim.enable = true;
 programs.neovim.defaultEditor = true;
-programs.zsh.enable = true;
 programs.hyprland.enable = true;
 
 
