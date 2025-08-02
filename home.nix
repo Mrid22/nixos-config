@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.zen-browser.homeModules.twilight
     inputs.nvf.homeManagerModules.default
@@ -16,13 +19,12 @@
     ];
   };
 
-
   programs.nvf = {
     enable = true;
     settings = {
       vim = {
         viAlias = true;
-	vimAlias = true;
+        vimAlias = true;
         languages = {
           enableFormat = true;
           enableTreesitter = true;
@@ -32,7 +34,10 @@
           # Languages
           nix.enable = true;
         };
-        lsp = {enable = true;formatOnSave = true;};
+        lsp = {
+          enable = true;
+          formatOnSave = true;
+        };
       };
     };
   };
@@ -41,12 +46,6 @@
     enable = true;
     policies = {};
   };
-  
-
-
-
-
-
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

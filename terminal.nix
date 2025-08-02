@@ -1,5 +1,8 @@
-{config,pkgs,...}:
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.git = {
     enable = true;
     userName = "Mrid22";
@@ -58,5 +61,4 @@
     flake = "/etc/nixos/";
     clean.enable = true;
   };
-
 }
