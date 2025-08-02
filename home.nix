@@ -23,7 +23,7 @@
       vim = {
         viAlias = true;
 	vimAlias = true;
-        langauges = {
+        languages = {
           enableFormat = true;
 
           # Languages
