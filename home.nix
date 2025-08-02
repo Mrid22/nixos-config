@@ -75,7 +75,7 @@
   programs.nvf = {
     enable = true;
     settings = {
-      vim {
+      vim = {
         viAlias = true;
 	vimAlias = true;
       };
