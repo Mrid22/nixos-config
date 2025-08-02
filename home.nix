@@ -27,6 +27,7 @@
         vimAlias = true;
         lineNumberMode = "none";
         withPython3 = true;
+        withNodeJs = true;
         options = {
           shiftwidth = 2;
           tabstop = 2;
@@ -49,6 +50,13 @@
           # Languages
           nix.enable = true;
           python.enable = true;
+          html.enable = true;
+          css.enable = true;
+          ts.enable = true;
+          markdown = {
+            enable = true;
+            extensions.markview-nvim.enable = true;
+          };
         };
         lsp = {
           enable = true;
