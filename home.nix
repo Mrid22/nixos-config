@@ -44,6 +44,8 @@
         lsp = {
           enable = true;
           formatOnSave = true;
+          inlayHints.enable = true;
+          lightbuld.enable = true;
           mappings = {
             codeAction = "<leader>ca";
           };
