@@ -23,13 +23,14 @@
     enable = true;
     settings = {
       vim = {
+        viAlias = true;
+        vimAlias = true;
+        withPython3 = true;
         options = {
           shiftwidth = 2;
           tabstop = 2;
         };
-        viAlias = true;
-        vimAlias = true;
-        withPython3 = true;
+        autocomplete.nvim-cmp.enable = true;
         languages = {
           enableFormat = true;
           enableTreesitter = true;
@@ -43,6 +44,9 @@
         lsp = {
           enable = true;
           formatOnSave = true;
+          mappings = {
+            codeAction = "<leader>ca";
+          };
         };
       };
     };
