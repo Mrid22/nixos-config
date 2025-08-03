@@ -11,30 +11,33 @@
       provider = "geoclue2";
     };
   };
-  programs.hyprpanel = {
-    enable = true;
-    systemd.enable = true;
-    settings = {
-      scalingPriority = "hyprland";
-      bar = {
-        clock.format = "%H:%M";
-        layouts."*" = {
-          left = [
-            "dashboard"
-            "workspaces"
-          ];
-          middle = [
-            "media"
-            "windowtitle"
-          ];
-          right = [
-            "volume"
-            "network"
-            "bluetooth"
-            "battery"
-            "clock"
-            "notifications"
-          ];
+  programs = {
+    cava.enable = true;
+    hyprpanel = {
+      enable = true;
+      systemd.enable = true;
+      settings = {
+        scalingPriority = "hyprland";
+        bar = {
+          clock.format = "%H:%M";
+          layouts."*" = {
+            left = [
+              "dashboard"
+              "workspaces"
+            ];
+            middle = [
+              "cava"
+              "windowtitle"
+            ];
+            right = [
+              "volume"
+              "network"
+              "bluetooth"
+              "battery"
+              "clock"
+              "notifications"
+            ];
+          };
         };
       };
     };
