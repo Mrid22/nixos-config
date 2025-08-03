@@ -7,6 +7,7 @@
   imports = [
     inputs.zen-browser.homeModules.twilight
     inputs.nvf.homeManagerModules.default
+    inputs.gauntlet.homeManagerModules.default
     ./terminal.nix
     ./de.nix
   ];
@@ -21,6 +22,11 @@
   };
 
   programs = {
+    gauntlet = {
+      enable = true;
+      service.enable = true;
+      config = {};
+    };
     nvf = {
       enable = true;
       settings = {

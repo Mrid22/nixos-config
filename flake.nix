@@ -13,8 +13,13 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nvf = {
       url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    gauntlet = {
+      url = "github:project-gauntlet/gauntlet/v20";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
