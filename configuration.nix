@@ -74,6 +74,7 @@
 
   environment.systemPackages = with pkgs; [
     blueberry
+    kdePackages.dolphin
   ];
 
   fonts.packages = with pkgs; [
