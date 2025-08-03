@@ -19,7 +19,7 @@
         scalingPriority = "hyprland";
         theme.mutagen.enable = true;
         bar = {
-          network.hideName = true;
+          network.showName = true;
           workspaces.show_numbered = true;
           wallpaper = {
             enable = true;
