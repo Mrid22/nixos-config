@@ -22,6 +22,7 @@
         bar = {
           network.showName = false;
           workspaces.show_numbered = true;
+          network.label = false;
           wallpaper = {
             enable = true;
             image = "/home/mridula/Downloads/Wallpaper.jpg";
@@ -33,7 +34,6 @@
           };
           layouts."*" = {
             left = [
-              "notifications"
               "workspaces"
               "cava"
             ];
@@ -46,6 +46,7 @@
               "bluetooth"
               "battery"
               "clock"
+              "notifications"
               "power"
             ];
           };
