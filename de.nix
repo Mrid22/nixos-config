@@ -88,6 +88,9 @@
 
         # Navigation
         "$mod, H, movefocus, l"
+        "$mod, J, movefocus, d"
+        "$mod, K, movefocus, u"
+        "$mod, L, movefocus, r"
 
         # Workspaces
         "$mod, 1, workspace, 1"
