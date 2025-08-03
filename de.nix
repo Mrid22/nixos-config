@@ -45,6 +45,7 @@
               "bluetooth"
               "battery"
               "clock"
+              "notifications"
               "power"
             ];
           };
