@@ -21,6 +21,14 @@
       enable = true;
       openFirewall = true;
     };
+    transmission = {
+      enable = true;
+      openFirewall = true;
+      downloadDirPermissions = "770";
+      settings = {
+        downloadDir = "/media/downloads";
+      };
+    };
     jellyfin = {
       enable = true;
       openFirewall = true;
