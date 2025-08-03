@@ -6,7 +6,6 @@
 }: {
   services = {
     swww.enable = true;
-    geoclue2.enable = true;
     redshift = {
       enable = true;
       provider = "geoclue2";
