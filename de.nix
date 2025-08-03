@@ -27,7 +27,6 @@
             "battery"
             "clock"
             "notifications"
-            "powerdropdown"
           ];
         };
       };
