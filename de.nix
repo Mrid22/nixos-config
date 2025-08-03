@@ -32,7 +32,6 @@
           };
           layouts."*" = {
             left = [
-              "dashboard"
               "workspaces"
               "cava"
             ];
