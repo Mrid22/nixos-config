@@ -31,19 +31,18 @@
           };
           layouts."*" = {
             left = [
-              "notifications"
-              "clock"
               "workspaces"
-              "cava"
             ];
             middle = [
               "windowtitle"
+              "cava"
             ];
             right = [
               "volume"
               "network"
               "bluetooth"
               "battery"
+              "clock"
               "power"
             ];
           };
