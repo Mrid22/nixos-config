@@ -10,8 +10,8 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
     ./server.nix
+    inputs.home-manager.nixosModules.default
   ];
 
   boot = {
@@ -61,6 +61,7 @@
     neovim.defaultEditor = true;
     hyprland.enable = true;
     zsh.enable = true;
+    gnome-disks.enable = true;
   };
   hardware = {
     bluetooth = {
