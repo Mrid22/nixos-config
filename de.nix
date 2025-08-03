@@ -22,9 +22,9 @@
           ];
           right = [
             "volume"
-            "battery"
             "network"
             "bluetooth"
+            "battery"
             "clock"
             "notifications"
           ];
