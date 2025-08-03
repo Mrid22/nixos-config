@@ -4,6 +4,8 @@
   inputs,
   ...
 }: {
+  services.swww.enable = true;
+  services.redshift.enable = true;
   programs.hyprpanel = {
     enable = true;
     systemd.enable = true;
