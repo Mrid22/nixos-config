@@ -17,6 +17,10 @@
       enable = true;
       openFirewall = true;
     };
+    radarr = {
+      enable = true;
+      openFirewall = true;
+    };
     jellyfin = {
       enable = true;
       openFirewall = true;
