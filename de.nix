@@ -48,6 +48,7 @@
         touchpad.natural_scroll = true;
       };
 
+      exec-once = ["gauntlet"];
       animations = {
         enabled = "yes, please :)";
         bezier = [
