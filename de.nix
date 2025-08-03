@@ -17,8 +17,14 @@
       systemd.enable = true;
       settings = {
         scalingPriority = "hyprland";
+        theme.mutagen.enable = true;
         bar = {
           launcher.autoDetectIcon = true;
+          workspace.show_numbered = true;
+          wallpaper = {
+            enable = true;
+            image = "~/Downlads/Wallpaper.jpg";
+          };
 
           clock.format = "%H:%M";
           layouts."*" = {
@@ -29,7 +35,6 @@
             ];
             middle = [
               "windowtitle"
-              "seperator"
             ];
             right = [
               "volume"
