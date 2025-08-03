@@ -29,6 +29,7 @@
             ];
             middle = [
               "windowtitle"
+              "seperator"
             ];
             right = [
               "volume"
