@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     gauntlet = {
-      url = "github:project-gauntlet/gauntlet?ref=97fc6360eadf7fb2f2b742f47b393651e267441a";
+      url = "github:project-gauntlet/gauntlet?ref=32bf43438c1b72a0fc53a8b0b128b5c2405f5b7b";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
