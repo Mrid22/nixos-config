@@ -19,6 +19,7 @@
         scalingPriority = "hyprland";
         theme.mutagen.enable = true;
         bar = {
+          network.hideName = true;
           workspaces.show_numbered = true;
           wallpaper = {
             enable = true;
@@ -38,8 +39,8 @@
               "windowtitle"
             ];
             right = [
-              "volume"
               "network"
+              "volume"
               "bluetooth"
               "battery"
               "clock"
