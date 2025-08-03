@@ -75,6 +75,8 @@
   environment.systemPackages = with pkgs; [
     blueberry
     kdePackages.dolphin
+    brightnessctl
+    playerctl
   ];
 
   fonts.packages = with pkgs; [
