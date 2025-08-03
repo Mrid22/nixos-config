@@ -26,9 +26,9 @@
             left = [
               "dashboard"
               "workspaces"
+              "cava"
             ];
             middle = [
-              "cava"
               "windowtitle"
             ];
             right = [
