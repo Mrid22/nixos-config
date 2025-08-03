@@ -3,6 +3,9 @@
   pkgs,
   ...
 }: {
+  environment.systemPackages = with pkgs; [
+    tree
+  ];
   programs = {
     git = {
       enable = true;
