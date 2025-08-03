@@ -19,7 +19,6 @@
         scalingPriority = "hyprland";
         theme.mutagen.enable = true;
         bar = {
-          launcher.autoDetectIcon = true;
           workspaces.show_numbered = true;
           wallpaper = {
             enable = true;
@@ -32,6 +31,8 @@
           };
           layouts."*" = {
             left = [
+              "notifications"
+              "clock"
               "workspaces"
               "cava"
             ];
@@ -43,8 +44,6 @@
               "network"
               "bluetooth"
               "battery"
-              "clock"
-              "notifications"
               "power"
             ];
           };
