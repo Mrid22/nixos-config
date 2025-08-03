@@ -26,7 +26,10 @@
             image = "/home/mridula/Downloads/Wallpaper.jpg";
           };
 
-          clock.format = "%H:%M";
+          clock = {
+            format = "%H:%M";
+            showIcon = false;
+          };
           layouts."*" = {
             left = [
               "dashboard"
