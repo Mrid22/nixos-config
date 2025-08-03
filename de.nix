@@ -9,6 +9,27 @@
     systemd.enable = true;
     settings = {
       scalingPriority = "hyprland";
+      bar = {
+        clock.format = "%H:%M";
+        layouts."*" = {
+          left = [
+            "dashboard"
+            "workspaces"
+          ];
+          middle = [
+            "media"
+            "windowtitle"
+          ];
+          right = [
+            "volume"
+            "battery"
+            "network"
+            "bluetooth"
+            "clock"
+            "notifications"
+          ];
+        };
+      };
     };
   };
 
