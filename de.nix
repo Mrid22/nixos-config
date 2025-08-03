@@ -32,10 +32,10 @@
           layouts."*" = {
             left = [
               "workspaces"
+              "cava"
             ];
             middle = [
               "windowtitle"
-              "cava"
             ];
             right = [
               "volume"
