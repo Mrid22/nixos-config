@@ -33,6 +33,7 @@
           };
           layouts."*" = {
             left = [
+              "notifications"
               "workspaces"
               "cava"
             ];
@@ -45,7 +46,6 @@
               "bluetooth"
               "battery"
               "clock"
-              "notifications"
               "power"
             ];
           };
