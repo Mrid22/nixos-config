@@ -14,12 +14,13 @@
     cava.enable = true;
     hyprpanel = {
       enable = true;
+      package = inputs.hyprpanel.packages.${pkgs.system}.default;
       systemd.enable = true;
       settings = {
         scalingPriority = "hyprland";
         theme.mutagen.enable = true;
         bar = {
-          network.showName = true;
+          network.showName = false;
           workspaces.show_numbered = true;
           wallpaper = {
             enable = true;

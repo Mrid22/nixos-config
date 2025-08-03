@@ -18,8 +18,14 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     gauntlet = {
       url = "github:project-gauntlet/gauntlet?ref=32bf43438c1b72a0fc53a8b0b128b5c2405f5b7b";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprpanel = {
+      url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
