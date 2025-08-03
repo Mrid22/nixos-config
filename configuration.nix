@@ -98,7 +98,6 @@
     displayManager.gdm.enable = true;
     udisks2.enable = true;
     upower.enable = true;
-    geoclue2.enable = true;
 
     xserver = {
       enable = true;

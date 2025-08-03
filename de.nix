@@ -6,9 +6,8 @@
 }: {
   services = {
     swww.enable = true;
-    redshift = {
+    hyprsunset = {
       enable = true;
-      provider = "geoclue2";
     };
   };
   programs = {
