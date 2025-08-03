@@ -39,9 +39,10 @@
             style = "storm";
             transparent = true;
           };
-          statusline.lualine.enable = true;
           telescope.enable = true;
+          statusline.lualine.enable = true;
           autocomplete.nvim-cmp.enable = true;
+          autopairs.nvim-autopairs.enable = true;
           assistant = {
             codecompanion-nvim.enable = true;
             copilot = {
@@ -98,6 +99,23 @@
         gaps_out = 5;
         border_size = 0;
         resize_on_border = true;
+      };
+
+      input = {
+        follow_mouse = 1;
+        touchpad.natural_scroll = true;
+      };
+
+      animations = {
+        enabled = "yes, please :)";
+        bezier = [
+          "easeOutQuint,0.23,1,0.32,1"
+          "easeInOutCubic,0.65,0.05,0.36,1"
+          "linear,0,0,1,1"
+          "almostLinear,0.5,0.5,0.75,1.0"
+          "quick,0.15,0,0.1,1"
+        ];
+        animation = [];
       };
 
       "$mod" = "ALT";
