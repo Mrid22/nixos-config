@@ -123,6 +123,9 @@
         "$mod, E, exec, dolphin"
         "$mod, SPACE, exec, gauntlet open"
         "$mod, C, killactive"
+
+        # Workspaces
+        "$mod, 1, workspace, 1"
       ];
     };
   };
