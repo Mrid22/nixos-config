@@ -19,6 +19,8 @@
       settings = {
         scalingPriority = "hyprland";
         bar = {
+          launcher.autoDetectIcon = true;
+
           clock.format = "%H:%M";
           layouts."*" = {
             left = [
