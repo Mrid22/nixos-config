@@ -77,6 +77,7 @@
     kdePackages.dolphin
     brightnessctl
     playerctl
+    hyprshot
   ];
 
   fonts.packages = with pkgs; [
