@@ -20,10 +20,10 @@
         theme.mutagen.enable = true;
         bar = {
           launcher.autoDetectIcon = true;
-          workspace.show_numbered = true;
+          workspaces.show_numbered = true;
           wallpaper = {
             enable = true;
-            image = "~/Downloads/Wallpaper.jpg";
+            image = "/home/mridula/Downloads/Wallpaper.jpg";
           };
 
           clock.format = "%H:%M";
@@ -43,6 +43,7 @@
               "battery"
               "clock"
               "notifications"
+              "power"
             ];
           };
         };
