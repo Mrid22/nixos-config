@@ -34,7 +34,7 @@
       openFirewall = true;
       downloadDirPermissions = "770";
       settings = {
-        downloadDir = "/media/downloads";
+        download-dir = "/media/downloads";
       };
     };
     jellyfin = {
