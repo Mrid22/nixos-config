@@ -4,8 +4,14 @@
   inputs,
   ...
 }: {
-  services.swww.enable = true;
-  services.redshift.enable = true;
+  services = {
+    swww.enable = true;
+    geoclue2.enable = true;
+    redshift = {
+      enable = true;
+      provider = "geoclue2";
+    };
+  };
   programs.hyprpanel = {
     enable = true;
     systemd.enable = true;
