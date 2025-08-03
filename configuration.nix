@@ -92,6 +92,7 @@
 
   services = {
     displayManager.gdm.enable = true;
+    udisks2.enable = true;
 
     xserver = {
       enable = true;
