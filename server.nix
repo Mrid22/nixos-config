@@ -21,6 +21,10 @@
       enable = true;
       openFirewall = true;
     };
+    flaresolverr = {
+      enable = true;
+      openFirewall = true;
+    };
     transmission = {
       enable = true;
       openFirewall = true;
