@@ -4,12 +4,11 @@
   inputs,
   ...
 }: {
-  programs.quickshell = {
+  programs.hyprpanel = {
     enable = true;
     systemd.enable = true;
-    configs = {
-      activeCongig = "borders.qml";
-      "borders.qml" = true;
+    settings = {
+      scalingPriority = "hyprland";
     };
   };
 
