@@ -23,7 +23,7 @@
           workspace.show_numbered = true;
           wallpaper = {
             enable = true;
-            image = "~/Downlads/Wallpaper.jpg";
+            image = "~/Downloads/Wallpaper.jpg";
           };
 
           clock.format = "%H:%M";
