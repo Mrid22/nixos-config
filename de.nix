@@ -86,6 +86,9 @@
         "$mod, SPACE, exec, gauntlet open"
         "$mod, C, killactive"
 
+        # Navigation
+        "$mod, H, movefocus, l"
+
         # Workspaces
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
