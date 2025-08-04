@@ -63,7 +63,6 @@
     nh = {
       enable = true;
       flake = "/etc/nixos/nixos-backup/";
-      clean.enable = true;
     };
   };
 }
