@@ -79,6 +79,7 @@
     playerctl
     hyprshot
     nodejs
+    pnpm
   ];
 
   fonts.packages = with pkgs; [
