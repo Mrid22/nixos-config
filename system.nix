@@ -4,6 +4,10 @@
   inputs,
   ...
 }: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -35,7 +39,7 @@
   };
   services.xserver = {
     enable = true;
-
+    videoDrivers = ["nvidia"];
     xkb = {
       layout = "us";
       variant = "";
@@ -79,6 +83,16 @@
 
   # Hardware Configuration
   hardware = {
+    opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+    nvidia = {
+      modesetting.enable = true;
+      open = true;
+      nvidiaSettings = true;
+    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
