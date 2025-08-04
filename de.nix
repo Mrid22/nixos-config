@@ -45,7 +45,7 @@
 
           clock = {
             format = "%H:%M";
-            showIcon = false;
+            showIcon = true;
           };
           layouts."*" = {
             left = [
