@@ -41,5 +41,9 @@
       enable = true;
       openFirewall = true;
     };
+    tailscale = {
+      enhale = true;
+      openFirewall = true;
+    };
   };
 }
