@@ -78,6 +78,7 @@
     brightnessctl
     playerctl
     hyprshot
+    nodejs
   ];
 
   fonts.packages = with pkgs; [

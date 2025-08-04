@@ -4,7 +4,7 @@
   ...
 }: {
   fileSystems."/media" = {
-    device = "/dev/sdb1";
+    device = "/dev/sda1";
     fsType = "ntfs";
     options = [
       "users" # Allows any user to mount and unmount
