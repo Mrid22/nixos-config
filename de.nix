@@ -8,7 +8,7 @@
     swww.enable = true;
     hyprsunset = {
       enable = true;
-      transitions = {
+      settings = {
         sunrise = {
           calendar = "*-*-* 06:00:00";
           requests = [
