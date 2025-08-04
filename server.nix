@@ -42,7 +42,7 @@
       openFirewall = true;
     };
     tailscale = {
-      enhale = true;
+      enable = true;
       openFirewall = true;
     };
   };
