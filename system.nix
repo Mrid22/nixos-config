@@ -104,6 +104,10 @@
       powerOnBoot = true;
     };
   };
+  powerManagement = {
+    enable = true;
+    powertop.enable = true;
+  };
 
   # Nix Package Manager Configuration
   nixpkgs.config.allowUnfree = true;
