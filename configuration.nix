@@ -40,6 +40,7 @@
     hyprshot
     nodejs
     pnpm
+    lunar-client
   ];
 
   fonts.packages = with pkgs; [
