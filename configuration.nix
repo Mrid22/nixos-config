@@ -26,7 +26,6 @@
   };
 
   programs = {
-    neovim.defaultEditor = true;
     hyprland.enable = true;
     zsh.enable = true;
     gnome-disks.enable = true;

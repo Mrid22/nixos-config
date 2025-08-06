@@ -4,6 +4,14 @@
   inputs,
   ...
 }: {
+  imports = [
+    inputs.catppuccin.homeModules.catppuccin
+  ];
+  catppuccin = {
+    flavor = "mocha";
+    enable = true;
+    accent = "mauve";
+  };
   services = {
     swww.enable = true;
     hyprsunset = {
