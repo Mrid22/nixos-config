@@ -7,6 +7,7 @@
   imports = [
     inputs.zen-browser.homeModules.twilight
     inputs.gauntlet.homeManagerModules.default
+    inputs.nvf.homeManagerModules.default
     ./terminal.nix
     ./de.nix
   ];
