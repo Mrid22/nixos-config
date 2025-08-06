@@ -26,6 +26,11 @@
     hyprland.enable = true;
     zsh.enable = true;
     gnome-disks.enable = true;
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
+    gamemode.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -37,7 +42,13 @@
     nodejs
     pnpm
     lunar-client
+    mangohud
+    protonup
   ];
+
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+  };
 
   fonts.packages = with pkgs; [
     noto-fonts
