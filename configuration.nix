@@ -17,8 +17,6 @@
       isNormalUser = true;
       description = "Mridul Agarwal";
       extraGroups = ["networkmanager" "wheel"];
-      packages = with pkgs; [
-      ];
     };
   };
 
