@@ -4,9 +4,6 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.catppuccin.homeModules.catppuccin
-  ];
   services = {
     swww.enable = true;
     hyprsunset = {
