@@ -8,6 +8,7 @@
     inputs.zen-browser.homeModules.twilight
     inputs.nvf.homeManagerModules.default
     inputs.gauntlet.homeManagerModules.default
+    inputs.catppuccin.homeModules.catppuccin
     ./terminal.nix
     ./de.nix
   ];
@@ -19,6 +20,12 @@
     packages = with pkgs; [
       spotdl
     ];
+  };
+
+  catppuccin = {
+    enable = true;
+    accent = "lavender";
+    flavor = "macchiato";
   };
 
   programs = {
@@ -39,12 +46,6 @@
           options = {
             shiftwidth = 2;
             tabstop = 2;
-          };
-          theme = {
-            enable = true;
-            name = "tokyonight";
-            style = "storm";
-            transparent = true;
           };
           telescope.enable = true;
           dashboard.alpha.enable = true;
