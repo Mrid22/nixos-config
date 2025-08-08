@@ -4,6 +4,10 @@
   inputs,
   ...
 }: {
+  gtk = {
+    enable = true;
+    theme = "Layan-dark";
+  };
   services = {
     swww.enable = true;
     hyprsunset = {
