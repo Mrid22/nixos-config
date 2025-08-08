@@ -6,7 +6,7 @@
 }: {
   gtk = {
     enable = true;
-    theme = "Layan";
+    theme.name = "Layan";
   };
   services = {
     swww.enable = true;
