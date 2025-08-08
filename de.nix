@@ -26,7 +26,6 @@
     };
   };
   programs = {
-    cava.enable = true;
     hyprpanel = {
       enable = true;
       package = inputs.hyprpanel.packages.${pkgs.system}.default;
@@ -68,6 +67,7 @@
         };
       };
     };
+    cava.enable = true;
   };
 
   wayland.windowManager.hyprland = {
