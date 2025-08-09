@@ -66,9 +66,8 @@
       flake = "/etc/nixos/nixos-backup/";
     };
 
-    yazi = {
+    superfile = {
       enable = true;
-      enableZshIntegration = true;
     };
   };
 }
