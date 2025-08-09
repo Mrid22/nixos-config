@@ -64,5 +64,12 @@
       enable = true;
       flake = "/etc/nixos/nixos-backup/";
     };
+
+    superfile = {
+      enable = true;
+      settings = {
+        transprent_background = true;
+      };
+    };
   };
 }
