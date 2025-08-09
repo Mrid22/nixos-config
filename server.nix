@@ -7,12 +7,42 @@
     device = "/dev/sda1";
     fsType = "ntfs";
     options = [
-      "users" # Allows any user to mount and unmount
-      "nofail" # Prevent system from failing if this drive doesn't mount
+      "users"
+      "nofail"
     ];
   };
 
   services = {
+    homepage-dashboard = {
+      enable = true;
+      openFirewall = true;
+      bookmarks = [
+        {
+          Developer = [
+            {
+              Github = [
+                {
+                  abbr = "GH";
+                  href = "https://github.com/";
+                }
+              ];
+            }
+          ];
+        }
+        {
+          Entertainment = [
+            {
+              YouTube = [
+                {
+                  abbr = "YT";
+                  href = "https://youtube.com/";
+                }
+              ];
+            }
+          ];
+        }
+      ];
+    };
     sonarr = {
       enable = true;
       openFirewall = true;
