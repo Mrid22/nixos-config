@@ -66,11 +66,6 @@
       pulse.enable = true;
     };
 
-    wluma = {
-      enable = true;
-      systemd.enable = true;
-    };
-
     keyd = {
       enable = true;
       keyboards = {

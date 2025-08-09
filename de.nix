@@ -10,6 +10,10 @@
   };
   services = {
     swww.enable = true;
+    wluma = {
+      enable = true;
+      systemd.enable = true;
+    };
     hyprsunset = {
       enable = true;
       transitions = {
