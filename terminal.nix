@@ -57,9 +57,7 @@
       enableZshIntegration = true;
     };
 
-    cava = {
-      enable = true;
-    };
+    cava.enable = true;
 
     nh = {
       enable = true;
@@ -75,6 +73,7 @@
         dir_editor = "nvim";
         auto_check_update = false;
         zoxide_support = true;
+        default_directory = "~";
       };
     };
   };
