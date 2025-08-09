@@ -3,7 +3,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  system = "x86_64-linux";
+in {
   home.packages = with pkgs; [
     tree
   ];
@@ -67,7 +69,8 @@
     };
 
     superfile = {
-      enable = false;
+      enable = true;
+      package = inputs.superfile.packages.${system}.default;
     };
   };
 }
