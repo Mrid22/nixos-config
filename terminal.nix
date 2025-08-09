@@ -68,9 +68,6 @@
 
     superfile = {
       enable = true;
-      settings = {
-        transprent_background = true;
-      };
     };
   };
 }
