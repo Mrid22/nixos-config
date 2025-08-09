@@ -28,11 +28,6 @@
       url = "github:Jas-SinghFSU/HyprPanel";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    superfile = {
-      url = "github:yorukot/superfile";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
