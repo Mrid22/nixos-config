@@ -1,8 +1,11 @@
 {
   config,
   pkgs,
+  inputs,
   ...
-}: {
+}: let
+  system = "x86_64-linux";
+in {
   home.packages = with pkgs; [
     tree
   ];
@@ -67,6 +70,7 @@
 
     superfile = {
       enable = true;
+      package = inputs.superfile.packages.${system}.default;
       settings = {
         transprent_background = true;
       };
