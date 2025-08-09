@@ -42,6 +42,7 @@
     lunar-client
     mangohud
     protonup
+    pavucontrol
   ];
 
   environment.sessionVariables = {
