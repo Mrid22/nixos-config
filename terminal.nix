@@ -69,6 +69,7 @@
     superfile = {
       enable = true;
       settings = {
+        theme = "tokyonight";
         transparent_background = true;
         editor = "nvim";
       };
