@@ -67,7 +67,7 @@
     };
 
     superfile = {
-      enable = true;
+      enable = false;
     };
   };
 }
