@@ -31,7 +31,7 @@
 
     superfile = {
       url = "github:yorukot/superfile";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
