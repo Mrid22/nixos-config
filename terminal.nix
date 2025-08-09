@@ -72,6 +72,9 @@
         theme = "tokyonight";
         transparent_background = true;
         editor = "nvim";
+        dir_editor = "nvim";
+        auto_check_update = false;
+        zoxide_support = true;
       };
     };
   };
