@@ -124,7 +124,7 @@
       bind = [
         "$mod, Q, exec, kitty"
         "$mod, F, exec, zen"
-        "$mod, E, exec, kitty& superfile"
+        "$mod, E, exec, kitty && superfile"
         "$mod, SPACE, exec, gauntlet open"
         "$mod, C, killactive"
 
