@@ -24,6 +24,7 @@
     hyprland.enable = true;
     zsh.enable = true;
     gnome-disks.enable = true;
+    neovim.defaultEditor = true;
     steam = {
       enable = true;
       gamescopeSession.enable = true;
