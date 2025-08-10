@@ -48,6 +48,7 @@
     mangohud
     protonup
     pavucontrol
+    (import ./rebuild.nix {inherit pkgs;})
   ];
 
   environment.sessionVariables = {
