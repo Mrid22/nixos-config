@@ -34,9 +34,18 @@
         {
           "AI" = [
             {
-              "My Second Service" = {
-                description = "Homepage is the best";
+              "Ollama" = {
+                description = "Ollama";
                 href = "http://localhost/";
+              };
+            }
+          ];
+        }
+        {
+          "Other" = [
+            {
+              "Tailscale" = {
+                href = "login.tailscale.com";
               };
             }
           ];
@@ -75,6 +84,12 @@
       enable = true;
       openFirewall = true;
       disableTaildrop = true;
+    };
+    ollama = {
+      enable = true;
+      openFirewall = true;
+      acceleration = "cuda";
+      loadModels = ["lamma3.1:8b"];
     };
   };
 }
