@@ -35,24 +35,28 @@
     };
     gamemode.enable = true;
   };
+  environment = {
+    variables = {
+      EDITOR = "nvim";
+    };
+    systemPackages = with pkgs; [
+      blueberry
+      kdePackages.dolphin
+      brightnessctl
+      playerctl
+      hyprshot
+      nodejs
+      pnpm
+      lunar-client
+      mangohud
+      protonup
+      pavucontrol
+      (import ./rebuild.nix {inherit pkgs;})
+    ];
 
-  environment.systemPackages = with pkgs; [
-    blueberry
-    kdePackages.dolphin
-    brightnessctl
-    playerctl
-    hyprshot
-    nodejs
-    pnpm
-    lunar-client
-    mangohud
-    protonup
-    pavucontrol
-    (import ./rebuild.nix {inherit pkgs;})
-  ];
-
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+    sessionVariables = {
+      STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
+    };
   };
 
   fonts.packages = with pkgs; [
