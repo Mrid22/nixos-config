@@ -1,5 +1,5 @@
 {pkgs}:
-pkgs.writeShellScript "rebuild" ''
+pkgs.writeShellScriptBin "rebuild" ''
   ${pkgs.git}/bin/git add --all
   ${pkgs.git}/bin/git diff
   read -p "Commit message: " commitmsg
