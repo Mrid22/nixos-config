@@ -8,6 +8,10 @@
     tree
   ];
   programs = {
+    cava.enable = true;
+    atuin.enable = true;
+    pay-respects.enable = true;
+
     git = {
       enable = true;
       userName = "Mrid22";
@@ -43,8 +47,6 @@
       enableZshIntegration = true;
     };
 
-    pay-respects.enable = true;
-    atuin.enable = true;
     zoxide = {
       enable = true;
       enableZshIntegration = true;
@@ -56,8 +58,6 @@
       enable = true;
       enableZshIntegration = true;
     };
-
-    cava.enable = true;
 
     nh = {
       enable = true;
@@ -74,6 +74,7 @@
         auto_check_update = false;
         zoxide_support = true;
         default_directory = "~";
+        cd_on_quit = true;
       };
     };
   };
