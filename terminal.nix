@@ -44,6 +44,9 @@
         enable = true;
         plugins = ["git" "sudo"];
       };
+      shellAliases = {
+        r = "rebuild";
+      };
     };
 
     oh-my-posh = {
