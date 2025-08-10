@@ -12,29 +12,6 @@
     ];
   };
 
-  virtualisation = {
-    docker = {
-      enable = true;
-      enableOnBoot = true;
-      autoPrune.enable = true;
-    };
-    oci-containers = {
-      backend = "docker";
-      containers = {
-        openwebui = {
-          autoStart = true;
-          image = "ghcr.io/open-webui/open-webui:cuda";
-          volumes = [
-            "open-webui:/app/backend/data"
-          ];
-          ports = [
-            ":8080:8080"
-          ];
-        };
-      };
-    };
-  };
-
   services = {
     homepage-dashboard = {
       enable = true;
@@ -100,6 +77,10 @@
       };
     };
     jellyfin = {
+      enable = true;
+      openFirewall = true;
+    };
+    open-webui = {
       enable = true;
       openFirewall = true;
     };
