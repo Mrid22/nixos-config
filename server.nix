@@ -22,11 +22,14 @@
       backend = "docker";
       containers = {
         openwebui = {
+          autoStart = true;
           image = "ghcr.io/open-webui/open-webui:cuda";
           volumes = [
             "open-webui:/app/backend/data"
           ];
-          autoStart = true;
+          ports = [
+            ":8080:8080"
+          ];
         };
       };
     };
