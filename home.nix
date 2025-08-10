@@ -22,7 +22,7 @@
   };
 
   programs = {
- nvf = {
+    nvf = {
       enable = true;
       settings = {
         vim = {
@@ -31,6 +31,11 @@
           lineNumberMode = "none";
           withPython3 = true;
           withNodeJs = true;
+          telescope.enable = true;
+          dashboard.alpha.enable = true;
+          statusline.lualine.enable = true;
+          autocomplete.nvim-cmp.enable = true;
+          autopairs.nvim-autopairs.enable = true;
           options = {
             shiftwidth = 2;
             tabstop = 2;
@@ -41,11 +46,12 @@
             style = "storm";
             transparent = true;
           };
-          telescope.enable = true;
-          dashboard.alpha.enable = true;
-          statusline.lualine.enable = true;
-          autocomplete.nvim-cmp.enable = true;
-          autopairs.nvim-autopairs.enable = true;
+          terminal = {
+            toggleterm = {
+              enable = true;
+              lazygit.enable = true;
+            };
+          };
           assistant = {
             codecompanion-nvim.enable = true;
             copilot = {
