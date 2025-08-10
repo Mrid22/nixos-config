@@ -12,6 +12,24 @@
     ];
   };
 
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+      autoPrune.enable = true;
+      rootless.enable = true;
+    };
+    oci-containers = {
+      backend = "docker";
+      containers = {
+        openwebui = {
+          image = "ghcr.io/open-webui/open-webui:cuda";
+          autoStart = true;
+        };
+      };
+    };
+  };
+
   services = {
     homepage-dashboard = {
       enable = true;
