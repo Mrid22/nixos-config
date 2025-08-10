@@ -68,20 +68,6 @@
       flake = "/etc/nixos/nixos-backup/";
     };
 
-    superfile = {
-      enable = true;
-      settings = {
-        theme = "tokyonight";
-        transparent_background = true;
-        editor = "nvim";
-        dir_editor = "nvim";
-        auto_check_update = false;
-        zoxide_support = true;
-        default_directory = "~";
-        cd_on_quit = true;
-      };
-    };
-
     yazi = {
       enable = true;
     };
