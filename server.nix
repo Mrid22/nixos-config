@@ -24,6 +24,9 @@
       containers = {
         openwebui = {
           image = "ghcr.io/open-webui/open-webui:cuda";
+          volumes = [
+            "open-webui:/app/backend/data"
+          ];
           autoStart = true;
         };
       };
