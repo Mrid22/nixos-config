@@ -99,7 +99,7 @@
       enable = true;
       openFirewall = true;
       acceleration = "cuda";
-      loadModels = ["lamma3.1:8b"];
+      loadModels = ["llama3.1:8b"];
     };
   };
 }
