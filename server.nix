@@ -12,7 +12,7 @@
     ];
   };
   environment.systemPackages = with pkgs; [
-    librechat
+    alpaca
   ];
 
   services = {
