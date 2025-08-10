@@ -6,6 +6,7 @@ pkgs.writeShellScriptBin "rebuild" ''
     echo "Aborting."
     exit 1
   else
+    echo
     ${pkgs.git}/bin/git add --all
     read -p "Commit message: " commitmsg
     ${pkgs.git}/bin/git commit --all --message "$commitmsg"
