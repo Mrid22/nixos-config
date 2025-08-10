@@ -38,6 +38,7 @@
   environment = {
     variables = {
       EDITOR = "nvim";
+      VISUAL = "nvim";
     };
     systemPackages = with pkgs; [
       blueberry
