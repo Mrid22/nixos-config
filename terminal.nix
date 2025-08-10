@@ -22,6 +22,10 @@
       };
     };
 
+    lazygit = {
+      enable = true;
+    };
+
     kitty = {
       enable = true;
       shellIntegration.enableZshIntegration = true;
