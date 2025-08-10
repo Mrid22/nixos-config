@@ -11,6 +11,9 @@
       "nofail"
     ];
   };
+  environment.systemPackages = with pkgs; [
+    librechat
+  ];
 
   services = {
     homepage-dashboard = {
@@ -79,9 +82,6 @@
     jellyfin = {
       enable = true;
       openFirewall = true;
-    };
-    open-webui = {
-      enable = true;
     };
     tailscale = {
       enable = true;
