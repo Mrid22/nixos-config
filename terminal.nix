@@ -6,6 +6,7 @@
 }: {
   home.packages = with pkgs; [
     tree
+    managaar
   ];
   programs = {
     cava.enable = true;
