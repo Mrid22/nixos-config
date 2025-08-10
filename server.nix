@@ -16,28 +16,26 @@
     homepage-dashboard = {
       enable = true;
       openFirewall = true;
-      bookmarks = [
+      services = [
         {
-          Developer = [
+          "Media/Arr" = [
             {
-              Github = [
-                {
-                  abbr = "GH";
-                  href = "https://github.com/";
-                }
-              ];
+              "Jellyfin" = {
+                href = "http://nixos:8096";
+              };
+              "Sonarr" = {
+                href = "http://nixos:8989";
+              };
             }
           ];
         }
         {
-          Entertainment = [
+          "AI" = [
             {
-              YouTube = [
-                {
-                  abbr = "YT";
-                  href = "https://youtube.com/";
-                }
-              ];
+              "My Second Service" = {
+                description = "Homepage is the best";
+                href = "http://localhost/";
+              };
             }
           ];
         }
