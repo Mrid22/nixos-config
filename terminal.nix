@@ -81,5 +81,9 @@
         cd_on_quit = true;
       };
     };
+
+    yazi = {
+      enable = true;
+    };
   };
 }
