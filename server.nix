@@ -17,7 +17,6 @@
       enable = true;
       enableOnBoot = true;
       autoPrune.enable = true;
-      rootless.enable = true;
     };
     oci-containers = {
       backend = "docker";
