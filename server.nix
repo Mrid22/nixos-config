@@ -12,6 +12,42 @@
     ];
   };
 
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+      autoStart = true;
+      autoPrune.enable = true;
+    };
+    oci-containers = {
+      enable = true;
+      backend = "docker";
+      containers = {
+        "open-webui" = {
+          image = "ghcr.io/open-webui/open-webui:main";
+
+          environment = {
+            OPEN_WEBUI_OLLAMA_BASE_URL = "http://localhost:11434";
+          };
+
+          ports = [
+            "8080:8080"
+          ];
+
+          volumes = [
+            "/var/lib/open-webui:/app/backend/data"
+          ];
+
+          autoStart = true;
+
+          extraOptions = [
+            "--pull=always"
+          ];
+        };
+      };
+    };
+  };
+
   services = {
     homepage-dashboard = {
       enable = true;
@@ -91,6 +127,5 @@
       acceleration = "cuda";
       loadModels = ["llama3.1:8b"];
     };
-    open-webui.enable = true;
   };
 }
