@@ -27,7 +27,7 @@
           environment = {
             OLLAMA_BASE_URL = "http://nixos:11434";
             TZ = "Europe/Amsterdam";
-            # OLLAMA_API_BASE_URL = "http://<ollama IP address>:11434/api";
+            OLLAMA_API_BASE_URL = "http://nixos:11434/api";
           };
 
           ports = [
