@@ -16,7 +16,6 @@
     docker = {
       enable = true;
       enableOnBoot = true;
-      autoStart = true;
       autoPrune.enable = true;
     };
     oci-containers = {
