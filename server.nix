@@ -11,9 +11,6 @@
       "nofail"
     ];
   };
-  environment.systemPackages = with pkgs; [
-    jan
-  ];
 
   services = {
     homepage-dashboard = {
