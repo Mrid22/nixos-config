@@ -19,7 +19,6 @@
       autoPrune.enable = true;
     };
     oci-containers = {
-      enable = true;
       backend = "docker";
       containers = {
         "open-webui" = {
