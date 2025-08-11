@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   home.packages = with pkgs; [
@@ -47,6 +48,9 @@
       shellAliases = {
         r = "rebuild";
       };
+      initContent = lib.mkOrder 1200 ''
+        fastfetch
+      '';
     };
 
     oh-my-posh = {
