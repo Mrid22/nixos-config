@@ -71,7 +71,9 @@
       flake = "/etc/nixos/nixos-backup/";
     };
 
-    yazi = {
+    yazi.enable = true;
+
+    fastfetch = {
       enable = true;
     };
   };
