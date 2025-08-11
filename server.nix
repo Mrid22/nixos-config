@@ -23,7 +23,6 @@
       containers = {
         "open-webui" = {
           image = "ghcr.io/open-webui/open-webui:main";
-          network = "host";
 
           environment = {
             OLLAMA_BASE_URL = "http://nixos:11434";
@@ -43,6 +42,7 @@
 
           extraOptions = [
             "--pull=always"
+            "--network=host"
           ];
         };
       };
