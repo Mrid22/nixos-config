@@ -61,7 +61,7 @@
                 providers = {
                   ollama = {
                     endpoint = "http://nixos:11434";
-                    model = "llama3-8b";
+                    model = "llama3.1:8b";
                     timeout = 30000;
                     extra_request_body = {
                       options = {
