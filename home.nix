@@ -57,6 +57,7 @@
             avante-nvim = {
               enable = true;
               setupOpts = {
+                provider = "ollama";
                 providers = {
                   ollama = {
                     endpoint = "http://nixos:11434";
