@@ -73,5 +73,6 @@
     users = {
       "mridula" = import ./home.nix;
     };
+    backupFileExtension = ".bak";
   };
 }
