@@ -57,6 +57,19 @@
             avante-nvim = {
               enable = true;
               setupOpts = {
+                providers = {
+                  ollama = {
+                    endpoint = "http://nixos:11434";
+                    timeout = 30000;
+                    extra_request_body = {
+                      options = {
+                        temperature = 0.75;
+                        num_ctx = 20480;
+                        keep_alive = "5m";
+                      };
+                    };
+                  };
+                };
                 auto_suggestions_provider = "ollama";
               };
             };
