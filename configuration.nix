@@ -44,6 +44,7 @@
       blueberry
       kdePackages.dolphin
       brightnessctl
+      kdePackages.ark
       playerctl
       hyprshot
       nodejs
