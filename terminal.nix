@@ -79,6 +79,12 @@
 
     fastfetch = {
       enable = true;
+      settings = {
+        modules = [
+          "title"
+          "seperator"
+        ];
+      };
     };
   };
 }
