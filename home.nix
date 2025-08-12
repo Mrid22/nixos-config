@@ -54,6 +54,12 @@
           };
           assistant = {
             codecompanion-nvim.enable = true;
+            avante-nvim = {
+              enable = true;
+              setupOpts = {
+                auto_suggestions_provider = "ollama";
+              };
+            };
             copilot = {
               enable = true;
               cmp.enable = true;
