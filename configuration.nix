@@ -54,6 +54,7 @@
       protonup
       pavucontrol
       (import ./rebuild.nix {inherit pkgs;})
+      (import ./autogit.nix {inherit pkgs;})
     ];
 
     sessionVariables = {
