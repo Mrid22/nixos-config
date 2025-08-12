@@ -72,7 +72,7 @@
                 };
                 auto_suggestions_provider = "ollama";
                 behaviour = {
-                  auto_suggestions.enable = true;
+                  auto_suggestions = true;
                 };
               };
             };
