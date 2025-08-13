@@ -86,7 +86,7 @@
           "localip"
           "packages"
           "WM"
-          "wmtheme"
+          "display"
         ];
       };
     };
