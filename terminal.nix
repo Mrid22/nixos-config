@@ -84,7 +84,7 @@
           "de"
           "title"
           "os"
-          "address"
+          "ip"
         ];
       };
     };
