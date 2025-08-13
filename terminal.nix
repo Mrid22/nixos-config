@@ -81,10 +81,9 @@
       enable = true;
       settings = {
         modules = [
-          "de"
           "title"
           "os"
-          "ip"
+          "localip"
         ];
       };
     };
