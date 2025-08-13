@@ -81,6 +81,7 @@
       enable = true;
       settings = {
         modules = [
+          "de"
           "title"
           "os"
           "address"
