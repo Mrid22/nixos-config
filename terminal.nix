@@ -84,6 +84,7 @@
           "title"
           "os"
           "localip"
+          "packages"
         ];
       };
     };
