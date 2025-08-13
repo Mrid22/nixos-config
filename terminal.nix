@@ -83,6 +83,7 @@
         modules = [
           "title"
           "os"
+          "address"
         ];
       };
     };
