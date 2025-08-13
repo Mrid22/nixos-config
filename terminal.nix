@@ -85,6 +85,8 @@
           "os"
           "localip"
           "packages"
+          "WM"
+          "WMTheme"
         ];
       };
     };
