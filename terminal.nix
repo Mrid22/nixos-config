@@ -85,8 +85,9 @@
           "os"
           "localip"
           "packages"
-          "WM"
           "display"
+          "WM"
+          "kernel"
         ];
       };
     };
