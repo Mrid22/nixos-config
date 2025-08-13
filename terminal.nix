@@ -83,12 +83,11 @@
         modules = [
           "title"
           "os"
+          "kernel"
           "localip"
           "packages"
           "display"
           "WM"
-          "WM Theme"
-          "kernel"
         ];
       };
     };

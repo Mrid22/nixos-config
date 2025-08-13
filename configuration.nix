@@ -41,7 +41,6 @@
       VISUAL = "nvim";
     };
     systemPackages = with pkgs; [
-      blueberry
       kdePackages.dolphin
       brightnessctl
       kdePackages.ark
