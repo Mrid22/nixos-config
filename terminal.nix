@@ -87,7 +87,6 @@
           "host"
           "kernel"
           "packages"
-          "shell"
           "display"
           "de"
           "wm"
@@ -95,17 +94,14 @@
           "theme"
           "icons"
           "font"
-          "cursor"
+          "shell"
           "terminal"
-          "terminalfont"
           "cpu"
           "gpu"
           "memory"
-          "swap"
           "disk"
           "localip"
           "battery"
-          "poweradapter"
         ];
       };
     };
