@@ -106,8 +106,6 @@
           "localip"
           "battery"
           "poweradapter"
-          "locale"
-          "break"
         ];
       };
     };
