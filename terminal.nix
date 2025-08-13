@@ -82,7 +82,6 @@
       settings = {
         modules = [
           "title"
-          "seperator"
           "os"
         ];
       };
