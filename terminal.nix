@@ -87,6 +87,7 @@
           "packages"
           "display"
           "WM"
+          "WM Theme"
           "kernel"
         ];
       };
