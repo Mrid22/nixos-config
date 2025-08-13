@@ -86,7 +86,6 @@
           "os"
           "host"
           "kernel"
-          "uptime"
           "packages"
           "shell"
           "display"
