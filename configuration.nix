@@ -71,7 +71,6 @@
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
-    useGlobalPkgs = true;
     backupFileExtension = ".bak";
     users = {
       "mridula" = import ./home.nix;
