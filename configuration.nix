@@ -43,6 +43,7 @@
     systemPackages = with pkgs; [
       kdePackages.dolphin
       lutris
+      heroic
       brightnessctl
       kdePackages.ark
       playerctl
