@@ -47,7 +47,7 @@
       kdePackages.ark
       playerctl
       hyprshot
-      wine-wow
+      wineWowPackages.full
       nodejs
       pnpm
       lunar-client
