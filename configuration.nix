@@ -48,6 +48,7 @@
       kdePackages.ark
       playerctl
       hyprshot
+      hyprpicker
       wineWowPackages.full
       nodejs
       pnpm
