@@ -39,6 +39,7 @@
     variables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
+      TERM = "kitty";
     };
     systemPackages = with pkgs; [
       kdePackages.dolphin
