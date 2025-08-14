@@ -116,13 +116,6 @@
       };
     };
 
-    lutris = {
-      enable = true;
-      protonPackages = [pkgs.proton-ge-bin];
-      steamPackage = pkgs.steam;
-      winePackages = [pkgs.wineWow64Packages.full];
-    };
-
     gauntlet = {
       enable = true;
       service.enable = true;

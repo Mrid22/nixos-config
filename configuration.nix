@@ -42,6 +42,7 @@
     };
     systemPackages = with pkgs; [
       kdePackages.dolphin
+      lutris
       brightnessctl
       kdePackages.ark
       playerctl
