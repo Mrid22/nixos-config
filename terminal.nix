@@ -47,6 +47,7 @@
       };
       shellAliases = {
         r = "rebuild";
+        g = "autogit";
       };
       initContent = lib.mkOrder 1200 ''
         fastfetch
