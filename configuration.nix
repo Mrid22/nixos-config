@@ -58,6 +58,7 @@
       protonup
       pavucontrol
       wf-recorder
+      godot_4
       (import ./rebuild.nix {inherit pkgs;})
       (import ./autogit.nix {inherit pkgs;})
     ];
