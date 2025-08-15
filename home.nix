@@ -22,6 +22,9 @@
   };
 
   programs = {
+    helix = {
+      enable = true;
+    };
     nvf = {
       enable = true;
       settings = {
