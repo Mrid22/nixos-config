@@ -115,16 +115,16 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1754854220,
-        "narHash": "sha256-rz32wEloyjwNCYLYBNmOE/0DQbfdgM6ulF/4bXHr5GI=",
+        "lastModified": 1755358798,
+        "narHash": "sha256-llvifLB7AU9v2k6EhgM3eyaXwtKUgeQG5q40Gd4qxmQ=",
         "owner": "project-gauntlet",
         "repo": "gauntlet",
-        "rev": "24405c92bca33f9f93cb08aea407f9bd0ad7ba55",
+        "rev": "e62a89f45ecb9055447ed56860fe761d2d9f30ef",
         "type": "github"
       },
       "original": {
         "owner": "project-gauntlet",
-        "ref": "24405c92bca33f9f93cb08aea407f9bd0ad7ba55",
+        "ref": "v21",
         "repo": "gauntlet",
         "type": "github"
       }
