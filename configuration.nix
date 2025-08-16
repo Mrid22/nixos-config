@@ -20,6 +20,8 @@
     };
   };
 
+  virtualisation.virtualbox.host.enable = true;
+
   programs = {
     hyprland.enable = true;
     zsh.enable = true;
