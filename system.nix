@@ -50,7 +50,6 @@
   security.rtkit.enable = true;
 
   services = {
-    flatpak.enable = true;
     displayManager.gdm.enable = true;
     udisks2.enable = true;
     upower.enable = true;
@@ -137,25 +136,6 @@
       ];
       dates = "02:00";
       randomizedDelaySec = "45min";
-    };
-  };
-  systemd = {
-    services = {
-      flatpak-repo = {
-        wantedBy = ["multi-user.target"];
-        path = [pkgs.flatpak];
-        script = ''
-          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-        '';
-      };
-
-      flatpak-apps = {
-        wantedBy = ["multi-user.target"];
-        path = [pkgs.flatpak];
-        script = ''
-          flatpak install --noninteractive flathub us.materialio.Materialious
-        '';
-      };
     };
   };
 }
