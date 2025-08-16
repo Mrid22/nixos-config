@@ -16,7 +16,7 @@
     users.mridula = {
       isNormalUser = true;
       description = "Mridul Agarwal";
-      extraGroups = ["networkmanager" "wheel" "vboxusers"];
+      extraGroups = ["networkmanager" "wheel"];
     };
   };
 
