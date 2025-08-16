@@ -19,10 +19,6 @@
       extraGroups = ["networkmanager" "wheel"];
     };
   };
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableExtensionPack = true;
-  };
 
   programs = {
     hyprland.enable = true;
