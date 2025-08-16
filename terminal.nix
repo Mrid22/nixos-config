@@ -12,6 +12,8 @@
     cava.enable = true;
     atuin.enable = true;
     pay-respects.enable = true;
+    ripgrep.enable = true;
+    lazygit.enable = true;
 
     git = {
       enable = true;
@@ -21,10 +23,6 @@
       extraConfig = {
         init.defaultBranch = "main";
       };
-    };
-
-    lazygit = {
-      enable = true;
     };
 
     kitty = {
