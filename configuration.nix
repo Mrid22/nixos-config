@@ -16,9 +16,11 @@
     users.mridula = {
       isNormalUser = true;
       description = "Mridul Agarwal";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = ["networkmanager" "wheel" "vboxusers"];
     };
   };
+
+  virtualisation.virtualbox.host.enable = true;
 
   programs = {
     hyprland.enable = true;
