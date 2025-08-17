@@ -82,7 +82,7 @@
           "Other" = [
             {
               "Tailscale" = {
-                href = "login.tailscale.com";
+                href = "https://login.tailscale.com";
               };
             }
           ];
