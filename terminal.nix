@@ -10,7 +10,7 @@
   ];
   programs = {
     cava.enable = true;
-    # atuin.enable = true;
+    atuin.enable = true;
     pay-respects.enable = true;
     ripgrep.enable = true;
     lazygit.enable = true;
@@ -33,8 +33,6 @@
         background_opacity = 0.5;
       };
     };
-
-    nushell.enable = true;
 
     zsh = {
       enable = true;
