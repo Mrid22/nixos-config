@@ -36,7 +36,7 @@
           statusline.lualine.enable = true;
           autocomplete.nvim-cmp.enable = true;
           autopairs.nvim-autopairs.enable = true;
-          filetree.neotree.enable = true;
+          filetree.neo-tree.enable = true;
           options = {
             shiftwidth = 2;
             tabstop = 2;
