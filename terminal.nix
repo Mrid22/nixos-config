@@ -34,7 +34,10 @@
       };
     };
 
-    ghostty.enable = true;
+    ghostty = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
     zsh = {
       enable = true;
