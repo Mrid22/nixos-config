@@ -10,7 +10,7 @@
   ];
   programs = {
     cava.enable = true;
-    atuin.enable = true;
+    # atuin.enable = true;
     pay-respects.enable = true;
     ripgrep.enable = true;
     lazygit.enable = true;
