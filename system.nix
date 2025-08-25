@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
   ];
-
+  systemd.settings.Manager = {DefaultLimitNOFILE = 4096;};
   boot = {
     loader = {
       systemd-boot.enable = true;
