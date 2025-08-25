@@ -45,6 +45,9 @@
           src = pkgs.fishPlugins.plugin-git.src;
         }
       ];
+      shellInit = ''
+        set fish_greeting
+      ''
     };
 
     oh-my-posh = {
