@@ -69,7 +69,7 @@
       jetbrains.pycharm-community
       nwg-look
       pamixer
-      libsForQt5.qtstyleplugin-kvantum5
+      libsForQt5.qtstyleplugin-kvantum
       (import ./rebuild.nix {inherit pkgs;})
       (import ./autogit.nix {inherit pkgs;})
     ];
