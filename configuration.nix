@@ -21,6 +21,7 @@
   };
 
   virtualisation.virtualbox.host.enable = true;
+  services.blueman.enable = true;
 
   programs = {
     hyprland.enable = true;
