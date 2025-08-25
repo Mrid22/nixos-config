@@ -42,6 +42,7 @@
           border: none;
           border-radius: 0;
           font-family: Source Code Pro;
+          color: #FFFFFF;
         }
         window#waybar {
           background: rgba(0,0,0,0.5);
