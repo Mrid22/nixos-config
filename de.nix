@@ -61,9 +61,9 @@
             "eDP-1"
             "HDMI-A-1"
           ];
-          modules-left = ["sway/workspaces" "sway/mode" "wlr/taskbar"];
-          modules-center = ["sway/window" "custom/hello-from-waybar"];
-          modules-right = ["mpd" "custom/mymodule#with-css-id" "temperature"];
+          modules-left = ["hyprland/workspaces" "hyprland/mode"];
+          modules-center = ["hyprland/window"];
+          modules-right = ["mpd" "temperature"];
 
           "sway/workspaces" = {
             disable-scroll = true;
