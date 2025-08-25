@@ -47,7 +47,7 @@
       ];
       shellInit = ''
         set fish_greeting
-      ''
+      '';
     };
 
     oh-my-posh = {
