@@ -27,17 +27,11 @@
 
     kitty = {
       enable = true;
-      shellIntegration.enableZshIntegration = true;
+      shellIntegration.enableFishIntegration = true;
       enableGitIntegration = true;
       settings = {
         background_opacity = 0.5;
       };
-    };
-
-    ghostty = {
-      enable = true;
-      enableZshIntegration = true;
-      installVimSyntax = true;
     };
 
     fish = {
@@ -52,19 +46,19 @@
 
     oh-my-posh = {
       enable = true;
-      enableZshIntegration = true;
+      enableFishIntegration = true;
     };
 
     zoxide = {
       enable = true;
-      enableZshIntegration = true;
+      enableFishIntegration = true;
       options = [
         "--cmd cd"
       ];
     };
     fzf = {
       enable = true;
-      enableZshIntegration = true;
+      enableFishIntegration = true;
     };
 
     nh = {
