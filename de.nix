@@ -6,7 +6,10 @@
 }: {
   gtk = {
     enable = true;
-    theme.name = "Layan Dark";
+    theme = {
+      name = "Layan Dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
   };
   services = {
     swww.enable = true;
