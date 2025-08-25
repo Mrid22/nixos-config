@@ -8,7 +8,7 @@
     enable = true;
     theme = {
       name = "Layan Dark";
-      package = pkgs.gnome-themes-extra;
+      package = pkgs.layan-gtk-theme;
     };
   };
   services = {
