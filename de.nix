@@ -10,6 +10,7 @@
   };
   services = {
     swww.enable = true;
+    swaync.enable = true;
     wluma = {
       enable = true;
       systemd.enable = true;
