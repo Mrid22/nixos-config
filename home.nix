@@ -8,7 +8,6 @@
     inputs.zen-browser.homeModules.twilight
     inputs.gauntlet.homeManagerModules.default
     inputs.nvf.homeManagerModules.default
-    inputs.plasma-manager.homeManagerModules.plasma-manager
     ./terminal.nix
     ./de.nix
   ];

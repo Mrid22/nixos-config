@@ -4,6 +4,9 @@
   inputs,
   ...
 }: {
+  imports = [
+    inputs.plasma-manager.homeManagerModules.plasma-manager
+  ];
   gtk = {
     enable = true;
     theme = {
@@ -11,6 +14,7 @@
       package = pkgs.layan-gtk-theme;
     };
   };
+  plasma.enable = true;
   services = {
     swww.enable = true;
     swaync.enable = true;
