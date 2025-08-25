@@ -58,6 +58,16 @@
       '';
     };
 
+    fish = {
+      enable = true;
+      plugins = [
+        {
+          name = "plugin-git";
+          src = pkgs.fishPlugins.plugin-git.src;
+        }
+      ];
+    };
+
     oh-my-posh = {
       enable = true;
       enableZshIntegration = true;
