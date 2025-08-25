@@ -41,7 +41,10 @@
     };
   };
   programs = {
-    plasma.enable = true;
+    plasma = {
+      enable = true;
+      workspace.colorScheme = "LayanDark";
+    };
     waybar = {
       enable = true;
       systemd.enable = true;
