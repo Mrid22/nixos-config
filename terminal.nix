@@ -36,6 +36,9 @@
 
     fish = {
       enable = true;
+      shellAbbrs = {
+        r = "rebuild";
+      };
       plugins = [
         {
           name = "plugin-git";
