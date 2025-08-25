@@ -40,24 +40,6 @@
       installVimSyntax = true;
     };
 
-    zsh = {
-      enable = true;
-      enableCompletion = true;
-      syntaxHighlighting.enable = true;
-      autosuggestion.enable = true;
-      oh-my-zsh = {
-        enable = true;
-        plugins = ["git" "sudo"];
-      };
-      shellAliases = {
-        r = "rebuild";
-        g = "autogit";
-      };
-      initContent = lib.mkOrder 1200 ''
-        fastfetch
-      '';
-    };
-
     fish = {
       enable = true;
       plugins = [

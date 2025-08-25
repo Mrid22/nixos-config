@@ -12,7 +12,7 @@
   ];
 
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.fish;
     users.mridula = {
       isNormalUser = true;
       description = "Mridul Agarwal";
@@ -24,7 +24,7 @@
 
   programs = {
     hyprland.enable = true;
-    zsh.enable = true;
+    fish.enable = true;
     gnome-disks.enable = true;
     neovim.defaultEditor = true;
     steam = {
