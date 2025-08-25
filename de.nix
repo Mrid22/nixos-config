@@ -14,6 +14,7 @@
       enable = true;
       systemd.enable = true;
     };
+    blueman.enable = true;
     hyprsunset = {
       enable = true;
       transitions = {
