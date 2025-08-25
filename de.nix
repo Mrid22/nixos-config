@@ -14,7 +14,6 @@
       package = pkgs.layan-gtk-theme;
     };
   };
-  plasma.enable = true;
   services = {
     swww.enable = true;
     swaync.enable = true;
@@ -42,6 +41,7 @@
     };
   };
   programs = {
+    plasma.enable = true;
     waybar = {
       enable = true;
       systemd.enable = true;
