@@ -47,7 +47,7 @@
     };
     systemPackages = with pkgs; [
       bluez
-      bluez-utils
+      bluez-tools
       kdePackages.dolphin
       lutris
       heroic
