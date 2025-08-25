@@ -36,6 +36,7 @@
           statusline.lualine.enable = true;
           autocomplete.nvim-cmp.enable = true;
           autopairs.nvim-autopairs.enable = true;
+          comments.comment-nvim.enable = true;
           filetree.neo-tree.enable = true;
           options = {
             shiftwidth = 2;
@@ -52,6 +53,10 @@
               enable = true;
               lazygit.enable = true;
             };
+          };
+          clipboard = {
+            enable = true;
+            providers.wl-copy.enable = true;
           };
           assistant = {
             codecompanion-nvim.enable = true;
