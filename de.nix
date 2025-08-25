@@ -81,47 +81,47 @@
       };
     };
 
-    hyprpanel = {
-      enable = true;
-      package = inputs.hyprpanel.packages.${pkgs.system}.default;
-      systemd.enable = true;
-      settings = {
-        scalingPriority = "hyprland";
-        theme.mutagen.enable = true;
-        bar = {
-          network.showName = false;
-          workspaces.show_numbered = true;
-          network.label = false;
-          wallpaper = {
-            enable = true;
-            image = "/home/mridula/Downloads/Wallpaper.jpg";
-          };
-
-          clock = {
-            format = "%H:%M";
-            showIcon = true;
-          };
-          layouts."*" = {
-            left = [
-              "workspaces"
-              "cava"
-            ];
-            middle = [
-              "windowtitle"
-            ];
-            right = [
-              "network"
-              "volume"
-              "bluetooth"
-              "battery"
-              "clock"
-              "notifications"
-              "power"
-            ];
-          };
-        };
-      };
-    };
+    # hyprpanel = {
+    #   enable = true;
+    #   package = inputs.hyprpanel.packages.${pkgs.system}.default;
+    #   systemd.enable = true;
+    #   settings = {
+    #     scalingPriority = "hyprland";
+    #     theme.mutagen.enable = true;
+    #     bar = {
+    #       network.showName = false;
+    #       workspaces.show_numbered = true;
+    #       network.label = false;
+    #       wallpaper = {
+    #         enable = true;
+    #         image = "/home/mridula/Downloads/Wallpaper.jpg";
+    #       };
+    #
+    #       clock = {
+    #         format = "%H:%M";
+    #         showIcon = true;
+    #       };
+    #       layouts."*" = {
+    #         left = [
+    #           "workspaces"
+    #           "cava"
+    #         ];
+    #         middle = [
+    #           "windowtitle"
+    #         ];
+    #         right = [
+    #           "network"
+    #           "volume"
+    #           "bluetooth"
+    #           "battery"
+    #           "clock"
+    #           "notifications"
+    #           "power"
+    #         ];
+    #       };
+    #     };
+    #   };
+    # };
     cava.enable = true;
   };
 
