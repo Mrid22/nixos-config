@@ -46,6 +46,8 @@
       TERM = "kitty";
     };
     systemPackages = with pkgs; [
+      bluez
+      bluez-utils
       kdePackages.dolphin
       lutris
       heroic
@@ -66,6 +68,7 @@
       jetbrains.webstorm
       jetbrains.pycharm-community
       nwg-look
+      pamixer
       (import ./rebuild.nix {inherit pkgs;})
       (import ./autogit.nix {inherit pkgs;})
     ];
