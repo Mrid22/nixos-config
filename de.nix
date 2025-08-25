@@ -44,7 +44,7 @@
           font-family: Source Code Pro;
         }
         window#waybar {
-          background: #16191C;
+          background: rgba(0,0,0,0.5);
           color: #AAB2BF;
         }
         #workspaces button {
