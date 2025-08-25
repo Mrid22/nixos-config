@@ -63,6 +63,8 @@
       pavucontrol
       wf-recorder
       godot_4
+      jetbrains.webstorm
+      jetbrains.pycharm-community
       (import ./rebuild.nix {inherit pkgs;})
       (import ./autogit.nix {inherit pkgs;})
     ];
