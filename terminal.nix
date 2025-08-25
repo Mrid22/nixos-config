@@ -64,6 +64,7 @@
     nh = {
       enable = true;
       flake = "/etc/nixos/nixos-config/";
+      clean.enable = true;
     };
 
     yazi.enable = true;
