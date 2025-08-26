@@ -43,7 +43,7 @@
   programs = {
     plasma = {
       enable = true;
-      workspace.colorScheme = "LayanDark";
+      workspace.colorScheme = "Layan";
     };
     waybar = {
       enable = true;
