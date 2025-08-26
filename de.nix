@@ -11,12 +11,6 @@
       package = pkgs.layan-gtk-theme;
     };
   };
-  qt = {
-    enable = true;
-    style = {
-      name = "kvantum";
-    };
-  };
   services = {
     swww.enable = true;
     swaync.enable = true;
