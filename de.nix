@@ -4,15 +4,17 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.plasma-manager.homeManagerModules.plasma-manager
-  ];
   gtk = {
     enable = true;
     theme = {
       name = "Layan Dark";
       package = pkgs.layan-gtk-theme;
     };
+  };
+  qt = {
+    enable = true;
+    style = "kvantum";
+    platformTheme = "gnome"
   };
   services = {
     swww.enable = true;
@@ -41,10 +43,6 @@
     };
   };
   programs = {
-    plasma = {
-      enable = true;
-      workspace.colorScheme = "Layan";
-    };
     waybar = {
       enable = true;
       systemd.enable = true;

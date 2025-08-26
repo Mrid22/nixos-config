@@ -51,7 +51,6 @@
 
   services = {
     displayManager.gdm.enable = true;
-    desktopManager.plasma6.enable = true;
     udisks2.enable = true;
     upower.enable = true;
     power-profiles-daemon.enable = true;
