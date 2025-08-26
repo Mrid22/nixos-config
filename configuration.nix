@@ -49,6 +49,7 @@
       bluez
       bluez-tools
       kdePackages.dolphin
+      nautilus
       lutris
       heroic
       brightnessctl
