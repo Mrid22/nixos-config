@@ -15,7 +15,6 @@
     enable = true;
     style = {
       name = "kvantum";
-      package = pkgs.qt6Packages.qtstyleplugin-kvantum;
     };
   };
   services = {
