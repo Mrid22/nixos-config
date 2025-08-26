@@ -115,7 +115,7 @@
         download-dir = "/media/downloads";
       };
     };
-    plex = {
+    jellyfin = {
       enable = true;
       openFirewall = true;
     };
