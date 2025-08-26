@@ -14,7 +14,7 @@
   qt = {
     enable = true;
     style = "kvantum";
-    platformTheme = "gnome"
+    platformTheme = "gnome";
   };
   services = {
     swww.enable = true;
