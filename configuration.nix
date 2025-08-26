@@ -59,6 +59,7 @@
       nodejs
       pnpm
       lunar-client
+      jellyfin-media-player
       mangohud
       protonup
       pavucontrol
