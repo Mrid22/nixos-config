@@ -114,7 +114,7 @@
       };
     };
     jellyfin = {
-      enable = false;
+      enable = true;
       openFirewall = true;
     };
     tailscale = {
