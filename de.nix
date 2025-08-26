@@ -13,8 +13,10 @@
   };
   qt = {
     enable = true;
-    style = "kvantum";
-    platformTheme = "gnome";
+    style = {
+      name = "kvantum";
+      package = pkgs.qt6Packages.qtstlyleplugin-kvantum;
+    };
   };
   services = {
     swww.enable = true;
