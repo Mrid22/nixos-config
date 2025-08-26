@@ -50,6 +50,8 @@
   };
 
   services = {
+    xserver.desktopManager.kodi.enable = true;
+    displayManager.autoLogin.user = "kodi";
     homepage-dashboard = {
       enable = true;
       openFirewall = true;
