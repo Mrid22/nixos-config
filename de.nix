@@ -14,9 +14,8 @@
   services = {
     swww.enable = true;
     swaync.enable = true;
-    wluma = {
+    swayosd = {
       enable = true;
-      systemd.enable = true;
     };
     hyprsunset = {
       enable = true;
