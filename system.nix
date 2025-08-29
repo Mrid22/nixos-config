@@ -21,8 +21,6 @@
     networkmanager.enable = true;
   };
 
-  sound.enable = true;
-
   # Locale
   time.timeZone = "Europe/Amsterdam";
   i18n = {
@@ -63,11 +61,13 @@
 
     pipewire = {
       enable = true;
+      audio.enable = true;
       alsa = {
         enable = true;
         support32Bit = true;
       };
       pulse.enable = true;
+      wireplumber.enable
     };
 
     keyd = {
