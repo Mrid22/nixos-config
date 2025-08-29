@@ -20,7 +20,6 @@
     };
   };
 
-  virtualisation.virtualbox.host.enable = true;
   services.blueman.enable = true;
 
   programs = {
@@ -65,10 +64,9 @@
       pavucontrol
       wf-recorder
       godot_4
-      jetbrains.webstorm
-      jetbrains.pycharm-community
       nwg-look
       pamixer
+      git
       (import ./rebuild.nix {inherit pkgs;})
       (import ./autogit.nix {inherit pkgs;})
     ];
