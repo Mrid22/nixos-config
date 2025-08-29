@@ -7,7 +7,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./system.nix
-    ./server.nix
     inputs.home-manager.nixosModules.default
   ];
 
