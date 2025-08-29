@@ -67,7 +67,7 @@
         support32Bit = true;
       };
       pulse.enable = true;
-      wireplumber.enable
+      wireplumber.enable = true;
     };
 
     keyd = {
