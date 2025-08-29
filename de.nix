@@ -16,6 +16,7 @@
     swaync.enable = true;
     swayosd = {
       enable = true;
+      display = "eDP-1";
     };
     hyprsunset = {
       enable = true;
