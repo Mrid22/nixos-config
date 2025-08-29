@@ -21,6 +21,8 @@
     networkmanager.enable = true;
   };
 
+  sound.enable = true;
+
   # Locale
   time.timeZone = "Europe/Amsterdam";
   i18n = {
