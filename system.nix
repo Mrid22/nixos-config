@@ -87,7 +87,6 @@
 
   # Hardware Configuration
   hardware = {
-    pulseaudio.enable = false;
     graphics = {
       enable = true;
       enable32Bit = true;
