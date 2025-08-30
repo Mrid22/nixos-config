@@ -7,7 +7,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./system.nix
-#   ./server.nix
+    #   ./server.nix
     inputs.home-manager.nixosModules.default
   ];
 
@@ -50,7 +50,7 @@
       lutris
       heroic
       brightnessctl
-      kdePackages.ark
+      # kdePackages.ark
       playerctl
       hyprshot
       hyprpicker
@@ -58,7 +58,7 @@
       nodejs
       pnpm
       lunar-client
-      jellyfin-media-player
+      # jellyfin-media-player
       mangohud
       protonup
       pavucontrol
