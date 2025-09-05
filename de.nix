@@ -23,6 +23,12 @@
       "$mod" = "ALT";
       bind = [
         "$mod, Q, exec, kitty"
+        # Window Navigation
+        "$mainMod, H, movefocus, l"
+        "$mainMod, J, movefocus, d"
+        "$mainMod, K, movefocus, u"
+        "$mainMod, L, movefocus, r"
+        "$mainMod, C, killactive"
         # Workspaces
         "$mod, 1, workspace, 1"
         "$mod, 2, workspace, 2"
