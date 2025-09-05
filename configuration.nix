@@ -86,10 +86,7 @@
     xwayland.enable = true; # Xwayland can be disabled.
   };
   
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  }; 
+  programs.neovim.defaultEditor = true;
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
