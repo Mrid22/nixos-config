@@ -11,7 +11,8 @@
     settings = {
       "$mod" = "ALT";
       bind = [
-        "$mainMod, Q, exec, kitty"
+        "$mod, Q, exec, kitty"
+        "$mod, 1, workspace, 1"
       ];
     };
   };
