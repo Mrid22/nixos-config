@@ -2,15 +2,22 @@
   config,
   inputs,
   ...
-}:{
+}: {
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     defaultKeymap = "emacs";
     shellAliases = {
-    "cd"="z";
-    "cdi"="zi";
+      "cd" = "z";
+      "cdi" = "zi";
+    };
+    ohMyZsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "sudo"
+      ];
     };
   };
   programs.kitty = {
@@ -50,5 +57,4 @@
       };
     };
   };
-
 }
