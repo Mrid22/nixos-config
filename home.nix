@@ -5,10 +5,10 @@
   ...
 }: {
   imports = [
+    ./de.nix
     ./terminal.nix
-    ./home.nix
     inputs.zen-browser.homeModules.twilight
-    # inputs.gauntlet.homeManagerModules.default`
+    # inputs.gauntlet.homeManagerModules.default
     inputs.nvf.homeManagerModules.default
   ];
 
