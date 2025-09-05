@@ -47,6 +47,11 @@
           enableFormat = true;
           enableTreesitter = true;
           html.enable = true;
+          nix.enable = true;
+        };
+        lsp = {
+          enable = true;
+          formatOnSave = true;
         };
       };
     };
