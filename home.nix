@@ -5,6 +5,7 @@
    ./terminal.nix
    inputs.zen-browser.homeModules.twilight
   # inputs.gauntlet.homeManagerModules.default`
+  inputs.nvf.homeManagerModules.default
   ];
 
   programs.zen-browser.enable = true;
