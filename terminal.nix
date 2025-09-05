@@ -12,7 +12,7 @@
       "cd" = "z";
       "cdi" = "zi";
     };
-    ohMyZsh = {
+    oh-my-zsh = {
       enable = true;
       plugins = [
         "git"
