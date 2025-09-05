@@ -38,4 +38,17 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/etc/nixos/nixos-config";
   };
+
+  programs.git = {
+    enable = true;
+    userName = "Mrid22";
+    userEmail = "mridulaga@outlook.com";
+    delta.enable = true;
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+    };
+  };
+
 }

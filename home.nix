@@ -13,17 +13,6 @@
  #   service.enable = true;
  #   config = {};
  # };
-  programs.git = {
-    enable = true;
-    userName = "Mrid22";
-    userEmail = "mridulaga@outlook.com";
-    delta.enable = true;
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-    };
-  };
   home.username = "mridula";
   home.homeDirectory = "/home/mridula";
 
@@ -38,4 +27,15 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.nvf = {
+    enable = true;
+    settings = {
+      vim = {
+        viAlias = true;
+	vimAlias = true;
+	lsp.enable = true;
+      };
+    };
+  };
 }
