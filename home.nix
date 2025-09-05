@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./terminal.nix
+    ./home.nix
     inputs.zen-browser.homeModules.twilight
     # inputs.gauntlet.homeManagerModules.default`
     inputs.nvf.homeManagerModules.default
@@ -38,6 +39,10 @@
         viAlias = true;
         vimAlias = true;
         autocomplete.nvim-cmp.enable = true;
+        options = {
+          tabstop = 2;
+          shiftwidth = 2;
+        };
         treesitter = {
           addDefaultGrammars = true;
           autotagHtml = true;
