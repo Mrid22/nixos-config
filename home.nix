@@ -1,19 +1,22 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
-   ./terminal.nix
-   inputs.zen-browser.homeModules.twilight
-  # inputs.gauntlet.homeManagerModules.default`
-  inputs.nvf.homeManagerModules.default
+    ./terminal.nix
+    inputs.zen-browser.homeModules.twilight
+    # inputs.gauntlet.homeManagerModules.default`
+    inputs.nvf.homeManagerModules.default
   ];
 
   programs.zen-browser.enable = true;
- # programs.gauntlet = {
- #   enable = true;
- #   service.enable = true;
- #   config = {};
- # };
+  # programs.gauntlet = {
+  #   enable = true;
+  #   service.enable = true;
+  #   config = {};
+  # };
   home.username = "mridula";
   home.homeDirectory = "/home/mridula";
 
@@ -21,7 +24,6 @@
 
   home.packages = [
   ];
-
 
   home.sessionVariables = {
   };
@@ -34,8 +36,8 @@
     settings = {
       vim = {
         viAlias = true;
-	vimAlias = true;
-	autocomplete.nvim-cmp.enable = true;
+        vimAlias = true;
+        autocomplete.nvim-cmp.enable = true;
         treesitter = {
           addDefaultGrammars = true;
           autotagHtml = true;
@@ -52,6 +54,7 @@
         lsp = {
           enable = true;
           formatOnSave = true;
+          lspkind.enable = true;
         };
       };
     };
