@@ -35,7 +35,19 @@
       vim = {
         viAlias = true;
 	vimAlias = true;
-	lsp.enable = true;
+	autocomplete.nvim-cmp.enable = true;
+        treesitter = {
+          addDefaultGrammars = true;
+          autotagHtml = true;
+          context.enable = true;
+        };
+        languages = {
+          enableDAP = true;
+          enableExtraDiagnostics = true;
+          enableFormat = true;
+          enableTreesitter = true;
+          html.enable = true;
+        };
       };
     };
   };
