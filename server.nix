@@ -12,11 +12,12 @@
     ];
   };
 
-  networking = {
-    useDHCP = false;
-    nameservers = ["1.1.1.1"];
-  };
+  networking.firewall.checkReversePath = false;
 
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+    protonvpn-gui
+  ];
   virtualisation = {
     docker = {
       enable = true;
