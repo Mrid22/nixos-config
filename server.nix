@@ -14,7 +14,7 @@
 
   networking = {
     useDHCP = false;
-    nameservers = ["1.1.1.1"];
+    # nameservers = ["1.1.1.1"];
   };
 
   virtualisation = {
