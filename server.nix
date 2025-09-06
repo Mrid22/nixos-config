@@ -12,7 +12,10 @@
     ];
   };
 
-  networking.nameservers = [ "1.1.1.1" ];
+  networking = {
+    useDHCP = false;
+    nameservers = ["1.1.1.1"];
+  };
 
   virtualisation = {
     docker = {
