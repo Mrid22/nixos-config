@@ -10,6 +10,7 @@
     systemd.enable = true;
     xwayland.enable = true;
     settings = {
+      exec-once = ["swww-daemon"];
       general = {
         gaps_in = 5;
         gaps_out = 5;
