@@ -41,10 +41,11 @@
           viAlias = true;
           vimAlias = true;
           withNodeJs = true;
+          lineNumberMode = "none";
           telescope.enable = true;
           statusline.lualine.enable = true;
           autocomplete.nvim-cmp.enable = true;
-          lineNumberMode = "none";
+          ui.fastaction.enable = true;
           options = {
             tabstop = 2;
             shiftwidth = 2;
