@@ -1,16 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./server.nix
-      inputs.home-manager.nixosModules.default
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./server.nix
+    inputs.home-manager.nixosModules.default
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -46,8 +47,8 @@
     LC_TELEPHONE = "nl_NL.UTF-8";
     LC_TIME = "nl_NL.UTF-8";
   };
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -60,7 +61,7 @@
     keyboards = {
       # The name is just the name of the configuration file, it does not really matter
       default = {
-        ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
+        ids = ["*"]; # what goes into the [id] section, here we select all keyboards
         # Everything but the ID section:
         settings = {
           # The main layer, if you choose to declare it in Nix
@@ -69,8 +70,8 @@
           };
         };
       };
+    };
   };
-};
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -85,11 +86,21 @@
     withUWSM = true; # recommended for most users
     xwayland.enable = true; # Xwayland can be disabled.
   };
-  
+
   programs.neovim.defaultEditor = true;
 
+  fonts = {
+    fontDir = {
+      enable = true;
+      decompressFonts = true;
+    };
+    packages = with pkgs; [
+      nerd-fonts.fira-code
+    ];
+  };
+
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "mridula" = import ./home.nix;
     };
@@ -122,10 +133,10 @@
   users.users.mridula = {
     isNormalUser = true;
     description = "Mridul Agarwal";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -138,9 +149,9 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  ntfs3g
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    ntfs3g
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -169,5 +180,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
