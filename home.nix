@@ -51,6 +51,12 @@
           autotagHtml = true;
           context.enable = true;
         };
+        theme = {
+          enable = true;
+          name = "tokyonight";
+          style = "storm";
+          transparent = true;
+        };
         languages = {
           enableDAP = true;
           enableExtraDiagnostics = true;
