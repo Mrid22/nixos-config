@@ -38,6 +38,7 @@
       vim = {
         viAlias = true;
         vimAlias = true;
+        withNodeJs = true;
         autocomplete.nvim-cmp.enable = true;
         lineNumberMode = "none";
         options = {
@@ -54,8 +55,12 @@
           enableExtraDiagnostics = true;
           enableFormat = true;
           enableTreesitter = true;
+          # Languages
           html.enable = true;
           nix.enable = true;
+          css.enable = true;
+          ts.enable = true;
+          tailwind.enable = true;
         };
         lsp = {
           enable = true;
