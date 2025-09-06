@@ -39,6 +39,7 @@
         viAlias = true;
         vimAlias = true;
         withNodeJs = true;
+        statusline.lualine.enable = true;
         autocomplete.nvim-cmp.enable = true;
         lineNumberMode = "none";
         options = {
