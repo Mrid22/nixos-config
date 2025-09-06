@@ -10,6 +10,7 @@
     inputs.zen-browser.homeModules.twilight
     # inputs.gauntlet.homeManagerModules.default
     inputs.nvf.homeManagerModules.default
+    inputs.vicinae.homeManagerModules.default
   ];
   home = {
     # programs.gauntlet = {
@@ -27,6 +28,11 @@
 
     sessionVariables = {
     };
+  };
+
+  services.vicinae = {
+    enable = true;
+    autoStart = true;
   };
 
   programs = {
