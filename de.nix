@@ -56,6 +56,7 @@
       bind = [
         "$mod, Q, exec, kitty"
         "$mod, F, exec, zen"
+        "$mod, SPACE, exec, vicinae"
 
         # Window Navigation
         "$mod, H, movefocus, l"
