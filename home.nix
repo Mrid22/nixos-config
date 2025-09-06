@@ -28,6 +28,7 @@
     sessionVariables = {
     };
   };
+
   programs = {
     zen-browser.enable = true;
 
@@ -45,7 +46,6 @@
           telescope.enable = true;
           statusline.lualine.enable = true;
           autocomplete.nvim-cmp.enable = true;
-          ui.fastaction.enable = true;
           options = {
             tabstop = 2;
             shiftwidth = 2;
@@ -77,6 +77,7 @@
             enable = true;
             formatOnSave = true;
             lspkind.enable = true;
+            lspsaga.enable = true;
           };
         };
       };
