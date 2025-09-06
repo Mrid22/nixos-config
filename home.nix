@@ -39,6 +39,7 @@
         viAlias = true;
         vimAlias = true;
         autocomplete.nvim-cmp.enable = true;
+        lineNumberMode = "none";
         options = {
           tabstop = 2;
           shiftwidth = 2;
