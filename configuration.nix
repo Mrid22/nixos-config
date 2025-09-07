@@ -24,20 +24,11 @@
     enable = true;
     powerOnBoot = true;
   };
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
+  networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -53,45 +44,67 @@
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
-
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.tlp.enable = true;
-  services.xserver.enable = true;
-  services.blueman.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      # The name is just the name of the configuration file, it does not really matter
-      default = {
-        ids = ["*"]; # what goes into the [id] section, here we select all keyboards
-        # Everything but the ID section:
-        settings = {
-          # The main layer, if you choose to declare it in Nix
-          main = {
-            capslock = "overload(control, esc)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+  services = {
+    tlp.enable = true;
+    blueman.enable = true;
+    displayManager.gdm.enable = true;
+    keyd = {
+      enable = true;
+      keyboards = {
+        # The name is just the name of the configuration file, it does not really matter
+        default = {
+          ids = ["*"]; # what goes into the [id] section, here we select all keyboards
+          # Everything but the ID section:
+          settings = {
+            # The main layer, if you choose to declare it in Nix
+            main = {
+              capslock = "overload(control, esc)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+            };
           };
         };
       };
     };
-  };
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-  services.udisks2.enable = true;
-  programs.gnome-disks.enable = true;
-  programs.zsh.enable = true;
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true; # recommended for most users
-    xwayland.enable = true; # Xwayland can be disabled.
-  };
+    # Configure keymap in X11
+    xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
+    udisks2.enable = true;
 
-  programs.neovim.defaultEditor = true;
+    # Enable CUPS to print documents.
+    printing.enable = true;
+
+    # Enable sound with pipewire.
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
+      # If you want to use JACK applications, uncomment this
+      #jack.enable = true;
+
+      # use the example session manager (no others are packaged yet so this is enabled by default,
+      # no need to redefine it in your config for now)
+      #media-session.enable = true;
+    };
+  };
+  programs = {
+    gnome-disks.enable = true;
+    zsh.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true; # recommended for most users
+      xwayland.enable = true; # Xwayland can be disabled.
+    };
+
+    neovim.defaultEditor = true;
+
+    # Install firefox.
+  };
 
   fonts = {
     fontDir = {
@@ -109,43 +122,18 @@
       "mridula" = import ./home.nix;
     };
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.mridula = {
+      isNormalUser = true;
+      description = "Mridul Agarwal";
+      extraGroups = ["networkmanager" "wheel"];
+      packages = with pkgs; [
+        playerctl
+      ];
+    };
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.defaultUserShell = pkgs.zsh;
-  users.users.mridula = {
-    isNormalUser = true;
-    description = "Mridul Agarwal";
-    extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      kdePackages.kate
-      #  thunderbird
-    ];
-  };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
