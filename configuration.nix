@@ -131,6 +131,7 @@
       extraGroups = ["networkmanager" "wheel"];
       packages = with pkgs; [
         playerctl
+        kdePackages.kio-fuse
       ];
     };
   };
