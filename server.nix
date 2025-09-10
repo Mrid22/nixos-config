@@ -20,5 +20,9 @@
       enable = true;
       openFirewall = true;
     };
+    flaresolverr = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }
