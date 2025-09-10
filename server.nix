@@ -24,5 +24,11 @@
       enable = true;
       openFirewall = true;
     };
+    transmission = {
+      enable = true;
+      openFirewall = true;
+      settings.download-dir = "/media/downloads";
+      downloadDirPermissions = "770";
+    };
   };
 }
