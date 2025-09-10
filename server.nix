@@ -11,8 +11,14 @@
       "nofail"
     ];
   };
-  services.sonarr = {
-    enable = true;
-    openFirewall = true;
+  services = {
+    sonarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    prowlarr = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }
