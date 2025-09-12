@@ -97,6 +97,10 @@
   programs = {
     gnome-disks.enable = true;
     zsh.enable = true;
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
     hyprland = {
       enable = true;
       withUWSM = true; # recommended for most users
