@@ -4,7 +4,10 @@
   inputs,
   ...
 }: {
-  services.swww.enable = true;
+  services = {
+    swww.enable = true;
+    swaync.enable = true;
+  };
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
