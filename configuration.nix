@@ -148,6 +148,8 @@
     wireguard-tools
     protonvpn-gui
     ntfs3g
+    nwg-look
+    layan-gtk-theme
   ];
 
   system.stateVersion = "25.05";
