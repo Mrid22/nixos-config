@@ -30,5 +30,9 @@
       settings.download-dir = "/media/downloads";
       downloadDirPermissions = "770";
     };
+    jellyfin = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }
