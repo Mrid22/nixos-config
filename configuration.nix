@@ -149,6 +149,7 @@
     protonvpn-gui
     ntfs3g
     nwg-look
+    spotdl
     layan-gtk-theme
   ];
 
