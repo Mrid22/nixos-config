@@ -54,7 +54,8 @@
         ];
       };
 
-      # Keybinds
+      # Input and Key binds
+      input.touchpad.natural_scroll = true;
       "$mod" = "ALT";
       bind = [
         "$mod, Q, exec, kitty"
