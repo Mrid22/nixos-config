@@ -1,6 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   pkgs,
@@ -50,8 +47,7 @@
         variant = "";
       };
     };
-
-    # Enable the GNOME Desktop Environment.
+    udisks2.enable = true;
     displayManager.gdm.enable = true;
     keyd = {
       enable = true;
@@ -106,6 +102,7 @@
   };
   programs = {
     firefox.enable = true;
+    gnome-disks.enable = true;
     zsh.enable = true;
     hyprland.enable = true;
     neovim = {
