@@ -1,7 +1,10 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [inputs.nvf.homeManagerModules.default];
+  imports = [
+  ./terminal.nix
+  inputs.nvf.homeManagerModules.default
+  ];
   home.username = "mridula";
   home.homeDirectory = "/home/mridula";
 
@@ -165,15 +168,6 @@
   ];
 
   # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "Mrid22";
-    userEmail = "mridulaga@outlook.com";
-    delta.enable = true;
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
 
 programs.zsh = {
   enable = true;
