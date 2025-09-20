@@ -80,11 +80,8 @@
     #
     # it provides the command `nom` works just like `nix`
     # with more details log output
-    nix-output-monitor
 
     # productivity
-    hugo # static site generator
-    glow # markdown previewer in terminal
 
     btop  # replacement of htop/nmon
     iotop # io monitoring
@@ -116,7 +113,15 @@
 programs.zsh = {
   enable = true;
   autocd = true;
-  syntakHighlighting.enable = true;
+  syntaxHighlighting.enable = true;
+};
+
+programs.kitty = {
+  enable = true;
+  shellIntegration.enableZshIntegration = true;
+  settings = {
+    background_opacity = 0.5;
+  };
 };
   # starship - an customizable prompt for any shell
 
