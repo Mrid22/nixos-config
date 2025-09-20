@@ -114,16 +114,16 @@
         "ALT, 9, workspace, 9"
         "ALT, 0, workspace, 10"
 
-        "ALT, 1, movetoworkspace, 1"
-        "ALT, 2, movetoworkspace, 2"
-        "ALT, 3, movetoworkspace, 3"
-        "ALT, 4, movetoworkspace, 4"
-        "ALT, 5, movetoworkspace, 5"
-        "ALT, 6, movetoworkspace, 6"
-        "ALT, 7, movetoworkspace, 7"
-        "ALT, 8, movetoworkspace, 8"
-        "ALT, 9, movetoworkspace, 9"
-        "ALT, 0, movetoworkspace, 10"
+        "ALT SHIFT, 1, movetoworkspace, 1"
+        "ALT SHIFT, 2, movetoworkspace, 2"
+        "ALT SHIFT, 3, movetoworkspace, 3"
+        "ALT SHIFT, 4, movetoworkspace, 4"
+        "ALT SHIFT, 5, movetoworkspace, 5"
+        "ALT SHIFT, 6, movetoworkspace, 6"
+        "ALT SHIFT, 7, movetoworkspace, 7"
+        "ALT SHIFT, 8, movetoworkspace, 8"
+        "ALT SHIFT, 9, movetoworkspace, 9"
+        "ALT SHIFT, 0, movetoworkspace, 10"
       ];
       input = {
         follow_mouse = 1;
