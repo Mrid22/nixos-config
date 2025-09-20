@@ -8,8 +8,35 @@
     ./terminal.nix
     inputs.nvf.homeManagerModules.default
   ];
-  home.username = "mridula";
-  home.homeDirectory = "/home/mridula";
+  home = {
+    username = "mridula";
+    homeDirectory = "/home/mridula";
+
+    # Packages that should be installed to the user profile.
+    packages = with pkgs; [
+      zip
+      xz
+      unzip
+      p7zip
+
+      # utils
+      ripgrep # recursively searches directories for a regex pattern
+      jq # A lightweight and flexible command-line JSON processor
+      yq-go # yaml processor https://github.com/mikefarah/yq
+      eza # A modern replacement for ‘ls’
+      fzf # A command-line fuzzy finder
+
+      which
+      tree
+      gnused
+      gnutar
+      gawk
+      zstd
+      gnupg
+    ];
+
+    stateVersion = "25.05";
+  };
 
   xresources.properties = {
     "Xcursor.size" = 16;
@@ -105,29 +132,6 @@
     };
   };
 
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    zip
-    xz
-    unzip
-    p7zip
-
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-    jq # A lightweight and flexible command-line JSON processor
-    yq-go # yaml processor https://github.com/mikefarah/yq
-    eza # A modern replacement for ‘ls’
-    fzf # A command-line fuzzy finder
-
-    which
-    tree
-    gnused
-    gnutar
-    gawk
-    zstd
-    gnupg
-  ];
-
   programs.nvf = {
     enable = true;
     settings.vim = {
@@ -151,6 +155,4 @@
       };
     };
   };
-
-  home.stateVersion = "25.05";
 }
