@@ -32,6 +32,10 @@
     xwayland.enable = true;
     settings = {
       bind = ["ALT,Q,exec,kitty" "ALT,C, killactive"];
+      input = {
+        follow_mouse = 1;
+	touchpad.natural_scroll = true;
+      };
     };
   };
 
