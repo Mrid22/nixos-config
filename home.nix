@@ -162,7 +162,7 @@ programs.zsh = {
 programs.nh = {
   enable = true;
   clean.enable = true;
-  flake = "~/nixos-config";
+  flake = "/home/mridula/nixos-config";
 };
 
 programs.kitty = {
