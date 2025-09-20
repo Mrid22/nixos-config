@@ -34,7 +34,7 @@
     nh = {
       enable = true;
       clean.enable = true;
-      flake = "/home/mridula/nixos-config";
+      flake = "/home/mridula/.config/home-manager";
     };
 
     kitty = {
