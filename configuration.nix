@@ -51,7 +51,19 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            capslock = "overload(control, esc)";
+          };
+        };
+      };
+    };
+  };
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
