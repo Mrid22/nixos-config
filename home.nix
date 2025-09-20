@@ -136,6 +136,11 @@
     enable = true;
     settings.vim = {
       lineNumberMode = "none";
+      options = {
+        tabstop = 2;
+        softtabstop = 2;
+        shiftwidth = 2;
+      };
       theme = {
         enable = true;
         transparent = true;
@@ -151,6 +156,7 @@
         enableDAP = true;
         enableFormat = true;
         enableTreesitter = true;
+        # Languages
         nix.enable = true;
       };
     };
