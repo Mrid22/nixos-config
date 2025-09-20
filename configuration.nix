@@ -1,14 +1,16 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -27,7 +29,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
@@ -55,7 +57,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
     enable = true;
     keyboards = {
       default = {
-        ids = [ "*" ];
+        ids = ["*"];
         settings = {
           main = {
             capslock = "overload(control, esc)";
@@ -99,9 +101,9 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   users.users.mridula = {
     isNormalUser = true;
     description = "Mridul Agarwal";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -117,10 +119,10 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  git
-  proton-authenticator
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    git
+    proton-authenticator
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -149,5 +151,4 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
