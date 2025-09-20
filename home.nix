@@ -32,6 +32,7 @@
       gawk
       zstd
       gnupg
+      nwg-look
     ];
 
     stateVersion = "25.05";
