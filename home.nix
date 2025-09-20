@@ -159,6 +159,12 @@ programs.zsh = {
   };
 };
 
+programs.nh = {
+  enable = true;
+  clean.enable = true;
+  flake = "~/nixos-config";
+};
+
 programs.kitty = {
   enable = true;
   shellIntegration.enableZshIntegration = true;
