@@ -51,7 +51,6 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -61,7 +60,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  services.blueman.enable = true;
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
