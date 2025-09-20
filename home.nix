@@ -147,7 +147,7 @@
       enable = true;
       enableZshIntegration = true;
       package = pkgs.eww-wayland;
-      configDir = ../eww
+      configDir = ../eww;
     };
     nvf = {
       enable = true;
