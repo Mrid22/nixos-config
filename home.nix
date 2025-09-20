@@ -40,7 +40,6 @@
       decoration = {
         rounding = 10;
 	blur = {
-          k = true;
 	  size = 3;
 	  passes = 1;
 	  vibrancy = 0.1696;
