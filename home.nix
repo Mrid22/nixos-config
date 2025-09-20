@@ -180,10 +180,6 @@ programs.atuin = {
 programs.zoxide = {
   enable = true;
   enableZshIntegration = true;
-  options = [
-    "--no-cmd"
-    "--cmd cd"
-  ];
 };
   # starship - an customizable prompt for any shell
 
