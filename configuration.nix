@@ -91,7 +91,9 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.defaultUserShell = pkgs.zsh;
   users.users.mridula = {
