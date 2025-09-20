@@ -178,7 +178,7 @@ programs.zoxide = {
   enableZshIntegration = true;
   options = [
     "--no-cmd"
-    "cmd cd"
+    "--cmd cd"
   ];
 };
   # starship - an customizable prompt for any shell
