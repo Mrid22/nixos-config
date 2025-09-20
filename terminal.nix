@@ -1,7 +1,8 @@
 {
 config,
 pkgs,
-inputs
+inputs,
+...
 }:{
   programs.git = {
     enable = true;
