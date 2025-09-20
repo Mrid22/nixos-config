@@ -127,10 +127,13 @@
   ];
 
 programs.nvf = {
-  vim = {
+  enable = true;
+  settings.vim = {
+    lineNumbuerMode = "none";
+    statusline.lualine.enable = true;
     theme = {
       enable = true;
-      transprent = true;
+      transparent = true;
       name = "tokyonight";
       style = "night";
     };
