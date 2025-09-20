@@ -41,6 +41,7 @@
     };
   };
   services = {
+    tlp.enable = true;
     xserver = {
       enable = true;
       xkb = {
