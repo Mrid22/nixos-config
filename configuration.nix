@@ -102,7 +102,6 @@
     };
   };
   programs = {
-    firefox.enable = true;
     gnome-disks.enable = true;
     zsh.enable = true;
     hyprland.enable = true;
