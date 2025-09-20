@@ -57,8 +57,39 @@
 	];
       };
       bind = [
+        #Apps
         "ALT,Q,exec,kitty"
+
+	# Windows
+	"ALT,H,movefocus,l"
+	"ALT,J,movefocus,d"
+	"ALT,K,movefocus,u"
+	"ALT,L,movefocus,r"
+
       	"ALT,C, killactive"
+
+	# Workspaces
+	"ALT, 1, workspace, 1"
+	"ALT, 2, workspace, 2"
+	"ALT, 3, workspace, 3"
+	"ALT, 4, workspace, 4"
+	"ALT, 5, workspace, 5"
+	"ALT, 6, workspace, 6"
+	"ALT, 7, workspace, 7"
+	"ALT, 8, workspace, 8"
+	"ALT, 9, workspace, 9"
+	"ALT, 0, workspace, 10"
+
+	"ALT, 1, movetoworkspace, 1"
+	"ALT, 2, movetoworkspace, 2"
+	"ALT, 3, movetoworkspace, 3"
+	"ALT, 4, movetoworkspace, 4"
+	"ALT, 5, movetoworkspace, 5"
+	"ALT, 6, movetoworkspace, 6"
+	"ALT, 7, movetoworkspace, 7"
+	"ALT, 8, movetoworkspace, 8"
+	"ALT, 9, movetoworkspace, 9"
+	"ALT, 0, movetoworkspace, 10"
       ];
       input = {
         follow_mouse = 1;
