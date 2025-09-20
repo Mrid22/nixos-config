@@ -130,12 +130,18 @@ programs.nvf = {
   enable = true;
   settings.vim = {
     lineNumberMode = "none";
-    statusline.lualine.enable = true;
     theme = {
       enable = true;
       transparent = true;
       name = "tokyonight";
       style = "night";
+    };
+    statusline.lualine.enable = true;
+    languages = {
+      enableDAP = true;
+      enableFormat = true;
+      enableTreesitter = true;
+      nix.enable = true;
     };
   };
 };
