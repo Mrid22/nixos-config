@@ -31,7 +31,15 @@
     systemd.enable = true;
     xwayland.enable = true;
     settings = {
-      bind = ["ALT,Q,exec,kitty" "ALT,C, killactive"];
+      general = {
+        gaps_in = 5;
+	gaps_out = 5;
+	border_size = 0;
+      };
+      bind = [
+        "ALT,Q,exec,kitty"
+      	"ALT,C, killactive"
+      ];
       input = {
         follow_mouse = 1;
 	touchpad.natural_scroll = true;
