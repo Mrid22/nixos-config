@@ -35,9 +35,9 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
+              backupFileExtension = "bak";
 
               users.mridula = import ./home.nix;
-              backupFileExtension = "bak";
             };
           }
         ];
