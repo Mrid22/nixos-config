@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
   hardware.bluetooth = {
     enable = true;
-    poerOnBoot = true;
+    powerOnBoot = true;
   };
 
   networking.hostName = "nixos"; # Define your hostname.
