@@ -1,26 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # TODO please change the username & home directory to your own
   home.username = "mridula";
   home.homeDirectory = "/home/mridula";
 
-  # link the configuration file in current directory to the specified location in home directory
-  # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
-
-  # link all files in `./scripts` to `~/.config/i3/scripts`
-  # home.file.".config/i3/scripts" = {
-  #   source = ./scripts;
-  #   recursive = true;   # link recursively
-  #   executable = true;  # make all files executable
-  # };
-
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-
-  # set cursor size and dpi for 4k monitor
   xresources.properties = {
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
@@ -183,6 +166,20 @@ programs.kitty = {
 programs.oh-my-posh = {
   enable = true;
   enableZshIntegration = true;
+};
+
+programs.atuin = {
+  enable = true;
+  enableZshIntegration = true;
+};
+
+programs.zoxide = {
+  enable = true;
+  enableZshIntegration = true;
+  options = [
+    "--no-cmd"
+    "cmd=cd"
+  ];
 };
   # starship - an customizable prompt for any shell
 
