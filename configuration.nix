@@ -78,6 +78,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.defaultUserShell = pkgs.zsh
   users.users.mridula = {
     isNormalUser = true;
     description = "Mridul Agarwal";
