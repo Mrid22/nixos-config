@@ -7,24 +7,23 @@
   imports = [
     ./terminal.nix
     inputs.nvf.homeManagerModules.default
+    inputs.zen-browser.homeModules.twilight
   ];
   home = {
     username = "mridula";
     homeDirectory = "/home/mridula";
 
-    # Packages that should be installed to the user profile.
     packages = with pkgs; [
       zip
       xz
       unzip
       p7zip
 
-      # utils
-      ripgrep # recursively searches directories for a regex pattern
-      jq # A lightweight and flexible command-line JSON processor
-      yq-go # yaml processor https://github.com/mikefarah/yq
-      eza # A modern replacement for ‘ls’
-      fzf # A command-line fuzzy finder
+      ripgrep
+      jq
+      yq-go
+      eza
+      fzf
 
       which
       tree
@@ -131,33 +130,35 @@
       };
     };
   };
-
-  programs.nvf = {
-    enable = true;
-    settings.vim = {
-      lineNumberMode = "none";
-      options = {
-        tabstop = 2;
-        softtabstop = 2;
-        shiftwidth = 2;
-      };
-      theme = {
-        enable = true;
-        transparent = true;
-        name = "tokyonight";
-        style = "night";
-      };
-      statusline.lualine.enable = true;
-      lsp = {
-        enable = true;
-        formatOnSave = true;
-      };
-      languages = {
-        enableDAP = true;
-        enableFormat = true;
-        enableTreesitter = true;
-        # Languages
-        nix.enable = true;
+  programs = {
+    zen-browser.enable = true;
+    nvf = {
+      enable = true;
+      settings.vim = {
+        lineNumberMode = "none";
+        options = {
+          tabstop = 2;
+          softtabstop = 2;
+          shiftwidth = 2;
+        };
+        theme = {
+          enable = true;
+          transparent = true;
+          name = "tokyonight";
+          style = "night";
+        };
+        statusline.lualine.enable = true;
+        lsp = {
+          enable = true;
+          formatOnSave = true;
+        };
+        languages = {
+          enableDAP = true;
+          enableFormat = true;
+          enableTreesitter = true;
+          # Languages
+          nix.enable = true;
+        };
       };
     };
   };
