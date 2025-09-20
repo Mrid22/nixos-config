@@ -31,7 +31,7 @@
     systemd.enable = true;
     xwayland.enable = true;
     settings = {
-      bind = ["ALT,Q,exec,kitty"];
+      bind = ["ALT,Q,exec,kitty" "ALT,C, killactive"];
     };
   };
 
@@ -105,6 +105,7 @@
     enable = true;
     userName = "Mrid22";
     userEmail = "mridulaga@outlook.com";
+    delta.enable = true;
     extraConfig = {
       init.defaultBranch = "main";
     };
@@ -113,7 +114,13 @@
 programs.zsh = {
   enable = true;
   autocd = true;
+  defaultKeymap = "emacs";
   syntaxHighlighting.enable = true;
+  autoSuggestion.enable = true;
+  oh-my-zsh = {
+    enable = true;
+    plugins = ["git" "sudo"];
+  };
 };
 
 programs.kitty = {
@@ -122,6 +129,11 @@ programs.kitty = {
   settings = {
     background_opacity = 0.5;
   };
+};
+
+programs.oh-my-posh = {
+  enable = true;
+  enableZshIntegration = true;
 };
   # starship - an customizable prompt for any shell
 
