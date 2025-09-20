@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [inputs.nvf.homeManagerModules.default];
   home.username = "mridula";
   home.homeDirectory = "/home/mridula";
 
