@@ -137,6 +137,10 @@ programs.nvf = {
       style = "night";
     };
     statusline.lualine.enable = true;
+    lsp = {
+      enable = true;
+      formatOnSave = true;
+    };
     languages = {
       enableDAP = true;
       enableFormat = true;
