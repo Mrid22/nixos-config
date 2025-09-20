@@ -22,20 +22,11 @@
   };
   networking = {
     hostName = "nixos"; # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-    # Configure network proxy if necessary
-    # networking.proxy.default = "http://user:password@proxy:port/";
-    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-    # Enable networking
     networkmanager.enable = true;
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
   i18n = {
-    # Select internationalisation properties.
     defaultLocale = "en_US.UTF-8";
 
     extraLocaleSettings = {
@@ -47,14 +38,12 @@
       LC_NUMERIC = "nl_NL.UTF-8";
       LC_PAPER = "nl_NL.UTF-8";
       LC_TELEPHONE = "nl_NL.UTF-8";
-      LC_TIME = "nl_NL.UTF-8";
+      LC_TIME = "en_US.UTF-8";
     };
   };
   services = {
     xserver = {
-      # Enable the X11 windowing system.
       enable = true;
-      # Configure keymap in X11
       xkb = {
         layout = "us";
         variant = "";
