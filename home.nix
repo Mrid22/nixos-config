@@ -132,14 +132,14 @@
     };
   };
 
-  gtk = {
-    enable = true;
-    colorScheme = "dark";
-    theme = {
-      name = "Layan Dark";
-      package = pkgs.layan-gtk-theme;
-    };
-  };
+  #  gtk = {
+  #    enable = true;
+  #    colorScheme = "dark";
+  #    theme = {
+  #      name = "Layan Dark";
+  #      package = pkgs.layan-gtk-theme;
+  #    };
+  #  };
 
   programs = {
     zen-browser.enable = true;
