@@ -37,7 +37,7 @@
               extraSpecialArgs = {inherit inputs;};
 
               users.mridula = import ./home.nix;
-              backupFileExtension = ".bak";
+              backupFileExtension = "bak";
             };
           }
         ];
