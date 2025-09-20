@@ -91,6 +91,7 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Install firefox.
   programs.firefox.enable = true;
   programs.zsh.enable = true;
+  programs.hyprland.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
   # Allow unfree packages
