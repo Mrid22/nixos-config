@@ -136,7 +136,7 @@
     enable = true;
     colorScheme = "dark";
     theme = {
-      name = "Layan Dark";
+      name = "Layan-Dark";
       package = pkgs.layan-gtk-theme;
     };
   };
