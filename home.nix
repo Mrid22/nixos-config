@@ -129,7 +129,7 @@
 programs.nvf = {
   enable = true;
   settings.vim = {
-    lineNumbuerMode = "none";
+    lineNumberMode = "none";
     statusline.lualine.enable = true;
     theme = {
       enable = true;
