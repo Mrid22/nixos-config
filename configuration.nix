@@ -23,6 +23,7 @@
   networking = {
     hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true;
+    firewall.checkReversePath = false;
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
   time.timeZone = "Europe/Amsterdam";
@@ -117,6 +118,8 @@
   environment.systemPackages = with pkgs; [
     git
     proton-authenticator
+    wireguard-tools
+    protonvpn-gui
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
