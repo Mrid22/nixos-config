@@ -8,7 +8,6 @@
     ./terminal.nix
     inputs.nvf.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
-    inputs.ags.homeManagerModules.default
   ];
   home = {
     username = "mridula";
@@ -144,10 +143,6 @@
 
   programs = {
     zen-browser.enable = true;
-    ags = {
-      enable = true;
-      configDir = ./ags;
-    };
     nvf = {
       enable = true;
       settings.vim = {
