@@ -149,6 +149,10 @@ programs.zsh = {
   defaultKeymap = "emacs";
   syntaxHighlighting.enable = true;
   autosuggestion.enable = true;
+  shellAliases = {
+    "cd" = "z";
+    "cdi" = "zi";
+  };
   oh-my-zsh = {
     enable = true;
     plugins = ["git" "sudo"];
