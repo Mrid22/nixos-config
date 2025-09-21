@@ -31,7 +31,6 @@
     };
     netbird = {
       enable = true;
-      server.dashboard.enable = true;
     };
     immich = {
       enable = true;
