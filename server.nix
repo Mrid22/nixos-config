@@ -25,5 +25,24 @@
       enable = true;
       openFirewall = true;
     };
+    flaresolverr = {
+      enable = true;
+      openFirewall = true;
+    };
+    immich = {
+      enable = true;
+      openFirewall = true;
+      machine-learning.enable = true;
+      mediaLocation = "/media/photos";
+    };
+    transmission = {
+      enable = true;
+      openFirewall = true;
+      settings = {
+        download-dir = "/media/downloads";
+        incomplete-dir = "/media/incomplete";
+        incomplete-dir-enabled = true;
+      };
+    };
   };
 }
