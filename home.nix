@@ -147,7 +147,6 @@
     eww = {
       enable = true;
       enableZshIntegration = true;
-      package = pkgs.eww-wayland;
     };
     nvf = {
       enable = true;
