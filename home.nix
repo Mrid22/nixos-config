@@ -43,6 +43,15 @@
     "Xft.dpi" = 172;
   };
 
+  services.vicinae = {
+    enable = true;
+    autoStart = true;
+    settings = {
+      popToRootonClose = true;
+      rootSearch.searchFiles = true;
+    };
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
