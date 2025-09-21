@@ -29,10 +29,9 @@
       enable = true;
       openFirewall = true;
     };
-    tailscale = {
+    netbird = {
       enable = true;
-      openFirewall = true;
-      disableTaildrop = true;
+      server.dashboard.enable = true;
     };
     immich = {
       enable = true;
