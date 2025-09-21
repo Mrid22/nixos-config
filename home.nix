@@ -8,7 +8,6 @@
     ./terminal.nix
     inputs.nvf.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
-    inputs.gauntlet.homeManagerModules.default
   ];
   home = {
     username = "mridula";
