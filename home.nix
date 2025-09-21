@@ -185,6 +185,11 @@
           # Languages
           nix.enable = true;
         };
+        extraPlugins = {
+          yuck = {
+            package = pkgs.vimPlugins.yuck-vim;
+          };
+        };
       };
     };
   };
