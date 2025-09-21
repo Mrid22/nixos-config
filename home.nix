@@ -93,6 +93,7 @@
       bind = [
         #Apps
         "ALT,Q,exec,kitty"
+        "ALT,F,exec,zen"
 
         # Windows
         "ALT,H,movefocus,l"
