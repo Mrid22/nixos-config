@@ -162,6 +162,8 @@
       enable = true;
       settings.vim = {
         lineNumberMode = "none";
+        autocomplete.nvim-cmp.enable = true;
+        autopairs.nvim-autopairs.enable = true;
         options = {
           tabstop = 2;
           softtabstop = 2;
@@ -188,6 +190,9 @@
         extraPlugins = {
           yuck = {
             package = pkgs.vimPlugins.yuck-vim;
+          };
+          treesitter-yuck = {
+            package = pkgs.vimPlugins.nvim-treesitter-parsers.yuck;
           };
         };
       };
