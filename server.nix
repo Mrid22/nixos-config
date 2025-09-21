@@ -29,8 +29,9 @@
       enable = true;
       openFirewall = true;
     };
-    netbird = {
+    tailscale = {
       enable = true;
+      openFirewall = true;
     };
     immich = {
       enable = true;
