@@ -29,9 +29,10 @@
       enable = true;
       openFirewall = true;
     };
-    tailscale = {
+    netbird = {
       enable = true;
       useRoutingFeatures = "server";
+      server.dashboard.enable = true;
     };
     immich = {
       enable = true;
