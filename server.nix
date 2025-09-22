@@ -31,6 +31,7 @@
     };
     tailscale = {
       enable = true;
+      useRoutingFeatures = "server";
     };
     immich = {
       enable = true;
