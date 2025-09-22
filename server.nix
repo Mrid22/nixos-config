@@ -31,7 +31,6 @@
     };
     tailscale = {
       enable = true;
-      openFirewall = true;
     };
     immich = {
       enable = true;
