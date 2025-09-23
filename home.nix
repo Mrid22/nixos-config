@@ -188,6 +188,10 @@
           enableTreesitter = true;
           # Languages
           nix.enable = true;
+          markdown = {
+            enable = true;
+            extensions.markview.nvim.enable = true;
+          };
         };
         extraPlugins = {
           yuck = {
