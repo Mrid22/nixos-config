@@ -157,10 +157,6 @@
 
   programs = {
     zen-browser.enable = true;
-    eww = {
-      enable = true;
-      enableZshIntegration = true;
-    };
     nvf = {
       enable = true;
       settings.vim = {
