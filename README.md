@@ -18,5 +18,5 @@ sudo nixos-rebuild switch --flake nixos-config
 ssh-keygen
 wl-copy < ~/.ssh/id_ed25519.pub
 ```
-[Add the key to GitHub](https://www.github.com/Mrid22/settings/keys)
+[Add the key to GitHub](https://www.github.com/settings/keys)
 
