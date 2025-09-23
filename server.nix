@@ -29,11 +29,6 @@
       enable = true;
       openFirewall = true;
     };
-    netbird = {
-      enable = true;
-      useRoutingFeatures = "server";
-      server.dashboard.enable = true;
-    };
     immich = {
       enable = true;
       openFirewall = true;

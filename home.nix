@@ -33,7 +33,6 @@
       gawk
       zstd
       gnupg
-      nwg-look
     ];
 
     stateVersion = "25.05";
@@ -44,12 +43,15 @@
     "Xft.dpi" = 172;
   };
 
-  services.vicinae = {
-    enable = true;
-    autoStart = true;
-    settings = {
-      popToRootonClose = true;
-      rootSearch.searchFiles = true;
+  services = {
+    swww.enable = true;
+    vicinae = {
+      enable = true;
+      autoStart = true;
+      settings = {
+        popToRootonClose = true;
+        rootSearch.searchFiles = true;
+      };
     };
   };
 
