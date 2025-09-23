@@ -117,6 +117,7 @@
     proton-authenticator
     wireguard-tools
     protonvpn-gui
+    wl-clipboard
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
