@@ -1,6 +1,5 @@
 ### Setup Instructions:
-
+#### **`hello_world.js`**
 ```nix
-# configuration.nix
 nix.settings.experimental-features = ["nix-command" "flakes"];
 ```
