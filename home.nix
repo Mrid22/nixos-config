@@ -165,6 +165,7 @@
       enable = true;
       settings.vim = {
         lineNumberMode = "none";
+        telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
         autopairs.nvim-autopairs.enable = true;
         options = {
