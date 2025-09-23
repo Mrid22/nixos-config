@@ -106,6 +106,7 @@
         #Apps
         "ALT,Q,exec,kitty"
         "ALT,F,exec,zen"
+        "ALT,SPACE,exec,vicinae"
 
         # Windows
         "ALT,H,movefocus,l"
