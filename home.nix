@@ -9,6 +9,7 @@
     inputs.nvf.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
     inputs.vicinae.homeManagerModules.default
+    inputs.ags.homeManagerModules.default
   ];
   home = {
     username = "mridula";
@@ -157,6 +158,12 @@
 
   programs = {
     zen-browser.enable = true;
+    ags = {
+      enable = true;
+      extraPackages = with pkgs; [
+        inputs.astal.packages.${system}.battery
+      ];
+    };
     nvf = {
       enable = true;
       settings.vim = {
