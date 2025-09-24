@@ -24,6 +24,7 @@
       shellAliases = {
         "cd" = "z";
         "cdi" = "zi";
+        "ls" = "eza";
       };
       oh-my-zsh = {
         enable = true;
