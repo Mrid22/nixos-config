@@ -160,6 +160,7 @@
     zen-browser.enable = true;
     ags = {
       enable = true;
+      configDir = ./ags;
       extraPackages = with pkgs; [
         inputs.astal.packages.${system}.battery
       ];
