@@ -43,7 +43,6 @@
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
   };
-
   services = {
     swww.enable = true;
     vicinae = {
@@ -158,13 +157,12 @@
 
   programs = {
     zen-browser.enable = true;
-    ags = {
-      enable = true;
-      configDir = ./ags;
-      extraPackages = with pkgs; [
-        inputs.astal.packages.${system}.battery
-      ];
-    };
+    # ags = {
+    #   enable = true;
+    #   extraPackages = with pkgs; [
+    #     inputs.astal.packages.${system}.battery
+    #   ];
+    # };
     nvf = {
       enable = true;
       settings.vim = {
