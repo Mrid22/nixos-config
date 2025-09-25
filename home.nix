@@ -163,9 +163,6 @@
       extraPackages = with pkgs; [
         inputs.astal.packages.${system}.battery
       ];
-      configDir = builtins.path {
-        path = "${./eww}";
-      };
     };
     nvf = {
       enable = true;
