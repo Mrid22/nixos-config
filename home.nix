@@ -157,12 +157,12 @@
 
   programs = {
     zen-browser.enable = true;
-    # ags = {
-    #   enable = true;
-    #   extraPackages = with pkgs; [
-    #     inputs.astal.packages.${system}.battery
-    #   ];
-    # };
+    ags = {
+      enable = true;
+      extraPackages = with pkgs; [
+        inputs.astal.packages.${system}.battery
+      ];
+    };
     nvf = {
       enable = true;
       settings.vim = {
