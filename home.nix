@@ -154,7 +154,7 @@
         search = {
           default = "ddg";
           engines = {
-            nix-packages = {
+            nix-options = {
               name = "NixOS";
               urls = [
                 {
@@ -168,12 +168,11 @@
                 }
               ];
 
-              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
               definedAliases = ["@nx"];
             };
 
             bing.metaData.hidden = true;
-            google.metaData.alias = "@g"; # builtin engines only support specifying one additional alias
+            google.metaData.alias = "@g";
           };
         };
       };
