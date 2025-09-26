@@ -108,6 +108,7 @@
     gnome-disks.enable = true;
     zsh.enable = true;
     hyprland.enable = true;
+    librewolf.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
