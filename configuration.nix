@@ -49,10 +49,6 @@
       };
     };
     udisks2.enable = true;
-    desktopManager.cosmic = {
-      enable = true;
-      xwayland.enable = true;
-    };
     displayManager.gdm.enable = true;
     keyd = {
       enable = true;
