@@ -10,8 +10,11 @@
     ./server.nix
   ];
   boot = {
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    kernelParams = ["snd_hda_intel.power_save=0"];
   };
   hardware.bluetooth = {
     enable = true;
