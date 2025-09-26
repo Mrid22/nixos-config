@@ -43,6 +43,7 @@
     self,
     nixpkgs,
     home-manager,
+    nur,
     ...
   }: {
     nixosConfigurations = {
@@ -52,6 +53,7 @@
         };
         modules = [
           ./configuration.nix
+          nur.modules.nixos.default
           home-manager.nixosModules.home-manager
           {
             home-manager = {

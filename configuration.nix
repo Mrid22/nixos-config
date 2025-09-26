@@ -67,41 +67,27 @@
       };
     };
 
-    # Enable CUPS to print documents.
     printing.enable = true;
     blueman.enable = true;
-    # Enable sound with pipewire.
     pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
-      # If you want to use JACK applications, uncomment this
-      #jack.enable = true;
-
-      # use the example session manager (no others are packaged yet so this is enabled by default,
-      # no need to redefine it in your config for now)
-      #media-session.enable = true;
     };
   };
   security.rtkit.enable = true;
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];
   users = {
-    # Define a user account. Don't forget to set a password with ‘passwd’.
     defaultUserShell = pkgs.zsh;
     users.mridula = {
       isNormalUser = true;
       description = "Mridul Agarwal";
       extraGroups = ["networkmanager" "wheel"];
-      packages = with pkgs; [
-        #  thunderbird
-      ];
     };
   };
   programs = {
@@ -122,14 +108,16 @@
     protonvpn-gui
     wl-clipboard
   ];
-  system.autoUpgrade = {
-    enable = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "-L"
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
+  system = {
+    autoUpgrade = {
+      enable = true;
+      flake = inputs.self.outPath;
+      flags = [
+        "-L"
+      ];
+      dates = "02:00";
+      randomizedDelaySec = "45min";
+    };
+    stateVersion = "25.05";
   };
-  system.stateVersion = "25.05"; # Did you read the comment?
 }
