@@ -194,6 +194,9 @@
           enableTreesitter = true;
           # Languages
           nix.enable = true;
+          ts.enable = true;
+          tailwind.enable = true;
+          html.enable = true;
           markdown = {
             enable = true;
             extensions.markview-nvim.enable = true;
