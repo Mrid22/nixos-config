@@ -61,6 +61,7 @@
     systemd.enable = true;
     xwayland.enable = true;
     settings = {
+      exec-once = ["ags run ~/nixos-config/ags/app.ts"];
       general = {
         gaps_in = 5;
         gaps_out = 5;
