@@ -148,7 +148,12 @@
 
   programs = {
     zen-browser.enable = true;
-    librewolf.enable = true;
+    librewolf = {
+      enable = true;
+      profiles.mridula = {
+        extensions = {};
+      };
+    };
     ags = {
       enable = true;
       extraPackages = with pkgs; [
