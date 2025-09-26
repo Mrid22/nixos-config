@@ -46,6 +46,7 @@
   };
   services = {
     swww.enable = true;
+    swaync.enable = true;
     vicinae = {
       enable = true;
       autoStart = true;
