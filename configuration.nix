@@ -40,7 +40,7 @@
     };
   };
   services = {
-    power-profiles-daemon.enable = true;
+    tlp.enable = true;
     xserver = {
       enable = true;
       xkb = {
