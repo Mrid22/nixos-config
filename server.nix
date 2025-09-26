@@ -35,14 +35,12 @@
       machine-learning.enable = true;
       mediaLocation = "/media/photos";
     };
-    open-webui = {
-      enable = true;
-      openFirewall = true;
-    };
+    open-webui.enable = true;
     ollama = {
       enable = true;
       openFirewall = true;
       loadModels = ["llama3.2:3b"];
+      acceleration = "cuda";
     };
     transmission = {
       enable = true;
