@@ -7,9 +7,9 @@
 }: {
   imports = [
     ./terminal.nix
+    ./de.nix
     inputs.nvf.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
-    inputs.vicinae.homeManagerModules.default
     inputs.ags.homeManagerModules.default
   ];
   home = {
@@ -43,18 +43,6 @@
   xresources.properties = {
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
-  };
-  services = {
-    swww.enable = true;
-    swaync.enable = true;
-    vicinae = {
-      enable = true;
-      autoStart = true;
-      settings = {
-        popToRootonClose = true;
-        rootSearch.searchFiles = true;
-      };
-    };
   };
 
   wayland.windowManager.hyprland = {
