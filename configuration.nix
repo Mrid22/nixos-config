@@ -122,6 +122,14 @@
     protonvpn-gui
     wl-clipboard
   ];
-
+  system.autoUpgrade = {
+    enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "-L"
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
   system.stateVersion = "25.05"; # Did you read the comment?
 }
