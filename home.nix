@@ -148,6 +148,7 @@
 
   programs = {
     zen-browser.enable = true;
+    librewolf.enable = true;
     ags = {
       enable = true;
       extraPackages = with pkgs; [
