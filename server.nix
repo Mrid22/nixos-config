@@ -39,6 +39,11 @@
       enable = true;
       openFirewall = true;
     };
+    ollama = {
+      enable = true;
+      openFirewall = true;
+      loadModels = ["llama3.2:3b"];
+    };
     transmission = {
       enable = true;
       openFirewall = true;
