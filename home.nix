@@ -155,17 +155,13 @@
           default = "ddg";
           engines = {
             nix-packages = {
-              name = "Nix Packages";
+              name = "NixOS";
               urls = [
                 {
-                  template = "https://search.nixos.org/packages";
+                  template = "https://mynixos.com/search";
                   params = [
                     {
-                      name = "type";
-                      value = "packages";
-                    }
-                    {
-                      name = "query";
+                      name = "q";
                       value = "{searchTerms}";
                     }
                   ];
@@ -173,14 +169,7 @@
               ];
 
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = ["@np"];
-            };
-
-            nixos-wiki = {
-              name = "NixOS Wiki";
-              urls = [{template = "https://wiki.nixos.org/w/index.php?search={searchTerms}";}];
-              iconMapObj."16" = "https://wiki.nixos.org/favicon.ico";
-              definedAliases = ["@nw"];
+              definedAliases = ["@nx"];
             };
 
             bing.metaData.hidden = true;
