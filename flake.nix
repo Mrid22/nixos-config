@@ -43,7 +43,9 @@
   }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = {
+          inherit inputs;
+        };
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
@@ -51,7 +53,10 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
+              extraSpecialArgs = {
+                inherit inputs;
+                inherit self;
+              };
               backupFileExtension = "bak";
 
               users.mridula = import ./home.nix;

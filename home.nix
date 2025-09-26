@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  self,
   ...
 }: {
   imports = [
@@ -162,6 +163,7 @@
       extraPackages = with pkgs; [
         inputs.astal.packages.${system}.battery
       ];
+      configDir = self + /ags;
     };
     nvf = {
       enable = true;
