@@ -56,6 +56,9 @@
           proton-pass
           shortkeys
           dearrow
+          youtube-addon
+          sponsorblock
+          decentraleyes
         ];
       };
     };
