@@ -23,7 +23,6 @@
   networking = {
     hostName = "nixos"; # Define your hostname.
     networkmanager.enable = true;
-    firewall.checkReversePath = false;
   };
   nix.settings.experimental-features = ["nix-command" "flakes"];
   time.timeZone = "Europe/Amsterdam";
