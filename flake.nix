@@ -33,8 +33,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.astal.follows = "astal";
     };
-    nur = {
-      url = "github:nix-community/NUR";
+    nix-firefox-addons = {
+      url = "github:osipog/nix-firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -43,11 +43,9 @@
     self,
     nixpkgs,
     home-manager,
-    nur,
+    nix-firefox-addons,
     ...
-  }: let
-    system = "x86_64-linux";
-  in {
+  }: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -55,8 +53,6 @@
         };
         modules = [
           ./configuration.nix
-          nur.modules.nixos.default
-          nur.legacyPackages."${system}".repos.iopq.modules.xraya
           home-manager.nixosModules.home-manager
           {
             home-manager = {
