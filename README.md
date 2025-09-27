@@ -28,7 +28,7 @@ git remote set-url git@github.com:Mrid22/nixos-config.git
 
 [Add the key to GitHub](https://www.github.com/settings/keys)
 
-## Update system and git log
+## Update system and git history
 
 #### **`terminal`**
 
@@ -38,4 +38,12 @@ gaa
 gcam "update system"
 gp
 nh os switch
+```
+## Setup tailscale
+
+#### **`terminal`**
+
+```bash
+sudo tailscale login
+sudo tailscale up --advertize-exit-node
 ```
