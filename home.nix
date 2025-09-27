@@ -59,6 +59,18 @@
     librewolf = {
       enable = true;
       profiles.mridula = {
+        bookmarks.settings = [
+          {
+            name = "Colleges";
+            toolbar = true;
+            bookmarks = [
+              {
+                name = "Course 1";
+                url = "https://www.uva.nl/en/programmes/bachelors/computational-social-science";
+              }
+            ];
+          }
+        ];
         search = {
           default = "ddg";
           engines = {
