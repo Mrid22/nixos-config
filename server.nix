@@ -18,6 +18,7 @@
       enableOnBoot = true;
     };
     oci-containers = {
+      backend = "docker";
       containers = {
         open-web-ui = {
           image = "ghcr.io/open-webui/open-webui:main";
