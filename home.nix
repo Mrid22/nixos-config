@@ -43,6 +43,7 @@
   services.kdeconnect.enable = true;
 
   programs = {
+    zen-browser.enable = true;
     ags = {
       enable = true;
       extraPackages = with pkgs; [
