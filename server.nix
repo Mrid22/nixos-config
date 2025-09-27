@@ -4,6 +4,7 @@
   inputs,
   ...
 }: {
+  networking.firewall.checkReversePath = "loose";
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
