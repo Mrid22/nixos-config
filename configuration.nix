@@ -52,6 +52,10 @@
     };
     udisks2.enable = true;
     displayManager.gdm.enable = true;
+    syncthing = {
+      enable = true;
+      openDefaultPorts = true;
+    };
     keyd = {
       enable = true;
       keyboards = {
