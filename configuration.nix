@@ -79,5 +79,6 @@
     wireguard-tools
     protonvpn-gui
     wl-clipboard
+    inputs.nur.overlays.default
   ];
 }
