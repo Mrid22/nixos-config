@@ -55,6 +55,10 @@
       enable = true;
       openFirewall = true;
     };
+    radarr = {
+      enable = true;
+      openFirewall = true;
+    };
     flaresolverr = {
       enable = true;
       openFirewall = true;
