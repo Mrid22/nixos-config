@@ -8,14 +8,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./server.nix
+    ./system.nix
   ];
-  boot = {
-    loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-    kernelParams = ["snd_hda_intel.power_save=0"];
-  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
