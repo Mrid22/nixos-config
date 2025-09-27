@@ -39,7 +39,7 @@
 
     stateVersion = "25.05";
   };
-
+  services.kdeconnect.enable = true;
   xresources.properties = {
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
