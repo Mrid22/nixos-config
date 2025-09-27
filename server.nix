@@ -12,8 +12,18 @@
       "nofail"
     ];
   };
+  virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+    };
+  };
   services = {
     jellyfin = {
+      enable = true;
+      openFirewall = true;
+    };
+    tailscale = {
       enable = true;
       openFirewall = true;
     };
