@@ -58,6 +58,7 @@
     };
     librewolf = {
       enable = true;
+      settings."extensions.autoDisableScopes" = 0;
       profiles.mridula = {
         bookmarks = {
           force = true;
@@ -101,6 +102,12 @@
             bing.metaData.hidden = true;
             google.metaData.alias = "@g";
           };
+        };
+        extenstions = {
+          packages = with pkgs.firefoxAddons; [
+            ublock-origin
+            proton-pass
+          ];
         };
       };
     };
