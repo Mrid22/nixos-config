@@ -67,8 +67,12 @@
               toolbar = true;
               bookmarks = [
                 {
-                  name = "Course 1";
+                  name = "Computational Social Science Bsc @ UvA";
                   url = "https://www.uva.nl/en/programmes/bachelors/computational-social-science";
+                }
+                {
+                  name = "Computing Science Bsc @ Radboud University";
+                  url = "https://www.ru.nl/en/education/bachelors/computing-science";
                 }
               ];
             }
