@@ -7,8 +7,8 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./server.nix
-    ./system.nix
+    ./config/system.nix
+    ./config/server.nix
   ];
   services = {
     tlp.enable = true;

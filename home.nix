@@ -6,8 +6,9 @@
   ...
 }: {
   imports = [
-    ./terminal.nix
-    ./de.nix
+    ./home/terminal.nix
+    ./home/de.nix
+    ./home/librewolf.nix
     inputs.nvf.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
     inputs.ags.homeManagerModules.default
@@ -116,7 +117,7 @@
       extraPackages = with pkgs; [
         inputs.astal.packages.${system}.battery
       ];
-      configDir = self + /ags;
+      configDir = self + /home/ags;
     };
     nvf = {
       enable = true;
