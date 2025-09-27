@@ -71,7 +71,10 @@
       defaultEditor = true;
     };
   };
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [inputs.nix-firefox-addons.overlays.default];
+  };
 
   environment.systemPackages = with pkgs; [
     git
