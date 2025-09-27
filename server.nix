@@ -45,6 +45,7 @@
     tailscale = {
       enable = true;
       openFirewall = true;
+      disableTaildrop = true;
     };
     prowlarr = {
       enable = true;
