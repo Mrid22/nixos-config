@@ -12,6 +12,7 @@
     inputs.zen-browser.homeModules.twilight
     inputs.ags.homeManagerModules.default
   ];
+  nixpkgs.overlays = [inputs.nix-firefox-addons.overlays.default];
   home = {
     username = "mridula";
     homeDirectory = "/home/mridula";
