@@ -63,7 +63,7 @@
       openFirewall = true;
       machine-learning.enable = true;
       mediaLocation = "/media/photos";
-      host = "nixos";
+      host = "0.0.0.0";
     };
     ollama = {
       enable = true;
