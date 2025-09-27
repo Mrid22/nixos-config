@@ -55,6 +55,7 @@
           ublock-origin
           proton-pass
           shortkeys
+          dearrow
         ];
       };
     };
