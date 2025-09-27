@@ -54,6 +54,7 @@
         packages = with pkgs.firefoxAddons; [
           ublock-origin
           proton-pass
+          shortkeys
         ];
       };
     };
