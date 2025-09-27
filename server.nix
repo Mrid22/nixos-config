@@ -35,7 +35,10 @@
       machine-learning.enable = true;
       mediaLocation = "/media/photos";
     };
-    open-webui.enable = true;
+    open-webui = {
+      enable = true;
+      openFirewall = true;
+    };
     ollama = {
       enable = true;
       openFirewall = true;
