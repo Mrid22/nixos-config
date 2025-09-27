@@ -46,7 +46,7 @@
       enable = true;
       openFirewall = true;
       disableTaildrop = true;
-      useRoutingFeatures = true;
+      useRoutingFeatures = "both";
     };
     prowlarr = {
       enable = true;
