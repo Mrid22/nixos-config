@@ -13,31 +13,6 @@
       "nofail"
     ];
   };
-  virtualisation = {
-    docker = {
-      enable = true;
-      enableOnBoot = true;
-    };
-    oci-containers = {
-      backend = "docker";
-      containers = {
-        open-web-ui = {
-          image = "ghcr.io/open-webui/open-webui:main";
-          environment = {
-            "TZ" = "Europe/Amsterdam";
-            #        "OLLAMA_API_BASE_URL" = "http://<ollama IP address>:11434/api";
-            #        "OLLAMA_BASE_URL" = "http://<ollama IP address>:11434";
-          };
-          volumes = [
-            "/media/open-web-ui/data:/app/backend/data"
-          ];
-          extraOptions = [
-            "--pull=newer"
-          ];
-        };
-      };
-    };
-  };
   services = {
     jellyfin = {
       enable = true;
