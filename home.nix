@@ -103,7 +103,7 @@
             google.metaData.alias = "@g";
           };
         };
-        extenstions = {
+        extensions = {
           packages = with pkgs.firefoxAddons; [
             ublock-origin
             proton-pass
