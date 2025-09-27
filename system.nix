@@ -15,10 +15,9 @@
 
   # Hardware Settings
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSuppot32Bit = true;
+      enable32Bit = true;
     };
     nvidia = {
       modesetting.enable = true;
