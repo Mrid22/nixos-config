@@ -79,6 +79,5 @@
     wireguard-tools
     protonvpn-gui
     wl-clipboard
-    inputs.nur.repos.mic92.hello-nur
   ];
 }

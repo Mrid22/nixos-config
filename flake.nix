@@ -45,7 +45,9 @@
     home-manager,
     nur,
     ...
-  }: {
+  }: let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {
@@ -54,6 +56,7 @@
         modules = [
           ./configuration.nix
           nur.modules.nixos.default
+          nur.legacyPackages."${system}".repos.iopq.modules.xraya
           home-manager.nixosModules.home-manager
           {
             home-manager = {
