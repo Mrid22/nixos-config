@@ -93,10 +93,6 @@
     gnome-disks.enable = true;
     zsh.enable = true;
     hyprland.enable = true;
-    localsend = {
-      enable = true;
-      openFirewall = true;
-    };
     neovim = {
       enable = true;
       defaultEditor = true;
