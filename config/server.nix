@@ -54,6 +54,10 @@
       loadModels = ["llama3.2:3b"];
       acceleration = "cuda";
     };
+    open-webui = {
+      enable = true;
+      openFirewall = true;
+    };
     transmission = {
       enable = true;
       openFirewall = true;
