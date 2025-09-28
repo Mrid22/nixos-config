@@ -234,6 +234,7 @@
       },
       "original": {
         "owner": "Mrid22",
+        "ref": "3441cc2810cad8c008b2341f9307cd6cfabcf3d7",
         "repo": "gauntlet-nix-iced-fix",
         "type": "github"
       }
