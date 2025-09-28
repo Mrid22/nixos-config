@@ -43,7 +43,30 @@
   services.kdeconnect.enable = true;
 
   programs = {
-    zen-browser.enable = true;
+    zen-browser = {
+      enable = true;
+      profiles.mridula = {
+        bookmarks = {
+          force = true;
+          settings = [
+            {
+              name = "Colleges";
+              toolbar = true;
+              bookmarks = [
+                {
+                  name = "Computational Social Science Bsc @ UvA";
+                  url = "https://www.uva.nl/en/programmes/bachelors/computational-social-science";
+                }
+                {
+                  name = "Computing Science Bsc @ Radboud University";
+                  url = "https://www.ru.nl/en/education/bachelors/computing-science";
+                }
+              ];
+            }
+          ];
+        };
+      };
+    };
     ags = {
       enable = true;
       extraPackages = with pkgs; [
