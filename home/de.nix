@@ -20,6 +20,7 @@
     };
   };
   programs.hyprpanel = {
+    enable = true;
     systemd.enable = true;
     dontAssertNotificationDaemons = true;
     settings = {
