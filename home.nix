@@ -56,6 +56,8 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
         autopairs.nvim-autopairs.enable = true;
+        statusline.lualine.enable = true;
+        filetree.neo-tree.enable = true;
         options = {
           tabstop = 2;
           softtabstop = 2;
@@ -67,7 +69,6 @@
           name = "tokyonight";
           style = "night";
         };
-        statusline.lualine.enable = true;
         lsp = {
           enable = true;
           formatOnSave = true;
@@ -80,18 +81,13 @@
           nix.enable = true;
           ts.enable = true;
           tailwind.enable = true;
-          html.enable = true;
+          html = {
+            enable = true;
+            treesitter.autotagHtml = true;
+          };
           markdown = {
             enable = true;
             extensions.markview-nvim.enable = true;
-          };
-        };
-        extraPlugins = {
-          yuck = {
-            package = pkgs.vimPlugins.yuck-vim;
-          };
-          treesitter-yuck = {
-            package = pkgs.vimPlugins.nvim-treesitter-parsers.yuck;
           };
         };
       };
