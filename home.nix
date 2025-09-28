@@ -49,6 +49,7 @@
         inputs.astal.packages.${system}.hyprland
         inputs.astal.packages.${system}.powerprofiles
         inputs.astal.packages.${system}.network
+        inputs.astal.packages.${system}.wireplumber
       ];
       configDir = self + /home/ags;
     };
