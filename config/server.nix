@@ -54,6 +54,8 @@
     nextcloud = {
       enable = true;
       hostName = "localhost";
+      config.dbtype = "sqlite";
+      home = "/media/nextcloud";
     };
     prowlarr = {
       enable = true;
