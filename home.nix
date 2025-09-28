@@ -8,7 +8,6 @@
   imports = [
     ./home/terminal.nix
     ./home/de.nix
-    ./home/librewolf.nix
     ./home/zen.nix
     inputs.nvf.homeManagerModules.default
     inputs.ags.homeManagerModules.default
