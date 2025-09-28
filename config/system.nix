@@ -33,9 +33,10 @@
       powerOnBoot = true;
     };
   };
-
-  services.xserver.videoDrivers = ["nvidia"];
-
+  services = {
+    xserver.videoDrivers = ["nvidia"];
+    playerctld.enable = true;
+  };
   # Networking
   networking = {
     hostName = "nixos"; # Define your hostname.
