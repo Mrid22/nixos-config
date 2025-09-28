@@ -9,8 +9,7 @@
     ./home/terminal.nix
     ./home/de.nix
     ./home/zen.nix
-    inputs.nvf.homeManagerModules.default
-    inputs.gauntlet-patch.homeManagerModules.default
+    ./home/nvf.nix
   ];
   home = {
     username = "mridula";
@@ -40,54 +39,4 @@
     stateVersion = "25.05";
   };
   services.kdeconnect.enable = true;
-
-  programs = {
-    nvf = {
-      enable = true;
-      settings.vim = {
-        lineNumberMode = "none";
-        telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-        autopairs.nvim-autopairs.enable = true;
-        statusline.lualine.enable = true;
-        filetree.neo-tree.enable = true;
-        options = {
-          tabstop = 2;
-          softtabstop = 2;
-          shiftwidth = 2;
-        };
-        theme = {
-          enable = true;
-          transparent = true;
-          name = "tokyonight";
-          style = "night";
-        };
-        lsp = {
-          enable = true;
-          formatOnSave = true;
-        };
-        languages = {
-          enableDAP = true;
-          enableFormat = true;
-          enableTreesitter = true;
-          # Languages
-          nix.enable = true;
-          ts.enable = true;
-          tailwind.enable = true;
-          html = {
-            enable = true;
-            treesitter.autotagHtml = true;
-          };
-          markdown = {
-            enable = true;
-            extensions.markview-nvim.enable = true;
-          };
-        };
-        extraPackages = [
-          pkgs.vimPlugins.yuck-vim
-          pkgs.vimPlugins.nvim-treesitter-parsers.yuck
-        ];
-      };
-    };
-  };
 }
