@@ -11,7 +11,6 @@
     ./home/librewolf.nix
     ./home/zen.nix
     inputs.nvf.homeManagerModules.default
-    inputs.zen-browser.homeModules.twilight
     inputs.ags.homeManagerModules.default
   ];
   home = {
