@@ -22,6 +22,7 @@
         "sponsorBlocker@ajay.app" = "sponsorBlock";
         "jid1-BoFifL9Vbdl2zQ@jetpack" = "decentraleyes";
         "{91aa3897-2634-4a8a-9092-279db23a7689}" = "zen-internet";
+        "{3c6bf0cc-3ae2-42fb-9993-0d33104fdcaf}" = "improved-tube";
       };
     };
     profiles.mridula = {
