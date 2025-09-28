@@ -19,7 +19,33 @@
       };
     };
   };
-
+  programs.hyprpanel = {
+    systemd.enable = true;
+    dontAssertNotificationDaemons = true;
+    settings = {
+      bar = {
+        battery.label = true;
+        bluetooth.label = false;
+        clock.format = "%H:%M:%S";
+        layouts = {
+          "*" = {
+            left = [
+              "dashboard"
+              "workspaces"
+              "media"
+            ];
+            middle = ["windowtitle"];
+            right = [
+              "volume"
+              "network"
+              "bluetooth"
+              "notifications"
+            ];
+          };
+        };
+      };
+    };
+  };
   xresources.properties = {
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
