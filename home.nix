@@ -51,6 +51,7 @@
         inputs.astal.packages.${system}.network
         inputs.astal.packages.${system}.wireplumber
         inputs.astal.packages.${system}.tray
+        inputs.astal.packages.${system}.mpris
       ];
       configDir = self + /home/ags;
     };
