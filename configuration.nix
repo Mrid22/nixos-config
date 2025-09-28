@@ -64,6 +64,7 @@
   };
   programs = {
     gnome-disks.enable = true;
+    adb.enable = true;
     zsh.enable = true;
     hyprland.enable = true;
     neovim = {
