@@ -92,6 +92,9 @@
           };
         };
       };
+      extraPackages = [
+        pkgs.vimPlugins.nvim-treesitter-parsers.yuck
+      ];
     };
   };
 }
