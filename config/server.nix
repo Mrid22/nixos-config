@@ -33,6 +33,9 @@
           volumes = [
             "open-webui:/app/backend/data"
           ];
+          extraOptions = [
+            "--network=host"
+          ];
         };
       };
     };
