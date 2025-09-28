@@ -60,14 +60,14 @@ function Mpris() {
                   >
                     <box>
                       <image
-                        iconName="media-playback-start-symbolic"
+                        iconName="media-playback-pause-symbolic"
                         visible={createBinding(
                           player,
                           "playbackStatus",
                         )((s) => s === AstalMpris.PlaybackStatus.PLAYING)}
                       />
                       <image
-                        iconName="media-playback-pause-symbolic"
+                        iconName="media-playback-start-symbolic"
                         visible={createBinding(
                           player,
                           "playbackStatus",
