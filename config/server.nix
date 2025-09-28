@@ -4,8 +4,8 @@
   inputs,
   ...
 }: {
+  # System
   networking.firewall.checkReversePath = "loose";
-  environment.systemPackages = with pkgs; [spotdl];
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
@@ -13,6 +13,29 @@
       "users"
       "nofail"
     ];
+  };
+  hardware.nvidia-container-toolkit.enable = true;
+  # Services
+  virtualisation = {
+    docker = {
+      enable = true;
+      rootless.enable = true;
+      enableOnBoot = true;
+    };
+    oci-containers = {
+      backend = "docker";
+      containers = {
+        open-webui = {
+          image = "ghcr.io/open-webui/open-webui:main";
+          ports = [
+            "3000:8080"
+          ];
+          volumes = [
+            "open-webui:/app/backend/data"
+          ];
+        };
+      };
+    };
   };
   services = {
     jellyfin = {
@@ -53,10 +76,6 @@
       openFirewall = true;
       loadModels = ["llama3.2:3b"];
       acceleration = "cuda";
-    };
-    open-webui = {
-      enable = true;
-      openFirewall = true;
     };
     transmission = {
       enable = true;
