@@ -13,6 +13,8 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
   for (const client of hyprland.get_clients()) {
     print(client.title)
   }
+
+  function getActiveWindow() {}
   return (
     <window
       visible

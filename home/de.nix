@@ -83,7 +83,7 @@
       bind = [
         #Apps
         "ALT,Q,exec,kitty"
-        "ALT,F,exec,zen"
+        "ALT,F,exec,zen-twilight"
         "ALT,SPACE,exec,vicinae"
 
         # Windows
