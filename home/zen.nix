@@ -17,7 +17,7 @@
     in {
       ExtensionSettings = mkExtensionSettings {
         "wappalyzer@crunchlabz.com" = "wappalyzer";
-        "{85860b32-02a8-431a-b2b1-40fbd64c9c69}" = "github-file-icons";
+        "uBlock0@raymondhill.net" = "ublock-origin";
         "{743ed1e3-c542-46a6-a0e3-8e62494e150b}" = "proton-pass";
       };
     };
