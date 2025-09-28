@@ -19,6 +19,9 @@
         "wappalyzer@crunchlabz.com" = "wappalyzer";
         "uBlock0@raymondhill.net" = "ublock-origin";
         "78272b6fa58f4a1abaac99321d503a20@proton.me" = "proton-pass";
+        "deArrow@ajay.app" = "dearrow";
+        "sponsorBlocker@ajay.app" = "sponsorBlock";
+        "jid1-BoFifL9Vbdl2zQ@jetpack" = "decentraleyes";
       };
     };
     profiles.mridula = {
