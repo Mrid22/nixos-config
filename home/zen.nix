@@ -18,7 +18,7 @@
       ExtensionSettings = mkExtensionSettings {
         "wappalyzer@crunchlabz.com" = "wappalyzer";
         "uBlock0@raymondhill.net" = "ublock-origin";
-        "{743ed1e3-c542-46a6-a0e3-8e62494e150b}" = "proton-pass";
+        "8272b6fa58f4a1abaac99321d503a20@proton.me" = "proton-pass";
       };
     };
     profiles.mridula = {
