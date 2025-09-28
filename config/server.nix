@@ -5,6 +5,7 @@
   ...
 }: {
   networking.firewall.checkReversePath = "loose";
+  environment.systemPackages = with pkgs; [spotdl];
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
