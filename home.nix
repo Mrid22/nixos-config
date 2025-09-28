@@ -65,6 +65,30 @@
             }
           ];
         };
+        search = {
+          default = "ddg";
+          engines = {
+            nix-options = {
+              name = "NixOS";
+              urls = [
+                {
+                  template = "https://mynixos.com/search";
+                  params = [
+                    {
+                      name = "q";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+
+              definedAliases = ["@nx"];
+            };
+
+            bing.metaData.hidden = true;
+            google.metaData.alias = "@g";
+          };
+        };
       };
     };
     ags = {
