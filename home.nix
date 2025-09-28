@@ -91,10 +91,11 @@
             extensions.markview-nvim.enable = true;
           };
         };
+        extraPackages = [
+          pkgs.vimPlugins.yuck-vim
+          pkgs.vimPlugins.nvim-treesitter-parsers.yuck
+        ];
       };
-      extraPackages = [
-        pkgs.vimPlugins.nvim-treesitter-parsers.yuck
-      ];
     };
   };
 }
