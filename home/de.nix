@@ -24,8 +24,10 @@
     systemd.enable = true;
     dontAssertNotificationDaemons = true;
     settings = {
+      theme.bar.transparent = true;
       bar = {
         launcher.autoDetectIcon = true;
+        workspaces.numbered = true;
         battery.label = true;
         bluetooth.label = false;
         clock.format = "%H:%M:%S";
