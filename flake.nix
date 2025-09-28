@@ -38,7 +38,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     gauntlet-patch = {
-      url = "github:Mrid22/gauntlet-nix-iced-fix";
+      url = "github:Mrid22/gauntlet-nix-iced-fix?ref=3441cc2810cad8c008b2341f9307cd6cfabcf3d7";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

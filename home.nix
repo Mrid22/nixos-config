@@ -11,6 +11,7 @@
     ./home/zen.nix
     inputs.nvf.homeManagerModules.default
     inputs.ags.homeManagerModules.default
+    inputs.gauntlet-path.homeManagerModules.default
   ];
   home = {
     username = "mridula";
