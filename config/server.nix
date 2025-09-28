@@ -16,31 +16,16 @@
   };
   hardware.nvidia-container-toolkit.enable = true;
   # Services
-  virtualisation = {
-    docker = {
-      enable = true;
-      rootless.enable = true;
-      enableOnBoot = true;
-    };
-    oci-containers = {
-      backend = "docker";
-      containers = {
-        open-webui = {
-          image = "ghcr.io/open-webui/open-webui:main";
-          ports = [
-            "127.0.0.1:3000:8080"
-          ];
-          volumes = [
-            "open-webui:/app/backend/data"
-          ];
-          extraOptions = [
-            "--network=host"
-          ];
-        };
-      };
-    };
-  };
+  environment.etc."nextcloud-admin-pass".text = "PWD";
   services = {
+    nextcloud = {
+      enable = true;
+      package = pkgs.nextcloud31;
+      hostName = "localhost";
+      config.adminpassFile = "/etc/nextcloud-admin-pass";
+      config.dbtype = "sqlite";
+    };
+
     jellyfin = {
       enable = true;
       openFirewall = true;
@@ -50,12 +35,6 @@
       openFirewall = true;
       disableTaildrop = true;
       useRoutingFeatures = "both";
-    };
-    nextcloud = {
-      enable = true;
-      hostName = "localhost";
-      config.dbtype = "sqlite";
-      home = "/media/nextcloud";
     };
     prowlarr = {
       enable = true;
@@ -94,6 +73,30 @@
         download-dir = "/media/downloads";
         incomplete-dir = "/media/incomplete";
         incomplete-dir-enabled = true;
+      };
+    };
+  };
+  virtualisation = {
+    docker = {
+      enable = true;
+      rootless.enable = true;
+      enableOnBoot = true;
+    };
+    oci-containers = {
+      backend = "docker";
+      containers = {
+        open-webui = {
+          image = "ghcr.io/open-webui/open-webui:main";
+          ports = [
+            "127.0.0.1:3000:8080"
+          ];
+          volumes = [
+            "open-webui:/app/backend/data"
+          ];
+          extraOptions = [
+            "--network=host"
+          ];
+        };
       };
     };
   };
