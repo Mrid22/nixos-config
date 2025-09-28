@@ -21,6 +21,7 @@
         "deArrow@ajay.app" = "dearrow";
         "sponsorBlocker@ajay.app" = "sponsorBlock";
         "jid1-BoFifL9Vbdl2zQ@jetpack" = "decentraleyes";
+        "{91aa3897-2634-4a8a-9092-279db23a7689}" = "zen-internet";
       };
     };
     profiles.mridula = {

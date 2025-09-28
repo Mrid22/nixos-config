@@ -42,12 +42,6 @@
   services.kdeconnect.enable = true;
 
   programs = {
-    yt-dlp.enable = true;
-    eww = {
-      enable = true;
-      enableZshIntegration = true;
-      configDir = self + /home/eww;
-    };
     ags = {
       enable = true;
       extraPackages = with pkgs; [
