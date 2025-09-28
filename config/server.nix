@@ -28,7 +28,7 @@
         open-webui = {
           image = "ghcr.io/open-webui/open-webui:main";
           ports = [
-            "3000:8080"
+            "127.0.0.1:3000:8080"
           ];
           volumes = [
             "open-webui:/app/backend/data"
