@@ -42,6 +42,7 @@
   services.kdeconnect.enable = true;
 
   programs = {
+    yt-dlp.enable = true;
     eww = {
       enable = true;
       enableZshIntegration = true;
