@@ -46,6 +46,7 @@
       enable = true;
       extraPackages = with pkgs; [
         inputs.astal.packages.${system}.battery
+        inputs.astal.packages.${system}.hyprland
       ];
       configDir = self + /home/ags;
     };
