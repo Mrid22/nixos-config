@@ -37,6 +37,10 @@
       url = "github:osipog/nix-firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    gauntlet-patch = {
+      url = "github:Mrid22/gauntlet-nix-iced-fix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
