@@ -51,7 +51,10 @@
       disableTaildrop = true;
       useRoutingFeatures = "both";
     };
-    nextcloud.enable = true;
+    nextcloud = {
+      enable = true;
+      hostName = "localhost";
+    };
     prowlarr = {
       enable = true;
       openFirewall = true;
