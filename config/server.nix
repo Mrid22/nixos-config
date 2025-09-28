@@ -77,6 +77,7 @@
     ollama = {
       enable = true;
       openFirewall = true;
+      host = "0.0.0.0";
       loadModels = ["llama3.2:3b"];
       acceleration = "cuda";
     };
