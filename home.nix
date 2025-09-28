@@ -42,6 +42,11 @@
   services.kdeconnect.enable = true;
 
   programs = {
+    eww = {
+      enable = true;
+      enableZshIntegration = true;
+      configDir = self + /home/eww;
+    };
     ags = {
       enable = true;
       extraPackages = with pkgs; [
