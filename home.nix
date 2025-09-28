@@ -47,6 +47,8 @@
       extraPackages = with pkgs; [
         inputs.astal.packages.${system}.battery
         inputs.astal.packages.${system}.hyprland
+        inputs.astal.packages.${system}.power-profiles
+        inputs.astal.packages.${system}.network
       ];
       configDir = self + /home/ags;
     };
