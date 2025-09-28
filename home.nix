@@ -10,7 +10,6 @@
     ./home/de.nix
     ./home/zen.nix
     inputs.nvf.homeManagerModules.default
-    inputs.ags.homeManagerModules.default
     inputs.gauntlet-patch.homeManagerModules.default
   ];
   home = {
@@ -43,21 +42,6 @@
   services.kdeconnect.enable = true;
 
   programs = {
-    gauntlet.enable = true;
-    ags = {
-      enable = true;
-      extraPackages = with pkgs; [
-        inputs.astal.packages.${system}.battery
-        inputs.astal.packages.${system}.hyprland
-        inputs.astal.packages.${system}.powerprofiles
-        inputs.astal.packages.${system}.network
-        inputs.astal.packages.${system}.wireplumber
-        inputs.astal.packages.${system}.tray
-        inputs.astal.packages.${system}.mpris
-        inputs.astal.packages.${system}.apps
-      ];
-      configDir = self + /home/ags;
-    };
     nvf = {
       enable = true;
       settings.vim = {
