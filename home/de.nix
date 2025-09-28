@@ -25,6 +25,7 @@
     dontAssertNotificationDaemons = true;
     settings = {
       bar = {
+        dashboard.autoDetectIcon = true;
         battery.label = true;
         bluetooth.label = false;
         clock.format = "%H:%M:%S";
