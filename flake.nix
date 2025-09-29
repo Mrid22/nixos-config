@@ -28,8 +28,8 @@
       url = "github:osipog/nix-firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    gauntlet-patch = {
-      url = "github:Mrid22/gauntlet-nix-iced-fix?ref=3441cc2810cad8c008b2341f9307cd6cfabcf3d7";
+    nixarr = {
+      url = "github:rasmus-kirk/nixarr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -39,6 +39,7 @@
     nixpkgs,
     home-manager,
     nix-firefox-addons,
+    nixarr,
     ...
   }: {
     nixosConfigurations = {
@@ -49,6 +50,7 @@
         modules = [
           ./configuration.nix
           home-manager.nixosModules.home-manager
+          nixarr.nixosModules.default
           {
             home-manager = {
               useGlobalPkgs = true;
