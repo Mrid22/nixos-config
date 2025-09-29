@@ -8,7 +8,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./config/system.nix
-    ./config/server.nix
+    #   ./config/server.nix
   ];
   services = {
     tlp.enable = true;
