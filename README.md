@@ -39,11 +39,12 @@ gcam "update system"
 gp
 nh os switch
 ```
+
 ## Setup tailscale
 
 #### **`terminal`**
 
 ```bash
 sudo tailscale login
-sudo tailscale up --advertize-exit-node
+sudo tailscale up --advertise-exit-node
 ```
