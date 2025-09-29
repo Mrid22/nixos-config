@@ -24,7 +24,6 @@
     systemd.enable = true;
     dontAssertNotificationDaemons = true;
     settings = {
-      theme.bar.transparent = true;
       bar = {
         launcher.autoDetectIcon = true;
         workspaces.numbered = true;
@@ -78,7 +77,7 @@
         rounding = 10;
         blur = {
           size = 3;
-          passes = 4;
+          passes = 7;
           vibrancy = 0.1696;
         };
       };
