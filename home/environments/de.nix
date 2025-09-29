@@ -78,7 +78,7 @@
         rounding = 10;
         blur = {
           size = 3;
-          passes = 1;
+          passes = 4;
           vibrancy = 0.1696;
         };
       };
