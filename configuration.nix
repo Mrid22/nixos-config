@@ -83,5 +83,6 @@
     wireguard-tools
     protonvpn-gui
     wl-clipboard
+    mediawriter
   ];
 }
