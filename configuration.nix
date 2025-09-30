@@ -11,7 +11,7 @@
     ./config/server.nix
   ];
   services = {
-    tlp.enable = true;
+    # tlp.enable = true;
     xserver = {
       enable = true;
       xkb = {
