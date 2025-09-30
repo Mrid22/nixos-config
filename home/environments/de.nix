@@ -8,6 +8,7 @@
     inputs.vicinae.homeManagerModules.default
   ];
   services = {
+    desktopManager.plasma6.enable = true;
     swww.enable = true;
     swaync.enable = true;
     vicinae = {
