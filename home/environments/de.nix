@@ -19,36 +19,40 @@
       };
     };
   };
-  programs.hyprpanel = {
+  programs.waybar = {
     enable = true;
     systemd.enable = true;
-    dontAssertNotificationDaemons = true;
-    settings = {
-      bar = {
-        launcher.autoDetectIcon = true;
-        workspaces.numbered = true;
-        battery.label = true;
-        bluetooth.label = false;
-        clock.format = "%H:%M:%S";
-        layouts = {
-          "*" = {
-            left = [
-              "dashboard"
-              "workspaces"
-              "media"
-            ];
-            middle = ["windowtitle"];
-            right = [
-              "volume"
-              "network"
-              "bluetooth"
-              "notifications"
-            ];
-          };
-        };
-      };
-    };
   };
+  # programs.hyprpanel = {
+  #   enable = true;
+  #   systemd.enable = true;
+  #   dontAssertNotificationDaemons = true;
+  #   settings = {
+  #     bar = {
+  #       launcher.autoDetectIcon = true;
+  #       workspaces.numbered = true;
+  #       battery.label = true;
+  #       bluetooth.label = false;
+  #       clock.format = "%H:%M:%S";
+  #       layouts = {
+  #         "*" = {
+  #           left = [
+  #             "dashboard"
+  #             "workspaces"
+  #             "media"
+  #           ];
+  #           middle = ["windowtitle"];
+  #           right = [
+  #             "volume"
+  #             "network"
+  #             "bluetooth"
+  #             "notifications"
+  #           ];
+  #         };
+  #       };
+  #     };
+  #   };
+  # };
   xresources.properties = {
     "Xcursor.size" = 16;
     "Xft.dpi" = 172;
