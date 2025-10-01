@@ -25,6 +25,7 @@
         "cd" = "z";
         "cdi" = "zi";
         "ls" = "eza";
+        "shizuku" = "adb shell /data/app/~~xahMdUsIaEw9_6Xj35FdPg==/moe.shizuku.privileged.api-hs5LbOvP9pY6PqnFkAXq8g==/lib/arm64/libshizuku.so";
       };
       oh-my-zsh = {
         enable = true;
