@@ -14,26 +14,24 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/9b8987f5-8b8b-45be-b63d-fd778cd2d73a";
+    { device = "/dev/disk/by-uuid/6cb63db1-7e76-4afd-b2cd-9171a3bc30af";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/506C-8504";
+    { device = "/dev/disk/by-uuid/5C4B-6EA9";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/bbaccffb-10eb-49f3-9842-8c3e86f4acd1"; }
-    ];
+  fileSystems."/var/lib/docker/overlay2/edc6c84dc0f285801a3cf3e007bc7a740b7c2edddc7ac5eb2bcf2208dba34423/merged" =
+    { device = "overlay";
+      fsType = "overlay";
+    };
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/86096019-7502-4dbf-9113-87fedebd589c"; }
+    ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
