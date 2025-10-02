@@ -22,6 +22,11 @@
   programs.waybar = {
     enable = true;
     systemd.enable = true;
+    style = ''
+      * {
+      border: none;
+      }
+    '';
   };
   xresources.properties = {
     "Xcursor.size" = 16;
