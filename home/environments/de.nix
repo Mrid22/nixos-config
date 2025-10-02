@@ -23,9 +23,86 @@
     enable = true;
     systemd.enable = true;
     style = ''
+
       * {
-      border: none;
-      background-color: rgba(0, 0, 0,0.5);
+          font-family: "MesloLGS Nerd Font Mono Bold";
+          font-size: 16px;
+          min-height: 0;
+          font-weight: bold;
+      }
+
+      window#waybar {
+          background: transparent;
+          background-color: rgba(0,0,0,0.5);
+          color: white;
+          transition-property: background-color;
+          transition-duration: 0.1s;
+      }
+
+      #window {
+          margin: 8px;
+          padding-left: 8;
+          padding-right: 8;
+      }
+
+      button {
+          box-shadow: inset 0 -3px transparent;
+          border: none;
+          border-radius: 0;
+      }
+
+      button:hover {
+          background: inherit;
+          color: @mauve;
+      }
+
+      #workspaces button {
+          padding: 0 4px;
+      }
+
+      #pulseaudio,
+      #clock,
+      #battery,
+      #cpu,
+      #memory,
+      #disk,
+      #temperature,
+      #backlight,
+      #wireplumber,
+      #tray,
+      #network,
+      #mode,
+      #scratchpad {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        margin-left: 4px;
+        margin-right: 4px;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+
+
+
+
+
+
+
+      /* If workspaces is the leftmost module, omit left margin */
+      .modules-left>widget:first-child>#workspaces {
+          margin-left: 0;
+      }
+
+      /* If workspaces is the rightmost module, omit right margin */
+      .modules-right>widget:last-child>#workspaces {
+          margin-right: 0;
+      }
+
+      #custom-vpn {
+          color: white;
+          border-radius: 15px;
+          padding-left: 6px;
+          padding-right: 6px;
       }
     '';
   };
