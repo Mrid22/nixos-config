@@ -31,6 +31,15 @@
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+      settings = {
+        General = {
+          Experimental = true;
+          FastConnectable = true;
+        };
+        Policy = {
+          AutoEnable = true;
+        };
+      };
     };
   };
   services = {
@@ -39,7 +48,7 @@
   };
   # Networking
   networking = {
-    hostName = "nixos"; # Define your hostname.
+    hostName = "nixos";
     networkmanager.enable = true;
   };
 
