@@ -86,7 +86,7 @@
     style = ''
 
       * {
-          font-family: "MesloLGS Nerd Font Mono Bold";
+          font-family: "MesloLGS Nerd Font Mono";
           font-size: 16px;
           min-height: 0;
           font-weight: bold;
