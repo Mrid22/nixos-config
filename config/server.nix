@@ -33,9 +33,10 @@
       enable = true;
       openFirewall = true;
     };
-    headscale = {
+    tailscale = {
       enable = true;
-      port = 8081;
+      openFirewall = true;
+      useRoutingFeatures = true;
     };
     prowlarr = {
       enable = true;
