@@ -36,7 +36,7 @@
     tailscale = {
       enable = true;
       openFirewall = true;
-      useRoutingFeatures = true;
+      useRoutingFeatures = "both";
     };
     prowlarr = {
       enable = true;
