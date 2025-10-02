@@ -33,11 +33,9 @@
       enable = true;
       openFirewall = true;
     };
-    tailscale = {
+    headscale = {
       enable = true;
-      openFirewall = true;
-      disableTaildrop = true;
-      useRoutingFeatures = "both";
+      port = 8081;
     };
     prowlarr = {
       enable = true;
