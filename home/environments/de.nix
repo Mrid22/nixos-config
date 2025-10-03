@@ -83,7 +83,7 @@
         #Apps
         "ALT,Q,exec,kitty"
         "ALT,F,exec,zen-twilight"
-        "ALT,SPACE,exec,vicinae"
+        "ALT,SPACE,exec,vicinae toggle"
 
         # Windows
         "ALT,H,movefocus,l"

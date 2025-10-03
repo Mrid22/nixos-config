@@ -81,6 +81,7 @@
   virtualisation = {
     docker = {
       enable = true;
+      autoPrune.enable = true;
       rootless.enable = true;
       enableOnBoot = true;
     };
@@ -98,6 +99,10 @@
           extraOptions = [
             "--network=host"
           ];
+        };
+        immich-server = {
+          image = "ghcr.io/immich-app/immich-server:$``{IMMICH_VERSION:-release}";
+          volumes = [];
         };
       };
     };
