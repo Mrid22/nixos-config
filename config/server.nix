@@ -16,18 +16,18 @@
   };
   hardware.nvidia-container-toolkit.enable = true;
   # Services
-  environment.etc."nextcloud-admin-pass".text = "PWD";
+  # environment.etc."nextcloud-admin-pass".text = "PWD";
   services = {
-    nextcloud = {
-      enable = true;
-      package = pkgs.nextcloud31;
-      hostName = "localhost";
-      config = {
-        adminpassFile = "/etc/nextcloud-admin-pass";
-        dbtype = "sqlite";
-      };
-      settings.trusted_domains = ["nixos"];
-    };
+    # nextcloud = {
+    #   enable = true;
+    #   package = pkgs.nextcloud31;
+    #   hostName = "localhost";
+    #   config = {
+    #     adminpassFile = "/etc/nextcloud-admin-pass";
+    #     dbtype = "sqlite";
+    #   };
+    #   settings.trusted_domains = ["nixos"];
+    # };
 
     jellyfin = {
       enable = true;
@@ -99,10 +99,6 @@
           extraOptions = [
             "--network=host"
           ];
-        };
-        immich-server = {
-          image = "ghcr.io/immich-app/immich-server:$``{IMMICH_VERSION:-release}";
-          volumes = [];
         };
       };
     };
