@@ -11,9 +11,10 @@ nix.settings.experimental-features = ["nix-command" "flakes"];
 #### **`terminal`**
 
 ```bash
+cd
 nix run nixpkgs#git -- clone https://github.com/Mrid22/nixos-config
 sudo mv /etc/nixos/hardware-configuration.nix ~/nixos-config
-sudo nixos-rebuild switch --flake nixos-config
+sudo nixos-rebuild switch --flake ~/nixos-config
 ```
 
 ## ssh for easier access
