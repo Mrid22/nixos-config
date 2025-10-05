@@ -31,6 +31,7 @@
       package = pkgs.layan-gtk-theme;
     };
   };
+  programs.waybar.enable = true;
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
