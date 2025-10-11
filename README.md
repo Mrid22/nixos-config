@@ -25,6 +25,7 @@ sudo nixos-rebuild switch --flake ~/nixos-config
 ssh-keygen
 wl-copy < ~/.ssh/id_ed25519.pub
 git remote set-url origin git@github.com:Mrid22/nixos-config.git
+xdg-open https://github.com/settings/keys
 ```
 
 [Add the key to GitHub](https://www.github.com/settings/keys)
