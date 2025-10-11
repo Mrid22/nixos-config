@@ -68,14 +68,18 @@
       loadModels = ["llama3.2:3b"];
       acceleration = "cuda";
     };
-    transmission = {
+    qbittorrent = {
       enable = true;
       openFirewall = true;
-      settings = {
-        download-dir = "/media/downloads";
-        incomplete-dir = "/media/incomplete";
-        incomplete-dir-enabled = true;
+      webuiPort = 9091;
+      serverConfig = {
+        BitTorrent.Session.DefaultSavePath = "/media/downloads";
       };
+      # settings = {
+      #   download-dir = "/media/downloads";
+      #   incomplete-dir = "/media/incomplete";
+      #   incomplete-dir-enabled = true;
+      # };
     };
   };
   virtualisation = {
