@@ -80,6 +80,11 @@
         plugins = ["sudo" "git"];
       };
     };
+    nh = {
+      enable = true;
+      flake = "~/nixos-config";
+      clean.enable = true;
+    };
     atuin = {
       enable = true;
       enableZshIntegration = true;
