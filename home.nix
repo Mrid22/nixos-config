@@ -82,7 +82,7 @@
     };
     nh = {
       enable = true;
-      flake = "./";
+      flake = "nixos-config";
       clean.enable = true;
     };
     atuin = {
