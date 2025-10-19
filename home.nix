@@ -112,12 +112,14 @@
         viAlias = true;
         vimAlias = true;
         languages.nix.enable = true;
+        statusline.lualine.enable = true;
         theme = {
           enable = true;
           transparent = true;
           name = "tokyonight";
           style = "storm";
         };
+        autocomplete.nvim-cmp.enable = true;
         lsp = {
           enable = true;
           formatOnSave = true;
