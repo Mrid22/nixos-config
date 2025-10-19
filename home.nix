@@ -76,6 +76,7 @@
         cdi = "zi";
       };
       oh-my-zsh = {
+        enable = true;
         plugins = ["sudo" "git"];
       };
     };
