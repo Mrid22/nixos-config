@@ -13,11 +13,25 @@
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
+    sudo chmod a+rwx -R /media
   '';
   services = {
     sonarr = {
       enable = true;
       openFirewall = true;
+    };
+    prowlarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    flaresolverr = {
+      enable = true;
+      openFirewall = true;
+    };
+    tailscale = {
+      enable = true;
+      openFirewall = true;
+      useRoutingFeatures = true;
     };
     transmission = {
       enable = true;
