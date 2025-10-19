@@ -112,8 +112,16 @@
         viAlias = true;
         vimAlias = true;
         languages.nix.enable = true;
-        lsp.enable = true;
-        lsp.formatOnSave = true;
+        theme = {
+          enable = true;
+          transparent = true;
+          name = "tokyonight";
+          style = "storm";
+        };
+        lsp = {
+          enable = true;
+          formatOnSave = true;
+        };
       };
     };
     floorp = {
