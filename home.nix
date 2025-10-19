@@ -73,6 +73,8 @@
     };
     zsh = {
       enable = true;
+      autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
       shellAliases = {
         cd = "z";
         cdi = "zi";
