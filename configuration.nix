@@ -106,7 +106,10 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     useGlobalPkgs = true;
-    sharedModules = [ inputs.nvf.homeManagerModules.default ];
+    sharedModules = with inputs; [
+      nvf.homeManagerModules.default
+      vicinae.homeManagerModules.default
+    ];
     users = {
       "mridula" = import ./home.nix;
     };
