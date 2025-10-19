@@ -5,9 +5,6 @@
     username = "mridula";
     homeDirectory = "/home/mridula";
     stateVersion = "25.05";
-    packages = [];
-    file = {};
-    sessionVariables = {};
   };
   gtk = {
     enable = true;
@@ -106,7 +103,6 @@
       settings.vim = {
           viAlias = true;
 	  vimAlias = true;
-	};
       };
     };
     floorp = {
