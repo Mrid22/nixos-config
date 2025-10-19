@@ -68,6 +68,7 @@ home-manager = {
   # also pass inputs to home-manager modules
   extraSpecialArgs = {inherit inputs;};
   useGlobalPkgs = true;
+  sharedModules = [inputs.nvf.homeManagerModules.default];
   users = {
     "mridula" = import ./home.nix;
   };

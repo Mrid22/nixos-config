@@ -32,7 +32,6 @@
         ./configuration.nix
 	declarative-jellyfin.nixosModules.default
         inputs.home-manager.nixosModules.default
-	nvf.homeManagerModules.default
       ];
     };
   };
