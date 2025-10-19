@@ -25,14 +25,22 @@
     };
   };
 
-  outputs = { self, nixpkgs, declarative-jellyfin, nvf, ... }@inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./configuration.nix
-	declarative-jellyfin.nixosModules.default
-        inputs.home-manager.nixosModules.default
-      ];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      declarative-jellyfin,
+      nvf,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          declarative-jellyfin.nixosModules.default
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
-  };
 }
