@@ -20,9 +20,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nur, ... }@inputs: {
-    # use "nixos", or your hostname as the name of the configuration
-    # it's a better practice than "default" shown in the video
+  outputs = { self, nixpkgs, nur, declarative-jellyfin, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
