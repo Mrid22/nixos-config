@@ -27,11 +27,13 @@
     enable = true;
     settings = {
       input.touchpad.natural_scroll = true;
+      exec-once = [ "vicinae server" ];
       "$mod" = "ALT";
       bind = [
         # Apps
         "$mod, Q, exec, kitty"
         "$mod, F, exec, floorp"
+        "$mod, SPACE, exec, vicinae toggle"
         # Windows
         "$mod, H, movefocus, l"
         "$mod, J, movefocus, d"
