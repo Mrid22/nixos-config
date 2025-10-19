@@ -131,7 +131,7 @@
     floorp = {
       enable = true;
       profiles.mridula = {
-        settings.extensions.autoDisableScopes = 0
+        settings.extensions.autoDisableScopes = 0;
         extensions = {
           packages = with inputs.firefox-addons.packages.${pkgs.system}; [
             ublock-origin
