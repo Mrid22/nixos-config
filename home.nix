@@ -103,6 +103,9 @@
       settings.vim = {
           viAlias = true;
 	  vimAlias = true;
+	  languages.nix.enable = true;
+	  lsp.enable = true;
+	  lsp.formatOnSave = true;
       };
     };
     floorp = {
