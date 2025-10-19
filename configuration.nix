@@ -153,6 +153,9 @@
       wireguard-tools
       mangohud
       protonup
+      protonvpn-gui
+      protonvpn-cli
+      wireguard-tools
     ];
     sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
