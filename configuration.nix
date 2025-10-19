@@ -29,7 +29,6 @@
     networkmanager.enable = true;
   };
 
-  # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
 
   i18n = {
@@ -46,6 +45,7 @@
       LC_TIME = "nl_NL.UTF-8";
     };
   };
+
   services = {
     xserver = {
       enable = true;
@@ -112,6 +112,10 @@
     };
   };
   security.rtkit.enable = true;
+
+  fonts.packages = with pkgs.nerd-fonts; [
+    fira-code
+  ];
 
   users = {
     defaultUserShell = pkgs.zsh;
