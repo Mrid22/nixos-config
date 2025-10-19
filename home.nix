@@ -111,6 +111,8 @@
       settings.vim = {
         viAlias = true;
         vimAlias = true;
+        lineNumberMode = "none";
+        telescope.enable = true;
         languages.nix.enable = true;
         statusline.lualine.enable = true;
         theme = {
