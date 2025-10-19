@@ -13,7 +13,6 @@
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
-    sudo chmod a+rwx -R /media
   '';
   services = {
     sonarr = {
