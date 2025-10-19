@@ -139,6 +139,7 @@
             ctrl-number-to-switch-tabs
             dearrow
             decentraleyes
+            sponsorblock
             #improved-tube
           ];
         };
