@@ -82,7 +82,7 @@
     };
     nh = {
       enable = true;
-      flake = "nixos-config";
+      flake = "/home/mridula/nixos-config";
       clean.enable = true;
     };
     atuin = {
