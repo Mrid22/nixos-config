@@ -60,6 +60,7 @@
     };
   };
   programs = {
+    ashell.enable = true;
     git = {
       enable = true;
       userName = "Mrid22";
