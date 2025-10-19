@@ -15,7 +15,6 @@
       mkdir -p /media/tv
       mkdir -p /media/photos
     '';
-}
  services = {
    sonarr = {
      enable = true;
