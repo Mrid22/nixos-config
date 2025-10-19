@@ -39,9 +39,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = ["nvidia"];
-  services.upower = {
-    enable = true;
-  };
+  services.udisks2.enable = true;
+  services.upower.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.graphics = {
@@ -120,6 +119,7 @@ home-manager = {
 
   # Install firefox
   programs.hyprland.enable = true;
+  programs.gnome-disks.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
   programs.zsh.enable = true;

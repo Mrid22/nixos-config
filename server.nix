@@ -1,3 +1,11 @@
 {config,pkgs,...}:{
-services.jellyfin.enable = true;
+ fileSystems."/media" = {
+   device = "/dev/sda1";
+   fsType = "ntfs";
+   options = [
+     "users"
+     "nofail"
+     
+   ];
+ };
 }
