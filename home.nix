@@ -101,6 +101,14 @@
       enable = true;
       enableZshIntegration = true;
     };
+    nvf = {
+      enable = true;
+      settings.vim = {
+          viAlias = true;
+	  vimAlias = true;
+	};
+      };
+    };
     floorp = {
       enable = true;
       profiles.mridula = {
