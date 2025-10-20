@@ -27,6 +27,10 @@
       enable = true;
       openFirewall = true;
     };
+    jellyfin = {
+      enable = true;
+      openFirewall = true;
+    };
     tailscale = {
       enable = true;
       openFirewall = true;
@@ -39,32 +43,6 @@
         download-dir = "/media/downloads/downloads";
         incomplete-dir = "/media/downloads/incomplete";
         incomplete-dir-enabled = true;
-      };
-    };
-    declarative-jellyfin = {
-      enable = true;
-      serverId = "mridul-jelly";
-      users = {
-        Mridul = {
-          mutable = false;
-          password = "123";
-          permissions.isAdministrator = true;
-        };
-      };
-      libraries = {
-        Shows = {
-          enabled = true;
-          contentType = "tvshows";
-          pathInfos = [ "/media/tv" ];
-          typeOptions.Movies = {
-            metadataFetchers = [
-              "TheTvDb"
-            ];
-            imageFetchers = [
-              "TheTvDb"
-            ];
-          };
-        };
       };
     };
   };
