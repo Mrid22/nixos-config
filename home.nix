@@ -67,6 +67,10 @@
   };
   programs = {
     delta.enable = true;
+    hyprshot = {
+      enable = true;
+      saveLocation = true;
+    };
     git = {
       enable = true;
       settings = {
