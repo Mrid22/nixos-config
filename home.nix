@@ -70,12 +70,12 @@
     git = {
       enable = true;
       settings = {
+        init.defaultBranch = "main";
         user = {
           name = "Mrid22";
           email = "mridulaga@outlook.com";
         };
       };
-      extraConfig.init.defaultBranch = "main";
     };
     kitty = {
       enable = true;
