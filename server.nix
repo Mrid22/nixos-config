@@ -43,6 +43,22 @@
     };
     declarative-jellyfin = {
       enable = true;
+      serverId = "mridul-jelly";
+      libraries = {
+        Shows = {
+          enabled = true;
+          contentType = "shows";
+          pathInfos = [ "/media/tv" ];
+          typeOptions.Movies = {
+            metadataFetchers = [
+              "TheTvDb"
+            ];
+            imageFetchers = [
+              "TheTvDb"
+            ];
+          };
+        };
+      };
     };
   };
 }
