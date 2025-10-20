@@ -28,7 +28,6 @@
     {
       self,
       nixpkgs,
-      declarative-jellyfin,
       nvf,
       vicinae,
       ...
