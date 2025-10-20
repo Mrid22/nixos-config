@@ -70,7 +70,7 @@
     delta.enable = true;
     hyprshot = {
       enable = true;
-      saveLocation = true;
+      saveLocation = "~/Pictures/Screenshots";
     };
     git = {
       enable = true;
