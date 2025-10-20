@@ -47,6 +47,7 @@
   };
 
   services = {
+    jellyfin.enable = true;
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" ];
