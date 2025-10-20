@@ -35,7 +35,6 @@
     jellyfin = {
       enable = true;
       openFirewall = true;
-      package = inputs.stable-fallback.jellyfin;
     };
     tailscale = {
       enable = true;
