@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    stable-fallback.url = "github:nixos/nixpkgs/nixos-25.11";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -33,6 +34,7 @@
     {
       self,
       nixpkgs,
+      stable-fallback,
       declarative-jellyfin,
       nvf,
       vicinae,

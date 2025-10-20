@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   fileSystems."/media" = {
     device = "/dev/sda1";
@@ -30,6 +35,7 @@
     jellyfin = {
       enable = true;
       openFirewall = true;
+      package = inputs.stable-fallback.jellyfin;
     };
     tailscale = {
       enable = true;
