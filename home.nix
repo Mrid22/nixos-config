@@ -66,12 +66,15 @@
     };
   };
   programs = {
-    ashell.enable = true;
+    delta.enable = true;
     git = {
       enable = true;
-      userName = "Mrid22";
-      userEmail = "mridulaga@outlook.com";
-      delta.enable = true;
+      settings = {
+        user = {
+          name = "Mrid22";
+          email = "mridulaga@outlook.com";
+        };
+      };
       extraConfig.init.defaultBranch = "main";
     };
     kitty = {
