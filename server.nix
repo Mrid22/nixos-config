@@ -44,6 +44,13 @@
     declarative-jellyfin = {
       enable = true;
       serverId = "mridul-jelly";
+      users = {
+        Mridul = {
+          mutable = false;
+          password = "123";
+          permissions.isAdministrator = true;
+        };
+      };
       libraries = {
         Shows = {
           enabled = true;
