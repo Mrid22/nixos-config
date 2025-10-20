@@ -15,6 +15,7 @@
   };
   system.activationScripts.setupFolders = ''
     mkdir -p /media/downloads/downloads
+    mkdir -p /media/downloads/downloads/tv-sonarr
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
