@@ -34,6 +34,7 @@
         "$mod, Q, exec, kitty"
         "$mod, F, exec, floorp"
         "$mod, SPACE, exec, vicinae\ toggle"
+        "$mod SHIFT, S, exec, hyprshot -m region"
         # Windows
         "$mod, H, movefocus, l"
         "$mod, J, movefocus, d"
