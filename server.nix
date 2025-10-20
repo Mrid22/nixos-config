@@ -47,7 +47,7 @@
       libraries = {
         Shows = {
           enabled = true;
-          contentType = "shows";
+          contentType = "tvshows";
           pathInfos = [ "/media/tv" ];
           typeOptions.Movies = {
             metadataFetchers = [
