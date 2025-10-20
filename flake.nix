@@ -14,11 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    declarative-jellyfin = {
-      url = "github:Sveske-Juice/declarative-jellyfin";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nvf = {
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -43,7 +38,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          declarative-jellyfin.nixosModules.default
           inputs.home-manager.nixosModules.default
         ];
       };
