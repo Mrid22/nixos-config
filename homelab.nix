@@ -34,7 +34,6 @@
       enable = true;
       configWritable = true;
       openFirewall = true;
-      configDir = "/media/home/config";
       config = {
         homeassistant.name = "Home";
       };
