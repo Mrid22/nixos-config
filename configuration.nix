@@ -8,7 +8,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./server.nix
+    ./homelab.nix
   ];
   nix.settings.experimental-features = [
     "nix-command"

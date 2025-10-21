@@ -91,6 +91,7 @@
       saveLocation = "~/Pictures/Screenshots";
     };
     git = {
+      delta.enable = true;
       enable = true;
       settings = {
         init.defaultBranch = "main";
