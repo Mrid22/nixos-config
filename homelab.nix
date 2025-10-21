@@ -38,8 +38,7 @@
         homeassistant.name = "Home";
       };
       extraComponents = [
-        "androidtv_remote"
-        "tuya"
+        "shelly"
       ];
     };
     prowlarr = {
