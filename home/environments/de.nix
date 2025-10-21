@@ -43,7 +43,7 @@
         wallpaper = {
           enable = true;
           pywal = true;
-          image = "~/nixos-config/Wallpaper/jpg";
+          image = "~/nixos-config/Wallpaper.jpg";
         };
         theme = {
           mutagen = true;
