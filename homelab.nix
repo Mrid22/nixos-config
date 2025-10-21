@@ -38,9 +38,6 @@
         homeassistant.name = "Home";
       };
       extraComponents = [
-        "default_config"
-        "met"
-        "esphome"
         "androidtv_remote"
         "tuya"
       ];
