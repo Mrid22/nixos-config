@@ -93,7 +93,7 @@
       enable = true;
       saveLocation = "~/Pictures/Screenshots";
     };
-    ashell = {
+    hyprpanel = {
       enable = true;
       systemd.enable = true;
     };
