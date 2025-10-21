@@ -19,6 +19,7 @@
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
+    mkdir -p /media/home/config
   '';
   services = {
     sonarr = {
@@ -28,6 +29,11 @@
     radarr = {
       enable = true;
       openFirewall = true;
+    };
+    home-assistant = {
+      enable = true;
+      openFirewall = true;
+      configDir = "/media/home/config";
     };
     prowlarr = {
       enable = true;
