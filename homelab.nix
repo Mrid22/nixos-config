@@ -38,7 +38,12 @@
         homeassistant.name = "Home";
       };
       extraComponents = [
-        "shelly"
+        "analytics"
+        "default_config"
+        "esphome"
+        "my"
+        "shopping_list"
+        "wled"
       ];
     };
     prowlarr = {
