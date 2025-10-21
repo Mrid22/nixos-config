@@ -38,7 +38,7 @@
       config = {
         homeassistant.name = "Home";
       };
-      extraConfig = [
+      extraComponents = [
         "default_config"
         "met"
         "esphome"
