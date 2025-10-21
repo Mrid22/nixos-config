@@ -82,6 +82,12 @@
     settings = {
       input.touchpad.natural_scroll = true;
       exec-once = [ "vicinae server" ];
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 0;
+      };
+      decoration.rounding = 5;
       "$mod" = "ALT";
       bind = [
         # Apps
