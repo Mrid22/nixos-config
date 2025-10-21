@@ -38,7 +38,10 @@
       config = {
         homeassistant.name = "Home";
       };
-      defaultIntegrations = [
+      extraConfig = [
+        "default_config"
+        "met"
+        "esphome"
         "androidtv_remote"
         "tuya"
       ];
