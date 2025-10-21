@@ -60,10 +60,8 @@
                 left = [
                   "dashboard"
                   "workspaces"
-                  "media"
                 ];
                 middle = [
-                  "cava"
                   "windowtitle"
                 ];
                 right = [
