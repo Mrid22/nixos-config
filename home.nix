@@ -98,6 +98,35 @@
     hyprpanel = {
       enable = true;
       systemd.enable = true;
+      settings = {
+        layout = {
+          bar = {
+            launcher = {
+              autoDetectIcon = true;
+              workspaces.numbered = true;
+            };
+            layouts = {
+              "0" = {
+                left = [
+                  "dashboard"
+                  "workspaces"
+                  "media"
+                ];
+                middle = [
+                  "cava"
+                  "windowtitle"
+                ];
+                right = [
+                  "volume"
+                  "systray"
+                  "notifications"
+                  "power"
+                ];
+              };
+            };
+          };
+        };
+      };
     };
     git = {
       enable = true;
