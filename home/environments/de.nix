@@ -36,12 +36,12 @@
       enable = true;
       systemd.enable = true;
       settings = {
+        bar = {
+          launcher.autoDetectIcon = true;
+          workspaces.numbered = true;
+        };
         layout = {
           bar = {
-            launcher = {
-              autoDetectIcon = true;
-              workspaces.numbered = true;
-            };
             layouts = {
               "0" = {
                 left = [
