@@ -40,6 +40,7 @@
     tailscale = {
       enable = true;
       openFirewall = true;
+      disableTaildrop = true;
       useRoutingFeatures = "both";
     };
     transmission = {
