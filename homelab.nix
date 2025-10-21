@@ -33,10 +33,36 @@
     home-assistant = {
       enable = true;
       openFirewall = true;
+      configDir = "/media/home/config";
       config = {
         default_config = { };
       };
-      configDir = "/media/home/config";
+      defaultIntegrations = [
+        "application_credentials"
+        "androidtv_remote"
+        "frontend"
+        "hardware"
+        "logger"
+        "network"
+        "system_health"
+        "automation"
+        "person"
+        "scene"
+        "script"
+        "tag"
+        "zone"
+        "counter"
+        "input_boolean"
+        "input_button"
+        "input_datetime"
+        "input_number"
+        "input_select"
+        "input_text"
+        "schedule"
+        "timer"
+        "tuya"
+        "backup"
+      ];
     };
     prowlarr = {
       enable = true;
