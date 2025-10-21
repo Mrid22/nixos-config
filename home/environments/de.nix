@@ -38,7 +38,20 @@
       settings = {
         bar = {
           launcher.autoDetectIcon = true;
-          workspaces.numbered = true;
+          workspaces.show_numbered = true;
+        };
+        wallpaper = {
+          enable = true;
+          pywal = true;
+          image = "~/nixos-config/Wallpaper/jpg";
+        };
+        theme = {
+          mutagen = true;
+          mutagen_settings = {
+            mode = "dark";
+            scheme_type = "expressive";
+            variation = "monochrome_2";
+          };
         };
         layout = {
           bar = {
