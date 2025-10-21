@@ -33,6 +33,9 @@
     home-assistant = {
       enable = true;
       openFirewall = true;
+      config = {
+        default_config = { };
+      };
       configDir = "/media/home/config";
     };
     prowlarr = {
