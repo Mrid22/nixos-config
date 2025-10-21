@@ -19,9 +19,12 @@
       package = pkgs.layan-gtk-theme;
     };
   };
-  services.vicinae = {
-    enable = true;
-    settings.popToRootOnClose = false;
+  services = {
+    swaync.enable = true;
+    vicinae = {
+      enable = true;
+      settings.popToRootOnClose = false;
+    };
   };
   wayland.windowManager.hyprland = {
     enable = true;
