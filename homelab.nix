@@ -35,7 +35,7 @@
       openFirewall = true;
       configDir = "/media/home/config";
       config = {
-        default_config = { };
+        homeassistant.name = "Home";
       };
       defaultIntegrations = [
         "application_credentials"
