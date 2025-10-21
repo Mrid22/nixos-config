@@ -32,6 +32,7 @@
     };
     home-assistant = {
       enable = true;
+      configWritable = true;
       openFirewall = true;
       configDir = "/media/home/config";
       config = {
