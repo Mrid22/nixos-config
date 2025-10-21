@@ -22,8 +22,8 @@
     hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/Downloads/Wallpaper.jpg" ];
-        wallpaper = [ ",~/Downloads/Wallpaper.jpg" ];
+        preload = [ "~/nixos-config/Wallpaper.jpg" ];
+        wallpaper = [ ",~/nixos-config/Wallpaper.jpg" ];
       };
     };
   };
