@@ -19,6 +19,13 @@
       enable = true;
       settings.popToRootOnClose = false;
     };
+    hyprpaper = {
+      enable = true;
+      settings = {
+        preload = [ "~/Downloads/Wallpaper.jpg" ];
+        wallpaper = [ ",~/Downloads/Wallpaper.jpg" ];
+      };
+    };
   };
   programs = {
     hyprshot = {
