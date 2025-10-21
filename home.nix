@@ -93,6 +93,10 @@
       enable = true;
       saveLocation = "~/Pictures/Screenshots";
     };
+    ashell = {
+      enable = true;
+      systemd.enable = true;
+    };
     git = {
       enable = true;
       settings = {
