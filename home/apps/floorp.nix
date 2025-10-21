@@ -21,6 +21,15 @@
           #improved-tube
         ];
       };
+      bookmarks = {
+        force = true;
+        settings = [
+          {
+            name = "Dropout";
+            url = "watch.dropout.tv";
+          }
+        ];
+      };
       search = {
         default = "ddg";
         engines = {
