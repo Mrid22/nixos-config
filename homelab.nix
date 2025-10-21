@@ -46,7 +46,7 @@
     immich = {
       enable = true;
       openFirewall = true;
-      host = "nixos";
+      host = "0.0.0.0";
       mediaLocation = "/media/photos";
       machine-learning.enable = true;
     };
