@@ -19,7 +19,6 @@
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
-    mkdir -p /media/home/config
   '';
   services = {
     sonarr = {
@@ -29,25 +28,6 @@
     radarr = {
       enable = true;
       openFirewall = true;
-    };
-    home-assistant = {
-      enable = true;
-      extraComponents = [
-        "analytics"
-        "google_translate"
-        "met"
-        "radio_browser"
-        "shopping_list"
-        # Recommended for fast zlib compression
-        # https://www.home-assistant.io/integrations/isal
-        "isal"
-        "tuya"
-      ];
-      config = {
-        # Includes dependencies for a basic setup
-        # https://www.home-assistant.io/integrations/default_config/
-        default_config = { };
-      };
     };
     prowlarr = {
       enable = true;
