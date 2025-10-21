@@ -85,13 +85,15 @@
     };
   };
   programs = {
-    delta.enable = true;
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
+    };
     hyprshot = {
       enable = true;
       saveLocation = "~/Pictures/Screenshots";
     };
     git = {
-      delta.enable = true;
       enable = true;
       settings = {
         init.defaultBranch = "main";
