@@ -43,6 +43,12 @@
       disableTaildrop = true;
       useRoutingFeatures = "both";
     };
+    immich = {
+      enable = true;
+      openFirewall = true;
+      mediaLocation = "/media/photos";
+      machine-learning.enable = true;
+    };
     transmission = {
       enable = true;
       package = pkgs.transmission_4;
