@@ -140,19 +140,19 @@
             layouts = {
               "0" = {
                 left = [
-                  "dashboard"
-                  "workspaces"
-                  "windowtitle"
+                  #           "dashboard"
+                  #           "workspaces"
+                  #           "windowtitle"
                 ];
                 middle = [
-                  "media"
+                  # "media"
                 ];
                 right = [
-                  "volume"
-                  "network"
-                  "systray"
-                  "notifications"
-                  "power"
+                  #   "volume"
+                  #   "network"
+                  #   "systray"
+                  #   "notifications"
+                  #   "power"
                 ];
               };
             };
