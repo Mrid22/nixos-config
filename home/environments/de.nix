@@ -3,9 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
-
+}: {
   gtk = {
     enable = true;
     colorScheme = "dark";
@@ -22,8 +20,8 @@
     hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/nixos-config/Wallpaper.jpg" ];
-        wallpaper = [ ",~/nixos-config/Wallpaper.jpg" ];
+        preload = ["~/nixos-config/Wallpaper.jpg"];
+        wallpaper = [",~/nixos-config/Wallpaper.jpg"];
       };
     };
     hyprsunset = {
@@ -55,12 +53,12 @@
         listener = [
           {
             timeout = 900;
-            on-timeout = "lock_cmd";
+            on-timeout = "hyprlock";
           }
           {
             timeout = 1200;
             on-timeout = "hyprctl dispatch dpms off";
-            on-resume = "after_sleep_cmd";
+            on-resume = "hyprctl dispatch dpms on";
           }
         ];
       };
@@ -115,7 +113,6 @@
           }
         ];
       };
-
     };
     hyprpanel = {
       enable = true;
@@ -168,7 +165,7 @@
     enable = true;
     settings = {
       input.touchpad.natural_scroll = true;
-      exec-once = [ "vicinae server" ];
+      exec-once = ["vicinae server"];
       general = {
         gaps_in = 5;
         gaps_out = 5;
