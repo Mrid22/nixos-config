@@ -35,12 +35,12 @@
           autotagHtml = true;
           context.enable = true;
         };
-        theme = {
-          enable = true;
-          transparent = true;
-          name = "tokyonight";
-          style = "storm";
-        };
+        #  theme = {
+        #    enable = false;
+        #    transparent = true;
+        #    name = "tokyonight";
+        #    style = "storm";
+        #  };
         languages = {
           enableTreesitter = true;
           enableDAP = true;
