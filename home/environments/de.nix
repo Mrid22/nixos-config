@@ -86,6 +86,7 @@
       };
     };
     hyprpanel = {
+      enable = true;
     };
   };
   wayland.windowManager.hyprland = {
