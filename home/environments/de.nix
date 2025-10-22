@@ -37,7 +37,7 @@
             identity = true;
           }
           {
-            time = "21:00";
+            time = "18:00";
             temperature = 5000;
             gamma = 0.8;
           }
@@ -55,12 +55,12 @@
         listener = [
           {
             timeout = 900;
-            on-timeout = "hyprlock";
+            on-timeout = "lock_cmd";
           }
           {
             timeout = 1200;
             on-timeout = "hyprctl dispatch dpms off";
-            on-resume = "hyprctl dispatch dpms on";
+            on-resume = "after_sleep_cmd";
           }
         ];
       };
