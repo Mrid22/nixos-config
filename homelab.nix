@@ -70,5 +70,9 @@
       enable = true;
       loadModels = ["llama3.2:3b"];
     };
+    open-webui = {
+      enable = true;
+      loadModels = ["llama3.2:3b"];
+    };
   };
 }
