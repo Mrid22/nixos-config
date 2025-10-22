@@ -87,7 +87,7 @@
     };
     hyprpanel = {
       enable = true;
-      settings.layouts.bar.layouts."0" = {};
+      settings.layouts.bar.layouts."*" = {};
     };
   };
   wayland.windowManager.hyprland = {
