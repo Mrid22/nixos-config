@@ -93,7 +93,7 @@
     enable = true;
     settings = {
       input.touchpad.natural_scroll = true;
-      exec-once = ["vicinae server"];
+      exec-once = ["vicinae server" "waybar"];
       general = {
         gaps_in = 5;
         gaps_out = 5;
