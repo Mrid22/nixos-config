@@ -107,6 +107,10 @@
       "mridula" = import ./home.nix;
     };
   };
+  stylix = {
+    enable = true;
+    image = "~/nixos-config/Wallpaper.jpg";
+  };
   security.rtkit.enable = true;
 
   fonts.packages = with pkgs.nerd-fonts; [
