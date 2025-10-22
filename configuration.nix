@@ -110,6 +110,7 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
+    targets.floorp.profileNames = ["mridula"];
   };
   security.rtkit.enable = true;
 
