@@ -3,8 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   programs = {
     delta = {
       enable = true;
@@ -22,7 +21,6 @@
     };
     kitty = {
       enable = true;
-      settings.background_opacity = 0.5;
     };
     zsh = {
       enable = true;
