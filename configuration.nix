@@ -110,6 +110,7 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
+    polarity = "dark";
   };
   security.rtkit.enable = true;
 
