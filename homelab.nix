@@ -66,6 +66,9 @@
         incomplete-dir-enabled = true;
       };
     };
-    ollama.enable = true;
+    ollama = {
+      enable = true;
+      loadModels = ["llama3.2:3b"];
+    };
   };
 }
