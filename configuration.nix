@@ -109,7 +109,7 @@
   };
   stylix = {
     enable = true;
-    image = "~/nixos-config/Wallpaper.jpg";
+    image = "/home/mridula/nixos-config/Wallpaper.jpg";
   };
   security.rtkit.enable = true;
 
