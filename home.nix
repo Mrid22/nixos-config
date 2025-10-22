@@ -45,10 +45,7 @@
           enableExtraDiagnostics = true;
           enableFormat = true;
           nix.enable = true;
-          html = {
-            enable = true;
-            treesitter.autoTagHtml = true;
-          };
+          html.enable = true;
           css.enable = true;
           tailwind.enable = true;
           ts = {
