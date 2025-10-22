@@ -88,12 +88,6 @@
     hyprpanel = {
       enable = true;
       systemd.enable = true;
-      settings = {
-        bar = {
-          launcher.autoDetectIcon = true;
-          workspaces.show_numbered = true;
-        };
-      };
     };
   };
   wayland.windowManager.hyprland = {
