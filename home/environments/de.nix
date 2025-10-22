@@ -78,12 +78,14 @@
                 left = [
                   "dashboard"
                   "workspaces"
+                  "windowtitle"
                 ];
                 middle = [
-                  "windowtitle"
+                  "media"
                 ];
                 right = [
                   "volume"
+                  "network"
                   "systray"
                   "notifications"
                   "power"
