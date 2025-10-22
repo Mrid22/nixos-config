@@ -3,8 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
@@ -67,5 +66,6 @@
         incomplete-dir-enabled = true;
       };
     };
+    ollama.enable = true;
   };
 }

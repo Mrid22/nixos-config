@@ -3,9 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-
-{
+}: {
   imports = [
     ./home/environments/de.nix
     ./home/environments/terminal.nix
@@ -28,6 +26,10 @@
         autocomplete.nvim-cmp.enable = true;
         autopairs.nvim-autopairs.enable = true;
         dashboard.alpha.enable = true;
+        options = {
+          shiftwidth = 2;
+          tabstop = 2;
+        };
         treesitter = {
           enable = true;
           autotagHtml = true;
