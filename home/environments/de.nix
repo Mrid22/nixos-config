@@ -85,7 +85,7 @@
         };
       };
     };
-    ashell = {
+    waybar = {
       enable = true;
     };
   };
