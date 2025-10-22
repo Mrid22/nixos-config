@@ -18,6 +18,7 @@
           dearrow
           decentraleyes
           sponsorblock
+          duckduckgo-privacy-essentials
           #improved-tube
         ];
       };
