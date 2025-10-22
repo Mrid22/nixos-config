@@ -69,6 +69,7 @@
     ollama = {
       enable = true;
       openFirewall = true;
+      acceleration = "cuda";
       loadModels = ["llama3.2:3b"];
     };
     open-webui = {
