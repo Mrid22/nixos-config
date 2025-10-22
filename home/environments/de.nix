@@ -6,7 +6,6 @@
 }: {
   gtk = {
     enable = true;
-    colorScheme = "dark";
   };
   services = {
     vicinae = {
