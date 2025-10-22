@@ -3,13 +3,13 @@
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   programs.floorp = {
     enable = true;
     profiles.mridula = {
       settings."extensions.autoDisableScopes" = 0;
       extensions = {
+        force = true;
         packages = with inputs.firefox-addons.packages.${pkgs.system}; [
           ublock-origin
           privacy-badger
@@ -36,7 +36,7 @@
         engines = {
           MyNixOS = {
             name = "MyNixOS";
-            definedAliases = [ "!nx" ];
+            definedAliases = ["!nx"];
             urls = [
               {
                 template = "https://mynixos.com/search";
