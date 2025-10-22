@@ -87,7 +87,10 @@
     };
     hyprpanel = {
       enable = true;
-      settings.layouts.bar.layouts."*" = {left = ["workspaces"];};
+      settings = {
+        layouts.bar.layouts."*" = {left = ["workspaces"];};
+        menus.clock.time.hideSeconds = true;
+      };
     };
   };
   wayland.windowManager.hyprland = {
