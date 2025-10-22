@@ -93,42 +93,6 @@
           launcher.autoDetectIcon = true;
           workspaces.show_numbered = true;
         };
-        wallpaper = {
-          enable = true;
-          pywal = true;
-          image = "~/nixos-config/Wallpaper.jpg";
-        };
-        theme = {
-          mutagen = true;
-          mutagen_settings = {
-            mode = "dark";
-            scheme_type = "expressive";
-            variation = "monochrome_2";
-          };
-        };
-        layout = {
-          bar = {
-            layouts = {
-              "0" = {
-                left = [
-                  #           "dashboard"
-                  #           "workspaces"
-                  #           "windowtitle"
-                ];
-                middle = [
-                  # "media"
-                ];
-                right = [
-                  "volume"
-                  "network"
-                  "systray"
-                  "notifications"
-                  #   "power"
-                ];
-              };
-            };
-          };
-        };
       };
     };
   };
