@@ -119,10 +119,10 @@
                   # "media"
                 ];
                 right = [
-                  #   "volume"
-                  #   "network"
-                  #   "systray"
-                  #   "notifications"
+                  "volume"
+                  "network"
+                  "systray"
+                  "notifications"
                   #   "power"
                 ];
               };
