@@ -16,7 +16,10 @@
   };
   stylix = {
     enable = true;
-    targets.floorp.profileNames = ["mridula"];
+    targets.floorp = {
+      colorTheme.enable = true;
+      profileNames = ["mridula"];
+    };
   };
   programs = {
     nvf = {
