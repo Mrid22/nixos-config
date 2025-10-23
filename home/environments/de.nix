@@ -11,6 +11,7 @@
     swaync.enable = true;
     vicinae = {
       enable = true;
+      autoStart = true;
       settings.popToRootOnClose = false;
     };
     hyprpaper = {
