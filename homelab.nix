@@ -24,7 +24,7 @@
     backend = "docker";
     containers.homeassistant = {
       volumes = [
-        "home-assistant:/config"
+        "/media/home:/config"
         "/var/run/dbus:/run/dbus:ro"
       ];
       environment.TZ = "Europe/Amsterdam";
