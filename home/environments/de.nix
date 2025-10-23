@@ -65,6 +65,7 @@
       enable = true;
       saveLocation = "~/Pictures/Screenshots";
     };
+    waybar.enable = true;
     hyprlock = {
       enable = true;
       settings = {
