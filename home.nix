@@ -14,6 +14,9 @@
     homeDirectory = "/home/mridula";
     stateVersion = "25.05";
   };
+  stylix = {
+    targets.floorp.profiles = ["mridula"];
+  };
   programs = {
     nvf = {
       enable = true;
