@@ -18,13 +18,8 @@
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
-    mkdir -p /media/passwords
   '';
   services = {
-    vaultwarden = {
-      enable = true;
-      backupDir = "/media/passwords";
-    };
     sonarr = {
       enable = true;
       openFirewall = true;
