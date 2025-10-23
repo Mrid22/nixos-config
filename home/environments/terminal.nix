@@ -27,6 +27,7 @@
       shellAliases = {
         cd = "z";
         cdi = "zi";
+        fastfetch = "nix run nixpkgs#fastfetch";
       };
       oh-my-zsh = {
         enable = true;
