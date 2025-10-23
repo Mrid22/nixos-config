@@ -12,7 +12,10 @@
     vicinae = {
       enable = true;
       autoStart = true;
-      settings.popToRootOnClose = false;
+      settings = {
+        popToRootOnClose = false;
+        theme.name = "tokyonight-storm";
+      };
     };
     hyprpaper = {
       enable = true;
