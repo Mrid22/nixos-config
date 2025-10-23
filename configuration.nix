@@ -111,6 +111,10 @@
     enable = true;
     image = ./Wallpaper.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    opacity = {
+      desktop = 0.5;
+      terminal = 0.5;
+    };
   };
   security.rtkit.enable = true;
 
