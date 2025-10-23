@@ -8,6 +8,7 @@
     enable = true;
   };
   services = {
+    swaync.enable = true;
     vicinae = {
       enable = true;
       settings.popToRootOnClose = false;

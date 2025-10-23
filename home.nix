@@ -17,9 +17,12 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
-    targets.floorp = {
-      colorTheme.enable = true;
-      profileNames = ["mridula"];
+    targets = {
+      nvf.transparentBackground = true;
+      floorp = {
+        colorTheme.enable = true;
+        profileNames = ["mridula"];
+      };
     };
   };
   programs = {
@@ -43,12 +46,6 @@
           autotagHtml = true;
           context.enable = true;
         };
-        #  theme = {
-        #    enable = false;
-        #    transparent = true;
-        #    name = "tokyonight";
-        #    style = "storm";
-        #  };
         languages = {
           enableTreesitter = true;
           enableDAP = true;
