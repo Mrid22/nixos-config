@@ -14,13 +14,6 @@
     homeDirectory = "/home/mridula";
     stateVersion = "25.05";
   };
-  stylix = {
-    enable = true;
-    targets.floorp = {
-      colorTheme.enable = true;
-      profileNames = ["mridula"];
-    };
-  };
   programs = {
     nvf = {
       enable = true;
