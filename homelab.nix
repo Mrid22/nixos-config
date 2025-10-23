@@ -26,8 +26,8 @@
       volumes = ["/media/home:/config"];
       environment = {
         TZ = "Europe/Amsterdam";
-        PUID = toString config.users.mridula.uid;
-        GUID = toString config.users.mridula.gid;
+        PUID = toString config.users.users.mridula.uid;
+        GUID = toString config.users.users.mridula.gid;
       };
       image = "ghcr.io/home-assistant/home-assistant:stable";
       ports = [
