@@ -108,7 +108,7 @@
     };
   };
   stylix = {
-    enable = false;
+    enable = true;
     image = ./Wallpaper.jpg;
     polarity = "dark";
   };
