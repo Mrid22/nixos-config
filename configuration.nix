@@ -110,7 +110,7 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     opacity = {
       desktop = 0.5;
       terminal = 0.5;
