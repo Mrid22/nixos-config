@@ -110,7 +110,7 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
-    polarity = "dark";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyonight-storm.yaml";
   };
   security.rtkit.enable = true;
 
