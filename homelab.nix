@@ -27,7 +27,7 @@
       environment = {
         TZ = "Europe/Amsterdam";
         PUID = toString config.users.users.mridula.uid;
-        PGID = 100;
+        PGID = toString 100;
       };
       image = "ghcr.io/home-assistant/home-assistant:stable";
       ports = [
