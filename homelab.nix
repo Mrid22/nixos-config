@@ -18,6 +18,7 @@
     mkdir -p /media/downloads/incomplete
     mkdir -p /media/tv
     mkdir -p /media/photos
+    mkdir -p /media/home
   '';
   services = {
     sonarr = {
@@ -76,6 +77,10 @@
       enable = true;
       openFirewall = true;
       host = "0.0.0.0";
+    };
+    home-assistant = {
+      enable = true;
+      extraComponents = ["tuya"];
     };
   };
 }
