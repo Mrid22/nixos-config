@@ -16,6 +16,7 @@
   };
   stylix = {
     enable = true;
+    image = ./Wallpaper.jpg;
     targets.floorp = {
       colorTheme.enable = true;
       profileNames = ["mridula"];
