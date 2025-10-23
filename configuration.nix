@@ -109,7 +109,7 @@
   };
   stylix = {
     enable = true;
-    image = ./Wallpaper.jpg;
+    image = ./Walpaper.jpg;
     polarity = "dark";
   };
   security.rtkit.enable = true;
