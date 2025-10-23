@@ -23,7 +23,10 @@
   virtualisation.oci-containers = {
     backend = "docker";
     containers.homeassistant = {
-      volumes = ["/media/home:/config"];
+      volumes = [
+        "/media/home:/config"
+        "/var/run/dbus:/run/dbus:ro"
+      ];
       environment = {
         TZ = "Europe/Amsterdam";
         PUID = toString config.users.users.mridula.uid;
