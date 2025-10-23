@@ -110,7 +110,7 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyonight-storm.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
   };
   security.rtkit.enable = true;
 
@@ -160,7 +160,6 @@
       pnpm
       nodejs
       netbeans
-      base16-schemes
     ];
     sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
