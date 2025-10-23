@@ -20,25 +20,17 @@
     mkdir -p /media/photos
     mkdir -p /media/home
   '';
-  virtualisation.oci-containers = {
+  virtualisation = {
     backend = "docker";
     containers.homeassistant = {
       volumes = [
-        "/media/home:/config"
+        "home-assistant:/config"
         "/var/run/dbus:/run/dbus:ro"
       ];
-      environment = {
-        TZ = "Europe/Amsterdam";
-        PUID = toString config.users.users.mridula.uid;
-        PGID = toString 100;
-      };
+      environment.TZ = "Europe/Amsterdam";
       image = "ghcr.io/home-assistant/home-assistant:stable";
-      ports = [
-        "8123:8123"
-      ];
       extraOptions = [
         "--network=host"
-        "--pull=newer"
       ];
     };
   };
