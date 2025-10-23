@@ -19,6 +19,7 @@
     image = ./Wallpaper.jpg;
     targets = {
       nvf.transparentBackground = true;
+      waybar.addCss = true;
       floorp = {
         colorTheme.enable = true;
         profileNames = ["mridula"];
