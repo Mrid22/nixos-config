@@ -81,6 +81,7 @@
     home-assistant = {
       enable = true;
       extraComponents = ["tuya"];
+      config.homeassistant.name = "home";
     };
   };
 }
