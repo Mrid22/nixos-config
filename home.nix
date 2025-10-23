@@ -42,7 +42,7 @@
           shiftwidth = 2;
           tabstop = 2;
         };
-        filetee.neo-tree.enable = true;
+        filetree.neo-tree.enable = true;
         treesitter = {
           enable = true;
           autotagHtml = true;
