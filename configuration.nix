@@ -160,6 +160,7 @@
       pnpm
       nodejs
       netbeans
+      base16-schemes
     ];
     sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
