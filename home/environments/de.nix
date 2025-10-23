@@ -14,7 +14,7 @@
       autoStart = true;
       settings = {
         popToRootOnClose = false;
-        theme.name = "tokyonight-storm";
+        theme.name = "tokyo-night-storm";
       };
     };
     hyprpaper = {
