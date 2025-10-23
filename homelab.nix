@@ -20,6 +20,7 @@
     mkdir -p /media/photos
   '';
   services = {
+    vaultwarden.enable = true;
     sonarr = {
       enable = true;
       openFirewall = true;
