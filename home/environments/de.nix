@@ -65,7 +65,10 @@
       enable = true;
       saveLocation = "~/Pictures/Screenshots";
     };
-    waybar.enable = true;
+    waybar = {
+      enable = true;
+      systemd.enable = true;
+    };
     hyprlock = {
       enable = true;
       settings = {
