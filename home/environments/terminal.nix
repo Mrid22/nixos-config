@@ -5,6 +5,7 @@
   ...
 }: {
   programs = {
+    kitty.enable = true;
     delta = {
       enable = true;
       enableGitIntegration = true;
@@ -18,9 +19,6 @@
           email = "mridulaga@outlook.com";
         };
       };
-    };
-    kitty = {
-      enable = true;
     };
     zsh = {
       enable = true;
@@ -42,6 +40,10 @@
       enable = true;
       flake = "/home/mridula/nixos-config";
       clean.enable = true;
+    };
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
     };
     atuin = {
       enable = true;
