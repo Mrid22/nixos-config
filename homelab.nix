@@ -28,6 +28,10 @@
         "/var/run/dbus:/run/dbus:ro"
       ];
       environment.TZ = "Europe/Amsterdam";
+      ports = [
+        "127.0.0.1:8123:8123"
+        "127.0.0.1:8124:80"
+      ];
       image = "ghcr.io/home-assistant/home-assistant:stable";
       extraOptions = [
         "--network=host"
