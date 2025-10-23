@@ -15,6 +15,7 @@
     stateVersion = "25.05";
   };
   stylix = {
+    enable = true;
     targets.floorp.profileNames = ["mridula"];
   };
   programs = {
