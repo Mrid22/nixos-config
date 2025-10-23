@@ -15,7 +15,7 @@
     stateVersion = "25.05";
   };
   stylix = {
-    targets.floorp.profiles = ["mridula"];
+    targets.floorp.profileNames = ["mridula"];
   };
   programs = {
     nvf = {
