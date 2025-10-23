@@ -20,7 +20,7 @@
     mkdir -p /media/photos
     mkdir -p /media/home
   '';
-  virtualisation = {
+  virtualisation.oci-containers = {
     backend = "docker";
     containers.homeassistant = {
       volumes = [
