@@ -23,28 +23,6 @@
   virtualisation.oci-containers = {
     backend = "docker";
     containers = {
-      pi-hole = {
-        image = "pihole/pihole:latest";
-        ports = [
-          "53:53/tcp"
-          "53:53/udp"
-          "80:80/tcp"
-          "443:443/tcp"
-        ];
-        volumes = [
-          "./etc-pihole:/etc/pihole"
-        ];
-        environment = {
-          TZ = "Europe/Amsterdam";
-          FTLCONF_webserver_api_password = "correct horse battery staple";
-          FTLCONF_dns_listeningMode = "all";
-        };
-        capabilities = {
-          NET_ADMIN = true;
-          SYS_TIME = true;
-          SYS_NICE = true;
-        };
-      };
       homeassistant = {
         image = "ghcr.io/home-assistant/home-assistant:stable";
         volumes = [
@@ -124,19 +102,9 @@
       openFirewall = true;
       host = "0.0.0.0";
     };
-    # home-assistant = {
-    #   enable = true;
-    #   extraComponents = [
-    #     "analytics"
-    #     "google_translate"
-    #     "met"
-    #     "radio_browser"
-    #     "shopping_list"
-    #     "isal"
-    #   ];
-    #   config = {
-    #     default_config = {};
-    #   };
-    # };
+    pihole-web.enable = true;
+    pihole-ftl = {
+      enable = true;
+    };
   };
 }
