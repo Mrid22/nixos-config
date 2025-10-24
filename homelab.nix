@@ -111,6 +111,9 @@
     };
     pihole-ftl = {
       enable = true;
+      settings = {
+        webserver.serve_all = true;
+      };
     };
   };
 }
