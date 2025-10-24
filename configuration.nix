@@ -8,10 +8,19 @@
     ./hardware-configuration.nix
     ./homelab.nix
   ];
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix = {
+    optimise.automatic = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -170,6 +179,16 @@
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
     };
   };
-
-  system.stateVersion = "25.05";
+  system = {
+    stateVersion = "25.05";
+    autoUpgrade = {
+      enable = true;
+      flake = inputs.self.outPath;
+      flags = [
+        "-L"
+      ];
+      dates = "02:00";
+      randomizedDelaySec = "45min";
+    };
+  };
 }
