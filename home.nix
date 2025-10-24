@@ -8,7 +8,7 @@
     ./home/environments/de.nix
     ./home/environments/terminal.nix
     ./home/apps/floorp.nix
-    ./home/apps/nvf.nix
+    # ./home/apps/nvf.nix
   ];
   home = {
     username = "mridula";
