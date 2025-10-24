@@ -22,21 +22,47 @@
   '';
   virtualisation.oci-containers = {
     backend = "docker";
-    containers.homeassistant = {
-      volumes = [
-        "/media/home:/config"
-        "/var/run/dbus:/run/dbus:ro"
-        "/media/tv:/media"
-      ];
-      environment.TZ = "Europe/Amsterdam";
-      ports = [
-        "127.0.0.1:8123:8123"
-        "127.0.0.1:8124:80"
-      ];
-      image = "ghcr.io/home-assistant/home-assistant:stable";
-      extraOptions = [
-        "--network=host"
-      ];
+    containers = {
+      pi-hole = {
+        image = "pihole/pihole:latest";
+        ports = [
+          "53:53/tcp"
+          "53:53/udp"
+          "80:80/tcp"
+          "443:443/tcp"
+        ];
+        volumes = [
+          "./etc-pihole:/etc/pihole"
+        ];
+        environment = {
+          TZ = "Europe/Amsterdam";
+          FTLCONF_webserver_api_password = "correct horse battery staple";
+          FTLCONF_dns_listeningMode = "all";
+        };
+        capabilities = {
+          NET_ADMIN = true;
+          SYS_TIME = true;
+          SYS_NICE = true;
+        };
+      };
+      homeassistant = {
+        image = "ghcr.io/home-assistant/home-assistant:stable";
+        volumes = [
+          "/media/home:/config"
+          "/var/run/dbus:/run/dbus:ro"
+          "/media/tv:/media"
+        ];
+        environment = {
+          TZ = "Europe/Amsterdam";
+        };
+        ports = [
+          "127.0.0.1:8123:8123"
+          "127.0.0.1:8124:80"
+        ];
+        extraOptions = [
+          "--network=host"
+        ];
+      };
     };
   };
   services = {
