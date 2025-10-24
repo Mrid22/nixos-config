@@ -111,8 +111,6 @@
     };
     pihole-ftl = {
       enable = true;
-      settings.webserver.port = 9090;
-      openFirewallWebserver = true;
     };
   };
 }
