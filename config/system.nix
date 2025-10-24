@@ -91,7 +91,6 @@
       powerOnBoot = true;
     };
     nvidia = {
-      enabled = true;
       open = true;
       modesetting.enable = true;
       powerManagement = {
