@@ -26,6 +26,7 @@
       volumes = [
         "/media/home:/config"
         "/var/run/dbus:/run/dbus:ro"
+        "/media/tv:/media"
       ];
       environment.TZ = "Europe/Amsterdam";
       ports = [
