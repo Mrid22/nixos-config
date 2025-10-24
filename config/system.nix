@@ -82,7 +82,7 @@
       enable32Bit = true;
     };
     cpu.intel.updateMicrocode = true;
-    logitech = {
+    logitech.wireless = {
       enable = true;
       enableGraphical = true;
     };
