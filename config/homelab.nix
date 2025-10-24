@@ -83,6 +83,7 @@
     };
     transmission = {
       enable = true;
+      openRPCPort = true;
       package = pkgs.transmission_4;
       settings = {
         download-dir = "/media/downloads/downloads";
