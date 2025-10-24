@@ -90,6 +90,7 @@
       openFirewall = true;
       acceleration = "cuda";
       loadModels = ["llama3.2:3b"];
+      host = "0.0.0.0";
     };
     open-webui = {
       enable = true;
