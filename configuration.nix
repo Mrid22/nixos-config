@@ -7,62 +7,19 @@
   imports = [
     ./hardware-configuration.nix
     ./config/homelab.nix
-    ./config/hardware.nix
+    ./config/system.nix
   ];
 
-  services = {
-    xserver = {
-      enable = true;
-      videoDrivers = ["nvidia"];
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
-    udisks2.enable = true;
-    upower.enable = true;
-    displayManager.gdm.enable = true;
-    printing.enable = true;
-    keyd = {
-      enable = true;
-      keyboards = {
-        default = {
-          ids = ["*"];
-          settings = {
-            main = {
-              capslock = "overload(control,esc)";
-            };
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "overload(control,esc)";
           };
         };
-      };
-    };
-    pulseaudio.enable = false;
-    pipewire = {
-      enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-      pulse.enable = true;
-    };
-  };
-
-  hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-    };
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-    };
-    nvidia = {
-      open = true;
-      modesetting.enable = true;
-      prime = {
-        sync.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
       };
     };
   };
@@ -87,11 +44,6 @@
       terminal = 0.5;
     };
   };
-  security.rtkit.enable = true;
-
-  fonts.packages = with pkgs.nerd-fonts; [
-    fira-code
-  ];
 
   users = {
     defaultUserShell = pkgs.zsh;
@@ -119,8 +71,9 @@
       gamescopeSession.enable = true;
     };
   };
-
-  nixpkgs.config.allowUnfree = true;
+  fonts.packages = with pkgs.nerd-fonts; [
+    fira-code
+  ];
   environment = {
     systemPackages = with pkgs; [
       kitty
@@ -139,18 +92,6 @@
     ];
     sessionVariables = {
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
-    };
-  };
-  system = {
-    stateVersion = "25.05";
-    autoUpgrade = {
-      enable = true;
-      flake = inputs.self.outPath;
-      flags = [
-        "-L"
-      ];
-      dates = "02:00";
-      randomizedDelaySec = "45min";
     };
   };
 }
