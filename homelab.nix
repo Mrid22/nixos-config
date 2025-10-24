@@ -102,9 +102,14 @@
       openFirewall = true;
       host = "0.0.0.0";
     };
-    pihole-web.enable = true;
-    pihole-ftl = {
+    pihole-web = {
       enable = true;
+      ports = [
+        "80r"
+        "443s"
+      ];
     };
+
+    pihole-ftl.enable = true;
   };
 }
