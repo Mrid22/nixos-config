@@ -199,7 +199,7 @@
       bind = [
         # Apps
         "$mod, Q, exec, kitty"
-        "$mod, F, exec, floorp"
+        "$mod, F, exec, zen"
         "$mod, E, exec, dolphin"
         "$mod, SPACE, exec, vicinae\ toggle"
         "$mod SHIFT, S, exec, hyprshot -m region"
