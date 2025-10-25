@@ -22,7 +22,7 @@
     targets = {
       nvf.transparentBackground = true;
       waybar.addCss = true;
-      floorp = {
+      zen-browser = {
         colorTheme.enable = true;
         profileNames = ["mridula"];
       };
