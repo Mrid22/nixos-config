@@ -7,7 +7,10 @@
   imports = [
     inputs.zen-browser.homeModules.twilight
   ];
-  stylix.targets.zen-browser.profileNames = ["mridula"];
+  stylix.targets.zen-browser = {
+    enable = false;
+    profileNames = ["mridula"];
+  };
   programs.zen-browser = {
     enable = true;
     profiles.mridula = {
