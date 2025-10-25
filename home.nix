@@ -23,7 +23,6 @@
       nvf.transparentBackground = true;
       waybar.addCss = true;
       zen-browser = {
-        colorTheme.enable = true;
         profileNames = ["mridula"];
       };
     };
