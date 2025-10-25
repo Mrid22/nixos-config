@@ -4,7 +4,11 @@
   inputs,
   ...
 }: {
-  programs.floorp = {
+  imports = [
+    inputs.zen-browser.homeModules.twilight
+  ];
+  stylix.targets.zen-browser.profileNames = ["mridula"];
+  programs.zen-browser = {
     enable = true;
     profiles.mridula = {
       settings."extensions.autoDisableScopes" = 0;
