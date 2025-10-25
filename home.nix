@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  inputs,
   ...
 }: {
   imports = [
@@ -18,10 +17,6 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
-    targets = {
-      nvf.transparentBackground = true;
-      waybar.addCss = true;
-    };
   };
 
   programs.home-manager.enable = true;

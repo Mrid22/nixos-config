@@ -4,6 +4,7 @@
   inputs,
   ...
 }: {
+  stylix.targets.waybar.addCss = true;
   gtk = {
     enable = true;
   };

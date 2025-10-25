@@ -3,6 +3,8 @@
   pkgs,
   ...
 }: {
+  stylix.targets.nvf.transparentBackground = true;
+
   programs.nvf = {
     enable = true;
     settings.vim = {
