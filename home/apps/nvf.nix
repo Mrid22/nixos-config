@@ -6,6 +6,8 @@
   programs.nvf = {
     enable = true;
     settings.vim = {
+      withNodeJs = true;
+      withPython3 = true;
       viAlias = true;
       vimAlias = true;
       lineNumberMode = "none";
@@ -46,6 +48,7 @@
         html.enable = true;
         css.enable = true;
         tailwind.enable = true;
+        python.enable = true;
         ts = {
           enable = true;
           extensions.ts-error-translator.enable = true;
@@ -53,6 +56,10 @@
         markdown = {
           enable = true;
           extensions.render-markdown-nvim.enable = true;
+        };
+        typst = {
+          enable = true;
+          extensions.typst-concealer.enable = true;
         };
       };
       lsp = {
