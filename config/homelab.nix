@@ -132,6 +132,7 @@
       acceleration = "cuda";
       loadModels = ["llama3.2:3b"];
       host = "0.0.0.0";
+      models = "/media/models";
     };
     open-webui = {
       enable = true;
