@@ -138,9 +138,5 @@
       openFirewall = true;
       host = "0.0.0.0";
     };
-    adguardhome = {
-      enable = true;
-      allowDHCP = true;
-    };
   };
 }
