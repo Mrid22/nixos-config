@@ -111,14 +111,5 @@
   # System
   system = {
     stateVersion = "25.05";
-    autoUpgrade = {
-      enable = true;
-      flake = inputs.self.outPath;
-      flags = [
-        "-L"
-      ];
-      dates = "02:00";
-      randomizedDelaySec = "45min";
-    };
   };
 }
