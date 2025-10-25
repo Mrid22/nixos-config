@@ -139,7 +139,7 @@
       host = "0.0.0.0";
     };
     adguardhome = {
-      # enable = true;
+      enable = true;
       allowDHCP = true;
     };
   };
