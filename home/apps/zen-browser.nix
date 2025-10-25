@@ -21,13 +21,12 @@
           ublock-origin
           privacy-badger
           proton-pass
-          #ctrl-number-to-switch-tabs
           dearrow
           decentraleyes
           sponsorblock
           duckduckgo-privacy-essentials
           transparent-zen
-          improved-tube
+          #improved-tube
         ];
       };
       bookmarks = {
