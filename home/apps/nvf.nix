@@ -1,6 +1,6 @@
 {
+  config,
   pkgs,
-  lib,
   ...
 }: {
   programs.nvf = {
@@ -11,7 +11,17 @@
       lineNumberMode = "none";
       telescope.enable = true;
       statusline.lualine.enable = true;
-      autocomplete.nvim-cmp.enable = true;
+      autocomplete.nvim-cmp = {
+        enable = true;
+        sourcePlugins = [
+          "alpha-nvim"
+          "cmp-nvim-lsp"
+          "cmp-treesitter"
+          "cmp-luasnip"
+          "friendly-snippets"
+          "nvim-treesitter-context"
+        ];
+      };
       autopairs.nvim-autopairs.enable = true;
       dashboard.alpha.enable = true;
       options = {
