@@ -63,6 +63,7 @@
     displayManager.gdm.enable = true;
     printing.enable = true;
     pulseaudio.enable = false;
+    tlp.enable = true;
     pipewire = {
       enable = true;
       alsa = {
