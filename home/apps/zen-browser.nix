@@ -26,6 +26,7 @@
           decentraleyes
           sponsorblock
           duckduckgo-privacy-essentials
+          transparent-zen
           #improved-tube
         ];
       };
