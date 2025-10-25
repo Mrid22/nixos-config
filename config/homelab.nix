@@ -66,11 +66,11 @@
                 {
                   href = "http://nixos:8096";
                 }
-              ];
-              Sonarr = [
                 {
                   href = "http://nixos:8989";
                 }
+              ];
+              Sonarr = [
               ];
             }
           ];
