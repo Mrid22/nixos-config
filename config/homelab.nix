@@ -45,6 +45,38 @@
     };
   };
   services = {
+    homepage-dashboard = {
+      enable = true;
+      bookmarks = [
+        {
+          AI = [
+            {
+              Ollama = [
+                {
+                  href = "http://nixos:11434";
+                }
+              ];
+            }
+          ];
+        }
+        {
+          Media = [
+            {
+              Jellyfin = [
+                {
+                  href = "http://nixos:8096";
+                }
+              ];
+              Sonarr = [
+                {
+                  href = "http://nixos:8989";
+                }
+              ];
+            }
+          ];
+        }
+      ];
+    };
     sonarr = {
       enable = true;
       openFirewall = true;
