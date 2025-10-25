@@ -18,8 +18,11 @@
           "cmp-nvim-lsp"
           "cmp-treesitter"
           "cmp-luasnip"
+          "luasnip"
           "friendly-snippets"
           "nvim-treesitter-context"
+          "nvim-cmp"
+          "telescope"
         ];
       };
       autopairs.nvim-autopairs.enable = true;
