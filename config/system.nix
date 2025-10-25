@@ -61,7 +61,10 @@
     udisks2.enable = true;
     upower.enable = true;
     displayManager.gdm.enable = true;
-    printing.enable = true;
+    printing = {
+      enable = true;
+      drivers = with pkgs; [hplip];
+    };
     pulseaudio.enable = false;
     tlp.enable = true;
     pipewire = {
