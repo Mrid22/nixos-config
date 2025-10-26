@@ -4,9 +4,6 @@
   inputs,
   ...
 }: {
-  imports = [
-    #   inputs.selfhostblocks.default
-  ];
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
@@ -15,7 +12,6 @@
       "nofail"
     ];
   };
-  # shb.jellyfin.enable = true;
   system.activationScripts.setupFolders = ''
     mkdir -p /media/downloads/downloads
     mkdir -p /media/downloads/downloads/tv-sonarr

@@ -36,10 +36,6 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    selfhostblocks = {
-      url = "github:ibizaman/selfhostblocks";
-    };
   };
 
   outputs = {
@@ -47,23 +43,15 @@
     nixpkgs,
     nvf,
     vicinae,
-    selfhostblocks,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    lib = selfhostblocks.lib.${system};
-  in {
+  } @ inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
-          inherit system;
-        };
+        specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
-          inputs.selfhostblocks.nixosModules.default
         ];
       };
     };
