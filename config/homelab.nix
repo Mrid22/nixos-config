@@ -15,7 +15,7 @@
       "nofail"
     ];
   };
-  shb.jellyfin.enable = true;
+  # shb.jellyfin.enable = true;
   system.activationScripts.setupFolders = ''
     mkdir -p /media/downloads/downloads
     mkdir -p /media/downloads/downloads/tv-sonarr
