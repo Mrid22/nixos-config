@@ -49,6 +49,7 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
+    lib = selfhostblocks.lib.${system};
     nixpkgs' = lib.shb.patchedNixpkgs;
     nixosSystem' = import "${nixpkgs'}/nixos/lib/eval-config.nix";
   in {
