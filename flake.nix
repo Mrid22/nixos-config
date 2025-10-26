@@ -51,6 +51,7 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
+    lib = selfhostblocks.lib.${system};
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
