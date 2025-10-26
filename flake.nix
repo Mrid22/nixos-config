@@ -53,14 +53,21 @@
     nixpkgs' = lib.shb.patchedNixpkgs;
     nixosSystem' = import "${nixpkgs'}/nixos/lib/eval-config.nix";
   in {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./configuration.nix
-        inputs.home-manager.nixosModules.default
-        inputs.stylix.nixosModules.stylix
-        selfhostblocks.nixosModules.default
-      ];
+    nixosConfigurations = {
+      machine = nixosSystem' {
+        inherit system;
+        modules = [
+          selfhostblocks.nixosModules.default
+        ];
+      };
+      nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./configuration.nix
+          inputs.home-manager.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+        ];
+      };
     };
   };
 }
