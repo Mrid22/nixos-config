@@ -27,7 +27,7 @@
 
   sops = {
     defaultSopsFile = ./secrets/secrets.yaml;
-    defaulSopsFormat = "yaml";
+    defaultSopsFormat = "yaml";
     age.keyFile = "~/.config/sops/age/keys.txt";
   };
 
