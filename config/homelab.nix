@@ -21,6 +21,7 @@
     mkdir -p /media/home
     mkdir -p /media/models
   '';
+  shb.jellyfin.enable = true;
   virtualisation.oci-containers = {
     backend = "docker";
     containers = {
