@@ -8,6 +8,7 @@
     ./hardware-configuration.nix
     ./config/homelab.nix
     ./config/system.nix
+    inputs.sops-nix.nixosModules.sops
   ];
 
   services.keyd = {
@@ -22,6 +23,12 @@
         };
       };
     };
+  };
+
+  sops = {
+    defaultSopsFile = ./secrets/secrets.yaml;
+    defaulSopsFormat = "yaml";
+    age.keyFile = "~/.config/sops/age/keys.txt";
   };
 
   home-manager = {
