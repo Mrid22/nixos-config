@@ -9,9 +9,8 @@
     ./config/homelab.nix
     ./config/system.nix
     inputs.sops-nix.nixosModules.sops
-    inputs.selfhostblocks.default
   ];
-
+  shb.jellyfin.enable = true;
   services.keyd = {
     enable = true;
     keyboards = {
