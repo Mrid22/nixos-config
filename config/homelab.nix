@@ -64,6 +64,11 @@
     };
   };
   services = {
+    duckdns = {
+      enable = true;
+      domains = ["mridulagarwal"];
+      tokenFile = "~/auth.txt";
+    };
     homepage-dashboard = {
       enable = true;
       bookmarks = [
