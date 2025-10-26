@@ -19,6 +19,7 @@
     mkdir -p /media/tv
     mkdir -p /media/photos
     mkdir -p /media/home
+    mkdir -p /media/models
   '';
   virtualisation.oci-containers = {
     backend = "docker";
