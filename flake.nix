@@ -39,7 +39,6 @@
 
     selfhostblocks = {
       url = "github:ibizaman/selfhostblocks";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
