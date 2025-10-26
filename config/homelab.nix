@@ -106,10 +106,10 @@
       enable = true;
       openFirewall = true;
     };
-    jellyfin = {
-      enable = true;
-      openFirewall = true;
-    };
+    # jellyfin = {
+    #   enable = true;
+    #   openFirewall = true;
+    # };
     jellyseerr = {
       enable = true;
       openFirewall = true;
@@ -153,6 +153,15 @@
     nixarr = {
       enable = true;
       mediaDir = "/media";
+      stateDir = "/media/.state/nixarr";
+      jellyfin = {
+        enable = true;
+        expose.https = {
+          enable = true;
+          domainName = "jellyfin.mridulagarwal.duckdns.org";
+          acmeMail = "mridulaga@outlook.com"; # Required for ACME-bot
+        };
+      };
     };
   };
 }
