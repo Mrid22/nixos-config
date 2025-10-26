@@ -9,7 +9,7 @@
     ./config/homelab.nix
     ./config/system.nix
     inputs.sops-nix.nixosModules.sops
-    inputs.selfhostblocks.nixosModules.default
+    inputs.selfhostblocks.nixosModules.jellyfin
   ];
   services.keyd = {
     enable = true;

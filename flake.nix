@@ -58,7 +58,7 @@
       machine = nixosSystem' {
         inherit system;
         modules = [
-          selfhostblocks.nixosModules.default
+          selfhostblocks.nixosModules.jellyfin
         ];
       };
       nixos = nixpkgs.lib.nixosSystem {
