@@ -5,7 +5,7 @@
   ...
 }: {
   imports = [
-    inputs.selfhostblocks.default
+    #   inputs.selfhostblocks.default
   ];
   fileSystems."/media" = {
     device = "/dev/sda1";
