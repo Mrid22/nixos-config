@@ -65,6 +65,7 @@
 
   programs = {
     hyprland.enable = true;
+    adb.enable = true;
     gnome-disks.enable = true;
     zsh.enable = true;
     gamemode.enable = true;
