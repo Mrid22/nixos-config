@@ -10,7 +10,6 @@
     ./config/system.nix
     inputs.sops-nix.nixosModules.sops
   ];
-  shb.jellyfin.enable = true;
   services.keyd = {
     enable = true;
     keyboards = {
