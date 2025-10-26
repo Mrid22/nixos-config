@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -32,6 +33,11 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -39,14 +45,20 @@
     nixpkgs,
     nvf,
     vicinae,
+    selfhostblocks,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux";
+    nixpkgs' = lib.shb.patchedNixpkgs;
+    nixosSystem' = import "${nixpkgs'}/nixos/lib/eval-config.nix";
+  in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
+        selfhostblocks.nixosModules.default
       ];
     };
   };
