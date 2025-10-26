@@ -44,6 +44,7 @@
     nixpkgs,
     nvf,
     vicinae,
+    selfhostblocks,
     ...
   } @ inputs: {
     nixosConfigurations = {
