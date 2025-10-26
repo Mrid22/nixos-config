@@ -4,6 +4,9 @@
   inputs,
   ...
 }: {
+  imports = [
+    inputs.selfhostblocks.default
+  ];
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
@@ -12,6 +15,7 @@
       "nofail"
     ];
   };
+  shb.jellyfin.enable = true;
   system.activationScripts.setupFolders = ''
     mkdir -p /media/downloads/downloads
     mkdir -p /media/downloads/downloads/tv-sonarr
@@ -21,7 +25,6 @@
     mkdir -p /media/home
     mkdir -p /media/models
   '';
-  shb.jellyfin.enable = true;
   virtualisation.oci-containers = {
     backend = "docker";
     containers = {
