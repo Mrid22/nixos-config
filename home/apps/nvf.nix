@@ -51,6 +51,7 @@
         css.enable = true;
         tailwind.enable = true;
         python.enable = true;
+        yaml.enable = true;
         ts = {
           enable = true;
           extensions.ts-error-translator.enable = true;
