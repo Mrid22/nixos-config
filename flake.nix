@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -54,7 +53,6 @@
           ./configuration.nix
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
-          inputs.selfhostblocks.nixosModules.default
         ];
       };
     };
