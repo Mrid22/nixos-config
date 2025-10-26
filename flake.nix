@@ -45,28 +45,16 @@
     nixpkgs,
     nvf,
     vicinae,
-    selfhostblocks,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    lib = selfhostblocks.lib.${system};
-    nixpkgs' = lib.shb.patchedNixpkgs;
-    nixosSystem' = import "${nixpkgs'}/nixos/lib/eval-config.nix";
-  in {
+  } @ inputs: {
     nixosConfigurations = {
-      machine = nixosSystem' {
-        inherit system;
-        modules = [
-          selfhostblocks.nixosModules.default
-        ];
-      };
       nixos = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
-          selfhostblocks.nixosModules.default
+          inputs.selfhostblocks.nixosModules.default
         ];
       };
     };
