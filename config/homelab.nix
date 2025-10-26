@@ -66,7 +66,7 @@
     duckdns = {
       enable = true;
       domains = ["mridulagarwal"];
-      tokenFile = "~/auth.txt";
+      tokenFile = "/home/mridula/auth.txt";
     };
     homepage-dashboard = {
       enable = true;
