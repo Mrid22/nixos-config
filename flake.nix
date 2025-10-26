@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixarr.url = "github:rasmus-kirk/nixarr";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,6 +45,7 @@
     nixpkgs,
     nvf,
     vicinae,
+    nixarr,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -53,6 +55,7 @@
           ./configuration.nix
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
+          nixarr.nixosModules.default
         ];
       };
     };
