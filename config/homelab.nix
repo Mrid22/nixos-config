@@ -58,7 +58,8 @@
       expose.https = {
         enable = true;
         domainName = "jellyfin.mridulagarwal.duckdns.org";
-        acmeMail = "mridulaga@outlook.com"; # Required for ACME-bot
+        acmeMail = "mridulaga@outlook.com";
+        upnp.enable = true;
       };
     };
   };
