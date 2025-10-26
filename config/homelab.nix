@@ -48,6 +48,20 @@
       };
     };
   };
+
+  nixarr = {
+    enable = true;
+    mediaDir = "/media";
+    stateDir = "/media/.state/nixarr";
+    jellyfin = {
+      enable = true;
+      expose.https = {
+        enable = true;
+        domainName = "jellyfin.mridulagarwal.duckdns.org";
+        acmeMail = "mridulaga@outlook.com"; # Required for ACME-bot
+      };
+    };
+  };
   services = {
     homepage-dashboard = {
       enable = true;
@@ -149,19 +163,6 @@
       enable = true;
       openFirewall = true;
       host = "0.0.0.0";
-    };
-    nixarr = {
-      enable = true;
-      mediaDir = "/media";
-      stateDir = "/media/.state/nixarr";
-      jellyfin = {
-        enable = true;
-        expose.https = {
-          enable = true;
-          domainName = "jellyfin.mridulagarwal.duckdns.org";
-          acmeMail = "mridulaga@outlook.com"; # Required for ACME-bot
-        };
-      };
     };
   };
 }
