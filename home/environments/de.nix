@@ -196,6 +196,9 @@
         ];
       };
       "$mod" = "ALT";
+      bindm = [
+        " $mod, mouse:272, movewindow"
+      ];
       bind = [
         # Apps
         "$mod, Q, exec, kitty"
