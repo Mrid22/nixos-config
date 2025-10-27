@@ -9,6 +9,7 @@
     ./config/homelab.nix
     ./config/system.nix
     inputs.sops-nix.nixosModules.sops
+    inputs.selfhostblocks.default
   ];
   services.keyd = {
     enable = true;
