@@ -49,19 +49,6 @@
     };
   };
 
-  nixarr = {
-    enable = true;
-    mediaDir = "/media";
-    stateDir = "/media/.state/nixarr";
-    jellyfin = {
-      enable = true;
-      expose.https = {
-        enable = true;
-        domainName = "jellyfin.mridulagarwal.duckdns.org";
-        acmeMail = "mridulaga@outlook.com";
-      };
-    };
-  };
   services = {
     duckdns = {
       enable = true;
