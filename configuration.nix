@@ -9,7 +9,7 @@
     ./config/homelab.nix
     ./config/system.nix
     inputs.sops-nix.nixosModules.sops
-    inputs.selfhostblocks.default
+    inputs.selfhostblocks.nixosModules.nextcloud
   ];
   services.keyd = {
     enable = true;
