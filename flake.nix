@@ -51,10 +51,20 @@
     nvf,
     vicinae,
     nixarr,
+    selfhostblocks,
     ...
   } @ inputs: {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations = let
+      system = "x86_64-linux";
+      lib = selfhostblocks.lib.${system};
+
+      nixpkgs' = lib.shb.patchedNixpkgs;
+
+      shbNixpkgs = import nixpkgs' {
+        inherit system;
+      };
+    in {
+      nixos = shbNixpkgs {
         specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
