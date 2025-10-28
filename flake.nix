@@ -58,6 +58,7 @@
   in {
     nixosConfigurations = {
       nixos = shb.pkgs.nixosSystem {
+        inherit system;
         specialArgs = {inherit inputs;};
         modules = [
           ./configuration.nix
