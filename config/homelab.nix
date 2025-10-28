@@ -4,6 +4,9 @@
   inputs,
   ...
 }: {
+  imports = [
+    inputs.selfhostblocks.nixosModules.default
+  ];
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
