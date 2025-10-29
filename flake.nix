@@ -51,6 +51,7 @@
     nvf,
     vicinae,
     selfhostblocks,
+    sops-nix,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -65,6 +66,7 @@
           inputs.home-manager.nixosModules.default
           inputs.stylix.nixosModules.stylix
           selfhostblocks.nixosModules.default
+          sops-nix.nixosModules.default
         ];
       };
     };
