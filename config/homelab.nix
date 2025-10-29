@@ -17,6 +17,7 @@
     config = {
       name = "Mridul's House";
       country.source = config.shb.sops.secret."home-assistant/country".result.path;
+      latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
     };
   };
   fileSystems."/media" = {
