@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./config/homelab.nix
+    ./config/homelab/homelab.nix
     ./config/system.nix
   ];
   services.keyd = {
@@ -21,12 +21,6 @@
         };
       };
     };
-  };
-
-  sops = {
-    defaultSopsFile = ./secrets/secrets.yaml;
-    defaultSopsFormat = "yaml";
-    age.keyFile = "~/.config/sops/age/keys.txt";
   };
 
   home-manager = {
