@@ -19,6 +19,7 @@
       country.source = config.shb.sops.secret."home-assistant/country".result.path;
       latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
       longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
+      time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
     };
   };
   fileSystems."/media" = {
