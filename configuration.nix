@@ -8,7 +8,6 @@
     ./hardware-configuration.nix
     ./config/homelab.nix
     ./config/system.nix
-    inputs.sops-nix.nixosModules.sops
   ];
   services.keyd = {
     enable = true;

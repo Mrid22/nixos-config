@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.selfhostblocks.nixosModules.default
+    inputs.selfhostblocks.inputs.sops-nix.nixosModules.default
   ];
   fileSystems."/media" = {
     device = "/dev/sda1";
