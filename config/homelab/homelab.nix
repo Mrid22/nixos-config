@@ -13,7 +13,6 @@
     defaultSopsFile = ./secrets.yaml;
     defaultSopsFormat = "yaml";
     age.keyFile = "~/.config/sops/age/keys.txt";
-    secrets."home-assistant/country".request = config.shb.home-assistant.config.country;
   };
   shb.home-assistant = {
     enable = true;
