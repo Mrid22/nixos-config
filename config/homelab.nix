@@ -9,6 +9,12 @@
     inputs.selfhostblocks.nixosModules.default
     inputs.selfhostblocks.nixosModules.sops
   ];
+  sops.defaultSopsFile = ~/nixos-config/secrests/secrets.yaml;
+  shb.home-assistant = {
+    enable = true;
+    subdomain = "ha";
+    domain = "mridulagarwal.duckdns.org";
+  };
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
