@@ -14,6 +14,10 @@
     enable = true;
     subdomain = "ha";
     domain = "mridulagarwal.duckdns.org";
+    config = {
+      name = "Mridul's House";
+      country.source = config.shb.sops.secret."home-assistant/country".result.path;
+    };
   };
   fileSystems."/media" = {
     device = "/dev/sda1";
