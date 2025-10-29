@@ -9,7 +9,7 @@
     inputs.selfhostblocks.nixosModules.default
     inputs.selfhostblocks.nixosModules.sops
   ];
-  sops.defaultSopsFile = ~/nixos-config/secrests/secrets.yaml;
+  sops.defaultSopsFile = ./secrets.yaml;
   shb.home-assistant = {
     enable = true;
     subdomain = "ha";
