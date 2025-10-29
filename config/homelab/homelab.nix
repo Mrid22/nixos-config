@@ -13,6 +13,7 @@
     defaultSopsFile = ./secrets.yaml;
     defaultSopsFormat = "yaml";
     age.keyFile = "~/.config/sops/age/keys.txt";
+    secrets."home-assistant/country".request = config.shb.home-assistant.country.request;
   };
   shb.home-assistant = {
     enable = true;
@@ -20,7 +21,7 @@
     domain = "mridulagarwal.duckdns.org";
     config = {
       name = "Mridul's House";
-      country.source = config.shb.sops.secret."home-assistant/country".result.path;
+      country.source = config.shb.sops.secret."home-assistant/country".result;
       latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
       longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
       time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
