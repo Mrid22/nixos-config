@@ -46,6 +46,7 @@
       enable = true;
       subdomain = "ha";
       domain = "mridulagarwal.duckdns.org";
+      configDir = "/media/home";
       config = {
         name = "Mridul's House";
         country.source = config.shb.sops.secret."home-assistant/country".result.path;
@@ -73,33 +74,33 @@
     mkdir -p /media/home
     mkdir -p /media/models
   '';
-  virtualisation.oci-containers = {
-    backend = "docker";
-    containers = {
-      homeassistant = {
-        image = "ghcr.io/home-assistant/home-assistant:stable";
-        volumes = [
-          "/media/home:/config"
-          "/var/run/dbus:/run/dbus:ro"
-          "/media/tv:/media"
-        ];
-        environment = {
-          TZ = "Europe/Amsterdam";
-        };
-        ports = [
-          "127.0.0.1:8123:8123"
-          "127.0.0.1:8124:80"
-        ];
-        capabilities = {
-          NET_ADMIN = true;
-          NET_RAW = true;
-        };
-        extraOptions = [
-          "--network=host"
-        ];
-      };
-    };
-  };
+  # virtualisation.oci-containers = {
+  #   backend = "docker";
+  #   containers = {
+  #     homeassistant = {
+  #       image = "ghcr.io/home-assistant/home-assistant:stable";
+  #       volumes = [
+  #         "/media/home:/config"
+  #         "/var/run/dbus:/run/dbus:ro"
+  #         "/media/tv:/media"
+  #       ];
+  #       environment = {
+  #         TZ = "Europe/Amsterdam";
+  #       };
+  #       ports = [
+  #         "127.0.0.1:8123:8123"
+  #         "127.0.0.1:8124:80"
+  #       ];
+  #       capabilities = {
+  #         NET_ADMIN = true;
+  #         NET_RAW = true;
+  #       };
+  #       extraOptions = [
+  #         "--network=host"
+  #       ];
+  #     };
+  #   };
+  # };
 
   services = {
     duckdns = {
