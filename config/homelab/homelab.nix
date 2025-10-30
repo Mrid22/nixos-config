@@ -14,17 +14,28 @@
     defaultSopsFormat = "yaml";
     age.keyFile = "~/.config/sops/age/keys.txt";
   };
-  shb.home-assistant = {
-    enable = true;
-    subdomain = "ha";
-    domain = "mridulagarwal.duckdns.org";
-    config = {
-      name = "Mridul's House";
-      country.source = config.shb.sops.secret."home-assistant/country".result;
-      latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
-      longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
-      time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
-      unit_system = "metric";
+  shb = {
+    sops.secret = {
+      "home-assistant/country".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+    };
+
+    home-assistant = {
+      enable = true;
+      subdomain = "ha";
+      domain = "mridulagarwal.duckdns.org";
+      config = {
+        name = "Mridul's House";
+        country.source = config.shb.sops.secret."home-assistant/country".result;
+        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
+        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
+        time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
+        unit_system = "metric";
+      };
     };
   };
   fileSystems."/media" = {
