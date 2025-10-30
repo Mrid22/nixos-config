@@ -22,6 +22,24 @@
         group = "hass";
         restartUnits = ["home-assistant.service"];
       };
+      "home-assistant/latitude".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+      "home-assistant/longitude".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+      "home-assistant/time_zone".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
     };
 
     home-assistant = {
