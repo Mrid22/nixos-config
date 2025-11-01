@@ -30,8 +30,8 @@
     config = {
       name = "SelfHostBlocks - Home Assistant";
       country.source = config.shb.sops.secret."home-assistant/country".result.path;
-      latitude.source = config.shb.sops.secret."home-assistant/latitude_home".result.path;
-      longitude.source = config.shb.sops.secret."home-assistant/longitude_home".result.path;
+      latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
+      longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
       time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
       unit_system = "metric";
     };
@@ -43,13 +43,13 @@
     group = "hass";
     restartUnits = ["home-assistant.service"];
   };
-  shb.sops.secret."home-assistant/latitude_home".request = {
+  shb.sops.secret."home-assistant/latitude".request = {
     mode = "0440";
     owner = "hass";
     group = "hass";
     restartUnits = ["home-assistant.service"];
   };
-  shb.sops.secret."home-assistant/longitude_home".request = {
+  shb.sops.secret."home-assistant/longitude".request = {
     mode = "0440";
     owner = "hass";
     group = "hass";
