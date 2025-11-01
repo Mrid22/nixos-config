@@ -22,46 +22,43 @@
       tokenFile = "/home/mridula/auth.txt";
     };
   };
-  shb = {
-    home-assistant = {
-      enable = true;
-      subdomain = "ha";
-      domain = "example.com";
+  shb.home-assistant = {
+    enable = true;
+    subdomain = "ha";
+    domain = "example.com";
 
-      config = {
-        name = "SelfHostBlocks - Home Assistant";
-        country.source = config.shb.sops.secret."home-assistant/country".result.path;
-        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
-        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
-        time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
-        unit_system = "metric";
-      };
+    config = {
+      name = "SelfHostBlocks - Home Assistant";
+      country.source = config.shb.sops.secret."home-assistant/country".result.path;
+      latitude.source = config.shb.sops.secret."home-assistant/latitude_home".result.path;
+      longitude.source = config.shb.sops.secret."home-assistant/longitude_home".result.path;
+      time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
+      unit_system = "metric";
     };
-    sops.secret = {
-      "home-assistant/country".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-      "home-assistant/latitude".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-      "home-assistant/longitude".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-      "home-assistant/time_zone".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-    };
+  };
+
+  shb.sops.secret."home-assistant/country".request = {
+    mode = "0440";
+    owner = "hass";
+    group = "hass";
+    restartUnits = ["home-assistant.service"];
+  };
+  shb.sops.secret."home-assistant/latitude_home".request = {
+    mode = "0440";
+    owner = "hass";
+    group = "hass";
+    restartUnits = ["home-assistant.service"];
+  };
+  shb.sops.secret."home-assistant/longitude_home".request = {
+    mode = "0440";
+    owner = "hass";
+    group = "hass";
+    restartUnits = ["home-assistant.service"];
+  };
+  shb.sops.secret."home-assistant/time_zone".request = {
+    mode = "0440";
+    owner = "hass";
+    group = "hass";
+    restartUnits = ["home-assistant.service"];
   };
 }
