@@ -15,8 +15,14 @@
     defaultSopsFormat = "yaml";
     age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
   };
-
-  services.home-assistant.configDir = lib.mkForce "/media/home";
+  services = {
+    home-assistant.configDir = lib.mkForce "/media/home";
+    duckdns = {
+      enable = true;
+      domains = ["mridulagarwal"];
+      tokenFile = ~/.config/duckns/tokenFile;
+    };
+  };
   shb = {
     sops.secret = {
       "home-assistant/country".request = {
