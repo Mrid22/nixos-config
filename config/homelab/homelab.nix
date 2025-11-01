@@ -25,7 +25,7 @@
   shb.home-assistant = {
     enable = true;
     subdomain = "ha";
-    domain = "mridula.duckdns.org";
+    domain = "mridula.accesscam.org";
 
     config = {
       name = "SelfHostBlocks - Home Assistant";
