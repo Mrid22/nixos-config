@@ -13,9 +13,12 @@
   sops = {
     defaultSopsFile = ./secrets.yaml;
     defaultSopsFormat = "yaml";
-    sops.age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
+    age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
+  };
 
-    secret = {
+  services.home-assistant.configDir = lib.mkForce "/media/home";
+  shb = {
+    sops.secret = {
       "home-assistant/country".request = {
         mode = "0440";
         owner = "hass";
@@ -23,13 +26,13 @@
         restartUnits = ["home-assistant.service"];
       };
 
-      "home-assistant/latitude_home".request = {
+      "home-assistant/latitude".request = {
         mode = "0440";
         owner = "hass";
         group = "hass";
         restartUnits = ["home-assistant.service"];
       };
-      "home-assistant/longitude_home".request = {
+      "home-assistant/longitude".request = {
         mode = "0440";
         owner = "hass";
         group = "hass";
@@ -42,10 +45,6 @@
         restartUnits = ["home-assistant.service"];
       };
     };
-  };
-
-  services.home-assistant.configDir = "/media/home";
-  shb = {
     home-assistant = {
       enable = true;
       subdomain = "ha";
@@ -54,8 +53,8 @@
       config = {
         name = "SelfHostBlocks - Home Assistant";
         country.source = config.shb.sops.secret."home-assistant/country".result.path;
-        latitude.source = config.shb.sops.secret."home-assistant/latitude_home".result.path;
-        longitude.source = config.shb.sops.secret."home-assistant/longitude_home".result.path;
+        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
+        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
         time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
         unit_system = "metric";
       };
