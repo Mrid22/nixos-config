@@ -20,7 +20,7 @@
     duckdns = {
       enable = true;
       domains = ["mridulagarwal"];
-      tokenFile = ~/.config/duckns/tokenFile;
+      tokenFile = "/home/mridula/auth.txt";
     };
   };
   shb = {
