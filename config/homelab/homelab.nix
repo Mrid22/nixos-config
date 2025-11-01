@@ -30,6 +30,7 @@
       ];
     };
   };
+  services.home-assistant.openFirewall = true;
   shb.home-assistant = {
     enable = true;
     subdomain = "ha";
