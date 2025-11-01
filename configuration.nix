@@ -7,7 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ./config/system.nix
-    ./config/homelab.nix
+    ./config/homelab/homelab.nix
   ];
   services.keyd = {
     enable = true;
