@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./config/homelab/homelab.nix
     ./config/system.nix
   ];
   services.keyd = {
