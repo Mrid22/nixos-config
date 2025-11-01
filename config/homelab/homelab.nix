@@ -21,6 +21,11 @@
       domains = ["mridula"];
       tokenFile = "/home/mridula/auth.txt";
     };
+    tailscale = {
+      enable = true;
+      useRoutingFeatures = "both";
+      disableTaildrop = true;
+    };
   };
   shb.home-assistant = {
     enable = true;
