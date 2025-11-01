@@ -14,5 +14,51 @@
     defaultSopsFile = ./secrets.yaml;
     defaultSopsFormat = "yaml";
     sops.age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
+
+    secret = {
+      "home-assistant/country".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+
+      "home-assistant/latitude_home".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+      "home-assistant/longitude_home".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+      "home-assistant/time_zone".request = {
+        mode = "0440";
+        owner = "hass";
+        group = "hass";
+        restartUnits = ["home-assistant.service"];
+      };
+    };
+  };
+
+  services.home-assistant.configDir = "/media/home";
+  shb = {
+    home-assistant = {
+      enable = true;
+      subdomain = "ha";
+      domain = "mridulagarwal.duckdns.org";
+
+      config = {
+        name = "SelfHostBlocks - Home Assistant";
+        country.source = config.shb.sops.secret."home-assistant/country".result.path;
+        latitude.source = config.shb.sops.secret."home-assistant/latitude_home".result.path;
+        longitude.source = config.shb.sops.secret."home-assistant/longitude_home".result.path;
+        time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
+        unit_system = "metric";
+      };
+    };
   };
 }
