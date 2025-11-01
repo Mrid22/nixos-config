@@ -16,7 +16,6 @@
     age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
   };
   services = {
-    # home-assistant.configDir = lib.mkForce "/media/home";
     duckdns = {
       enable = true;
       domains = ["mridulagarwal"];
@@ -24,6 +23,20 @@
     };
   };
   shb = {
+    home-assistant = {
+      enable = true;
+      subdomain = "ha";
+      domain = "example.com";
+
+      config = {
+        name = "SelfHostBlocks - Home Assistant";
+        country.source = config.shb.sops.secret."home-assistant/country".result.path;
+        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
+        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
+        time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
+        unit_system = "metric";
+      };
+    };
     sops.secret = {
       "home-assistant/country".request = {
         mode = "0440";
@@ -31,7 +44,6 @@
         group = "hass";
         restartUnits = ["home-assistant.service"];
       };
-
       "home-assistant/latitude".request = {
         mode = "0440";
         owner = "hass";
@@ -49,20 +61,6 @@
         owner = "hass";
         group = "hass";
         restartUnits = ["home-assistant.service"];
-      };
-    };
-    home-assistant = {
-      enable = true;
-      subdomain = "ha";
-      domain = "mridulagarwal.duckdns.org";
-
-      config = {
-        name = "SelfHostBlocks - Home Assistant";
-        country.source = config.shb.sops.secret."home-assistant/country".result.path;
-        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
-        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
-        time_zone.source = config.shb.sops.secret."home-assistant/time_zone".result.path;
-        unit_system = "metric";
       };
     };
   };
