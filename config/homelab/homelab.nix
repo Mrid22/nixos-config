@@ -25,6 +25,9 @@
       enable = true;
       useRoutingFeatures = "both";
       disableTaildrop = true;
+      extraUpFlags = [
+        "--advertize-exit-node"
+      ];
     };
   };
   shb.home-assistant = {
