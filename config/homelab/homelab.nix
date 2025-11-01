@@ -18,14 +18,14 @@
   services = {
     duckdns = {
       enable = true;
-      domains = ["mridulagarwal"];
+      domains = ["mridula"];
       tokenFile = "/home/mridula/auth.txt";
     };
   };
   shb.home-assistant = {
     enable = true;
     subdomain = "ha";
-    domain = "mridula.accesscam.org";
+    domain = "mridula.duckdns.org";
 
     config = {
       name = "SelfHostBlocks - Home Assistant";
