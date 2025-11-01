@@ -25,7 +25,7 @@
   shb.home-assistant = {
     enable = true;
     subdomain = "ha";
-    domain = "example.com";
+    domain = "mridulagarwal.duckdns.org";
 
     config = {
       name = "SelfHostBlocks - Home Assistant";
