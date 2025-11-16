@@ -14,7 +14,15 @@
   };
 
   programs = {
-    zen-browser.enable = true;
+    zen-browser = {
+      enable = true;
+      profiles.mridula.extensions.packages =
+        with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+          ublock-origin
+          dearrow
+          proton-pass
+        ];
+    };
     kitty = {
       enable = true;
       settings.background_opacity = 0.5;
