@@ -1,6 +1,12 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
+  imports = [ inputs.zen-browser.homeModules.twilight ];
   home = {
     username = "mridula";
     homeDirectory = "/home/mridula";
@@ -8,6 +14,7 @@
   };
 
   programs = {
+    zen-browser.enable = true;
     kitty = {
       enable = true;
       settings.background_opacity = 0.5;
