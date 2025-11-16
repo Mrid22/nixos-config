@@ -130,6 +130,7 @@
     playerctl
     wl-clipboard
     kitty
+    nwg-look
   ];
   system.stateVersion = "25.05";
 }
