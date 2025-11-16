@@ -21,6 +21,9 @@
     enable = true;
     enableGitIntegration = true;
   };
+  wayland.windowManager.hyprland = {
+    enable = true;
+  };
   home.file = {
   };
 
