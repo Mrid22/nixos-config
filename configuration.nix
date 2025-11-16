@@ -60,6 +60,10 @@
     };
   };
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.fira-code
+  ];
+
   gaming = {
     enable = true;
     nvidia = true;
@@ -99,17 +103,20 @@
     LC_TIME = "nl_NL.UTF-8";
   };
   security.rtkit.enable = true;
-
-  users.users.mridula = {
-    isNormalUser = true;
-    description = "Mridul Agarwal";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.mridula = {
+      isNormalUser = true;
+      description = "Mridul Agarwal";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+    };
   };
 
   programs = {
+    zsh.enable = true;
     hyprland.enable = true;
     neovim = {
       enable = true;
