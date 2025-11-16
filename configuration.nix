@@ -78,7 +78,7 @@
 
   gaming = {
     enable = true;
-    nvidia.enable = true;
+    nvidia = true;
   };
 
   hardware.bluetooth = {
