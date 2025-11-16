@@ -14,6 +14,15 @@
     };
     zsh = {
       enable = true;
+      autoSuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      oh-my-zsh = {
+        enable = true;
+	plugins = ["git" "sudo"];
+      };
+      shellAliases = {
+        "nvim" = "nix run /home/mridula/nixos-config --"
+      };
     };
     git = {
       enable = true;
