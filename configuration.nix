@@ -2,14 +2,23 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./gaming.nix
+  ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -17,39 +26,39 @@
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   services.jellyfin.enable = true;
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
+  gaming = {
+    enable = true;
+    nvidia.enable = true;
+  };
   hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
   };
   # Enable networking
 
-home-manager = {
-  # also pass inputs to home-manager modules
-  extraSpecialArgs = {inherit inputs;};
-  users = {
-    "mridula" = import ./home.nix;
+  home-manager = {
+    # also pass inputs to home-manager modules
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "mridula" = import ./home.nix;
+    };
   };
-};
 
   services.keyd = {
     enable = true;
     keyboards = {
-    # The name is just the name of the configuration file, it does not really matter
-    default = {
-      ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
-      # Everything but the ID section:
-      settings = {
-        # The main layer, if you choose to declare it in Nix
-        main = {
-          capslock = "overload(control,escape)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+      # The name is just the name of the configuration file, it does not really matter
+      default = {
+        ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
+        # Everything but the ID section:
+        settings = {
+          # The main layer, if you choose to declare it in Nix
+          main = {
+            capslock = "overload(control,escape)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
+          };
         };
       };
     };
-  };
   };
 
   networking.networkmanager.enable = true;
@@ -84,7 +93,7 @@ home-manager = {
     layout = "us";
     variant = "";
   };
-  
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -111,9 +120,12 @@ home-manager = {
   users.users.mridula = {
     isNormalUser = true;
     description = "Mridul Agarwal";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -127,10 +139,11 @@ home-manager = {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  playerctl
-  kitty
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    playerctl
+    wl-clipboard
+    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
