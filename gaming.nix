@@ -6,7 +6,7 @@
   ...
 }:
 let
-  gaming = lib.mkIf config.gaming.enable {
+  gaming = {
     hardware = {
       opengl = {
         enable = true;
@@ -18,7 +18,7 @@ let
     programs = {
       steam = {
         enable = true;
-        gameScopeSession.enable = true;
+        gamescopeSession.enable = true;
       };
       gamemode.enable = true;
     };
@@ -26,9 +26,10 @@ let
       mangohud
     ];
   };
-  nvidia = lib.mkIf config.gaming.nvidia {
+
+  nvidia = {
     services.xserver.videoDrivers = [ "nvidia" ];
-    nvidia = {
+    hardware.nvidia = {
       modesetting.enable = true;
       open = true;
       powerManagement = {
