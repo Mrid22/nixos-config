@@ -38,6 +38,10 @@
         "ALT,Q,exec,kitty"
         "ALT,F,exec,firefox"
         "ALT,C,killactive"
+	"ALT,H,movefocus,l"
+	"ALT,J,movefocus,d"
+	"ALT,K,movefocus,u"
+	"ALT,R,movefocus,r"
       ];
     };
   };
