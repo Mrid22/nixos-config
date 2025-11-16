@@ -10,6 +10,7 @@
    enable = true;
    settings = {
      init.defaultBranch = "main";
+     push.autoSetupRemote = true;
      user = {
        email = "mridulaga@outlook.com";
        name = "Mrid22";
