@@ -17,6 +17,7 @@
     };
     statusline.lualine.enable = true;
     theme = {
+      enable = true;
       name = "tokyonight";
       style = "storm";
       transparent = true;
