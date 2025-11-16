@@ -19,6 +19,10 @@
       enable = true;
       settings.background_opacity = 0.5;
     };
+    oh-my-posh = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     zsh = {
       enable = true;
       enableCompletion = true;
