@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 {
   config,
   pkgs,
@@ -11,7 +7,6 @@
 
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./gaming.nix
   ];
@@ -20,30 +15,19 @@
     "flakes"
   ];
   boot.loader = {
-    # Bootloader.
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
 
   networking.hostName = "nixos";
   services = {
-    # Define your hostname.
-    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
     jellyfin.enable = true;
-
     keyd = {
       enable = true;
-      keyboards = {
-        # The name is just the name of the configuration file, it does not really matter
-        default = {
-          ids = [ "*" ]; # what goes into the [id] section, here we select all keyboards
-          # Everything but the ID section:
-          settings = {
-            # The main layer, if you choose to declare it in Nix
-            main = {
-              capslock = "overload(control,escape)"; # you might need to also enclose the key in quotes if it contains non-alphabetical symbols
-            };
-          };
+      keyboards.default = {
+        ids = [ "*" ];
+        settings.main = {
+          capslock = "overload(control,escape)";
         };
       };
     };
@@ -79,6 +63,7 @@
   gaming = {
     enable = true;
     nvidia = true;
+    xbox-controller = true;
   };
 
   hardware.bluetooth = {
@@ -125,6 +110,7 @@
   };
 
   programs = {
+    hyprland.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -138,7 +124,5 @@
     wl-clipboard
     kitty
   ];
-
   system.stateVersion = "25.05";
-
 }

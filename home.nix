@@ -8,10 +8,13 @@
   };
 
   programs = {
+    kitty = {
+      enable = true;
+      background_opacity = 0.5;
+    };
     git = {
       enable = true;
-      settings = {
-        init.defaultBranch = "main";
+      settings = { init.defaultBranch = "main";
         push.autoSetupRemote = true;
         user = {
           email = "mridulaga@outlook.com";
@@ -30,5 +33,12 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    settings = {
+      bind = [
+        "ALT,Q,exec,kitty"
+        "ALT,F,exec,firefox"
+        "ALT,C,killactive"
+      ];
+    };
   };
 }
