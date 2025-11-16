@@ -10,7 +10,7 @@
   programs = {
     kitty = {
       enable = true;
-      background_opacity = 0.5;
+      settings.background_opacity = 0.5;
     };
     git = {
       enable = true;
