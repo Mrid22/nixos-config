@@ -41,7 +41,7 @@
 	"ALT,H,movefocus,l"
 	"ALT,J,movefocus,d"
 	"ALT,K,movefocus,u"
-	"ALT,R,movefocus,r"
+	"ALT,L,movefocus,r"
       ];
     };
   };
