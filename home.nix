@@ -13,6 +13,13 @@
     stateVersion = "25.05"; # Please read the comment before changing.
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.layan-gtk-theme-git;
+    };
+  };
+
   programs = {
     zen-browser = {
       enable = true;
