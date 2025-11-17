@@ -55,6 +55,13 @@
         "nvim" = "nix run /home/mridula/nixos-config --";
       };
     };
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
     git = {
       enable = true;
       settings = {
