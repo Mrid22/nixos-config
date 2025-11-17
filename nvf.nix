@@ -16,7 +16,6 @@
       formatOnSave = true;
       inlayHints.enable = true;
       lightbulb.enable = true;
-      lspSignature.enable = true;
       lspkind.enable = true;
       lspsaga.enable = true;
       nvim-docs-view.enable = true;
@@ -25,6 +24,7 @@
     autocomplete.blink-cmp = {
       enable = true;
       friendly-snippets.enable = true;
+      setupOpts.signature.enabled = true;
     };
     languages = {
       enableTreesitter = true;
