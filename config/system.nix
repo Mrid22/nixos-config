@@ -12,15 +12,6 @@
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
   };
-  pulseaudio.enable = false;
-  pipewire = {
-    enable = true;
-    alsa = {
-      enable = true;
-      support32Bit = true;
-    };
-    pulse.enable = true;
-  };
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
@@ -51,6 +42,15 @@
 
   services = {
     tlp.enable = true;
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
+    };
     xserver = {
       enable = true;
 
