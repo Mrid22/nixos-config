@@ -7,11 +7,14 @@
     lineNumberMode = "none";
     autopairs.nvim-autopairs.enable = true;
     comments.comment-nvim.enable = true;
-    filetree.nvimTree.enable = true;
     git.enable = true;
     options = {
       shiftwidth = 2;
       tabstop = 2;
+    };
+    filetree.nvimTree = {
+      enable = true;
+      mappings.toggle = "<leader>e";
     };
     lsp = {
       enable = true;
