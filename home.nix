@@ -24,8 +24,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "./Wallpaper.jpg" ];
-      wallpaper = [ ",./Wallpaper.jpg" ];
+      preload = [ "~/nixos-config/Wallpaper.jpg" ];
+      wallpaper = [ ",~/nixos-config/Wallpaper.jpg" ];
     };
   };
 
