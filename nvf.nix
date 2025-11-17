@@ -5,7 +5,7 @@
     autopairs.nvim-autopairs.enable = true;
     binds.whichKey.enable = true;
     comments.comment-nvim.enable = true;
-    fileTree.neo-tree.enable = true;
+    filetree.neo-tree.enable = true;
     git.enable = true;
     options = {
       shiftwidth = 2;
