@@ -39,6 +39,13 @@
     enable = true;
     settings = {
       exec-once = ["vicinae server"];
+
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+      };
+
+      decoration.rounding = 5;
       bind = [
         "ALT,Q,exec,kitty"
         "ALT,F,exec,zen-twilight"
