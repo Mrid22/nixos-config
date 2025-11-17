@@ -28,6 +28,6 @@
     playerctl
     wl-clipboard
     kitty
-    nwg-look
+    blueberry
   ];
 }
