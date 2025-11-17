@@ -3,9 +3,7 @@
   pkgs,
   inputs,
   ...
-}:
-
-{
+}: {
   imports = [
     ./hardware-configuration.nix
     ./gaming.nix
@@ -25,7 +23,7 @@
     keyd = {
       enable = true;
       keyboards.default = {
-        ids = [ "*" ];
+        ids = ["*"];
         settings.main = {
           capslock = "overload(control,escape)";
         };
@@ -77,7 +75,7 @@
   # Enable networking
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
       "mridula" = import ./home.nix;
     };

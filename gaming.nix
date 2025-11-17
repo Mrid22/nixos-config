@@ -4,15 +4,13 @@
   inputs,
   lib,
   ...
-}:
-let
+}: let
   gaming = {
     hardware = {
       graphics = {
         enable = true;
         enable32Bit = true;
       };
-
     };
     programs = {
       steam = {
@@ -27,7 +25,7 @@ let
   };
 
   nvidia = {
-    services.xserver.videoDrivers = [ "nvidia" ];
+    services.xserver.videoDrivers = ["nvidia"];
     hardware.nvidia = {
       modesetting.enable = true;
       open = true;
@@ -63,8 +61,7 @@ let
       };
     };
   };
-in
-{
+in {
   options.gaming = {
     enable = lib.mkEnableOption "enable module ";
     nvidia = lib.mkEnableOption "toggle nvidia incase im moving to a computer without it";

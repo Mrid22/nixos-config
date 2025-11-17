@@ -3,10 +3,8 @@
   pkgs,
   inputs,
   ...
-}:
-
-{
-  imports = [ inputs.zen-browser.homeModules.twilight ];
+}: {
+  imports = [inputs.zen-browser.homeModules.twilight];
   home = {
     username = "mridula";
     homeDirectory = "/home/mridula";
@@ -24,8 +22,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/nixos-config/Wallpaper.jpg" ];
-      wallpaper = [ ",~/nixos-config/Wallpaper.jpg" ];
+      preload = ["~/nixos-config/Wallpaper.jpg"];
+      wallpaper = [",~/nixos-config/Wallpaper.jpg"];
     };
   };
 
@@ -43,9 +41,9 @@
           engines = {
             mynixos = {
               name = "NixOS";
-              urls = [ { template = "https://mynixos.com/search?q={searchTerms}"; } ];
+              urls = [{template = "https://mynixos.com/search?q={searchTerms}";}];
               iconMapObj."16" = "https://wiki.nixos.org/favicon.ico";
-              definedAliases = [ "@nx" ];
+              definedAliases = ["@nx"];
             };
           };
         };

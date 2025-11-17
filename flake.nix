@@ -23,26 +23,24 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      nvf,
-      ...
-    }@inputs:
-    {
-      packages."x86_64-linux".default =
-        (nvf.lib.neovimConfiguration {
-          pkgs = nixpkgs.legacyPackages."x86_64-linux";
-          modules = [ ./nvf.nix ];
-        }).neovim;
+  outputs = {
+    self,
+    nixpkgs,
+    nvf,
+    ...
+  } @ inputs: {
+    packages."x86_64-linux".default =
+      (nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [./nvf.nix];
+      }).neovim;
 
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./configuration.nix
-          inputs.home-manager.nixosModules.default
-        ];
-      };
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./configuration.nix
+        inputs.home-manager.nixosModules.default
+      ];
     };
+  };
 }

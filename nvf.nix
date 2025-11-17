@@ -1,5 +1,8 @@
-{ pkgs, lib, ... }:
 {
+  pkgs,
+  lib,
+  ...
+}: {
   vim = {
     lineNumberMode = "none";
     autopairs.nvim-autopairs.enable = true;
