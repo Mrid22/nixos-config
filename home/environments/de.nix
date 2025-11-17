@@ -43,9 +43,11 @@
       general = {
         gaps_in = 5;
         gaps_out = 5;
+        border_size = 0;
       };
 
       decoration.rounding = 5;
+      inputs.touchpad.natural_scrolling = true;
       bind = [
         "ALT,Q,exec,kitty"
         "ALT,F,exec,zen-twilight"
