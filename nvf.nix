@@ -3,7 +3,6 @@
   vim = {
     lineNumberMode = "none";
     autopairs.nvim-autopairs.enable = true;
-    binds.whichKey.enable = true;
     comments.comment-nvim.enable = true;
     filetree.neo-tree.enable = true;
     git.enable = true;
@@ -28,7 +27,25 @@
     };
     languages = {
       enableTreesitter = true;
+      enableDAP = true;
+      enableFormat = true;
+      enableExtraDiagnostics = true;
       nix.enable = true;
+      css.enable = true;
+      html.enable = true;
+      java.enable = true;
+      python.enable = true;
+      tailwind.enable = true;
+      yaml.enable = true;
+      ts = {
+        enable = true;
+        extensions.ts-error-translator.enable = true;
+      };
+      markdown = {
+        enable = true;
+        extensions.markview-nvim.enable = true;
+        format.type = "prettierd";
+      };
     };
     statusline.lualine.enable = true;
     theme = {
