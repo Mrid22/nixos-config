@@ -22,6 +22,7 @@
   };
 
   programs = {
+    gh.enable = true;
     zen-browser = {
       enable = true;
       profiles.mridula.extensions.packages =
