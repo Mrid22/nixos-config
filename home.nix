@@ -31,6 +31,10 @@
 
   programs = {
     gh.enable = true;
+    nh = {
+      enable = true;
+      flake = "/home/mridula/nixos-config";
+    };
     zen-browser = {
       enable = true;
       profiles.mridula = {
