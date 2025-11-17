@@ -47,7 +47,7 @@
       };
 
       decoration.rounding = 5;
-      inputs.touchpad.natural_scrolling = true;
+      inputs.touchpad.natural_scroll = true;
       bind = [
         "ALT,Q,exec,kitty"
         "ALT,F,exec,zen-twilight"
