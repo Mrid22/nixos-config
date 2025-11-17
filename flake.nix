@@ -32,7 +32,7 @@
     packages."x86_64-linux".default =
       (nvf.lib.neovimConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        modules = [./nvf.nix];
+        modules = [./home/apps/nvf.nix];
       }).neovim;
 
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
