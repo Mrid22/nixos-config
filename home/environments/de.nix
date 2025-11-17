@@ -4,11 +4,26 @@
   inputs,
   ...
 }: {
+  imports = [
+    inputs.vicinae.homeManagerModules.default
+  ];
   gtk = {
     enable = true;
     theme = {
       package = pkgs.layan-gtk-theme;
       name = "Layan-Dark";
+    };
+  };
+
+  services.vicinae = {
+    enable = true; # default: false
+    autoStart = true; # default: true
+    settings = {
+      faviconService = "twenty"; # twenty | google | none
+      font.size = 11;
+      popToRootOnClose = false;
+      rootSearch.searchFiles = true;
+      theme.name = "tokyonight-storm";
     };
   };
 
