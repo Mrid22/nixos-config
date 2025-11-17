@@ -80,7 +80,7 @@
     settings = {
       bind = [
         "ALT,Q,exec,kitty"
-        "ALT,F,exec,firefox"
+        "ALT,F,exec,zen-twilight"
         "ALT,C,killactive"
         "ALT,H,movefocus,l"
         "ALT,J,movefocus,d"
