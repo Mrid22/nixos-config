@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./gaming.nix
+    ./config/gaming.nix
   ];
   nix.settings.experimental-features = [
     "nix-command"
