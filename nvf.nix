@@ -7,7 +7,7 @@
     lineNumberMode = "none";
     autopairs.nvim-autopairs.enable = true;
     comments.comment-nvim.enable = true;
-    filetree.neo-tree.enable = true;
+    filetree.nvimTree.enable = true;
     git.enable = true;
     options = {
       shiftwidth = 2;
