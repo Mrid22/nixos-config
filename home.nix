@@ -21,6 +21,14 @@
     };
   };
 
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = [ "./Wallpaper.jpg" ];
+      wallpaper = [ ",./Wallpaper.jpg" ];
+    };
+  };
+
   programs = {
     gh.enable = true;
     zen-browser = {
