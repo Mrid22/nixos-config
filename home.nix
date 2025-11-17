@@ -61,7 +61,6 @@
           dearrow
           noscript
           github-file-icons
-          enhanced-github
         ];
       };
     };
