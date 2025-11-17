@@ -41,6 +41,15 @@
           ublock-origin
           dearrow
           proton-pass
+          decentraleyes
+          privacy-badger
+          sponsorblock
+          transparent-zen
+          snowflake
+          dearrow
+          noscript
+          github-file-icons
+          enhanced-github
         ];
       };
     };
