@@ -4,16 +4,12 @@
   inputs,
   lib,
   ...
-}: let
-  files = lib.fileset.fromDir {
-    dir = ./config;
-    recursive = true;
-    include = ["*.nix"];
-    exclude = ["nvim.nix"];
-  };
-in {
+}: {
   imports = [
-    files
+    ./home/apps/nvf.nix
+    ./home/apps/zen.nix
+    ./home/environments/terminal.nix
+    ./home/environments/de.nix
   ];
 
   home = {

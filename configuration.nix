@@ -4,17 +4,13 @@
   inputs,
   lib,
   ...
-}: let
-  files = lib.fileset.fromDir {
-    dir = ./config;
-    recursive = true;
-    include = ["*.nix"];
-  };
-in {
+}: {
   imports = [
     ./hardware-configuration.nix
-    builtins.attrValues
-    files
+    ./config/apps.nix
+    ./config/user.nix
+    ./config/gaming.nix
+    ./config/system.nix
   ];
 
   fonts.packages = with pkgs; [
