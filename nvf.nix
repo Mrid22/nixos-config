@@ -15,7 +15,7 @@
       enable = true;
       formatOnSave = true;
       inlayHints.enable = true;
-      lightbult.enable = true;
+      lightbulb.enable = true;
       lspSignature.enable = true;
       lspkind.enable = true;
       lspsaga.enable = true;
