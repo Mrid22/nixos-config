@@ -25,12 +25,35 @@
     gh.enable = true;
     zen-browser = {
       enable = true;
-      profiles.mridula.extensions.packages =
-        with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+      profiles.mridula = {
+        search = {
+          default = "ddg";
+          engines = {
+            nix-packages = {
+              name = "Nix Packages";
+              urls = [
+                {
+                  template = "https://mynixos.com/search?q={searchTerms}";
+                  params = [
+                    {
+                      name = "query";
+                      value = "{searchTerms}";
+                    }
+                  ];
+                }
+              ];
+
+              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+              definedAliases = [ "@np" ];
+            };
+          };
+        };
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           ublock-origin
           dearrow
           proton-pass
         ];
+      };
     };
     kitty = {
       enable = true;
