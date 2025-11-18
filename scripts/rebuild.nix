@@ -7,5 +7,6 @@ pkgs.writeShellScriptBin "rebuild" ''
   echo $main
   second=$(${pkgs.gum}/bin/gum choose $(ls -d ./"$main"*))
   message=$(${pkgs.gum}/bin/gum input --placeholder "Describe the change")
-  ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit -m ""$main"/"second": $(message)"
+  ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit -m ""$main"/"second": "$message"
+  ${pkgs.nh}/bin/nh rebuild $(${pkgs.gum}/bin/gum choose "test" "switch")
 ''
