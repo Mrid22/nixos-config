@@ -1,7 +1,7 @@
 {pkgs}:
 pkgs.writeShellScriptBin "rebuild" ''
-  ${pkgs.git}/bin/git add all
-  main=$(${pkgs.gum}/bin/gum choose "home" "config")
+  ${pkgs.git}/bin/git add .
+  main=$(${pkgs.gum}/bin/gum choose "home" "config" "typo")
   echo $main
   if [[ "$main" == "config" ]]; then
     second=$(${pkgs.gum}/bin/gum choose "gaming" "system" "apps")
