@@ -1,8 +1,12 @@
 {pkgs}:
 pkgs.writeShellScriptBin "rebuild" ''
   main=$(${pkgs.gum}/bin/gum choose "home" "config")
-  if main == "config":
+  if $main == "config":
   then
-    ${pkgs.gum}/bin/gum choose "gaming"
+    second=$(${pkgs.gum}/bin/gum choose "gaming" "system" "apps")
+  elif $main == "home":
+  then
+    second=$(${pkgs.gum}/bin/gum choose "de" "terminal" "zen" "nvf")
   fi
+  ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit -m $main -m ">" - "$second"
 ''
