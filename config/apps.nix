@@ -3,7 +3,10 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  rebuild =
+    import ../scripts/rebuild.nix {inherit pkgs;};
+in {
   services.keyd = {
     enable = true;
     keyboards.default = {
@@ -29,8 +32,6 @@
     wl-clipboard
     kitty
     blueberry
-    import
-    ../scripts/rebuild.nix
-    {inherit pkgs;}
+    rebuild
   ];
 }
