@@ -1,4 +1,8 @@
 {pkgs}:
 pkgs.writeShellScriptBin "rebuild" ''
-  ${pkgs.gum}/bin/gum filter $(${pkgs.git}/bin/git diff --name-only)
+  $(main) = ${pkgs.gum}/bin/gum choose "home" "config"
+  if main == "config":
+  then
+    ${pkgs.gum}/bin/gum choose "gaming"
+  fi
 ''
