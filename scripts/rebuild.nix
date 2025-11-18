@@ -6,5 +6,6 @@ pkgs.writeShellScriptBin "rebuild" ''
   main=$(${pkgs.gum}/bin/gum choose $(ls -d */) "typo")
   echo $main
   second=$(${pkgs.gum}/bin/gum choose $(ls -d ./"$main"*))
-  ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit -m ""$main"/"second": ${pkgs.gum}/bin/gum input"
+  message=$(${pkgs.gum}/bin/gum input --placeholder "Describe the change")
+  ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit -m ""$main"/"second": $(message)"
 ''
