@@ -29,5 +29,8 @@
     wl-clipboard
     kitty
     blueberry
+    import
+    ../scripts/rebuild.nix
+    {inherit pkgs;}
   ];
 }
