@@ -2,7 +2,6 @@
 pkgs.writeShellScriptBin "rebuild" ''
   main=$(${pkgs.gum}/bin/gum choose "home" "config")
   echo $main
-  exit
   if $main == config:
   then
     second=$(${pkgs.gum}/bin/gum choose "gaming" "system" "apps")
