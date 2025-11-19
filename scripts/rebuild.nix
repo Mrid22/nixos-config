@@ -3,10 +3,15 @@ pkgs.writeShellScriptBin "rebuild" ''
   cd ~/nixos-config/
   ${pkgs.git}/bin/git diff
   ${pkgs.git}/bin/git add .
-  main=$(${pkgs.gum}/bin/gum choose $(ls -d */) "typo")
+  main=$(${pkgs.gum}/bin/gum choose $(ls -d */) "typo" "update")
   echo $main
   second=$(${pkgs.gum}/bin/gum choose $(ls -d ./"$main"*))
-  message=$(${pkgs.gum}/bin/gum input --placeholder "Describe the change")
+  if [[$main = "update"]]
+  then
+    message="System Update"
+  else
+    message=$(${pkgs.gum}/bin/gum input --placeholder "Describe the change")
+  fi
   ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit --all --message "$main/$second: $message"
   ${pkgs.nh}/bin/nh os $(${pkgs.gum}/bin/gum choose "test" "switch")
 ''
