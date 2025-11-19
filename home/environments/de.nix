@@ -81,6 +81,15 @@
         "ALT SHIFT,9,movetoworkspace,9"
         "ALT SHIFT,0,movetoworkspace,10"
       ];
+
+      bindel = [
+        " ,XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        " ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        " ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        " ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ];
     };
   };
 }

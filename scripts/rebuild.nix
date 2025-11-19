@@ -6,10 +6,6 @@ pkgs.writeShellScriptBin "rebuild" ''
   main=$(${pkgs.gum}/bin/gum choose $(ls -d */) "typo" "update")
   echo $main
   second=$(${pkgs.gum}/bin/gum choose $(ls -d ./"$main"*))
-  if [[ $main = "update" ]]
-  then
-    message="System Update"
-  else
     message=$(${pkgs.gum}/bin/gum input --placeholder "Describe the change")
   fi
   ${pkgs.gum}/bin/gum confirm "Commit changes?" && git commit --all --message "$main/$second: $message"
