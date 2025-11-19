@@ -33,5 +33,6 @@ in {
     kitty
     blueberry
     rebuild
+    sops
   ];
 }
