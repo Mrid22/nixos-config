@@ -6,7 +6,7 @@ pkgs.writeShellScriptBin "rebuild" ''
   main=$(${pkgs.gum}/bin/gum choose $(ls -d */) "typo" "update")
   echo $main
   second=$(${pkgs.gum}/bin/gum choose $(ls -d ./"$main"*))
-  if [[$main = "update"]]
+  if [[ $main = "update" ]]
   then
     message="System Update"
   else
