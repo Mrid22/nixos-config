@@ -4,7 +4,7 @@
   inputs,
   ...
 }: {
-  imorts = [
+  imports = [
     inputs.selfhostblocks.nixosModules.default
     inputs.sops-nix.nixosModules.default
   ];

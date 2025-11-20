@@ -245,7 +245,7 @@
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "selfhostblocks": "selfhostblocks",
-        "sops": "sops",
+        "sops-nix": "sops-nix",
         "vicinae": "vicinae",
         "zen-browser": "zen-browser"
       }
@@ -271,18 +271,18 @@
         "type": "github"
       }
     },
-    "sops": {
+    "sops-nix": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1763509310,
-        "narHash": "sha256-s2WzTAD3vJtPACBCZXezNUMTG/wC6SFsU9DxazB9wDI=",
+        "lastModified": 1763607916,
+        "narHash": "sha256-VefBA1JWRXM929mBAFohFUtQJLUnEwZ2vmYUNkFnSjE=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "3ee33c0ed7c5aa61b4e10484d2ebdbdc98afb03e",
+        "rev": "877bb495a6f8faf0d89fc10bd142c4b7ed2bcc0b",
         "type": "github"
       },
       "original": {
