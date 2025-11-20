@@ -11,6 +11,7 @@
     ./config/user.nix
     ./config/gaming.nix
     ./config/system.nix
+    ./config/homelab/homelab.nix
   ];
 
   fonts.packages = with pkgs; [
