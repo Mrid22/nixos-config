@@ -158,6 +158,11 @@
         "ALT SHIFT, 9, movetoworkspace, 9"
         "ALT SHIFT, 0, movetoworkspace, 10"
       ];
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+      };
+      decoration.rounding = 5;
       input.touchpad = {
         natural_scroll = true;
         disable_while_typing = true;
