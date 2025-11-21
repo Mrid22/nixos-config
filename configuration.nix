@@ -1,34 +1,37 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
- nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-
-home-manager = {
-  # also pass inputs to home-manager modules
-  extraSpecialArgs = {inherit inputs;};
-  users = {
-    "mridula" = import ./home.nix;
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+  boot = {
+    # Bootloader.
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
   };
-};
+
+  networking.hostName = "nixos"; # Define your hostname.appstream
+
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
+  home-manager = {
+    # also pass inputs to home-manager modules
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "mridula" = import ./home.nix;
+    };
+  };
   # Enable networking
   networking.networkmanager.enable = true;
 
@@ -50,19 +53,30 @@ home-manager = {
     LC_TIME = "nl_NL.UTF-8";
   };
 
-  # Enable the X11 windowing system.
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "overload(control,escape)";
+          };
+        };
+      };
+    };
+  };
+
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
-
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -86,13 +100,14 @@ home-manager = {
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with ‘passwd’.appstream
+  users.defaultUserShell = pkgs.zsh;
   users.users.mridula = {
     isNormalUser = true;
     description = "Mridul Agarwal";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -100,14 +115,18 @@ home-manager = {
   programs.firefox.enable = true;
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
+  programs.hyprland.enable = true;
+  programs.zsh.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    blueberry
+    wl-clipboard
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -136,5 +155,4 @@ home-manager = {
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }
