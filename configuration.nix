@@ -28,9 +28,9 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Amsterdam";
+
   i18n = {
     defaultLocale = "en_US.UTF-8";
-
     extraLocaleSettings = {
       LC_ADDRESS = "nl_NL.UTF-8";
       LC_IDENTIFICATION = "nl_NL.UTF-8";
@@ -113,6 +113,7 @@
   environment.systemPackages = with pkgs; [
     blueberry
     wl-clipboard
+    sops
   ];
 
   system.stateVersion = "25.05";
