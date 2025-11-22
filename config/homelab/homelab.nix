@@ -7,6 +7,7 @@
   imports = with inputs; [
     selfhostblocks.nixosModules.default
     sops-nix.nixosModules.default
+    selfhostblocks.nixosModules.sops
   ];
   sops = {
     defaultSopsFile = ./secrets.yaml;
