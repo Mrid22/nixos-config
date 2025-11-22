@@ -26,8 +26,14 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     vicinae = {
       url = "github:vicinaehq/vicinae";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    selfhostblocks = {
+      url = "github:ibizaman/selfhostblocks";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -37,13 +43,23 @@
     nixpkgs,
     nvf,
     vicinae,
+    selfhostblocks,
     ...
-  } @ inputs: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+  } @ inputs: let
+    system = "x86_64-linux";
+    lib = selfhostblocks.lib.${system};
+
+    nixpkgs' = lib.shb.patchedNixpkgs;
+
+    nixosSystem' = import "${nixpkgs'}/nixos/lib/eval-config.nix";
+  in {
+    nixosConfigurations.nixos = nixosSystem' {
+      inherit system;
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        selfhostblocks.nixosModules.default
       ];
     };
   };
