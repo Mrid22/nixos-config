@@ -32,7 +32,11 @@
       "mridula" = import ./home.nix;
     };
   };
-  # Enable networking
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.droid-sans-mono
+  ];
+
   networking.networkmanager.enable = true;
 
   # Set your time zone.

@@ -64,7 +64,7 @@
       enable = true;
       settings = {
         user = {
-          email = "mridulaga@Outlook.com";
+          email = "mridulaga@outlook.com";
           name = "Mrid22";
         };
         init.defaultBranch = "main";
@@ -87,6 +87,13 @@
     oh-my-posh = {
       enable = true;
       enableZshIntegration = true;
+    };
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
     };
     kitty = {
       enable = true;
