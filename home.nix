@@ -23,6 +23,20 @@
       package = pkgs.layan-gtk-theme;
     };
   };
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      ipc = "on";
+      splash = false;
+      splash_offset = 2.0;
+
+      preload = ["~/nixos-config/Wallpaper.jpg"];
+
+      wallpaper = [
+        ",~/nixos-config/Wallpaper.jpg"
+      ];
+    };
+  };
   programs = {
     zen-browser = {
       enable = true;
@@ -53,7 +67,7 @@
               ];
 
               icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = ["!nx"];
+              definedAliases = ["@nx"];
             };
           };
         };
