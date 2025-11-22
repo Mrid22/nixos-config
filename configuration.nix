@@ -31,7 +31,7 @@
     users = {
       "mridula" = import ./home.nix;
     };
-    force = true;
+    backupFileExtension = ".bak";
   };
 
   fonts.packages = with pkgs; [
