@@ -47,13 +47,9 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    lib = selfhostblocks.lib.${system};
-
-    nixpkgs' = lib.shb.patchedNixpkgs;
-
-    nixosSystem' = import "${nixpkgs'}/nixos/lib/eval-config.nix";
+    shb = selfhostblocks.lib.${system};
   in {
-    nixosConfigurations.nixos = nixosSystem' {
+    nixosConfigurations.nixos = shb.pkgs.nixosSystem {
       inherit system;
       specialArgs = {inherit inputs;};
       modules = [
