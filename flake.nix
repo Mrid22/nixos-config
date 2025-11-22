@@ -26,12 +26,17 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    vicinae = {
+      url = "github:vicinaehq/vicinae";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     nvf,
+    vicinae,
     ...
   } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
