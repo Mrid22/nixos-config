@@ -20,11 +20,6 @@
       tunnels = {
         "Mridul Agarwal" = {
           credentialsFile = "${config.sops.secrets.cf-token.path}";
-          ingress = {
-            "jellyfin.shmanju.org" = {
-              service = "http://localhost:8096";
-            };
-          };
           default = "http_status:404";
         };
       };
