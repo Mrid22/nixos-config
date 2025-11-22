@@ -17,12 +17,6 @@
   services = {
     cloudflared = {
       enable = true;
-      tunnels = {
-        "Mridul Agarwal" = {
-          credentialsFile = "${config.sops.secrets.cf-token.path}";
-          default = "http_status:404";
-        };
-      };
     };
   };
   shb = {
