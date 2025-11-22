@@ -31,6 +31,7 @@
     users = {
       "mridula" = import ./home.nix;
     };
+    force = true;
   };
 
   fonts.packages = with pkgs; [
