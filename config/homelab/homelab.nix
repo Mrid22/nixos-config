@@ -24,7 +24,6 @@
             "jellyfin.shmanju.org" = {
               service = "http://localhost:8096";
             };
-            "*.domain2.com" = "http://localhost:80";
           };
           default = "http_status:404";
         };
