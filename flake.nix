@@ -32,10 +32,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    selfhostblocks = {
-      url = "github:ibizaman/selfhostblocks";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     sops-nix = {
       url = "github:Mic92/sops-nix";
