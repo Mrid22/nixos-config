@@ -111,10 +111,12 @@
         ];
       };
     };
+
     oh-my-posh = {
       enable = true;
       enableZshIntegration = true;
     };
+
     zoxide = {
       enable = true;
       enableZshIntegration = true;
@@ -122,6 +124,13 @@
         "--cmd cd"
       ];
     };
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      flake = "/home/mridula/nixos-config";
+    };
+
     kitty = {
       enable = true;
       settings.background_opacity = 0.5;
