@@ -19,7 +19,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "";
+      name = "Layan-Dark";
       package = pkgs.layan-gtk-theme;
     };
   };
