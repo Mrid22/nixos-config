@@ -24,18 +24,30 @@
       package = pkgs.layan-gtk-theme;
     };
   };
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      ipc = "on";
-      splash = false;
-      splash_offset = 2.0;
+  services = {
+    vicinae = {
+      enable = true;
+      autoStart = true;
+      settings = {
+        faviconService = "twenty";
+        popToRootOnClose = false;
+        rootSearch.searchFiles = true;
+        theme.name = "tokyonight-storm";
+      };
+    };
+    hyprpaper = {
+      enable = true;
+      settings = {
+        ipc = "on";
+        splash = false;
+        splash_offset = 2.0;
 
-      preload = ["~/nixos-config/Wallpaper.jpg"];
+        preload = ["~/nixos-config/Wallpaper.jpg"];
 
-      wallpaper = [
-        ",~/nixos-config/Wallpaper.jpg"
-      ];
+        wallpaper = [
+          ",~/nixos-config/Wallpaper.jpg"
+        ];
+      };
     };
   };
   programs = {
