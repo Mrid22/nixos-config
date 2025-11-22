@@ -16,6 +16,13 @@
     sessionVariables = {
     };
   };
+  gtk = {
+    enable = true;
+    theme = {
+      name = "";
+      package = pkgs.layan-gtk-theme;
+    };
+  };
   programs = {
     zen-browser = {
       enable = true;
