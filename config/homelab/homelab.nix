@@ -12,7 +12,6 @@
     defaultSopsFile = ./secrets.yaml;
     defaultSopsFormat = "yaml";
     age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
-    secrets."cloudflared/cert".path = "/home/mridula/.cloudflared/cert.pem";
   };
 
   fileSystems."/media" = {
@@ -35,6 +34,7 @@
           ingress = {
             "jellyfin.shmanju.org" = "http://localhost:8096";
             "jellyseerr.shmanju.org" = "http://localhost:5055";
+            "photos.shmanju.org" = "http://localhost:2283";
           };
         };
       };
@@ -72,6 +72,12 @@
         incomplete-dir = "/media/downloads/incomplete";
         incomplete-dir-enabled = true;
       };
+    };
+    immich = {
+      enable = true;
+      openFirewall = true;
+      mediaLocation = "/media/photos/";
+      machine-learning.enable = true;
     };
   };
 }
