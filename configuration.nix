@@ -59,6 +59,7 @@
   };
 
   services = {
+    cloudflared.enable = true;
     tlp.enable = true;
     keyd = {
       enable = true;
@@ -136,6 +137,7 @@
     blueberry
     wl-clipboard
     sops
+    cloudflared
   ];
 
   system.stateVersion = "25.05";
