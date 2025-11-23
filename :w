@@ -121,11 +121,6 @@
     neovim.defaultEditor = true;
     hyprland.enable = true;
     zsh.enable = true;
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-    };
-    gamemode.enable = true;
   };
 
   nixpkgs.config.allowUnfree = true;
