@@ -39,6 +39,9 @@
     nerd-fonts.droid-sans-mono
   ];
 
+  services.immich.enable = true;
+  services.immich.port = 2283;
+
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Amsterdam";
