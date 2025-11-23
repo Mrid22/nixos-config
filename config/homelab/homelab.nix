@@ -4,16 +4,6 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.sops-nix.nixosModules.sops
-  ];
-
-  sops = {
-    defaultSopsFile = ./secrets.yaml;
-    defaultSopsFormat = "yaml";
-    age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
-  };
-
   fileSystems."/media" = {
     device = "/dev/sda1";
     fsType = "ntfs";
