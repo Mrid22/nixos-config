@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -44,19 +43,13 @@
     nixpkgs,
     nvf,
     vicinae,
-    selfhostblocks,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    shb = selfhostblocks.lib.${system};
-  in {
-    nixosConfigurations.nixos = shb.pkgs.nixosSystem {
-      inherit system;
+  } @ inputs: {
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
-        selfhostblocks.nixosModules.default
       ];
     };
   };
