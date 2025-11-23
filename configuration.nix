@@ -25,6 +25,7 @@
       powerOnBoot = true;
     };
     nvidia = {
+      open = true;
       modesetting.enable = true;
       prime = {
         sync.enable = true;
