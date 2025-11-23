@@ -42,5 +42,26 @@
       enable = true;
       openFirewall = true;
     };
+    sonarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    radarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    prowlarr = {
+      enable = true;
+      openFirewall = true;
+    };
+    transmission = {
+      enable = true;
+      openFirewall = true;
+      settings = {
+        download-dir = "/media/downloads/incomplete";
+        incomplete-dir = "/media/downloads/incomplete";
+        incomplete-dir-enabled = true;
+      };
+    };
   };
 }
