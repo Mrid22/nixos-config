@@ -72,5 +72,6 @@
         incomplete-dir-enabled = true;
       };
     };
+    immich.enable = true;
   };
 }
