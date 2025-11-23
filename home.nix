@@ -61,6 +61,10 @@
           decentraleyes
           censor-tracker
           snowflake
+          privacy-badger
+          duckduckgo-privacy-essentials
+          transparent-zen
+          firenvim
         ];
         search = {
           default = "ddg";
