@@ -122,6 +122,7 @@
     neovim.defaultEditor = true;
     hyprland.enable = true;
     zsh.enable = true;
+    gnome-disks.enable = true;
     steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -138,6 +139,7 @@
     wl-clipboard
     sops
     cloudflared
+    ntfs3g
   ];
 
   system.stateVersion = "25.05";
