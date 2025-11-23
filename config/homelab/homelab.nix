@@ -20,7 +20,7 @@
       enable = true;
       tunnels = {
         "d730b790-900f-4664-a8de-fdbaac137fee" = {
-          credentialsFile = ~/.cloudflared/cert.pem;
+          credentialsFile = "/home/mridula/.cloudflared/cert.pem";
           default = "http_status:404";
         };
       };
