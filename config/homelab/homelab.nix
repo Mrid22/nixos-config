@@ -73,7 +73,7 @@
       };
     };
     immich = {
-      enable = true;
+      enable = false;
       openFirewall = true;
       machine-learning.enable = true;
       mediaLocation = "/media/photos/";
