@@ -15,6 +15,16 @@
     secrets."cloudflared/cert".path = "/home/mridula/.cloudflared/cert.pem";
   };
 
+  fileSystems."/media" = {
+    device = "/dev/sda";
+    fsType = "ntfs";
+    options = [
+      "users"
+      "nofail"
+      "exec"
+    ];
+  };
+
   services = {
     cloudflared = {
       enable = true;
