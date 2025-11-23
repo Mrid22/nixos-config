@@ -72,5 +72,11 @@
         incomplete-dir-enabled = true;
       };
     };
+    immich = {
+      enable = true;
+      openFirewall = true;
+      machine-learning.enable = true;
+      mediaLocation = "/media/photos/";
+    };
   };
 }
