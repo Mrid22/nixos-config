@@ -19,9 +19,12 @@
     cloudflared = {
       enable = true;
       tunnels = {
-        "d730b790-900f-4664-a8de-fdbaac137fee" = {
-          credentialsFile = config.sops.secrets."cloudflared/cert".path;
+        "4093605a-51ec-4dca-a803-5c128b905a8a" = {
+          credentialsFile = "/etc/cloudflared/4093605a-51ec-4dca-a803-5c128b905a8a.json";
           default = "http_status:404";
+          ingress = {
+            "jellyfin.shmanju.org" = "http://localhost:8096";
+          };
         };
       };
     };
