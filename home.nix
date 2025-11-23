@@ -91,6 +91,71 @@
       };
     };
 
+    waybar = {
+      enable = true;
+      systemd.enable = true;
+      settings = {
+        position = "top";
+        modules-left = [
+          "hyprland/workspaces"
+        ];
+        modules-center = [
+          "hyprland/window"
+        ];
+        modules-right = [
+          "network"
+          "pulseaudio"
+          "battery"
+          "clock"
+        ];
+        clock = {
+          format = "<span foreground=>   </span>{:%a %d %H:%M}";
+          tooltip-format = "<big>{:%Y %B}</big>
+<tt><small>{calendar}</small></tt>";
+        };
+        battery = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "<span size='13000' foreground=>{icon} </span> {capacity}%";
+          format-warning = "<span size='13000' foreground=>{icon} </span> {capacity}%";
+          format-critical = "<span size='13000' foreground=>{icon} </span> {capacity}%";
+          format-charging = "<span size='13000' foreground=> </span>{capacity}%";
+          format-plugged = "<span size='13000' foreground=> </span>{capacity}%";
+          format-alt = "<span size='13000' foreground=>{icon} </span> {time}";
+          format-full = "<span size='13000' foreground=> </span>{capacity}%";
+          format-icons = [
+            ""
+            ""
+            ""
+            ""
+            ""
+          ];
+          tooltip-format = "{time}";
+        };
+        network = {
+          format-wifi = "<span size='13000' foreground=>  </span>{essid}";
+          format-ethernet = "<span size='13000' foreground=>󰤭  </span> Disconnected";
+          format-linked = "{ifname} (No IP) ";
+          format-disconnected = "<span size='13000' foreground=>  </span>Disconnected";
+          tooltip-format-wifi = "Signal Strenght: {signalStrength}%";
+        };
+        pulseaudio = {
+          format = "{icon}  {volume}%";
+          format-muted = "";
+          format-icons = {
+            default = [
+              ""
+              ""
+              " "
+            ];
+          };
+          on-click = "pavucontrol";
+        };
+      };
+    };
+
     git = {
       enable = true;
       settings = {
