@@ -15,13 +15,25 @@
     secrets.cloudflare-creds = {};
   };
 
-  services.cloudflared = {
-    enable = true;
-    tunnels = {
-      "0d6acf9b-d6e2-48a6-a4d0-41078c6f8576" = {
-        credentialsFile = "${config.sops.secrets.cloudflare-creds.path}";
-        default = "http_status:404";
+  services = {
+    cloudflared = {
+      enable = true;
+      tunnels = {
+        "d730b790-900f-4664-a8de-fdbaac137fee" = {
+          credentialsFile = "${config.sops.secrets.cloudflare-creds.path}";
+          ingress = {
+            "shmanju.org" = {
+              service = "http://localhost:8096";
+              path = "/";
+            };
+          };
+          default = "http_status:404";
+        };
       };
+    };
+    jellyfin = {
+      enable = true;
+      openFirewall = true;
     };
   };
 }
