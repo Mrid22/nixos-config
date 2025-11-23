@@ -141,7 +141,7 @@
     sops
     cloudflared
     ntfs3g
-    spot-dl
+    spotdl
   ];
 
   system.stateVersion = "25.05";
