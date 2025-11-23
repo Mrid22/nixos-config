@@ -42,6 +42,10 @@
       enable = true;
       openFirewall = true;
     };
+    jellyseerr = {
+      enable = true;
+      openFirewall = true;
+    };
     sonarr = {
       enable = true;
       openFirewall = true;
