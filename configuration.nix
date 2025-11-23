@@ -6,9 +6,8 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    inputs.sops-nix.nixosModules.sops
+    ./config/homelab/homelab.nix
   ];
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -59,23 +58,7 @@
     };
   };
 
-  sops = {
-    defaultSopsFile = ./config/homelab/secrets.yaml;
-    defaultSopsFormat = "yaml";
-    age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
-    secrets.cloudflare-creds = {};
-  };
-
   services = {
-    cloudflared = {
-      enable = true;
-      tunnels = {
-        "0d6acf9b-d6e2-48a6-a4d0-41078c6f8576" = {
-          credentialsFile = "${config.sops.secrets.cloudflare-creds.path}";
-          default = "http_status:404";
-        };
-      };
-    };
     tlp.enable = true;
     keyd = {
       enable = true;
@@ -148,6 +131,7 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
     blueberry
