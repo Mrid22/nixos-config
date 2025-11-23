@@ -57,6 +57,7 @@
     transmission = {
       enable = true;
       openFirewall = true;
+      package = pkgs.transmission_4;
       settings = {
         download-dir = "/media/downloads/incomplete";
         incomplete-dir = "/media/downloads/incomplete";
