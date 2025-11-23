@@ -63,6 +63,7 @@
     defaultSopsFile = ./config/homelab/secrets.yaml;
     defaultSopsFormat = "yaml";
     age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
+    secrets.cloudflare-creds = {};
   };
 
   services = {
