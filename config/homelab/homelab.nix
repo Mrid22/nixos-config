@@ -20,7 +20,7 @@
       enable = true;
       tunnels = {
         "d730b790-900f-4664-a8de-fdbaac137fee" = {
-          credentialsFile = "${config.sops.secrets.cloudflare-creds.path}";
+          credentialsFile = ~/.cloudflared/cert.pem;
           default = "http_status:404";
         };
       };
