@@ -34,7 +34,6 @@
           ingress = {
             "jellyfin.shmanju.org" = "http://localhost:8096";
             "jellyseerr.shmanju.org" = "http://localhost:5055";
-            "photos.shmanju.org" = "http://localhost:2283";
           };
         };
       };
