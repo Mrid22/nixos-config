@@ -142,6 +142,7 @@
     cloudflared
     ntfs3g
     spotdl
+    playerctl
   ];
 
   system.stateVersion = "25.05";
