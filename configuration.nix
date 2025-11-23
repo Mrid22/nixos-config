@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./config/homelab/homelab.nix
+#    ./config/homelab/homelab.nix
   ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
