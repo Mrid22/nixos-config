@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    inputs.sops-nix.nixosModules.sops
   ];
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
@@ -58,8 +59,22 @@
     };
   };
 
+  sops = {
+    defaultSopsFile = ./config/homelab/secrets.yaml;
+    defaultSopsFormat = "yaml";
+    age.keyFile = "/home/mridula/.config/sops/age/keys.txt";
+  };
+
   services = {
-    cloudflared.enable = true;
+    cloudflared = {
+      enable = true;
+      tunnels = {
+        "0d6acf9b-d6e2-48a6-a4d0-41078c6f8576" = {
+          credentialsFile = "${config.sops.secrets.cloudflare-creds.path}";
+          default = "http_status:404";
+        };
+      };
+    };
     tlp.enable = true;
     keyd = {
       enable = true;

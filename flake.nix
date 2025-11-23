@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -31,8 +32,6 @@
       url = "github:vicinaehq/vicinae";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     sops-nix = {
       url = "github:Mic92/sops-nix";
