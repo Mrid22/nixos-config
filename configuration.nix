@@ -59,6 +59,7 @@
   };
 
   services = {
+    udisks2.enable = true;
     tlp.enable = true;
     keyd = {
       enable = true;
