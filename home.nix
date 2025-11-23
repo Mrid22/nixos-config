@@ -64,6 +64,7 @@
           privacy-badger
           duckduckgo-privacy-essentials
           transparent-zen
+          sponsorblock
           firenvim
         ];
         search = {
