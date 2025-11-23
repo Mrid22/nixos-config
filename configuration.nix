@@ -25,7 +25,7 @@
       powerOnBoot = true;
     };
     nvidia = {
-      modesetting = true;
+      modesetting.enable = true;
       prime = {
         sync.enable = true;
         intelBusId = "PCI:0:2:0";
