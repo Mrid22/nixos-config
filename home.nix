@@ -186,6 +186,7 @@
     settings = {
       exec-once = [
         "vicinae server"
+        "caelestia-shell"
       ];
       bind = [
         "ALT, Q, exec, kitty"
