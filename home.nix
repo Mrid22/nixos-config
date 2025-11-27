@@ -84,7 +84,7 @@
             scale = 1;
           };
           transparency = {
-            enabled = false;
+            enabled = true;
             base = 0.85;
             layers = 0.4;
           };
@@ -92,7 +92,7 @@
         general = {
           apps = {
             terminal = [
-              "foot"
+              "kitty"
             ];
             audio = [
               "pavucontrol"
@@ -101,7 +101,7 @@
               "mpv"
             ];
             explorer = [
-              "thunar"
+              "kitty yazi"
             ];
           };
           battery = {
@@ -141,24 +141,17 @@
                 idleAction = "dpms off";
                 returnAction = "dpms on";
               }
-              {
-                timeout = 600;
-                idleAction = [
-                  "systemctl"
-                  "suspend-then-hibernate"
-                ];
-              }
             ];
           };
         };
         background = {
           desktopClock = {
-            enabled = false;
+            enabled = true;
           };
           enabled = true;
           visualiser = {
-            blur = false;
-            enabled = false;
+            blur = true;
+            enabled = true;
             autoHide = true;
             rounding = 1;
             spacing = 1;
@@ -192,7 +185,7 @@
             }
             {
               id = "tray";
-              enabled = true;
+              enabled = false;
             }
             {
               id = "clock";
