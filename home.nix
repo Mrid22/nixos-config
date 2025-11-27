@@ -61,6 +61,8 @@
           showBattery = true;
         };
         paths.wallpaperDir = "~/Downloads";
+        transparency.enabled = true;
+        tray.background = true;
       };
       cli = {
         enable = true; # Also add caelestia-cli to path
