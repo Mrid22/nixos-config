@@ -171,12 +171,6 @@
           tabstop = 2;
           shiftwidth = 2;
         };
-        theme = {
-          enable = true;
-          name = "tokyonight";
-          style = "storm";
-          transparent = true;
-        };
         statusline.lualine.enable = true;
         lsp = {
           enable = true;
