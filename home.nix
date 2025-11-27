@@ -15,13 +15,6 @@
     homeDirectory = "/home/mridula";
     stateVersion = "25.05";
   };
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Layan-Dark";
-      package = pkgs.layan-gtk-theme;
-    };
-  };
   services = {
     vicinae = {
       enable = true;
