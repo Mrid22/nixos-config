@@ -49,6 +49,10 @@
     };
   };
   programs = {
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     caelestia = {
       enable = true;
       systemd = {
