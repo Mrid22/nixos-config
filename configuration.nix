@@ -38,12 +38,6 @@
   fonts.packages = with pkgs; [
     nerd-fonts.droid-sans-mono
   ];
-  services.immich = {
-    enable = true;
-    port = 2283;
-    mediaLocation = "/media/photos/";
-    host = "0.0.0.0";
-  };
 
   networking.networkmanager.enable = true;
 
