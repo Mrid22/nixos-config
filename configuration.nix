@@ -38,8 +38,12 @@
 
   stylix = {
     enable = true;
+    overlays.enable = true;
     image = ./Wallpaper.jpg;
     polarity = "dark";
+    opacity = {
+      terminal = 0.5;
+    };
   };
 
   fonts.packages = with pkgs; [
