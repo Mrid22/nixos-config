@@ -159,10 +159,7 @@
       icons = "auto";
     };
 
-    kitty = {
-      enable = true;
-      settings.background_opacity = 0.5;
-    };
+    kitty.enable = true;
 
     nvf = {
       enable = true;
