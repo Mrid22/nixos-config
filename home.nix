@@ -52,15 +52,15 @@
     caelestia = {
       enable = true;
       systemd = {
-        enable = false; # if you prefer starting from your compositor
+        enable = true; # if you prefer starting from your compositor
         target = "graphical-session.target";
         environment = [];
       };
       settings = {
         bar.status = {
-          showBattery = false;
+          showBattery = true;
         };
-        paths.wallpaperDir = "~/Images";
+        paths.wallpaperDir = "~/nixos-config";
       };
       cli = {
         enable = true; # Also add caelestia-cli to path
@@ -207,7 +207,6 @@
     settings = {
       exec-once = [
         "vicinae server"
-        "caelestia-shell"
       ];
       bind = [
         "ALT, Q, exec, kitty"
