@@ -155,7 +155,6 @@
     spotdl
     playerctl
     brightnessctl
-    bluetui
   ];
   system = {
     stateVersion = "25.05";
