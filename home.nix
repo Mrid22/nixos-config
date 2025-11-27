@@ -84,7 +84,7 @@
             scale = 1;
           };
           transparency = {
-            enabled = true;
+            enabled = false;
             base = 0.85;
             layers = 0.4;
           };
