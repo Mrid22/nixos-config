@@ -160,6 +160,13 @@
       flake = "/home/mridula/nixos-config";
     };
 
+    eza = {
+      enable = true;
+      enableZshIntegration = true;
+      git = true;
+      icons = "auto";
+    };
+
     kitty = {
       enable = true;
       settings.background_opacity = 0.5;
