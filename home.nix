@@ -8,7 +8,7 @@
     inputs.nvf.homeManagerModules.default
     inputs.zen-browser.homeModules.twilight
     inputs.vicinae.homeManagerModules.default
-    inputs.caelestia-shell.default
+    inputs.caelestia-shell.homeManagerModules.default
   ];
   home = {
     username = "mridula";
