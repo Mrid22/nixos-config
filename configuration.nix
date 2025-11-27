@@ -148,6 +148,7 @@
     ntfs3g
     spotdl
     playerctl
+    brightnessctl
   ];
   system = {
     stateVersion = "25.05";
