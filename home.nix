@@ -176,11 +176,11 @@
               enabled = true;
             }
             {
-              id = "activeWindow";
+              id = "windowtitle";
               enabled = true;
             }
             {
-              id = "spacer";
+              id = "activeWindow";
               enabled = true;
             }
             {
