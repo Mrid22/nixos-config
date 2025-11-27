@@ -217,6 +217,7 @@
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
+        "ALT, E, exec, kitty yazi"
         "ALT, SPACE, exec, vicinae toggle"
 
         "ALT, C, killactive"
