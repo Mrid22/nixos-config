@@ -148,7 +148,6 @@
     ntfs3g
     spotdl
     playerctl
-    inputs.caelestia-shell.packages.${stdenv.hostPlatform.system}.with-cli
   ];
   system = {
     stateVersion = "25.05";
