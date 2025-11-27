@@ -7,6 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ./config/homelab/homelab.nix
+    inputs.stylix.nixosModules.stylix
   ];
 
   boot.loader = {
