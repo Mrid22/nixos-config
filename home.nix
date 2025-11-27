@@ -23,7 +23,6 @@
         faviconService = "twenty";
         popToRootOnClose = false;
         rootSearch.searchFiles = true;
-        theme.name = "tokyo-night-storm";
       };
     };
     hyprpaper = {
