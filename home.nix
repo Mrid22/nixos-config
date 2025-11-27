@@ -48,7 +48,7 @@
     };
   };
   programs = {
-    programs.caelestia = {
+    caelestia = {
       enable = true;
       systemd = {
         enable = false; # if you prefer starting from your compositor
