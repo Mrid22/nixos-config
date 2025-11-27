@@ -60,7 +60,7 @@
         bar.status = {
           showBattery = true;
         };
-        paths.wallpaperDir = "~/nixos-config";
+        paths.wallpaperDir = "~/Downloads";
       };
       cli = {
         enable = true; # Also add caelestia-cli to path
