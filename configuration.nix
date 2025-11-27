@@ -66,7 +66,7 @@
 
   services = {
     udisks2.enable = true;
-    tlp.enable = true;
+    power-profiles-daemon.enable = true;
     keyd = {
       enable = true;
       keyboards = {
