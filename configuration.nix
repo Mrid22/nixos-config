@@ -38,7 +38,7 @@
 
   stylix = {
     enable = true;
-    image = "~/nixos-config/Wallpaper.jpg";
+    image = ~/nixos-config/Wallpaper.jpg;
   };
 
   fonts.packages = with pkgs; [
