@@ -65,7 +65,7 @@
       cli = {
         enable = true; # Also add caelestia-cli to path
         settings = {
-          theme.enableGtk = true;
+          theme.enableGtk = false;
         };
       };
     };
