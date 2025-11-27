@@ -39,6 +39,7 @@
   stylix = {
     enable = true;
     image = ./Wallpaper.jpg;
+    polarity = "dark";
   };
 
   fonts.packages = with pkgs; [
