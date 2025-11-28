@@ -156,7 +156,7 @@
     spotdl
     playerctl
     brightnessctl
-    jellyfin
+    jellyfin-media-player
   ];
   system = {
     stateVersion = "25.05";
