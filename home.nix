@@ -194,9 +194,6 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      exec-once = [
-        "vicinae server"
-      ];
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
