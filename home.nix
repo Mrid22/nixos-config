@@ -194,11 +194,13 @@
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+      exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
         "ALT, E, exec, kitty yazi"
-        "ALT, SPACE, global, caelestia:launcher"
+        "ALT, SPACE, exec, vicinae toggle"
+        "ALT SHIFT, SPACE, global, caelestia:launcher"
 
         "ALT, C, killactive"
         "ALT, H, movefocus, l"
