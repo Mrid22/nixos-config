@@ -201,8 +201,7 @@
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
         "ALT, E, exec, kitty yazi"
-        "ALT, SPACE, exec, vicinae toggle"
-        "ALT, L, global, caelestia:launcher"
+        "ALT, SPACE, global, caelestia:launcher"
 
         "ALT, C, killactive"
         "ALT, H, movefocus, l"
