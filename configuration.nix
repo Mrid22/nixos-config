@@ -38,6 +38,7 @@
 
   stylix = {
     enable = true;
+    theme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
     overlays.enable = true;
     image = ./Wallpaper.jpg;
     polarity = "dark";
