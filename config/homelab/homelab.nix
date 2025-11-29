@@ -75,9 +75,9 @@
     };
     immich = {
       enable = true;
-      port = 2283;
-      mediaLocation = "/media/photos/";
-      host = "0.0.0.0";
+      # port = 2283;
+      # mediaLocation = "/media/photos/";
+      # host = "0.0.0.0";
     };
   };
 }
