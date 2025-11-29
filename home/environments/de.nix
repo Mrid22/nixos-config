@@ -110,7 +110,7 @@
         gaps_out = 5;
         border_size = 0;
       };
-      decoration.rounding = 5;
+      decoration.rounding = 10;
       input.touchpad = {
         natural_scroll = true;
         disable_while_typing = true;
