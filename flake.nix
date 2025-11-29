@@ -67,6 +67,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit inputs;
+        inherit stablepkgs;
       };
       modules = [
         ./configuration.nix
