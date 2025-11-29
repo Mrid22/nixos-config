@@ -83,7 +83,7 @@
 
     immich = {
       enable = true;
-      package = inputs.stablepkgs.immich;
+      package = inputs.stablepkgs.pkgs.immich;
       mediaLocation = "/media/photos/";
     };
   };
