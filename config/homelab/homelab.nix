@@ -39,6 +39,11 @@
 
     home-assistant = {
       enable = true;
+      config = {
+        homeassistant = {
+          name = "MridulHouse";
+        };
+      };
       extraComponents = [
         "default_config"
         "androidtv"
