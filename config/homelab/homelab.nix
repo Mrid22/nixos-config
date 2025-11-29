@@ -15,6 +15,7 @@
   };
 
   services = {
+    meilisearch.enable = true;
     cloudflared = {
       enable = true;
       tunnels = {
@@ -29,11 +30,16 @@
         };
       };
     };
-    meilisearch.enable = true;
-
     jellyfin = {
       enable = true;
       openFirewall = true;
+    };
+
+    ollama = {
+      enable = true;
+      loadModels = ["gpt-oss:120b"];
+      acceleration = "cuda";
+      models = "/media/models/";
     };
 
     jellyseerr = {
