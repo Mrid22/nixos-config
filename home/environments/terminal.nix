@@ -7,7 +7,7 @@
   programs = {
     delta = {
       enable = true;
-      enableZshIntegration = true;
+      enableGitIntegration = true;
     };
     git = {
       enable = true;
