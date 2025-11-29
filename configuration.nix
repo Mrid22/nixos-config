@@ -7,34 +7,9 @@
   imports = [
     ./hardware-configuration.nix
     ./config/homelab/homelab.nix
+    ./config/system.nix
     inputs.stylix.nixosModules.stylix
   ];
-
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
-
-  networking.hostName = "nixos";
-  hardware = {
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-    };
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
-    };
-    nvidia = {
-      open = true;
-      modesetting.enable = true;
-      prime = {
-        sync.enable = true;
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
-      };
-    };
-  };
 
   stylix = {
     enable = true;
@@ -51,67 +26,19 @@
     nerd-fonts.droid-sans-mono
   ];
 
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "Europe/Amsterdam";
-
-  i18n = {
-    defaultLocale = "en_US.UTF-8";
-    extraLocaleSettings = {
-      LC_ADDRESS = "nl_NL.UTF-8";
-      LC_IDENTIFICATION = "nl_NL.UTF-8";
-      LC_MEASUREMENT = "nl_NL.UTF-8";
-      LC_MONETARY = "nl_NL.UTF-8";
-      LC_NAME = "nl_NL.UTF-8";
-      LC_NUMERIC = "nl_NL.UTF-8";
-      LC_PAPER = "nl_NL.UTF-8";
-      LC_TELEPHONE = "nl_NL.UTF-8";
-      LC_TIME = "nl_NL.UTF-8";
-    };
-  };
-
-  services = {
-    upower.enable = true;
-    udisks2.enable = true;
-    power-profiles-daemon.enable = true;
-    keyd = {
-      enable = true;
-      keyboards = {
-        default = {
-          ids = ["*"];
-          settings = {
-            main = {
-              capslock = "overload(control,escape)";
-            };
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = ["*"];
+        settings = {
+          main = {
+            capslock = "overload(control,escape)";
           };
         };
       };
     };
-    xserver = {
-      enable = true;
-      videoDrivers = ["nvidia"];
-
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
-
-    displayManager.gdm.enable = true;
-
-    printing.enable = true;
-
-    pulseaudio.enable = false;
-    pipewire = {
-      enable = true;
-      alsa = {
-        enable = true;
-        support32Bit = true;
-      };
-      pulse.enable = true;
-    };
   };
-  security.rtkit.enable = true;
 
   users = {
     defaultUserShell = pkgs.zsh;
@@ -132,11 +59,13 @@
 
   programs = {
     firefox.enable = true;
-    neovim.enable = true;
-    neovim.defaultEditor = true;
     hyprland.enable = true;
     zsh.enable = true;
     gnome-disks.enable = true;
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
     steam = {
       enable = true;
       gamescopeSession.enable = true;
@@ -144,9 +73,6 @@
     };
     gamemode.enable = true;
   };
-
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
@@ -157,16 +83,4 @@
     playerctl
     brightnessctl
   ];
-  system = {
-    stateVersion = "25.05";
-    autoUpgrade = {
-      enable = true;
-      flake = inputs.self.outPath;
-      flags = [
-        "-L"
-      ];
-      dates = "02:00";
-      randomizedDelaySec = "45min";
-    };
-  };
 }
