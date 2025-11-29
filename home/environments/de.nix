@@ -40,6 +40,17 @@
             }
             + "/extensions/power-profile";
         })
+        (inputs.vicinae.packages.${pkgs.stdenv.hostPlatform.system}.mkVicinaeExtension {
+          pname = "nix";
+          src =
+            pkgs.fetchFromGitHub {
+              owner = "vicinaehq";
+              repo = "extensions";
+              rev = "610459553a20cf510fa414844f0d094f14ae9643";
+              sha256 = "sha256-C2b6upygLE6xUP/cTSKZfVjMXOXOOqpP5Xmgb9r2dhA=";
+            }
+            + "/extensions/nix";
+        })
       ];
     };
     hyprpaper = {
