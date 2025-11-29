@@ -30,11 +30,28 @@
         };
       };
     };
+    meilisearch.enable = true;
+
     jellyfin = {
       enable = true;
       openFirewall = true;
     };
-    meilisearch.enable = true;
+
+    home-assistant = {
+      enable = true;
+      extraComponents = [
+        "default_config"
+        "androidtv"
+        "androidtv_remote"
+        "tailscale"
+        "tuya"
+      ];
+    };
+
+    tailscale = {
+      enable = true;
+      disableTaildrop = true;
+    };
 
     jellyseerr = {
       enable = true;
