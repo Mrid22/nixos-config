@@ -42,11 +42,6 @@
     };
   };
   programs = {
-    quickshell = {
-      enable = true;
-      activeConfig = "default";
-      configs.default = inputs.self + ./home/environments/quickshell-test;
-    };
     caelestia = {
       enable = true;
       systemd = {

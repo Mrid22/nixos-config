@@ -80,5 +80,6 @@
     spotdl
     playerctl
     brightnessctl
+    inputs.quickshell.packages.${system}.default
   ];
 }
