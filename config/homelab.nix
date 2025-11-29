@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  pkgs-stable,
   ...
 }: {
   fileSystems."/media" = {
@@ -83,7 +84,7 @@
 
     immich = {
       enable = true;
-      package = inputs.pkgs-stable.immich;
+      package = pkgs-stable.immich;
       mediaLocation = "/media/photos/";
     };
   };
