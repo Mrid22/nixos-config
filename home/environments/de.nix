@@ -10,7 +10,7 @@
   ];
   services = {
     vicinae = {
-      #     enable = true;
+      enable = true;
       autoStart = true;
       settings = {
         faviconService = "twenty";
@@ -33,17 +33,19 @@
       };
     };
   };
-
-  programs.caelestia = {
-    enable = true;
-    systemd = {
+  programs = {
+    gpu-screen-recorder.enable = true;
+    caelestia = {
       enable = true;
-      target = "graphical-session.target";
-    };
-    cli = {
-      enable = true;
-      settings = {
-        theme.enableGtk = false;
+      systemd = {
+        enable = true;
+        target = "graphical-session.target";
+      };
+      cli = {
+        enable = true;
+        settings = {
+          theme.enableGtk = false;
+        };
       };
     };
   };
