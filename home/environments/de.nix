@@ -41,17 +41,25 @@
       };
     };
   };
-
-  programs.caelestia = {
-    enable = true;
-    systemd = {
+  programs = {
+    quickshell = {
       enable = true;
-      target = "graphical-session.target";
+      activeConfig = "default";
+      configs = {
+        default = ./quickshell-test;
+      };
     };
-    cli = {
+    caelestia = {
       enable = true;
-      settings = {
-        theme.enableGtk = false;
+      systemd = {
+        enable = true;
+        target = "graphical-session.target";
+      };
+      cli = {
+        enable = true;
+        settings = {
+          theme.enableGtk = false;
+        };
       };
     };
   };
