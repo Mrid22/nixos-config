@@ -18,7 +18,20 @@
         rootSearch.searchFiles = true;
       };
       extensions = with inputs.vicinae.mkVicinaeExtension.${pkgs.system}; [
-        bluetooth
+        {
+          inherit pkgs;
+          name = "extension-name";
+          src =
+            pkgs.fetchFromGitHub {
+              # You can also specify different sources other than github
+              owner = "vicinaehq";
+              repo = "extensions";
+              rev = "ec7334e9bb636f4771580238bd3569b58dbce879"; # If the extension has no releases use the latest commit hash
+              # You can get the sha256 by rebuilding once and then copying the output hash from the error message
+              sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            }
+            + "/extensions/bluetooth"; # If the extension is in a subdirectory you can add ` + "/subdir"` between the brace and the semicolon here
+        }
       ];
     };
     hyprpaper = {
