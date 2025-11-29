@@ -2,7 +2,6 @@
   config,
   pkgs,
   inputs,
-  self,
   ...
 }: {
   imports = with inputs; [
@@ -46,9 +45,6 @@
     quickshell = {
       enable = true;
       activeConfig = "default";
-      configs = {
-        default = self + ./home/environments/quickshell-test;
-      };
     };
     caelestia = {
       enable = true;
