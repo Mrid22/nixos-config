@@ -18,7 +18,7 @@
         rootSearch.searchFiles = true;
       };
       extensions = [
-        (inputs.vicinae.mkVicinaeExtension.${pkgs.stdenv.hostPlatform.system} {
+        (inputs.vicinae.packages.${pkgs.stdenv.hostPlatform.system}.mkVicinaeExtension {
           inherit pkgs;
           name = "bluetooth";
           src =
