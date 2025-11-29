@@ -37,6 +37,7 @@
 
     ollama = {
       enable = true;
+      host = "0.0.0.0";
       loadModels = ["gpt-oss:120b"];
       acceleration = "cuda";
       models = "/media/models/";
