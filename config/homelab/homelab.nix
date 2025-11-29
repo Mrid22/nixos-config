@@ -43,6 +43,8 @@
       models = "/media/models/";
     };
 
+    open-webui.enable = true;
+
     jellyseerr = {
       enable = true;
       openFirewall = true;
