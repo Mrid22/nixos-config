@@ -16,6 +16,7 @@
 
   services = {
     meilisearch.enable = true;
+    open-webui.enable = true;
     cloudflared = {
       enable = true;
       tunnels = {
@@ -30,6 +31,7 @@
         };
       };
     };
+
     jellyfin = {
       enable = true;
       openFirewall = true;
@@ -43,28 +45,31 @@
       models = "/media/models/";
     };
 
-    open-webui.enable = true;
-
     jellyseerr = {
       enable = true;
       openFirewall = true;
     };
+
     sonarr = {
       enable = true;
       openFirewall = true;
     };
+
     radarr = {
       enable = true;
       openFirewall = true;
     };
+
     prowlarr = {
       enable = true;
       openFirewall = true;
     };
+
     flaresolverr = {
       enable = true;
       openFirewall = true;
     };
+
     transmission = {
       enable = true;
       openFirewall = true;
@@ -74,6 +79,12 @@
         incomplete-dir = "/media/downloads/incomplete";
         incomplete-dir-enabled = true;
       };
+    };
+
+    immich = {
+      enable = true;
+      package = inputs.stablepkgs.immich;
+      mediaLocation = "/media/photos/";
     };
   };
 }
