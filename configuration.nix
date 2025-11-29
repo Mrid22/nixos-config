@@ -58,6 +58,8 @@
   };
 
   programs = {
+    gpu-screen-recorder.enable = true;
+
     firefox.enable = true;
     hyprland.enable = true;
     zsh.enable = true;

@@ -33,19 +33,17 @@
       };
     };
   };
-  programs = {
-    gpu-screen-recorder.enable = true;
-    caelestia = {
+
+  programs.caelestia = {
+    enable = true;
+    systemd = {
       enable = true;
-      systemd = {
-        enable = true;
-        target = "graphical-session.target";
-      };
-      cli = {
-        enable = true;
-        settings = {
-          theme.enableGtk = false;
-        };
+      target = "graphical-session.target";
+    };
+    cli = {
+      enable = true;
+      settings = {
+        theme.enableGtk = false;
       };
     };
   };
