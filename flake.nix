@@ -62,12 +62,13 @@
     stablepkgs,
     ...
   } @ inputs: let
-    stable = import stablepkgs;
+    system = "x86_64-linux";
+    pkgs-stable = stablepkgs.legacyPackages.${system};
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit inputs;
-        inherit stablepkgs;
+        inherit pkgs-stable;
       };
       modules = [
         ./configuration.nix
