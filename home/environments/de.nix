@@ -10,7 +10,7 @@
   ];
   services = {
     vicinae = {
-      enable = true;
+      #     enable = true;
       autoStart = true;
       settings = {
         faviconService = "twenty";
