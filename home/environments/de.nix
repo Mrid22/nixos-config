@@ -47,7 +47,7 @@
       enable = true;
       activeConfig = "default";
       configs = {
-        default = inputs.self + ./home/de/quickshell-test;
+        default = inputs.self + ./home/environments/quickshell-test;
       };
     };
     caelestia = {
