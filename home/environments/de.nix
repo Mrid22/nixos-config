@@ -17,10 +17,10 @@
         popToRootOnClose = false;
         rootSearch.searchFiles = true;
       };
-      extensions = with inputs.vicinae.mkVicinaeExtension.${pkgs.system}; [
-        {
+      extensions = [
+        (inputs.vicinae.mkVicinaeExtension.${pkgs.system} {
           inherit pkgs;
-          name = "extension-name";
+          name = "bluetooth";
           src =
             pkgs.fetchFromGitHub {
               # You can also specify different sources other than github
@@ -31,7 +31,7 @@
               sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
             }
             + "/extensions/bluetooth"; # If the extension is in a subdirectory you can add ` + "/subdir"` between the brace and the semicolon here
-        }
+        })
       ];
     };
     hyprpaper = {
