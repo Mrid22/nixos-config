@@ -19,18 +19,15 @@
       };
       extensions = [
         (inputs.vicinae.packages.${pkgs.stdenv.hostPlatform.system}.mkVicinaeExtension {
-          inherit pkgs;
-          name = "bluetooth";
+          pname = "bluetooth";
           src =
             pkgs.fetchFromGitHub {
-              # You can also specify different sources other than github
               owner = "vicinaehq";
               repo = "extensions";
-              rev = "ec7334e9bb636f4771580238bd3569b58dbce879"; # If the extension has no releases use the latest commit hash
-              # You can get the sha256 by rebuilding once and then copying the output hash from the error message
+              rev = "ec7334e9bb636f4771580238bd3569b58dbce879";
               sha256 = "sha256-C2b6upygLE6xUP/cTSKZfVjMXOXOOqpP5Xmgb9r2dhA=";
             }
-            + "/extensions/bluetooth"; # If the extension is in a subdirectory you can add ` + "/subdir"` between the brace and the semicolon here
+            + "/extensions/bluetooth";
         })
       ];
     };
