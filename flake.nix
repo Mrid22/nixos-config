@@ -61,7 +61,9 @@
     vicinae,
     stablepkgs,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    stable = import stablepkgs;
+  in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {
         inherit inputs;
