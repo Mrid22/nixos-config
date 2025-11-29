@@ -47,7 +47,7 @@
       enable = true;
       activeConfig = "default";
       configs = {
-        default = self + ./home/environments/quickshell-test;
+        default ="~/nixos-config/home/environments/quickshell-test/"
       };
     };
     caelestia = {
