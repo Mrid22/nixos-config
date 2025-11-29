@@ -22,6 +22,8 @@
         nix
         power-profile
         it-tools
+        hypr-keybinds
+        otp
       ];
     };
     hyprpaper = {

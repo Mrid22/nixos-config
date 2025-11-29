@@ -22,9 +22,7 @@
     };
   };
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.droid-sans-mono
-  ];
+  fonts.packages = [pkgs.nerd-fonts.droid-sans-mono];
 
   services.keyd = {
     enable = true;
@@ -51,19 +49,11 @@
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
-    users = {
-      "mridula" = import ./home.nix;
-    };
+    users = {"mridula" = import ./home.nix;};
     backupFileExtension = ".bak";
   };
 
   programs = {
-    gpu-screen-recorder.enable = true;
-
-    firefox.enable = true;
-    hyprland.enable = true;
-    zsh.enable = true;
-    gnome-disks.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -73,6 +63,10 @@
       gamescopeSession.enable = true;
       protontricks.enable = true;
     };
+    gpu-screen-recorder.enable = true;
+    hyprland.enable = true;
+    zsh.enable = true;
+    gnome-disks.enable = true;
     gamemode.enable = true;
   };
 
