@@ -55,11 +55,6 @@
     vicinae,
     ...
   } @ inputs: {
-    packages."x86_64-linux".default =
-      (nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        modules = [./home/apps/nvf.nix];
-      }).neovim;
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
