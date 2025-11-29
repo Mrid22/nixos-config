@@ -39,7 +39,7 @@
       enable = true;
       host = "0.0.0.0";
       acceleration = "cuda";
-      loadModels = ["gpt-oss:120b" "gpt-oss:20b"];
+      loadModels = ["llama3.2:1b"];
       models = "/media/models/";
     };
 
