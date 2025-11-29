@@ -84,6 +84,7 @@
 
     immich = {
       enable = true;
+      port = 2283;
       package = pkgs-stable.immich;
       mediaLocation = "/media/photos/";
     };
