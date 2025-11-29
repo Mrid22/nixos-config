@@ -1,7 +1,0 @@
-keys:
-  - &primary age14s2zpggxlstlerglhfw5jh9ytcth73gpkpmm36d7am95f0y5pp8srqq0f6
-creation_rules:
-  - path_regex: config/homelab/secrets.yaml$
-    key_groups:
-    - age:
-      - *primary

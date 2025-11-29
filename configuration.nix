@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./config/homelab/homelab.nix
+    ./config/homelab.nix
     ./config/system.nix
     inputs.stylix.nixosModules.stylix
   ];
@@ -54,14 +54,14 @@
   };
 
   programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
     steam = {
       enable = true;
       gamescopeSession.enable = true;
       protontricks.enable = true;
+    };
+    neovim = {
+      enable = true;
+      defaultEditor = true;
     };
     gpu-screen-recorder.enable = true;
     hyprland.enable = true;
@@ -72,7 +72,6 @@
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
-    sops
     netbeans
     cloudflared
     ntfs3g
