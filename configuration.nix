@@ -77,6 +77,7 @@
   environment.systemPackages = with pkgs; [
     wl-clipboard
     sops
+    netbeans
     cloudflared
     ntfs3g
     spotdl
