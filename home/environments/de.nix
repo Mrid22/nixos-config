@@ -21,6 +21,7 @@
         bluetooth
         nix
         power-profile
+        it-tools
       ];
     };
     hyprpaper = {
