@@ -17,7 +17,7 @@
           shiftwidth = 2;
         };
         statusline.lualine.enable = true;
-        filetree.nvim-tree.enable = true;
+        filetree.nvimTree.enable = true;
         dashboard.alpha.enable = true;
         lsp = {
           enable = true;
