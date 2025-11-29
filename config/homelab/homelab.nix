@@ -24,7 +24,6 @@
           ingress = {
             "jellyfin.shmanju.org" = "http://localhost:8096";
             "jellyseerr.shmanju.org" = "http://localhost:5055";
-            "search.shmanju.org" = "http://localhost:7700";
             "photos.shmanju.org" = "http://localhost:2283";
           };
         };
@@ -35,27 +34,6 @@
     jellyfin = {
       enable = true;
       openFirewall = true;
-    };
-
-    home-assistant = {
-      enable = true;
-      config = {
-        homeassistant = {
-          name = "MridulHouse";
-        };
-      };
-      extraComponents = [
-        "default_config"
-        "androidtv"
-        "androidtv_remote"
-        "tailscale"
-        "tuya"
-      ];
-    };
-
-    tailscale = {
-      enable = true;
-      disableTaildrop = true;
     };
 
     jellyseerr = {
