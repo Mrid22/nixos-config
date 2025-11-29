@@ -29,6 +29,17 @@
             }
             + "/extensions/bluetooth";
         })
+        (inputs.vicinae.packages.${pkgs.stdenv.hostPlatform.system}.mkVicinaeExtension {
+          pname = "power-profiles";
+          src =
+            pkgs.fetchFromGitHub {
+              owner = "vicinaehq";
+              repo = "extensions";
+              rev = "effaaa2a87227a3887a263b158b29dd06840932a";
+              sha256 = "sha256-C2b6upygLE6xUP/cTSKZfVjMXOXOOqpP5Xmgb9r2dhA=";
+            }
+            + "/extensions/power-profile";
+        })
       ];
     };
     hyprpaper = {
