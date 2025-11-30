@@ -68,11 +68,18 @@
   } @ inputs: let
     system = "x86_64-linux";
   in {
+    packages."${system}".default =
+      (nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."${system}";
+        modules = [./home/apps/nvf.nix];
+      }).neovim;
+
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        nvf.nixosModules.default
       ];
     };
   };
