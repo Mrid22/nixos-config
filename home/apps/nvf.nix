@@ -13,7 +13,7 @@
     };
     treesitter = {
       enable = true;
-      autoTagHtml = true;
+      autotagHtml = true;
       context.enable = true;
     };
     filetree.nvimTree = {
