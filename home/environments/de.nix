@@ -82,16 +82,16 @@
         "ALT, 9, workspace, 9"
         "ALT, 0, workspace, 10"
 
-        "ALT SHIFT, 1, split-movetoworkspace, 1"
-        "ALT SHIFT, 2, split-movetoworkspace, 2"
-        "ALT SHIFT, 3, split-movetoworkspace, 3"
-        "ALT SHIFT, 4, split-movetoworkspace, 4"
-        "ALT SHIFT, 5, split-movetoworkspace, 5"
-        "ALT SHIFT, 6, split-movetoworkspace, 6"
-        "ALT SHIFT, 7, split-movetoworkspace, 7"
-        "ALT SHIFT, 8, split-movetoworkspace, 8"
-        "ALT SHIFT, 9, split-movetoworkspace, 9"
-        "ALT SHIFT, 0, split-movetoworkspace, 10"
+        "ALT SHIFT, 1, movetoworkspace, 1"
+        "ALT SHIFT, 2, movetoworkspace, 2"
+        "ALT SHIFT, 3, movetoworkspace, 3"
+        "ALT SHIFT, 4, movetoworkspace, 4"
+        "ALT SHIFT, 5, movetoworkspace, 5"
+        "ALT SHIFT, 6, movetoworkspace, 6"
+        "ALT SHIFT, 7, movetoworkspace, 7"
+        "ALT SHIFT, 8, movetoworkspace, 8"
+        "ALT SHIFT, 9, movetoworkspace, 9"
+        "ALT SHIFT, 0, movetoworkspace, 10"
       ];
 
       bindel = [
