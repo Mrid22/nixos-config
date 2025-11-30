@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    systems = {
+      url = "github:nix-systems/default";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -63,29 +68,69 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    nvf,
-    vicinae,
-    split-monitor-workspaces,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-  in {
-    packages."${system}".default =
-      (nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages."${system}";
-        modules = [./home/apps/nvf.nix];
-      }).neovim;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nvf,
+      vicinae,
+      split-monitor-workspaces,
+      git-hooks,
+      systems,
+      ...
+    }@inputs:
+    let
+      system = "x86_64-linux";
+      forEachSystem = nixpkgs.lib.genAttrs (import systems);
+    in
+    {
+      formatter = forEachSystem (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+          config = self.checks.${system}.pre-commit-check.config;
+          inherit (config) package configFile;
+          script = ''
+            ${pkgs.lib.getExe package} run --all-files --config ${configFile}
+          '';
+        in
+        pkgs.writeShellScriptBin "pre-commit-run" script
+      );
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./configuration.nix
-        inputs.home-manager.nixosModules.default
-        nvf.nixosModules.default
-      ];
+      checks = forEachSystem (system: {
+        pre-commit-check = inputs.git-hooks.lib.${system}.run {
+          src = ./.;
+          hooks = {
+            nixfmt.enable = true;
+          };
+        };
+      });
+
+      devShells = forEachSystem (system: {
+        default =
+          let
+            pkgs = nixpkgs.legacyPackages.${system};
+            inherit (self.checks.${system}.pre-commit-check) shellHook enabledPackages;
+          in
+          pkgs.mkShell {
+            inherit shellHook;
+            buildInputs = enabledPackages;
+          };
+      });
+
+      packages."${system}".default =
+        (nvf.lib.neovimConfiguration {
+          pkgs = nixpkgs.legacyPackages."${system}";
+          modules = [ ./home/apps/nvf.nix ];
+        }).neovim;
+
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          inputs.home-manager.nixosModules.default
+          nvf.nixosModules.default
+        ];
+      };
     };
-  };
 }
