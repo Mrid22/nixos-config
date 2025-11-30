@@ -81,7 +81,9 @@
         incomplete-dir-enabled = true;
       };
     };
-
-    immich.enable = true;
+    immich = {
+      enable = true;
+      port = 2283;
+    };
   };
 }
