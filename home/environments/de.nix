@@ -52,8 +52,8 @@
 
     package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
 
-    plugins = [
-      inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+    plugins = with inputs; [
+      split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}.split-monitor-workspaces
     ];
 
     settings = {
@@ -62,7 +62,6 @@
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
-        "ALT, E, exec, kitty yazi"
         "ALT, SPACE, exec, vicinae toggle"
         "ALT SHIFT, SPACE, global, caelestia:launcher"
 
@@ -72,27 +71,27 @@
         "ALT, K, movefocus, u"
         "ALT, L, movefocus, r"
 
-        "ALT, 1, workspace, 1"
-        "ALT, 2, workspace, 2"
-        "ALT, 3, workspace, 3"
-        "ALT, 4, workspace, 4"
-        "ALT, 5, workspace, 5"
-        "ALT, 6, workspace, 6"
-        "ALT, 7, workspace, 7"
-        "ALT, 8, workspace, 8"
-        "ALT, 9, workspace, 9"
-        "ALT, 0, workspace, 10"
+        "ALT, 1, split-workspace, 1"
+        "ALT, 2, split-workspace, 2"
+        "ALT, 3, split-workspace, 3"
+        "ALT, 4, split-workspace, 4"
+        "ALT, 5, split-workspace, 5"
+        "ALT, 6, split-workspace, 6"
+        "ALT, 7, split-workspace, 7"
+        "ALT, 8, split-workspace, 8"
+        "ALT, 9, split-workspace, 9"
+        "ALT, 0, split-workspace, 10"
 
-        "ALT SHIFT, 1, movetoworkspace, 1"
-        "ALT SHIFT, 2, movetoworkspace, 2"
-        "ALT SHIFT, 3, movetoworkspace, 3"
-        "ALT SHIFT, 4, movetoworkspace, 4"
-        "ALT SHIFT, 5, movetoworkspace, 5"
-        "ALT SHIFT, 6, movetoworkspace, 6"
-        "ALT SHIFT, 7, movetoworkspace, 7"
-        "ALT SHIFT, 8, movetoworkspace, 8"
-        "ALT SHIFT, 9, movetoworkspace, 9"
-        "ALT SHIFT, 0, movetoworkspace, 10"
+        "ALT SHIFT, 1, split-movetoworkspace, 1"
+        "ALT SHIFT, 2, split-movetoworkspace, 2"
+        "ALT SHIFT, 3, split-movetoworkspace, 3"
+        "ALT SHIFT, 4, split-movetoworkspace, 4"
+        "ALT SHIFT, 5, split-movetoworkspace, 5"
+        "ALT SHIFT, 6, split-movetoworkspace, 6"
+        "ALT SHIFT, 7, split-movetoworkspace, 7"
+        "ALT SHIFT, 8, split-movetoworkspace, 8"
+        "ALT SHIFT, 9, split-movetoworkspace, 9"
+        "ALT SHIFT, 0, split-movetoworkspace, 10"
       ];
 
       bindel = [
