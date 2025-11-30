@@ -49,9 +49,16 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+
     package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
+
+    plugins = [
+      inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+    ];
+
     settings = {
       exec-once = ["vicinae server"];
+
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
