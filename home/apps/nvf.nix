@@ -7,23 +7,22 @@
     viAlias = true;
     vimAlias = true;
     lineNumberMode = "none";
+    telescope.enable = true;
+    dashboard.alpha.enable = true;
+    statusline.lualine.enable = true;
+    autopairs.nvim-autopairs.enable = true;
     options = {
       tabstop = 2;
       shiftwidth = 2;
     };
-    theme = {
-      enable = true;
-      name = "tokyonight";
-      style = "storm";
-      transparent = true;
-    };
-    statusline.lualine.enable = true;
     filetree.nvimTree = {
       enable = true;
       mappings.toggle = "<leader>e";
     };
-    telescope.enable = true;
-    dashboard.alpha.enable = true;
+    autocomplete.blink-cmp = {
+      enable = true;
+      friendly-snippets.enable = true;
+    };
     lsp = {
       enable = true;
       formatOnSave = true;
@@ -33,10 +32,11 @@
       enableTreesitter = true;
       nix.enable = true;
     };
-    autopairs.nvim-autopairs.enable = true;
-    autocomplete.blink-cmp = {
+    theme = {
       enable = true;
-      friendly-snippets.enable = true;
+      name = "tokyonight";
+      style = "storm";
+      transparent = true;
     };
   };
 }

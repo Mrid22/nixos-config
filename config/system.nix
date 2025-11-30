@@ -5,6 +5,17 @@
   ...
 }: {
   networking.hostName = "nixos";
+  networking.networkmanager.enable = true;
+  time.timeZone = "Europe/Amsterdam";
+  security.rtkit.enable = true;
+  nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
+
   hardware = {
     graphics = {
       enable = true;
@@ -25,10 +36,6 @@
     };
   };
 
-  boot.loader = {
-    systemd-boot.enable = true;
-    efi.canTouchEfiVariables = true;
-  };
   system = {
     stateVersion = "25.05";
     autoUpgrade = {
@@ -41,10 +48,6 @@
       randomizedDelaySec = "45min";
     };
   };
-
-  networking.networkmanager.enable = true;
-
-  time.timeZone = "Europe/Amsterdam";
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
@@ -65,6 +68,10 @@
     upower.enable = true;
     udisks2.enable = true;
     power-profiles-daemon.enable = true;
+    displayManager.gdm.enable = true;
+    printing.enable = true;
+    pulseaudio.enable = false;
+
     xserver = {
       enable = true;
       videoDrivers = ["nvidia"];
@@ -75,11 +82,6 @@
       };
     };
 
-    displayManager.gdm.enable = true;
-
-    printing.enable = true;
-
-    pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa = {
@@ -89,8 +91,4 @@
       pulse.enable = true;
     };
   };
-  security.rtkit.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 }

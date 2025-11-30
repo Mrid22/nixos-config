@@ -28,17 +28,14 @@
     noto-fonts-color-emoji
     nerd-fonts.droid-sans-mono
   ];
+  services = {
+    playerctld.enable = true;
+    keyd = {
+      enable = true;
 
-  services.keyd = {
-    enable = true;
-    keyboards = {
-      default = {
+      keyboards.default = {
         ids = ["*"];
-        settings = {
-          main = {
-            capslock = "overload(control,escape)";
-          };
-        };
+        settings.main.capslock = "overload(control,escape)";
       };
     };
   };
@@ -53,19 +50,15 @@
   };
 
   home-manager = {
-    extraSpecialArgs = {
-      inherit inputs;
-    };
     users = {"mridula" = import ./home.nix;};
-    backupFileExtension = ".bak";
+    backupFileExtension = "bak";
+    extraSpecialArgs = {inherit inputs;};
   };
 
   programs = {
-    steam = {
-      enable = true;
-      gamescopeSession.enable = true;
-      protontricks.enable = true;
-    };
+    gpu-screen-recorder.enable = true;
+    zsh.enable = true;
+    gamemode.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
@@ -74,19 +67,17 @@
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     };
-    gpu-screen-recorder.enable = true;
-    zsh.enable = true;
-    gnome-disks.enable = true;
-    gamemode.enable = true;
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+      protontricks.enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
     netbeans
     cloudflared
-    ntfs3g
-    spotdl
-    playerctl
     brightnessctl
   ];
 }

@@ -9,9 +9,7 @@
     caelestia-shell.homeManagerModules.default
   ];
   services = {
-    swww = {
-      enable = true;
-    };
+    swww.enable = true;
     vicinae = {
       enable = true;
       autoStart = true;
@@ -31,18 +29,17 @@
       ];
     };
   };
-  programs = {
-    caelestia = {
+
+  programs.caelestia = {
+    enable = true;
+    systemd = {
       enable = true;
-      systemd = {
-        enable = true;
-        target = "graphical-session.target";
-      };
-      cli = {
-        enable = true;
-        settings = {
-          theme.enableGtk = false;
-        };
+      target = "graphical-session.target";
+    };
+    cli = {
+      enable = true;
+      settings = {
+        theme.enableGtk = false;
       };
     };
   };
@@ -58,6 +55,18 @@
 
     settings = {
       exec-once = ["vicinae server"];
+      decoration.rounding = 10;
+
+      input.touchpad = {
+        natural_scroll = true;
+        disable_while_typing = true;
+      };
+
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 0;
+      };
 
       plugin.split-monitor-workspaces = {
         count = 10;
@@ -112,16 +121,6 @@
         ",XF86MonBrightnessDown, exec, brightnessctl s 10%"
       ];
 
-      general = {
-        gaps_in = 5;
-        gaps_out = 5;
-        border_size = 0;
-      };
-      decoration.rounding = 10;
-      input.touchpad = {
-        natural_scroll = true;
-        disable_while_typing = true;
-      };
       animations = {
         enabled = "yes, please :)";
         bezier = [

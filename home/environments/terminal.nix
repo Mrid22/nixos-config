@@ -5,10 +5,44 @@
   ...
 }: {
   programs = {
+    kitty.enable = true;
+
     delta = {
       enable = true;
       enableGitIntegration = true;
     };
+
+    atuin = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    oh-my-posh = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+
+    nh = {
+      enable = true;
+      clean.enable = true;
+      flake = "/home/mridula/nixos-config";
+    };
+
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
+
+    eza = {
+      enable = true;
+      enableZshIntegration = true;
+      git = true;
+      icons = "auto";
+    };
+
     git = {
       enable = true;
       settings = {
@@ -36,38 +70,5 @@
         ];
       };
     };
-
-    oh-my-posh = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    atuin = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-
-    zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-      options = [
-        "--cmd cd"
-      ];
-    };
-
-    nh = {
-      enable = true;
-      clean.enable = true;
-      flake = "/home/mridula/nixos-config";
-    };
-
-    eza = {
-      enable = true;
-      enableZshIntegration = true;
-      git = true;
-      icons = "auto";
-    };
-
-    kitty.enable = true;
   };
 }
