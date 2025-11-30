@@ -42,6 +42,7 @@
       enable = true;
       autoUpdateApps.enable = true;
       hostName = "mridcloud";
+      package = pkgs.nextcloud32;
       settings.trusted_domains = ["cloud.shmanju.org"];
       config = {
         adminpassFile = "/etc/nextcloud/pass.txt";
