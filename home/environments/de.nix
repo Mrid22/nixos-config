@@ -27,6 +27,7 @@
         it-tools
         hypr-keybinds
         otp
+        player-pilot
       ];
     };
   };
