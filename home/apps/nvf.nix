@@ -21,6 +21,7 @@
           enable = true;
           mappings.toggle = "<leader>e";
         };
+        telescope.enable = true;
         dashboard.alpha.enable = true;
         lsp = {
           enable = true;
