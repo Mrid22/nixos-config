@@ -41,6 +41,7 @@
     nextcloud = {
       enable = true;
       autoUpdateApps.enable = true;
+      hostName = "mridcloud";
     };
 
     ollama = {
