@@ -29,6 +29,8 @@
     echo "Running tests"
     git --version | grep --color=auto "${pkgs.git.version}"
   '';
+
+  languages.nix.enable = true;
   git-hooks = {
     enable = true;
     hooks = {
