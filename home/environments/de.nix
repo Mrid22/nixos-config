@@ -9,6 +9,9 @@
     caelestia-shell.homeManagerModules.default
   ];
   services = {
+    swww = {
+      enable = true;
+    };
     vicinae = {
       enable = true;
       autoStart = true;
