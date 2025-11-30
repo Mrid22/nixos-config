@@ -61,6 +61,7 @@
 
   programs = {
     gpu-screen-recorder.enable = true;
+    npm.enable = true;
     zsh.enable = true;
     gamemode.enable = true;
     neovim = {
@@ -84,5 +85,6 @@
     cloudflared
     brightnessctl
     devenv
+    nodejs
   ];
 }
