@@ -65,8 +65,11 @@
       enable = true;
       defaultEditor = true;
     };
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    };
     gpu-screen-recorder.enable = true;
-    hyprland.enable = true;
     zsh.enable = true;
     gnome-disks.enable = true;
     gamemode.enable = true;
