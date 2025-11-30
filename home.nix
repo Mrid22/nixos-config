@@ -6,7 +6,6 @@
 }: {
   imports = [
     ./home/apps/zen.nix
-    ./home/apps/nvf.nix
     ./home/environments/de.nix
     ./home/environments/terminal.nix
   ];
