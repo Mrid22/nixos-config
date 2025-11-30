@@ -25,6 +25,9 @@
       enable = true;
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
+      shellAliases = {
+        nvim = "nix run ~/nixos-config";
+      };
       oh-my-zsh = {
         enable = true;
         plugins = [
