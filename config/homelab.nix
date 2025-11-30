@@ -42,7 +42,10 @@
       enable = true;
       autoUpdateApps.enable = true;
       hostName = "mridcloud";
-      config.adminpassFile = "/etc/nextcloud/pass.txt";
+      config = {
+        adminpassFile = "/etc/nextcloud/pass.txt";
+        dbtype = "sqlite";
+      };
     };
 
     ollama = {
