@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    stablepkgs.url = "github:nixos/nixpkgs/nixos-25.11";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -64,18 +63,13 @@
     nixpkgs,
     nvf,
     vicinae,
-    stablepkgs,
     split-monitor-workspaces,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    pkgs-stable = stablepkgs.legacyPackages.${system};
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {
-        inherit inputs;
-        inherit pkgs-stable;
-      };
+      specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
