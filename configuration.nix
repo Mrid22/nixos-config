@@ -79,6 +79,6 @@
     netbeans
     cloudflared
     brightnessctl
-    precommit
+    pre-commit
   ];
 }
