@@ -28,471 +28,473 @@
       ];
     };
   };
-
-  programs.caelestia = {
-    enable = true;
-    systemd = {
+  programs = {
+    hyprshot.enable = true;
+    caelestia = {
       enable = true;
-      target = "graphical-session.target";
-    };
-    cli = {
-      enable = true;
-      settings = {
-        appearance = {
-          anim = {
-            durations = {
+      systemd = {
+        enable = true;
+        target = "graphical-session.target";
+      };
+      cli = {
+        enable = true;
+        settings = {
+          appearance = {
+            anim = {
+              durations = {
+                scale = 1;
+              };
+            };
+            font = {
+              family = {
+                clock = "Rubik";
+                material = "Material Symbols Rounded";
+                mono = "CaskaydiaCove NF";
+                sans = "Rubik";
+              };
+              size = {
+                scale = 1;
+              };
+            };
+            padding = {
               scale = 1;
             };
-          };
-          font = {
-            family = {
-              clock = "Rubik";
-              material = "Material Symbols Rounded";
-              mono = "CaskaydiaCove NF";
-              sans = "Rubik";
-            };
-            size = {
+            rounding = {
               scale = 1;
             };
+            spacing = {
+              scale = 1;
+            };
+            transparency = {
+              enabled = false;
+              base = 0.85;
+              layers = 0.4;
+            };
           };
-          padding = {
-            scale = 1;
+          general = {
+            apps = {
+              terminal = [
+                "kitty"
+              ];
+              audio = [
+                "pavucontrol"
+              ];
+              playback = [
+                "mpv"
+              ];
+              explorer = [
+                "thunar"
+              ];
+            };
+            battery = {
+              warnLevels = [
+                {
+                  level = 20;
+                  title = "Low battery";
+                  message = "You might want to plug in a charger";
+                  icon = "battery_android_frame_2";
+                }
+                {
+                  level = 10;
+                  title = "Did you see the previous message?";
+                  message = "You should probably plug in a charger <b>now</b>";
+                  icon = "battery_android_frame_1";
+                }
+                {
+                  level = 5;
+                  title = "Critical battery level";
+                  message = "PLUG THE CHARGER RIGHT NOW!!";
+                  icon = "battery_android_alert";
+                  critical = true;
+                }
+              ];
+              criticalLevel = 3;
+            };
+            idle = {
+              lockBeforeSleep = true;
+              inhibitWhenAudio = true;
+              timeouts = [
+                {
+                  timeout = 180;
+                  idleAction = "lock";
+                }
+                {
+                  timeout = 300;
+                  idleAction = "dpms off";
+                  returnAction = "dpms on";
+                }
+                {
+                  timeout = 600;
+                  idleAction = [
+                    "systemctl"
+                    "suspend-then-hibernate"
+                  ];
+                }
+              ];
+            };
           };
-          rounding = {
-            scale = 1;
+          background = {
+            desktopClock = {
+              enabled = false;
+            };
+            enabled = true;
+            visualiser = {
+              blur = true;
+              enabled = true;
+              autoHide = true;
+              rounding = 1;
+              spacing = 1;
+            };
           };
-          spacing = {
-            scale = 1;
-          };
-          transparency = {
-            enabled = false;
-            base = 0.85;
-            layers = 0.4;
-          };
-        };
-        general = {
-          apps = {
-            terminal = [
-              "kitty"
-            ];
-            audio = [
-              "pavucontrol"
-            ];
-            playback = [
-              "mpv"
-            ];
-            explorer = [
-              "thunar"
-            ];
-          };
-          battery = {
-            warnLevels = [
+          bar = {
+            clock = {
+              showIcon = true;
+            };
+            dragThreshold = 20;
+            entries = [
               {
-                level = 20;
-                title = "Low battery";
-                message = "You might want to plug in a charger";
-                icon = "battery_android_frame_2";
+                id = "logo";
+                enabled = true;
               }
               {
-                level = 10;
-                title = "Did you see the previous message?";
-                message = "You should probably plug in a charger <b>now</b>";
-                icon = "battery_android_frame_1";
+                id = "workspaces";
+                enabled = true;
               }
               {
-                level = 5;
-                title = "Critical battery level";
-                message = "PLUG THE CHARGER RIGHT NOW!!";
-                icon = "battery_android_alert";
-                critical = true;
+                id = "spacer";
+                enabled = true;
+              }
+              {
+                id = "activeWindow";
+                enabled = true;
+              }
+              {
+                id = "spacer";
+                enabled = true;
+              }
+              {
+                id = "tray";
+                enabled = true;
+              }
+              {
+                id = "clock";
+                enabled = true;
+              }
+              {
+                id = "statusIcons";
+                enabled = true;
+              }
+              {
+                id = "power";
+                enabled = true;
               }
             ];
-            criticalLevel = 3;
+            persistent = true;
+            popouts = {
+              activeWindow = true;
+              statusIcons = true;
+              tray = true;
+            };
+            scrollActions = {
+              brightness = true;
+              workspaces = true;
+              volume = true;
+            };
+            showOnHover = true;
+            status = {
+              showAudio = false;
+              showBattery = true;
+              showBluetooth = true;
+              showKbLayout = false;
+              showMicrophone = false;
+              showNetwork = true;
+              showLockStatus = true;
+            };
+            tray = {
+              background = false;
+              compact = false;
+              iconSubs = [];
+              recolour = false;
+            };
+            workspaces = {
+              activeIndicator = true;
+              activeLabel = "󰮯";
+              activeTrail = false;
+              label = "  ";
+              occupiedBg = false;
+              occupiedLabel = "󰮯";
+              perMonitorWorkspaces = true;
+              showWindows = true;
+              shown = 5;
+              specialWorkspaceIcons = [
+                {
+                  name = "steam";
+                  icon = "sports_esports";
+                }
+              ];
+            };
+            excludedScreens = [
+              ""
+            ];
+            activeWindow = {
+              inverted = false;
+            };
           };
-          idle = {
-            lockBeforeSleep = true;
-            inhibitWhenAudio = true;
-            timeouts = [
+          border = {
+            rounding = 25;
+            thickness = 10;
+          };
+          dashboard = {
+            enabled = true;
+            dragThreshold = 50;
+            mediaUpdateInterval = 500;
+            showOnHover = true;
+          };
+          launcher = {
+            actionPrefix = ">";
+            actions = [
               {
-                timeout = 180;
-                idleAction = "lock";
+                name = "Calculator";
+                icon = "calculate";
+                description = "Do simple math equations (powered by Qalc)";
+                command = [
+                  "autocomplete"
+                  "calc"
+                ];
+                enabled = true;
+                dangerous = false;
               }
               {
-                timeout = 300;
-                idleAction = "dpms off";
-                returnAction = "dpms on";
+                name = "Scheme";
+                icon = "palette";
+                description = "Change the current colour scheme";
+                command = [
+                  "autocomplete"
+                  "scheme"
+                ];
+                enabled = true;
+                dangerous = false;
               }
               {
-                timeout = 600;
-                idleAction = [
+                name = "Wallpaper";
+                icon = "image";
+                description = "Change the current wallpaper";
+                command = [
+                  "autocomplete"
+                  "wallpaper"
+                ];
+                enabled = true;
+                dangerous = false;
+              }
+              {
+                name = "Variant";
+                icon = "colors";
+                description = "Change the current scheme variant";
+                command = [
+                  "autocomplete"
+                  "variant"
+                ];
+                enabled = true;
+                dangerous = false;
+              }
+              {
+                name = "Transparency";
+                icon = "opacity";
+                description = "Change shell transparency";
+                command = [
+                  "autocomplete"
+                  "transparency"
+                ];
+                enabled = false;
+                dangerous = false;
+              }
+              {
+                name = "Random";
+                icon = "casino";
+                description = "Switch to a random wallpaper";
+                command = [
+                  "caelestia"
+                  "wallpaper"
+                  "-r"
+                ];
+                enabled = true;
+                dangerous = false;
+              }
+              {
+                name = "Light";
+                icon = "light_mode";
+                description = "Change the scheme to light mode";
+                command = [
+                  "setMode"
+                  "light"
+                ];
+                enabled = true;
+                dangerous = false;
+              }
+              {
+                name = "Dark";
+                icon = "dark_mode";
+                description = "Change the scheme to dark mode";
+                command = [
+                  "setMode"
+                  "dark"
+                ];
+                enabled = true;
+                dangerous = false;
+              }
+              {
+                name = "Shutdown";
+                icon = "power_settings_new";
+                description = "Shutdown the system";
+                command = [
+                  "systemctl"
+                  "poweroff"
+                ];
+                enabled = true;
+                dangerous = true;
+              }
+              {
+                name = "Reboot";
+                icon = "cached";
+                description = "Reboot the system";
+                command = [
+                  "systemctl"
+                  "reboot"
+                ];
+                enabled = true;
+                dangerous = true;
+              }
+              {
+                name = "Logout";
+                icon = "exit_to_app";
+                description = "Log out of the current session";
+                command = [
+                  "loginctl"
+                  "terminate-user"
+                  ""
+                ];
+                enabled = true;
+                dangerous = true;
+              }
+              {
+                name = "Lock";
+                icon = "lock";
+                description = "Lock the current session";
+                command = [
+                  "loginctl"
+                  "lock-session"
+                ];
+                enabled = true;
+                dangerous = false;
+              }
+              {
+                name = "Sleep";
+                icon = "bedtime";
+                description = "Suspend then hibernate";
+                command = [
                   "systemctl"
                   "suspend-then-hibernate"
                 ];
+                enabled = true;
+                dangerous = false;
               }
             ];
+            dragThreshold = 50;
+            vimKeybinds = false;
+            enableDangerousActions = false;
+            maxShown = 7;
+            maxWallpapers = 9;
+            specialPrefix = "@";
+            useFuzzy = {
+              apps = true;
+              actions = true;
+              schemes = true;
+              variants = true;
+              wallpapers = true;
+            };
+            showOnHover = false;
+            hiddenApps = [];
           };
-        };
-        background = {
-          desktopClock = {
-            enabled = false;
+          lock = {
+            recolourLogo = false;
           };
-          enabled = true;
-          visualiser = {
-            blur = true;
+          notifs = {
+            actionOnClick = true;
+            clearThreshold = 0.3;
+            defaultExpireTimeout = 5000;
+            expandThreshold = 20;
+            expire = false;
+          };
+          osd = {
             enabled = true;
-            autoHide = true;
-            rounding = 1;
-            spacing = 1;
+            enableBrightness = true;
+            enableMicrophone = true;
+            hideDelay = 2000;
           };
-        };
-        bar = {
-          clock = {
-            showIcon = true;
+          paths = {
+            mediaGif = "root:/assets/bongocat.gif";
+            sessionGif = "root:/assets/kurukuru.gif";
+            wallpaperDir = "~/Pictures/Wallpapers";
           };
-          dragThreshold = 20;
-          entries = [
-            {
-              id = "logo";
-              enabled = true;
-            }
-            {
-              id = "workspaces";
-              enabled = true;
-            }
-            {
-              id = "spacer";
-              enabled = true;
-            }
-            {
-              id = "activeWindow";
-              enabled = true;
-            }
-            {
-              id = "spacer";
-              enabled = true;
-            }
-            {
-              id = "tray";
-              enabled = true;
-            }
-            {
-              id = "clock";
-              enabled = true;
-            }
-            {
-              id = "statusIcons";
-              enabled = true;
-            }
-            {
-              id = "power";
-              enabled = true;
-            }
-          ];
-          persistent = true;
-          popouts = {
-            activeWindow = true;
-            statusIcons = true;
-            tray = true;
-          };
-          scrollActions = {
-            brightness = true;
-            workspaces = true;
-            volume = true;
-          };
-          showOnHover = true;
-          status = {
-            showAudio = false;
-            showBattery = true;
-            showBluetooth = true;
-            showKbLayout = false;
-            showMicrophone = false;
-            showNetwork = true;
-            showLockStatus = true;
-          };
-          tray = {
-            background = false;
-            compact = false;
-            iconSubs = [];
-            recolour = false;
-          };
-          workspaces = {
-            activeIndicator = true;
-            activeLabel = "󰮯";
-            activeTrail = false;
-            label = "  ";
-            occupiedBg = false;
-            occupiedLabel = "󰮯";
-            perMonitorWorkspaces = true;
-            showWindows = true;
-            shown = 5;
-            specialWorkspaceIcons = [
+          services = {
+            audioIncrement = 0.1;
+            maxVolume = 1.0;
+            gpuType = "nvidia";
+            playerAliases = [
               {
-                name = "steam";
-                icon = "sports_esports";
+                from = "com.github.th_ch.youtube_music";
+                to = "YT Music";
               }
             ];
+            weatherLocation = "";
+            useFahrenheit = false;
+            useTwelveHourClock = false;
+            smartScheme = true;
+            visualiserBars = 45;
           };
-          excludedScreens = [
-            ""
-          ];
-          activeWindow = {
-            inverted = false;
-          };
-        };
-        border = {
-          rounding = 25;
-          thickness = 10;
-        };
-        dashboard = {
-          enabled = true;
-          dragThreshold = 50;
-          mediaUpdateInterval = 500;
-          showOnHover = true;
-        };
-        launcher = {
-          actionPrefix = ">";
-          actions = [
-            {
-              name = "Calculator";
-              icon = "calculate";
-              description = "Do simple math equations (powered by Qalc)";
-              command = [
-                "autocomplete"
-                "calc"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Scheme";
-              icon = "palette";
-              description = "Change the current colour scheme";
-              command = [
-                "autocomplete"
-                "scheme"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Wallpaper";
-              icon = "image";
-              description = "Change the current wallpaper";
-              command = [
-                "autocomplete"
-                "wallpaper"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Variant";
-              icon = "colors";
-              description = "Change the current scheme variant";
-              command = [
-                "autocomplete"
-                "variant"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Transparency";
-              icon = "opacity";
-              description = "Change shell transparency";
-              command = [
-                "autocomplete"
-                "transparency"
-              ];
-              enabled = false;
-              dangerous = false;
-            }
-            {
-              name = "Random";
-              icon = "casino";
-              description = "Switch to a random wallpaper";
-              command = [
-                "caelestia"
-                "wallpaper"
-                "-r"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Light";
-              icon = "light_mode";
-              description = "Change the scheme to light mode";
-              command = [
-                "setMode"
-                "light"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Dark";
-              icon = "dark_mode";
-              description = "Change the scheme to dark mode";
-              command = [
-                "setMode"
-                "dark"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Shutdown";
-              icon = "power_settings_new";
-              description = "Shutdown the system";
-              command = [
-                "systemctl"
-                "poweroff"
-              ];
-              enabled = true;
-              dangerous = true;
-            }
-            {
-              name = "Reboot";
-              icon = "cached";
-              description = "Reboot the system";
-              command = [
-                "systemctl"
-                "reboot"
-              ];
-              enabled = true;
-              dangerous = true;
-            }
-            {
-              name = "Logout";
-              icon = "exit_to_app";
-              description = "Log out of the current session";
-              command = [
+          session = {
+            dragThreshold = 30;
+            enabled = true;
+            vimKeybinds = true;
+            commands = {
+              logout = [
                 "loginctl"
                 "terminate-user"
                 ""
               ];
-              enabled = true;
-              dangerous = true;
-            }
-            {
-              name = "Lock";
-              icon = "lock";
-              description = "Lock the current session";
-              command = [
-                "loginctl"
-                "lock-session"
-              ];
-              enabled = true;
-              dangerous = false;
-            }
-            {
-              name = "Sleep";
-              icon = "bedtime";
-              description = "Suspend then hibernate";
-              command = [
+              shutdown = [
                 "systemctl"
-                "suspend-then-hibernate"
+                "poweroff"
               ];
-              enabled = true;
-              dangerous = false;
-            }
-          ];
-          dragThreshold = 50;
-          vimKeybinds = false;
-          enableDangerousActions = false;
-          maxShown = 7;
-          maxWallpapers = 9;
-          specialPrefix = "@";
-          useFuzzy = {
-            apps = true;
-            actions = true;
-            schemes = true;
-            variants = true;
-            wallpapers = true;
+              hibernate = [
+                "systemctl"
+                "hibernate"
+              ];
+              reboot = [
+                "systemctl"
+                "reboot"
+              ];
+            };
           };
-          showOnHover = false;
-          hiddenApps = [];
-        };
-        lock = {
-          recolourLogo = false;
-        };
-        notifs = {
-          actionOnClick = true;
-          clearThreshold = 0.3;
-          defaultExpireTimeout = 5000;
-          expandThreshold = 20;
-          expire = false;
-        };
-        osd = {
-          enabled = true;
-          enableBrightness = true;
-          enableMicrophone = true;
-          hideDelay = 2000;
-        };
-        paths = {
-          mediaGif = "root:/assets/bongocat.gif";
-          sessionGif = "root:/assets/kurukuru.gif";
-          wallpaperDir = "~/Pictures/Wallpapers";
-        };
-        services = {
-          audioIncrement = 0.1;
-          maxVolume = 1.0;
-          gpuType = "nvidia";
-          playerAliases = [
-            {
-              from = "com.github.th_ch.youtube_music";
-              to = "YT Music";
-            }
-          ];
-          weatherLocation = "";
-          useFahrenheit = false;
-          useTwelveHourClock = false;
-          smartScheme = true;
-          visualiserBars = 45;
-        };
-        session = {
-          dragThreshold = 30;
-          enabled = true;
-          vimKeybinds = true;
-          commands = {
-            logout = [
-              "loginctl"
-              "terminate-user"
-              ""
-            ];
-            shutdown = [
-              "systemctl"
-              "poweroff"
-            ];
-            hibernate = [
-              "systemctl"
-              "hibernate"
-            ];
-            reboot = [
-              "systemctl"
-              "reboot"
-            ];
+          sidebar = {
+            dragThreshold = 80;
+            enabled = true;
           };
-        };
-        sidebar = {
-          dragThreshold = 80;
-          enabled = true;
-        };
-        utilities = {
-          enabled = true;
-          maxToasts = 4;
-          toasts = {
-            audioInputChanged = true;
-            audioOutputChanged = true;
-            capsLockChanged = true;
-            chargingChanged = true;
-            configLoaded = true;
-            dndChanged = true;
-            gameModeChanged = true;
-            kbLayoutChanged = true;
-            numLockChanged = true;
-            nowPlaying = false;
+          utilities = {
+            enabled = true;
+            maxToasts = 4;
+            toasts = {
+              audioInputChanged = true;
+              audioOutputChanged = true;
+              capsLockChanged = true;
+              chargingChanged = true;
+              configLoaded = true;
+              dndChanged = true;
+              gameModeChanged = true;
+              kbLayoutChanged = true;
+              numLockChanged = true;
+              nowPlaying = false;
+            };
           };
         };
       };
@@ -534,6 +536,7 @@
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
         "ALT, SPACE, exec, vicinae toggle"
+        "ALT SHIFT, C, exec, hyprshot -m region"
         "ALT SHIFT, SPACE, global, caelestia:launcher"
 
         "ALT, C, killactive"
