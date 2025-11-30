@@ -87,6 +87,7 @@
       host = "0.0.0.0";
       mediaLocation = "/media/photos/";
       machine-learning.enable = true;
+      openFirewall = true;
     };
   };
 }
