@@ -4,4 +4,4 @@ repos:
     hooks:
       - id: deadnix
         args: [--edit]
-        stages: [commit]
+        stages: [pre-commit]
