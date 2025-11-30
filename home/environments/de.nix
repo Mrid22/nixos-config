@@ -77,6 +77,8 @@
         "ALT, J, movefocus, d"
         "ALT, K, movefocus, u"
         "ALT, L, movefocus, r"
+        "ALT SHIFT, L, split-changemonitor"
+        "ALT SHIFT, H, split-changemonitor"
 
         "ALT, 1, split-workspace, 1"
         "ALT, 2, split-workspace, 2"
