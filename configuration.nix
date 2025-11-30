@@ -1,10 +1,11 @@
 {
   config,
-  df,
+  dsaf,
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   imports = [
     ./hardware-configuration.nix
     ./config/homelab.nix
@@ -35,7 +36,7 @@
       enable = true;
 
       keyboards.default = {
-        ids = ["*"];
+        ids = [ "*" ];
         settings.main.capslock = "overload(control,escape)";
       };
     };
@@ -46,14 +47,19 @@
     users.mridula = {
       isNormalUser = true;
       description = "Mridul Agarwal";
-      extraGroups = ["networkmanager" "wheel"];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
     };
   };
 
   home-manager = {
-    users = {"mridula" = import ./home.nix;};
+    users = {
+      "mridula" = import ./home.nix;
+    };
     backupFileExtension = "bak";
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
   };
 
   programs = {
@@ -80,6 +86,6 @@
     netbeans
     cloudflared
     brightnessctl
-    pre-commit
+    devenv
   ];
 }
