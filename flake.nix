@@ -97,6 +97,7 @@
         pre-commit-check = inputs.git-hooks.lib.${system}.run {
           src = ./.;
           hooks = {
+            nixfmt.enable = false;
             alejandra.enable = true;
             deadnix.enable = true;
             statix.enable = true;
