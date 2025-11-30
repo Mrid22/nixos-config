@@ -39,6 +39,18 @@
       enable = true;
       settings = {
         theme.enableGtk = false;
+        appearance = {
+          transparency = {
+            enabled = true;
+            base = 0.85;
+            layers = 0.4;
+          };
+        };
+        general = {
+          apps = {
+            terminal = ["kitty"];
+          };
+        };
         idle = {
           lockBeforeSleep = true;
           inhibitWhenAudio = true;

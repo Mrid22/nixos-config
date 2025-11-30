@@ -31,6 +31,7 @@
   '';
 
   languages.nix.enable = true;
+  delta.enable = true;
   git-hooks = {
     enable = true;
     hooks = {
