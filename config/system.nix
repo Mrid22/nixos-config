@@ -1,9 +1,13 @@
 {inputs, ...}: {
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
   time.timeZone = "Europe/Amsterdam";
   security.rtkit.enable = true;
   nixpkgs.config.allowUnfree = true;
+
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
+
   nix.settings = {
     experimental-features = [
       "nix-command"

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -28,7 +27,6 @@
         transparent-zen
         sponsorblock
         firenvim
-        ctrl-number-to-switch-tabs
       ];
       search = {
         default = "ddg";

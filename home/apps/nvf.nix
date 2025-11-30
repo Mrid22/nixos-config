@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{...}: {
   vim = {
     viAlias = true;
     vimAlias = true;
