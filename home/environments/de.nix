@@ -36,7 +36,7 @@
         preload = ["~/nixos-config/Wallpaper.jpg"];
 
         wallpaper = [
-          ",~/nixos-config/Wallpaper.jpg"
+          "*,~/nixos-config/Wallpaper.jpg"
         ];
       };
     };
