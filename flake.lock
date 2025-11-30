@@ -775,7 +775,6 @@
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "split-monitor-workspaces": "split-monitor-workspaces",
-        "stablepkgs": "stablepkgs",
         "stylix": "stylix",
         "vicinae": "vicinae",
         "vicinae-extensions": "vicinae-extensions",
@@ -800,22 +799,6 @@
       "original": {
         "owner": "Duckonaut",
         "repo": "split-monitor-workspaces",
-        "type": "github"
-      }
-    },
-    "stablepkgs": {
-      "locked": {
-        "lastModified": 1764406085,
-        "narHash": "sha256-CYbMp8hwuOf4umokSNp+t1s4Hjd4vxXq4S5CD+xvgNs=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "9561691c9f450fad7c3526916e1c4f44be0d1192",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-25.11",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },
