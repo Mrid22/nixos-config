@@ -3,13 +3,23 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/Amsterdam";
   security.rtkit.enable = true;
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    trusted-users = [
+      "root"
+      "mridula"
+    ];
+  };
 
   boot.loader = {
     systemd-boot.enable = true;
@@ -74,7 +84,7 @@
 
     xserver = {
       enable = true;
-      videoDrivers = ["nvidia"];
+      videoDrivers = [ "nvidia" ];
 
       xkb = {
         layout = "us";
