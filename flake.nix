@@ -3,14 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    systems.url = "github:nix-systems/default";
 
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    systems = {
-      url = "github:nix-systems/default";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -101,7 +97,8 @@
         pre-commit-check = inputs.git-hooks.lib.${system}.run {
           src = ./.;
           hooks = {
-            nixfmt.enable = true;
+            alejandra.enable = true;
+            deadnix.enable = true;
           };
         };
       });
