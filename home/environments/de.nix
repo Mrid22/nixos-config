@@ -59,6 +59,13 @@
     settings = {
       exec-once = ["vicinae server"];
 
+      plugin.split-monitor-workspaces = {
+        count = 5;
+        keep_focused = 0;
+        enable_notifications = 0;
+        enable_persistent_workspaces = 1;
+      };
+
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
