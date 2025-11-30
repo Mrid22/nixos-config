@@ -79,7 +79,7 @@
         "ALT, L, movefocus, r"
 
         "ALT, 1, workspace, 1"
-        "ALT, 2, workspace, 2"
+        "ALT, 2, split-workspace, 2"
         "ALT, 3, workspace, 3"
         "ALT, 4, workspace, 4"
         "ALT, 5, workspace, 5"
