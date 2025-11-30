@@ -38,6 +38,11 @@
       openFirewall = true;
     };
 
+    nextcloud = {
+      enable = true;
+      autoUpdateApps.enable = true;
+    };
+
     ollama = {
       enable = true;
       host = "0.0.0.0";
