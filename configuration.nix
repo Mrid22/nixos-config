@@ -84,6 +84,5 @@
     cloudflared
     brightnessctl
     devenv
-    commitizen
   ];
 }
