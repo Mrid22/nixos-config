@@ -71,52 +71,12 @@
       nvf,
       vicinae,
       split-monitor-workspaces,
-      git-hooks,
-      systems,
       ...
     }@inputs:
     let
       system = "x86_64-linux";
-      forEachSystem = nixpkgs.lib.genAttrs (import systems);
     in
     {
-      formatter = forEachSystem (
-        system:
-        let
-          pkgs = nixpkgs.legacyPackages.${system};
-          config = self.checks.${system}.pre-commit-check.config;
-          inherit (config) package configFile;
-          script = ''
-            ${pkgs.lib.getExe package} run --all-files --config ${configFile}
-          '';
-        in
-        pkgs.writeShellScriptBin "pre-commit-run" script
-      );
-
-      checks = forEachSystem (system: {
-        pre-commit-check = inputs.git-hooks.lib.${system}.run {
-          src = ./.;
-          hooks = {
-            nixfmt.enable = false;
-            alejandra.enable = true;
-            deadnix.enable = true;
-            statix.enable = true;
-          };
-        };
-      });
-
-      devShells = forEachSystem (system: {
-        default =
-          let
-            pkgs = nixpkgs.legacyPackages.${system};
-            inherit (self.checks.${system}.pre-commit-check) shellHook enabledPackages;
-          in
-          pkgs.mkShell {
-            inherit shellHook;
-            buildInputs = enabledPackages;
-          };
-      });
-
       packages."${system}".default =
         (nvf.lib.neovimConfiguration {
           pkgs = nixpkgs.legacyPackages."${system}";
