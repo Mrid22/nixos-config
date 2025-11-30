@@ -29,13 +29,12 @@
     echo "Running tests"
     git --version | grep --color=auto "${pkgs.git.version}"
   '';
-  languages.nix.enable = true;
-  delta.enable = true;
   git-hooks = {
     enable = true;
     hooks = {
       alejandra.enable = true;
       shellcheck.enable = true;
+      commitizen.enable = true;
       deadnix = {
         enable = true;
         settings.edit = true;
