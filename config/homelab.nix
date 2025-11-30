@@ -93,13 +93,5 @@
         incomplete-dir-enabled = true;
       };
     };
-    immich = {
-      enable = true;
-      port = 2283;
-      host = "0.0.0.0";
-      mediaLocation = "/media/photos/";
-      machine-learning.enable = true;
-      openFirewall = true;
-    };
   };
 }
