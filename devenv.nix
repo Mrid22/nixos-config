@@ -33,11 +33,12 @@
     enable = true;
     hooks = {
       alejandra.enable = true;
+      shellcheck.enable = true;
+      commitizen.enable = true;
       deadnix = {
         enable = true;
         settings.edit = true;
       };
-      shellcheck.enable = true;
     };
   };
 }
