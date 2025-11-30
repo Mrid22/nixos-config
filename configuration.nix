@@ -86,5 +86,6 @@
     brightnessctl
     devenv
     nodejs
+    pnpm
   ];
 }
