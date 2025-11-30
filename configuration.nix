@@ -1,11 +1,8 @@
 {
-  config,
-  dsaf,
   pkgs,
   inputs,
   ...
-}:
-{
+}: {
   imports = [
     ./hardware-configuration.nix
     ./config/homelab.nix
@@ -36,7 +33,7 @@
       enable = true;
 
       keyboards.default = {
-        ids = [ "*" ];
+        ids = ["*"];
         settings.main.capslock = "overload(control,escape)";
       };
     };
@@ -59,7 +56,7 @@
       "mridula" = import ./home.nix;
     };
     backupFileExtension = "bak";
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
   };
 
   programs = {

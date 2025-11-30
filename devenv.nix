@@ -1,16 +1,9 @@
-{
-  pkgs,
-  lib,
-  config,
-  inputs,
-  ...
-}:
-{
+{pkgs, ...}: {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [pkgs.git];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
@@ -45,7 +38,10 @@
   '';
   git-hooks.hooks = {
     alejandra.enable = true;
-    deadnix.enable = true;
+    deadnix = {
+      enable = true;
+      settings.edit = true;
+    };
     shellcheck.enable = true;
   };
 
