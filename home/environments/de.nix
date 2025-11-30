@@ -60,10 +60,10 @@
       exec-once = ["vicinae server"];
 
       plugin.split-monitor-workspaces = {
-        count = 5;
+        count = 10;
         keep_focused = 0;
         enable_notifications = 0;
-        enable_persistent_workspaces = 1;
+        enable_persistent_workspaces = 0;
       };
 
       bind = [
@@ -77,8 +77,8 @@
         "ALT, J, movefocus, d"
         "ALT, K, movefocus, u"
         "ALT, L, movefocus, r"
-        "ALT SHIFT, L, split-changemonitor"
-        "ALT SHIFT, H, split-changemonitor"
+        "ALT SHIFT, L, split-changemonitor, next"
+        "ALT SHIFT, H, split-changemonitor, prev"
 
         "ALT, 1, split-workspace, 1"
         "ALT, 2, split-workspace, 2"
