@@ -1,6 +1,7 @@
 {...}: {
   programs = {
     kitty.enable = true;
+    gh.enable = true;
 
     delta = {
       enable = true;
