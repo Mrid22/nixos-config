@@ -14,7 +14,7 @@
       autoStart = true;
       settings = {
         faviconService = "twenty";
-        popToRootOnClose = false;
+        popToRootOnClose = true;
         rootSearch.searchFiles = true;
       };
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
