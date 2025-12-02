@@ -529,7 +529,7 @@
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
         "ALT, SPACE, exec, vicinae toggle"
-        "ALT SHIFT, C, exec, hyprshot -m region"
+        "ALT SHIFT, S, exec, hyprshot -m region"
         "ALT SHIFT, SPACE, global, caelestia:launcher"
 
         "ALT, C, killactive"
