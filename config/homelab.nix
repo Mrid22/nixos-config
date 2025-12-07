@@ -17,7 +17,7 @@
   };
 
   services = {
-    meilisearch.enable = true;
+    # meilisearch.enable = true;
     open-webui.enable = true;
 
     jellyfin = {
