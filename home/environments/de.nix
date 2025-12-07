@@ -25,6 +25,7 @@
         hypr-keybinds
         otp
         player-pilot
+        process-manager
       ];
     };
   };
