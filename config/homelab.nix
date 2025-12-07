@@ -92,7 +92,6 @@
       enable = true;
       host = "0.0.0.0";
       package = pkgs.ollama-cuda;
-      acceleration = "cuda";
       loadModels = ["llama3.2:1b"];
       models = "/media/models/";
     };
