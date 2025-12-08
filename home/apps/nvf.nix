@@ -37,13 +37,13 @@
     autocomplete.blink-cmp = {
       enable = true;
       friendly-snippets.enable = true;
+      setupOpts.signature.enabled = true;
     };
     lsp = {
       enable = true;
       formatOnSave = true;
       inlayHints.enable = true;
       lightbulb.enable = true;
-      lspSignature.enable = true;
       lspkind.enable = true;
       lspsaga.enable = true;
       null-ls.enable = true;
