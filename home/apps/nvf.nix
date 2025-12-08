@@ -7,12 +7,21 @@
     dashboard.alpha.enable = true;
     statusline.lualine.enable = true;
     autopairs.nvim-autopairs.enable = true;
+    debugger.nvim-dap.enable = true;
+    notify.nvim-notify.enable = true;
+    runner.run-nvim.enable = true;
+    snippets.luasnip.enable = true;
     options = {
       tabstop = 2;
       shiftwidth = 2;
     };
+    git = {
+      enable = true;
+      neogit.enable = true;
+    };
     treesitter = {
       enable = true;
+      fold = true;
       autotagHtml = true;
       context.enable = true;
     };
@@ -32,9 +41,19 @@
     lsp = {
       enable = true;
       formatOnSave = true;
+      inlayHints.enable = true;
+      lightbulb.enable = true;
+      lspSignature.enable = true;
+      lspkind.enable = true;
+      lspsaga.enable = true;
+      null-ls.enable = true;
+      otter-nvim.enable = true;
+      trouble.enable = true;
     };
     languages = {
       enableFormat = true;
+      enableDAP = true;
+      enableTreesitter = true;
       nix.enable = true;
       html.enable = true;
       css.enable = true;
