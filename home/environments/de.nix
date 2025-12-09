@@ -30,6 +30,14 @@
     };
   };
   programs = {
+    ags = {
+      enable = true;
+      configDir = ../../ags;
+      extraPackages = with pkgs; [
+        inputs.astal.packages.${pkgs.system}.battery
+        fzf
+      ];
+    };
     hyprshot.enable = true;
     caelestia = {
       enable = true;
