@@ -6,6 +6,7 @@
   imports = with inputs; [
     vicinae.homeManagerModules.default
     caelestia-shell.homeManagerModules.default
+    ags.homeManagerModules.default
   ];
   services = {
     swww.enable = true;
