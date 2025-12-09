@@ -76,7 +76,7 @@
     upower.enable = true;
     udisks2.enable = true;
     power-profiles-daemon.enable = true;
-    displayManager.gdm.enable = true;
+    displayManager.cosmic-greeter.enable = true;
     printing.enable = true;
     pulseaudio.enable = false;
 
