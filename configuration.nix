@@ -84,6 +84,7 @@
 
   environment.systemPackages = with pkgs; [
     wl-clipboard
+    ags
     netbeans
     cloudflared
     brightnessctl
