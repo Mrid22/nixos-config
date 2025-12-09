@@ -61,10 +61,7 @@
         enable = true;
         extensions.ts-error-translator.enable = true;
       };
-      nix = {
-        enable = true;
-        lsp.server = "nixd";
-      };
+      nix.enable = true;
     };
     theme = {
       enable = true;
