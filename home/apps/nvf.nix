@@ -54,13 +54,16 @@
       enableFormat = true;
       enableDAP = true;
       enableTreesitter = true;
-      nix.enable = true;
       html.enable = true;
       css.enable = true;
       tailwind.enable = true;
       ts = {
         enable = true;
         extensions.ts-error-translator.enable = true;
+      };
+      nix = {
+        enable = true;
+        lsp.server = "nixd";
       };
     };
     theme = {
