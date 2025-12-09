@@ -11,6 +11,7 @@
     notify.nvim-notify.enable = true;
     runner.run-nvim.enable = true;
     snippets.luasnip.enable = true;
+    utility.images.image-nvim.enable = true;
     options = {
       tabstop = 2;
       shiftwidth = 2;
