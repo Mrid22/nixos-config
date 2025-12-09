@@ -35,7 +35,7 @@
   programs = {
     ags = {
       enable = true;
-      configDir = self + /ags;
+      configDir = inputs.self + /ags;
       extraPackages = with pkgs; [
         inputs.astal.packages.${pkgs.system}.battery
         fzf
