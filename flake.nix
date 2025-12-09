@@ -69,6 +69,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     nvf,
     ...
@@ -87,6 +88,7 @@
         ./configuration.nix
         inputs.home-manager.nixosModules.default
         nvf.nixosModules.default
+        self
       ];
     };
   };
