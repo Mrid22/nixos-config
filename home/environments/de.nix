@@ -36,6 +36,7 @@
       configDir = inputs.self + /ags;
       extraPackages = with pkgs; [
         inputs.astal.packages.${pkgs.stdenv.hostPlatform.system}.battery
+        inputs.astal.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
         fzf
       ];
     };
