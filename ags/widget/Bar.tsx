@@ -7,6 +7,11 @@ import { createPoll } from "ags/time"
 export default function Bar(gdkmonitor: Gdk.Monitor) {
   const time = createPoll("", 1000, "date")
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
+  const hyprland = Hyprland.get_default()
+
+  for (const client of hyprland.get_clients()) {
+    print(client.title)
+  }
 
   return (
     <window
