@@ -8,6 +8,7 @@
     vicinae.homeManagerModules.default
     caelestia-shell.homeManagerModules.default
     ags.homeManagerModules.default
+    self
   ];
   services = {
     swww.enable = true;
