@@ -83,6 +83,7 @@
     netbeans
     cloudflared
     brightnessctl
+    ueberzug
     devenv
     nodejs
     pnpm
