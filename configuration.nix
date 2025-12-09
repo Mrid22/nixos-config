@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  self,
   ...
 }: {
   imports = [
@@ -55,7 +56,10 @@
       "mridula" = import ./home.nix;
     };
     backupFileExtension = "bak";
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {
+      inherit inputs;
+      inherit self;
+    };
   };
 
   programs = {
