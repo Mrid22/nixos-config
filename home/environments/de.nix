@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  self,
   ...
 }: {
   imports = with inputs; [
@@ -33,7 +34,7 @@
   programs = {
     ags = {
       enable = true;
-      configDir = ../../ags;
+      configDir = self + /ags;
       extraPackages = with pkgs; [
         inputs.astal.packages.${pkgs.system}.battery
         fzf
