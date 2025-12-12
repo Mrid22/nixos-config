@@ -62,10 +62,6 @@
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
     };
-
-    astal.url = "github:aylur/astal";
-
-    ags.url = "github:aylur/ags";
   };
 
   outputs = {
@@ -86,7 +82,6 @@
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
-        nvf.nixosModules.default
       ];
     };
   };

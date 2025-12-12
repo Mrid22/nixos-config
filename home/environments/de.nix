@@ -6,7 +6,6 @@
   imports = with inputs; [
     vicinae.homeManagerModules.default
     caelestia-shell.homeManagerModules.default
-    ags.homeManagerModules.default
   ];
   services = {
     swww.enable = true;
@@ -31,15 +30,6 @@
     };
   };
   programs = {
-    ags = {
-      enable = true;
-      configDir = inputs.self + /ags;
-      extraPackages = with pkgs; [
-        inputs.astal.packages.${pkgs.stdenv.hostPlatform.system}.battery
-        inputs.astal.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
-        fzf
-      ];
-    };
     hyprshot.enable = true;
     caelestia = {
       enable = true;
