@@ -64,8 +64,8 @@
     cloudflared = {
       enable = true;
       tunnels = {
-        "37961e03-4e9b-457f-aef2-d4cbae7a359c" = {
-          credentialsFile = "/etc/cloudflared/37961e03-4e9b-457f-aef2-d4cbae7a359c.json";
+        "bd588fb9-a991-4b80-b57b-d3e96de2c58a" = {
+          credentialsFile = "/etc/cloudflared/bd588fb9-a991-4b80-b57b-d3e96de2c58a.json";
           default = "http_status:404";
           ingress = {
             "jellyfin.shmanju.org" = "http://localhost:8096";
