@@ -19,6 +19,10 @@
       enable = true;
       neogit.enable = true;
     };
+    clipboard = {
+      enable = true;
+      providers.wl-copy.enable = true;
+    };
     treesitter = {
       enable = true;
       fold = true;
