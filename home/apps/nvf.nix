@@ -61,6 +61,7 @@
       html.enable = true;
       css.enable = true;
       tailwind.enable = true;
+      qml.enable = true;
       ts = {
         enable = true;
         extensions.ts-error-translator.enable = true;
