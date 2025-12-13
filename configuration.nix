@@ -9,7 +9,6 @@
     ./config/homelab.nix
     ./config/system.nix
     inputs.stylix.nixosModules.stylix
-    inputs.catppuccin.nixosModules.catppuccin
   ];
 
   stylix = {
