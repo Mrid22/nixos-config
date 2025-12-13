@@ -147,26 +147,6 @@
         "type": "github"
       }
     },
-    "catppuccin": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1765485905,
-        "narHash": "sha256-fk6zFzzcwz6su99K7UTxS2497+z/Cdk3FzNsacsmZKA=",
-        "owner": "catppuccin",
-        "repo": "nix",
-        "rev": "b49c675acd80931fc8b54290920a90189b461dcf",
-        "type": "github"
-      },
-      "original": {
-        "owner": "catppuccin",
-        "repo": "nix",
-        "type": "github"
-      }
-    },
     "firefox-addons": {
       "inputs": {
         "nixpkgs": [
@@ -913,7 +893,6 @@
     "root": {
       "inputs": {
         "caelestia-shell": "caelestia-shell",
-        "catppuccin": "catppuccin",
         "firefox-addons": "firefox-addons",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager",

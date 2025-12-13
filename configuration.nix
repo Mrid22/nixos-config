@@ -15,7 +15,7 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
     overlays.enable = true;
-    image = ./Wallpaper.jpg;
+    # image = ./Wallpaper.jpg;
     polarity = "dark";
     opacity = {
       terminal = 0.5;
