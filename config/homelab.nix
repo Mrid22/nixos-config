@@ -76,16 +76,12 @@
       };
     };
 
-    nextcloud = {
+    immich = {
       enable = true;
-      autoUpdateApps.enable = true;
-      hostName = "mridcloud";
-      package = pkgs.nextcloud32;
-      settings.trusted_domains = ["cloud.shmanju.org"];
-      config = {
-        adminpassFile = "/etc/nextcloud/pass.txt";
-        dbtype = "sqlite";
-      };
+      openFirewall = true;
+      host = "0.0.0.0";
+      machine-learning.enable = true;
+      mediaLocation = "/media/photos/";
     };
 
     ollama = {
