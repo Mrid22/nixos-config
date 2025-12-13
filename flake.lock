@@ -147,6 +147,24 @@
         "type": "github"
       }
     },
+    "catppuccin": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1765485905,
+        "narHash": "sha256-fk6zFzzcwz6su99K7UTxS2497+z/Cdk3FzNsacsmZKA=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "b49c675acd80931fc8b54290920a90189b461dcf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "firefox-addons": {
       "inputs": {
         "nixpkgs": [
@@ -733,7 +751,7 @@
     },
     "ndg": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1765435293,
@@ -766,6 +784,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1763966396,
+        "narHash": "sha256-6eeL1YPcY1MV3DDStIDIdy/zZCDKgHdkCmsrLJFiZf0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5ae3b07d8d6527c42f17c876e404993199144b6a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1765472234,
         "narHash": "sha256-9VvC20PJPsleGMewwcWYKGzDIyjckEz8uWmT0vCDYK0=",
         "owner": "nixos",
@@ -780,7 +814,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1764242076,
         "narHash": "sha256-sKoIWfnijJ0+9e4wRvIgm/HgE27bzwQxcEmo2J/gNpI=",
@@ -893,11 +927,12 @@
     "root": {
       "inputs": {
         "caelestia-shell": "caelestia-shell",
+        "catppuccin": "catppuccin",
         "firefox-addons": "firefox-addons",
         "git-hooks": "git-hooks",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "nvf": "nvf",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stylix": "stylix",
