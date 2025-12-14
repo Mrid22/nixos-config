@@ -528,7 +528,7 @@
 
       bind = [
         "ALT, Q, exec, kitty"
-        "ALT, F, exec, zen-twilight"
+        "ALT, F, exec, librewolf"
         "ALT, SPACE, exec, vicinae toggle"
         "ALT SHIFT, S, exec, hyprshot -m region"
         "ALT SHIFT, SPACE, global, caelestia:launcher"
