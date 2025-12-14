@@ -3,16 +3,12 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.zen-browser.homeModules.twilight
-  ];
-
-  stylix.targets.zen-browser = {
+  stylix.targets.librewolf = {
     profileNames = ["mridula"];
     enableCss = false;
   };
 
-  programs.zen-browser = {
+  programs.librewolf = {
     enable = true;
     profiles.mridula = {
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
