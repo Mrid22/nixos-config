@@ -14,6 +14,7 @@
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
         ublock-origin
         dearrow
+        noscript
         proton-pass
         decentraleyes
         censor-tracker
