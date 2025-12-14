@@ -5,7 +5,7 @@
 }: {
   stylix.targets.librewolf = {
     profileNames = ["mridula"];
-    enableCss = false;
+    #   enableCss = false;
   };
 
   programs.librewolf = {
