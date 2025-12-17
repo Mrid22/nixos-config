@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default";
+    selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
@@ -61,11 +62,6 @@
     split-monitor-workspaces = {
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
-    };
-
-    selfhostblocks = {
-      url = "github:ibizaman/selfhostblocks";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
