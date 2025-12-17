@@ -62,14 +62,21 @@
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
     };
+
+    selfhostblocks = {
+      url = "github:ibizaman/selfhostblocks";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
     nvf,
+    selfhostblocks,
     ...
   } @ inputs: let
     system = "x86_64-linux";
+    nixpkgs' = selfhostblocks.lib.${system}.patchedNixpkgs;
   in {
     packages."${system}".default =
       (nvf.lib.neovimConfiguration {
@@ -77,11 +84,13 @@
         modules = [./home/apps/nvf.nix];
       }).neovim;
 
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.nixos = nixpkgs'.nixosSystem {
+      inherit system;
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
+        selfhostblocks.nixosModules.default
       ];
     };
   };
