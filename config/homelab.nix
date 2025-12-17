@@ -17,19 +17,6 @@
   };
 
   services = {
-    tailscale = {
-      enable = true;
-      useRoutingFeatures = "both";
-      disableTaildrop = true;
-      disableUpstreamLogging = true;
-    };
-
-    vaultwarden = {
-      enable = true;
-      config = {
-        ROCKET_ADDRESS = "0.0.0.0";
-      };
-    };
     # meilisearch.enable = true;
     open-webui.enable = true;
 
