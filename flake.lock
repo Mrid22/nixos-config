@@ -965,7 +965,7 @@
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "selfhostblocks": "selfhostblocks",
-        "sops": "sops",
+        "sops-nix": "sops-nix",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stylix": "stylix",
         "systems": "systems_5",
@@ -995,7 +995,7 @@
         "type": "github"
       }
     },
-    "sops": {
+    "sops-nix": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
