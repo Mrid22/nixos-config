@@ -6,7 +6,7 @@
 }: {
   imports = with inputs; [
     #  sops-nix.nixosModules.default
-    selfhostblocks.nixosModules.sops
+    #   selfhostblocks.nixosModules.sops
   ];
 
   # sops = {
@@ -30,32 +30,32 @@
         unit_system = "metric";
       };
     };
-    sops.secret = {
-      "home-assistant/country".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-      "home-assistant/latitude".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-      "home-assistant/longitude".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-      "home-assistant/timezone".request = {
-        mode = "0440";
-        owner = "hass";
-        group = "hass";
-        restartUnits = ["home-assistant.service"];
-      };
-    };
+    #  sops.secret = {
+    #    "home-assistant/country".request = {
+    #      mode = "0440";
+    #      owner = "hass";
+    #      group = "hass";
+    #      restartUnits = ["home-assistant.service"];
+    #    };
+    #    "home-assistant/latitude".request = {
+    #      mode = "0440";
+    #      owner = "hass";
+    #      group = "hass";
+    #      restartUnits = ["home-assistant.service"];
+    #    };
+    #    "home-assistant/longitude".request = {
+    #      mode = "0440";
+    #      owner = "hass";
+    #      group = "hass";
+    #      restartUnits = ["home-assistant.service"];
+    #    };
+    #    "home-assistant/timezone".request = {
+    #      mode = "0440";
+    #      owner = "hass";
+    #      group = "hass";
+    #      restartUnits = ["home-assistant.service"];
+    #    };
+    #  };
   };
 
   programs.gnome-disks.enable = true;
