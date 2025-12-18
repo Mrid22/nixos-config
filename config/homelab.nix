@@ -18,6 +18,22 @@
 
   virtualisation.oci-containers.containers.docker = {
     image = "homeassistant/home-assistant:stable";
+    autoStart = true;
+    extraOptions = [
+      "--pull=newer"
+    ];
+    volumes = [
+      "/media/home/config/:/config"
+    ];
+    ports = [
+      "127.0.0.1:8123:8123"
+      "127.0.0.1:8124:80"
+    ];
+    environment = {
+      TZ = "Europe/Amsterdam";
+      PUID = 1000;
+      PGID = 1000;
+    };
   };
 
   services = {
