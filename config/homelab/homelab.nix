@@ -23,10 +23,10 @@
 
       config = {
         name = "Mridul Home";
-        country.source = config.shb.sops.secret."home-assistant/country".result.path;
-        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
-        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
-        timezone.source = config.shb.sops.secret."home-assistant/timezone".result.path;
+        #       country.source = config.shb.sops.secret."home-assistant/country".result.path;
+        #       latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
+        #       longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
+        #       timezone.source = config.shb.sops.secret."home-assistant/timezone".result.path;
         unit_system = "metric";
       };
     };
