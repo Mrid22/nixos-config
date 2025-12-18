@@ -23,33 +23,33 @@
 
       config = {
         name = "Mridul Home";
-        country.source = config.shb.sops.secret."country".result.path;
-        latitude.source = config.shb.sops.secret."latitude".result.path;
-        longitude.source = config.shb.sops.secret."longitude".result.path;
-        time_zone.source = config.shb.sops.secret."timezone".result.path;
+        country.source = config.shb.sops.secret."home-assistant/country".result.path;
+        latitude.source = config.shb.sops.secret."home-assistant/latitude".result.path;
+        longitude.source = config.shb.sops.secret."home-assistant/longitude".result.path;
+        time_zone.source = config.shb.sops.secret."home-assistant/timezone".result.path;
         unit_system = "metric";
       };
     };
     sops.secret = {
-      "country".request = {
+      "home-assistant/country".request = {
         mode = "0440";
         owner = "hass";
         group = "hass";
         restartUnits = ["home-assistant.service"];
       };
-      "latitude".request = {
+      "home-assistant/latitude".request = {
         mode = "0440";
         owner = "hass";
         group = "hass";
         restartUnits = ["home-assistant.service"];
       };
-      "longitude".request = {
+      "home-assistant/longitude".request = {
         mode = "0440";
         owner = "hass";
         group = "hass";
         restartUnits = ["home-assistant.service"];
       };
-      "timezone".request = {
+      "home-assistant/timezone".request = {
         mode = "0440";
         owner = "hass";
         group = "hass";
