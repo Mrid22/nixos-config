@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./config/homelab/homelab.nix
+    ./config/homelab.nix
     ./config/system.nix
     inputs.stylix.nixosModules.stylix
   ];

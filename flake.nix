@@ -4,12 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     systems.url = "github:nix-systems/default";
-    selfhostblocks.url = "github:ibizaman/selfhostblocks";
-
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
@@ -73,11 +67,9 @@
   outputs = {
     nixpkgs,
     nvf,
-    selfhostblocks,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    nixpkgs' = selfhostblocks.lib.${system}.patchedNixpkgs;
   in {
     packages."${system}".default =
       (nvf.lib.neovimConfiguration {
@@ -85,13 +77,11 @@
         modules = [./home/apps/nvf.nix];
       }).neovim;
 
-    nixosConfigurations.nixos = nixpkgs'.nixosSystem {
-      inherit system;
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
-        selfhostblocks.nixosModules.default
       ];
     };
   };
