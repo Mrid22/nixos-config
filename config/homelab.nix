@@ -31,8 +31,8 @@
     ];
     environment = {
       TZ = "Europe/Amsterdam";
-      PUID = 1000;
-      PGID = 1000;
+      PUID = toString 1000;
+      PGID = toString 1000;
     };
   };
 
