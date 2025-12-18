@@ -6,6 +6,11 @@
     systems.url = "github:nix-systems/default";
     selfhostblocks.url = "github:ibizaman/selfhostblocks";
 
+    sops = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";

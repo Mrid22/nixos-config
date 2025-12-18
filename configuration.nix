@@ -92,5 +92,6 @@
     devenv
     nodejs
     pnpm
+    sops
   ];
 }
