@@ -23,6 +23,7 @@
         duckduckgo-privacy-essentials
         sponsorblock
         firenvim
+        darkreader
       ];
       search = {
         default = "ddg";
