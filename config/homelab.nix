@@ -16,6 +16,10 @@
     ];
   };
 
+  virtualisation.oci-containers.containers.docker = {
+    image = "homeassistant/home-assistant:stable";
+  };
+
   services = {
     open-webui.enable = true;
 
