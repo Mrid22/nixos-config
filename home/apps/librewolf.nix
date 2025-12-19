@@ -10,6 +10,7 @@
 
   programs.librewolf = {
     enable = true;
+    nativeMessagingHosts = [inputs.caelestia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default];
     profiles.mridula = {
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
         ublock-origin
