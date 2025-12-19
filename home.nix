@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ./home/apps/librewolf.nix
-    ./home/apps/zed.nix
     ./home/environments/de.nix
     ./home/environments/terminal.nix
   ];
