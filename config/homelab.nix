@@ -39,8 +39,6 @@
   services = {
     open-webui.enable = true;
 
-    nextcloud.enable = true;
-
     jellyfin = {
       enable = true;
       openFirewall = true;
