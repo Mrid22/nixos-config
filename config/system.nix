@@ -45,7 +45,6 @@
   };
 
   system = {
-    nixos-init.enable = true;
     stateVersion = "25.05";
     autoUpgrade = {
       enable = true;
