@@ -3,12 +3,11 @@
   inputs,
   ...
 }: {
-  stylix.targets.librewolf = {
-    profileNames = ["mridula"];
-    #   enableCss = false;
-  };
+  imports = with inputs; [
+    tor-browser.homeModules.default
+  ];
 
-  programs.librewolf = {
+  programs.tor-browser = {
     enable = true;
     profiles.mridula = {
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
