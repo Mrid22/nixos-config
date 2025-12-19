@@ -92,6 +92,7 @@
     devenv
     nodejs
     pnpm
+    tor-browser
     sops
   ];
 }
