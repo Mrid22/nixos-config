@@ -1,4 +1,8 @@
-{...}: {
+{
+  config,
+  lib,
+  ...
+}: {
   imports = [
     ./home/apps/librewolf.nix
     ./home/apps/tor.nix
