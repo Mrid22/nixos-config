@@ -902,6 +902,7 @@
         "split-monitor-workspaces": "split-monitor-workspaces",
         "stylix": "stylix",
         "systems": "systems_4",
+        "tor-browser-flake": "tor-browser-flake",
         "vicinae": "vicinae",
         "vicinae-extensions": "vicinae-extensions"
       }
@@ -1129,6 +1130,29 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
+        "type": "github"
+      }
+    },
+    "tor-browser-flake": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1766223638,
+        "narHash": "sha256-XwnRI/mtcz6UlhkrXoTb1cJhZstAC+gSYzYa0zQyybc=",
+        "owner": "Mrid22",
+        "repo": "tor-browser-flake",
+        "rev": "c7ebbd00114458d94e3ef36175173321414c163a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Mrid22",
+        "repo": "tor-browser-flake",
         "type": "github"
       }
     },
