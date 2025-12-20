@@ -54,6 +54,12 @@
       url = "github:Duckonaut/split-monitor-workspaces";
       inputs.hyprland.follows = "hyprland";
     };
+
+    tor-browser-flake = {
+      url = "github:Mrid22/tor-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
   outputs = {
