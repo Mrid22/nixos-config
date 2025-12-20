@@ -1143,11 +1143,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766254509,
-        "narHash": "sha256-FqsiouWgwYLvchr9iYW31RxVBgLLuMWsTc5rSttN6/I=",
+        "lastModified": 1766257847,
+        "narHash": "sha256-jz5NMsoWiaU8G89rI+jorL2ckR2OPDHrAmE+grGMdJk=",
         "owner": "Mrid22",
         "repo": "tor-browser-flake",
-        "rev": "2da8ee24d92d060860ac4bc3557ab323b42b175d",
+        "rev": "8e598f6f1c7431dc7adf7f9f4a07be5c1cd8ba4a",
         "type": "github"
       },
       "original": {
