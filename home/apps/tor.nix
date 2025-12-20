@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.tor-browser.homeModules.default
+    inputs.tor-browser-flake.homeModules.default
   ];
   programs.tor-browser = {
     enable = true;
