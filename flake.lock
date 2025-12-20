@@ -1164,16 +1164,15 @@
         "systems": "systems_5"
       },
       "locked": {
-        "lastModified": 1766239107,
-        "narHash": "sha256-70s/JQrc8hcSYpFYuplMzl56QT5MuE9tMAXMDwERWbM=",
+        "lastModified": 1766256506,
+        "narHash": "sha256-suRv5XkMrcXvXNO6nzkntPi/MLQoYDhPTTKk7zG31zM=",
         "owner": "vicinaehq",
         "repo": "vicinae",
-        "rev": "57f22ffd3cd961ba7dd4460b56423bb600c21b8c",
+        "rev": "449d04b14729b311811a0541fbd99945cd7156ff",
         "type": "github"
       },
       "original": {
         "owner": "vicinaehq",
-        "ref": "57f22ffd3cd961ba7dd4460b56423bb600c21b8c",
         "repo": "vicinae",
         "type": "github"
       }
