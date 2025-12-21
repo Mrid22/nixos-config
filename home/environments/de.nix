@@ -508,7 +508,13 @@
 
     settings = {
       exec-once = ["vicinae server"];
-      decoration.rounding = 10;
+      decoration = {
+        blur = {
+          enabled = true;
+          size = 5;
+        };
+        rounding = 10;
+      };
 
       input.touchpad = {
         natural_scroll = true;
