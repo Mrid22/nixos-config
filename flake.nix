@@ -77,7 +77,10 @@
       }).neovim;
 
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      specialArgs = {
+        inherit inputs;
+        stablepkgs = inputs.stablepkgs;
+      };
       modules = [
         ./configuration.nix
         inputs.home-manager.nixosModules.default
