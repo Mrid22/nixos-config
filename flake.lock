@@ -900,7 +900,6 @@
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "split-monitor-workspaces": "split-monitor-workspaces",
-        "stablepkgs": "stablepkgs",
         "stylix": "stylix",
         "systems": "systems_4",
         "tor-browser-flake": "tor-browser-flake",
@@ -926,22 +925,6 @@
       "original": {
         "owner": "Duckonaut",
         "repo": "split-monitor-workspaces",
-        "type": "github"
-      }
-    },
-    "stablepkgs": {
-      "locked": {
-        "lastModified": 1766201043,
-        "narHash": "sha256-eplAP+rorKKd0gNjV3rA6+0WMzb1X1i16F5m5pASnjA=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "b3aad468604d3e488d627c0b43984eb60e75e782",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-25.11",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },
