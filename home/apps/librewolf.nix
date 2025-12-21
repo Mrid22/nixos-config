@@ -8,7 +8,7 @@
   #   #   enableCss = false;
   # };
 
-  programs.floorp = {
+  programs.librewolf = {
     enable = true;
     nativeMessagingHosts = [inputs.caelestia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default];
     profiles.mridula = {
