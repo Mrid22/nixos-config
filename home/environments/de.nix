@@ -17,7 +17,7 @@
         faviconService = "twenty";
         popToRootOnClose = true;
         rootSearch.searchFiles = true;
-        window.opacity = lib.mkDefault 0.5;
+        window.opacity = lib.mkForce 0.5;
       };
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
         bluetooth
