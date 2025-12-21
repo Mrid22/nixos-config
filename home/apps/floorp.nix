@@ -3,12 +3,12 @@
   inputs,
   ...
 }: {
-  stylix.targets.librewolf = {
-    profileNames = ["mridula"];
-    #   enableCss = false;
-  };
+  # stylix.targets.librewolf = {
+  #   profileNames = ["mridula"];
+  #   #   enableCss = false;
+  # };
 
-  programs.librewolf = {
+  programs.floorp = {
     enable = true;
     nativeMessagingHosts = [inputs.caelestia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default];
     profiles.mridula = {
