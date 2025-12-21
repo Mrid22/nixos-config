@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    stablepkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     systems.url = "github:nix-systems/default";
 
     git-hooks = {
