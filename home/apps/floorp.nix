@@ -1,5 +1,4 @@
 {
-  stablepkgs,
   pkgs,
   inputs,
   ...
@@ -11,7 +10,7 @@
 
   programs.floorp = {
     enable = true;
-    package = stablepkgs.${pkgs.stdenv.hostPlatform.system}.floorp;
+    package = inputs.stablepkgs.${pkgs.stdenv.hostPlatform.system}.floorp;
     nativeMessagingHosts = [inputs.caelestia-shell.packages.${pkgs.stdenv.hostPlatform.system}.default];
     profiles.mridula = {
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
