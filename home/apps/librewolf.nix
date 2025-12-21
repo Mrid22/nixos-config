@@ -3,10 +3,10 @@
   inputs,
   ...
 }: {
-  # stylix.targets.librewolf = {
-  #   profileNames = ["mridula"];
-  #   #   enableCss = false;
-  # };
+  stylix.targets.librewolf = {
+    profileNames = ["mridula"];
+    #   enableCss = false;
+  };
 
   programs.librewolf = {
     enable = true;
