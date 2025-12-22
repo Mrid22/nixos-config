@@ -40,7 +40,7 @@ in {
             name = "DuckDuckGo (No AI)";
             urls = [
               {
-                template = "https://noai.duckduckgo.com/?q={searchTerm}";
+                template = "https://noai.duckduckgo.com/?q={searchTerms}";
                 params = [
                   {
                     name = "q";
