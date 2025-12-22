@@ -93,10 +93,5 @@
     nodejs
     pnpm
     sops
-    (symlinkJoin {
-      name = "tor-browser-wrapped";
-      buildInputs = [pkgs.wrapFirefox];
-      paths = [pkgs.tor-browser];
-    })
   ];
 }
