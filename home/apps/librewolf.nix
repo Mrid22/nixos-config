@@ -34,7 +34,7 @@ in {
         darkreader
       ];
       search = {
-        default = "ddg";
+        default = "ddgnoai";
         engines = {
           ddgnai = {
             name = "DuckDuckGo (No AI)";
