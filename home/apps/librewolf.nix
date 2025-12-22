@@ -43,7 +43,7 @@ in {
                 template = "https://noai.duckduckgo.com/?q={searchTerms}";
                 params = [
                   {
-                    name = "q";
+                    name = "query";
                     value = "searchTerms";
                   }
                 ];
