@@ -92,11 +92,6 @@
     devenv
     nodejs
     pnpm
-    (pkgs.symlinkJoin {
-      name = "tor-browser";
-      buildInputs = [pkgs.wrapFirefox];
-      paths = [tor-browser];
-    })
     sops
   ];
 }
