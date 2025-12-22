@@ -39,6 +39,11 @@
   services = {
     open-webui.enable = true;
 
+    bazarr = {
+      enable = true;
+      openFirewall = true;
+    };
+
     jellyfin = {
       enable = true;
       openFirewall = true;
