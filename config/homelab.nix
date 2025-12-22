@@ -107,7 +107,7 @@
       enable = true;
       host = "0.0.0.0";
       package = pkgs.ollama-cuda;
-      loadModels = ["llama3.2:1b" "gpt-oss:20b"];
+      loadModels = ["llama3.2:1b" "gpt-oss:20b" "codellama:34b"];
       models = "/media/models/";
     };
   };
