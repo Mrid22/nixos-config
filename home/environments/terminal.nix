@@ -57,6 +57,8 @@
       syntaxHighlighting.enable = true;
       shellAliases = {
         nvim = "nix run ~/nixos-config";
+        vim = "nix run ~/nixos-config";
+        vi = "nix run ~/nixos-config";
       };
       oh-my-zsh = {
         enable = true;
