@@ -41,7 +41,12 @@ in {
             urls = [
               {
                 template = "https://noai.duckduckgo.com/?q={searchTerm}";
-                params = param;
+                params = [
+                  {
+                    name = "q";
+                    value = "searchTerms";
+                  }
+                ];
               }
             ];
           };
@@ -50,7 +55,12 @@ in {
             urls = [
               {
                 template = "https://mynixos.com/search?q={searchTerms}";
-                params = param;
+                params = [
+                  {
+                    name = "query";
+                    value = "searchTerms";
+                  }
+                ];
               }
             ];
 
