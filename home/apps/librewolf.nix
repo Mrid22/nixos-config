@@ -2,7 +2,14 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  param = [
+    {
+      name = "query";
+      value = "{searchTerms}";
+    }
+  ];
+in {
   stylix.targets.librewolf = {
     profileNames = ["mridula"];
     #   enableCss = false;
@@ -27,19 +34,23 @@
         darkreader
       ];
       search = {
-        default = "ddg";
+        default = "ddgnoai";
         engines = {
+          ddgnai = {
+            name = "DuckDuckGo (No AI)";
+            urls = [
+              {
+                template = "https://noai.duckduckgo.com/?q={searchTerm}";
+                params = param;
+              }
+            ];
+          };
           mynixos = {
             name = "My NixOS";
             urls = [
               {
                 template = "https://mynixos.com/search?q={searchTerms}";
-                params = [
-                  {
-                    name = "query";
-                    value = "{searchTerms}";
-                  }
-                ];
+                params = param;
               }
             ];
 
