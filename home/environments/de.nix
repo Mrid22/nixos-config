@@ -512,6 +512,7 @@
         blur = {
           enabled = true;
           size = 5;
+          passes = 4;
         };
         rounding = 10;
       };
