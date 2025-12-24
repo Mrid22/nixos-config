@@ -12,7 +12,10 @@
     swww.enable = true;
     vicinae = {
       enable = true;
-      autoStart = true;
+      systemd = {
+        enable = true;
+        autostart = true;
+      };
       settings = {
         faviconService = "twenty";
         popToRootOnClose = true;
