@@ -14,7 +14,7 @@
       enable = true;
       systemd = {
         enable = true;
-        autostart = true;
+        autoStart = true;
       };
       settings = {
         faviconService = "twenty";
