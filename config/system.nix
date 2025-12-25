@@ -8,15 +8,20 @@
     networkmanager.enable = true;
   };
 
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    trusted-users = [
-      "root"
-      "mridula"
-    ];
+  nix = {
+    optimise.automatic = true;
+    gc.automatic = true;
+
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      trusted-users = [
+        "root"
+        "mridula"
+      ];
+    };
   };
 
   boot.loader = {
