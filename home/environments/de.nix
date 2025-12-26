@@ -11,7 +11,7 @@
   services = {
     swww.enable = true;
     vicinae = {
-      # enable = true;
+      enable = true;
       systemd = {
         enable = true;
         autoStart = true;
