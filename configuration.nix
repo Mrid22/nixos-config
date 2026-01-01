@@ -1,0 +1,131 @@
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    #./homelab.nix
+  ];
+
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
+
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
+
+  # Set your time zone.
+  time.timeZone = "Europe/Amsterdam";
+
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+
+    extraLocaleSettings = {
+      LC_ADDRESS = "nl_NL.UTF-8";
+      LC_IDENTIFICATION = "nl_NL.UTF-8";
+      LC_MEASUREMENT = "nl_NL.UTF-8";
+      LC_MONETARY = "nl_NL.UTF-8";
+      LC_NAME = "nl_NL.UTF-8";
+      LC_NUMERIC = "nl_NL.UTF-8";
+      LC_PAPER = "nl_NL.UTF-8";
+      LC_TELEPHONE = "nl_NL.UTF-8";
+      LC_TIME = "nl_NL.UTF-8";
+    };
+  };
+  services = {
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+    keyd = {
+      enable = true;
+      keyboards = {
+        default = {
+          ids = ["*"];
+          settings = {
+            main = {
+              capslock = "overload(control, esc)";
+            };
+          };
+        };
+      };
+    };
+
+    xserver = {
+      enable = true;
+
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
+    # Enable CUPS to print documents.
+    printing.enable = true;
+
+    # Enable sound with pipewire.
+    pulseaudio.enable = false;
+    pipewire = {
+      enable = true;
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+      pulse.enable = true;
+    };
+
+    openssh.enable = true;
+  };
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
+  security.rtkit.enable = true;
+  users = {
+    defaultUserShell = pkgs.zsh;
+    users.mridula = {
+      isNormalUser = true;
+      description = "Mridul Agarwal";
+      extraGroups = ["networkmanager" "wheel"];
+    };
+  };
+
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "mridula" = import ./home.nix;
+    };
+  };
+
+  catppuccin = {
+    enable = true;
+    accent = "mauve";
+    flavor = "macchiato";
+    cache.enable = true;
+  };
+
+  programs = {
+    zsh.enable = true;
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.x86_64-linux.hyprland;
+    };
+
+    git = {
+      enable = true;
+      package = inputs.self.packages.x86_64-linux.git;
+    };
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+  };
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  environment.systemPackages = with pkgs; [
+    kitty
+  ];
+
+  system.stateVersion = "25.11";
+}
