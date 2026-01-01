@@ -39,6 +39,12 @@
     enable = true;
     package = inputs.hyprland.packages.x86_64-linux.hyprland;
     settings = {
+      general = {
+        gaps_in = 5;
+        gaps_out = 5;
+        border_size = 0;
+      };
+      decoration.border_radius = 5;
       exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
@@ -104,6 +110,10 @@
     eza = {
       enable = true;
       git = true;
+      enableZshIntegration = true;
+    };
+    atuin = {
+      enable = true;
       enableZshIntegration = true;
     };
     zsh = {

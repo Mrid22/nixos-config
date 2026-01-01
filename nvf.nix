@@ -7,6 +7,7 @@
           {
             vim = {
               git.enable = true;
+              autocomplete.nvim-cmp.enable = true;
               treesitter = {
                 enable = true;
                 fold = true;
@@ -15,7 +16,12 @@
                 tabstop = 2;
                 shiftwidth = 2;
               };
-              autocomplete.nvim-cmp.enable = true;
+              theme = {
+                enable = true;
+                name = "catppuccin";
+                style = "mocha";
+                transparent = true;
+              };
               lsp = {
                 enable = true;
                 inlayHints.enable = true;
