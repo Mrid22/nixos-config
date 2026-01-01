@@ -105,6 +105,29 @@
       enable = true;
       settings.background_opacity = 0.5;
     };
+    oh-my-posh = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+    eza = {
+      enable = true;
+      git = true;
+      enableZshIntegration = true;
+    };
+    atuin = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+    zsh = {
+      enable = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = ["git" "sudo"];
+      };
+      shellAliases."nvim" = "nix run ~/nixos-config";
+    };
     librewolf = {
       enable = true;
       profiles.mridula = {
@@ -127,25 +150,6 @@
           ];
         };
       };
-    };
-    eza = {
-      enable = true;
-      git = true;
-      enableZshIntegration = true;
-    };
-    atuin = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-    zsh = {
-      enable = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
-      oh-my-zsh = {
-        enable = true;
-        plugins = ["git" "sudo"];
-      };
-      shellAliases."nvim" = "nix run ~/nixos-config";
     };
   };
 }
