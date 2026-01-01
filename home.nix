@@ -128,6 +128,12 @@
       };
       shellAliases."nvim" = "nix run ~/nixos-config";
     };
+    caelestia = {
+      enable = true;
+      systemd.enable = true;
+      settings.paths.wallpaperDir = "~/nixos-config";
+      cli.enable = true;
+    };
     librewolf = {
       enable = true;
       profiles.mridula = {
