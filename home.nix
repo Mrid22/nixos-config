@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -25,6 +24,11 @@
       search_files_in_root = true;
       pop_to_root_on_close = false;
     };
+    extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+      bluetooth
+      nix
+      power-profile
+    ];
   };
 
   wayland.windowManager.hyprland = {
