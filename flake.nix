@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    vicinae.url = "github:vicinaehq/vicinae";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -31,16 +32,20 @@
     };
   };
 
-  outputs = inputs @ { self, nixpkgs, flake-parts, wrappers, ... }:
-    flake-parts.lib.mkFlake { inherit inputs; }
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    flake-parts,
+    wrappers,
+    ...
+  }:
+    flake-parts.lib.mkFlake {inherit inputs;}
     {
       imports = [
         ./base.nix
         ./git.nix
-	./nvf.nix
+        ./nvf.nix
       ];
-      systems = ["x86_64-linux" ];
+      systems = ["x86_64-linux"];
     };
 }
-
-

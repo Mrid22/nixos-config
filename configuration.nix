@@ -78,8 +78,11 @@
 
     openssh.enable = true;
   };
-
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings = {
+    experimental-features = ["nix-command" "flakes"];
+    extra-substituters = ["https://vicinae.cachix.org"];
+    extra-trusted-public-keys = ["vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="];
+  };
   security.rtkit.enable = true;
   users = {
     defaultUserShell = pkgs.zsh;
