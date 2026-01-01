@@ -78,14 +78,14 @@
     librewolf = {
       enable = true;
       profiles.mridula = {
-        extensions = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+        extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           ublock-origin
           dearrow
           proton-pass
-          adaptive-tab-bar-color
+          adaptive-tab-bar-colour
           canvasblocker
           noscript
-          catppuccin-web-file-icons-
+          catppuccin-web-file-icons
           catppuccin-mocha-mauve
           censor-tracker
           clearurls
