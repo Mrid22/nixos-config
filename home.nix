@@ -43,8 +43,24 @@
         gaps_in = 5;
         gaps_out = 5;
         border_size = 0;
+        resize_on_border = true;
       };
-      decoration.border_radius = 5;
+      input = {
+        follow_mouse = 1;
+        touchpad.natural_scroll = true;
+      };
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+      };
+      decoration = {
+        rounding = 5;
+        blur = {
+          enabled = true;
+          size = 3;
+          passes = 5;
+        };
+      };
       exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
