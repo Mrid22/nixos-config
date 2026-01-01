@@ -55,10 +55,6 @@
           drag_3fg = 1;
         };
       };
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_fingers = 3;
-      };
       decoration = {
         rounding = 5;
         blur = {
@@ -105,7 +101,10 @@
 
   programs = {
     home-manager.enable = true;
-    kitty.enable = true;
+    kitty = {
+      enable = true;
+      settings.background_opacity = 0.5;
+    };
     librewolf = {
       enable = true;
       profiles.mridula = {
