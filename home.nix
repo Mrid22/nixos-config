@@ -23,6 +23,7 @@
       close_on_focus_loss = true;
       search_files_in_root = true;
       pop_to_root_on_close = false;
+      launcher_window.opacity = 0.5;
     };
     extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
       bluetooth
