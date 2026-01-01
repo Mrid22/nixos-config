@@ -81,21 +81,24 @@
     librewolf = {
       enable = true;
       profiles.mridula = {
-        extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
-          ublock-origin
-          dearrow
-          proton-pass
-          canvasblocker
-          noscript
-          catppuccin-web-file-icons
-          catppuccin-mocha-mauve
-          censor-tracker
-          clearurls
-          consent-o-matic
-          noscript
-          firenvim
-          snowflake
-        ];
+        extensions = {
+          force = true;
+          packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+            ublock-origin
+            dearrow
+            proton-pass
+            canvasblocker
+            noscript
+            catppuccin-web-file-icons
+            catppuccin-mocha-mauve
+            censor-tracker
+            clearurls
+            consent-o-matic
+            noscript
+            firenvim
+            snowflake
+          ];
+        };
       };
     };
     eza = {

@@ -110,7 +110,7 @@
   catppuccin = {
     enable = true;
     accent = "mauve";
-    flavor = "macchiato";
+    flavor = "mocha";
     cache.enable = true;
   };
 
