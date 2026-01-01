@@ -47,7 +47,13 @@
       };
       input = {
         follow_mouse = 1;
-        touchpad.natural_scroll = true;
+        touchpad = {
+          natural_scroll = true;
+          disable_while_typing = true;
+          drag_lock = 2;
+          tap-and-drag = true;
+          drag_3fg = 1;
+        };
       };
       gestures = {
         workspace_swipe = true;
