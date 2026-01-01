@@ -6,6 +6,7 @@
   imports = with inputs; [
     vicinae.homeManagerModules.default
     catppuccin.homeModules.catppuccin
+    caelestia-shell.homeManagerModules.default
   ];
 
   home = {
