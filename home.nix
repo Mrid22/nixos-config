@@ -3,8 +3,9 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.vicinae.homeManagerModules.default
+  imports = with inputs; [
+    vicinae.homeManagerModules.default
+    catppuccin.homeModules.catppuccin
   ];
 
   home = {
@@ -31,6 +32,8 @@
       power-profile
     ];
   };
+
+  catppuccin.enable = true;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -82,7 +85,6 @@
           ublock-origin
           dearrow
           proton-pass
-          adaptive-tab-bar-colour
           canvasblocker
           noscript
           catppuccin-web-file-icons

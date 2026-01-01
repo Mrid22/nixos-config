@@ -9,7 +9,16 @@
   ];
 
   boot.loader = {
-    grub.enable = true;
+    systemd-boot.enable = false;
+    grub = {
+      efiSupport = true;
+      enable = true;
+      devices = ["nodev"];
+    };
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
   };
 
   networking = {
