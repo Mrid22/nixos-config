@@ -75,8 +75,11 @@
   programs = {
     home-manager.enable = true;
     kitty.enable = true;
-    librewolf = {
+    librewolf.enable = true;
+    eza = {
       enable = true;
+      git = true;
+      enableZshIntegration = true;
     };
     zsh = {
       enable = true;
