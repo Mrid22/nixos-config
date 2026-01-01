@@ -75,7 +75,27 @@
   programs = {
     home-manager.enable = true;
     kitty.enable = true;
-    librewolf.enable = true;
+    librewolf = {
+      enable = true;
+      profiles.mridula = {
+        extensions = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+          ublock-origin
+          dearrow
+          proton-pass
+          adaptive-tab-bar-color
+          canvasblocker
+          noscript
+          catppuccin-web-file-icons-
+          catppuccin-mocha-mauve
+          censor-tracker
+          clearurls
+          consent-o-matic
+          noscript
+          firenvim
+          snowflake
+        ];
+      };
+    };
     eza = {
       enable = true;
       git = true;
