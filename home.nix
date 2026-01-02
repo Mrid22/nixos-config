@@ -48,7 +48,7 @@
     enable = true;
     package = inputs.hyprland.packages.x86_64-linux.hyprland;
     plugins = [
-      inputs.split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}
+      inputs.split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}.split-monitor-workspaces
     ];
     settings = {
       general = {
