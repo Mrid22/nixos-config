@@ -8,7 +8,7 @@
             vim = {
               git.enable = true;
               statusline.lualine.enable = true;
-              filetree.nvimtree.enable = true;
+              filetree.nvimTree.enable = true;
               autocomplete.nvim-cmp.enable = true;
               treesitter = {
                 enable = true;
