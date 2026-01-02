@@ -16,10 +16,10 @@
   };
   services = {
     vicinae = {
-      enable = true; # default: false
+      enable = true;
       systemd = {
-        enable = true; # default: false
-        autoStart = true; # default: false
+        enable = true;
+        autoStart = true;
       };
       settings = {
         close_on_focus_loss = true;
@@ -47,6 +47,9 @@
   wayland.windowManager.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.x86_64-linux.hyprland;
+    plugins = [
+      inputs.split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}
+    ];
     settings = {
       general = {
         gaps_in = 5;
