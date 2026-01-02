@@ -14,24 +14,32 @@
     homeDirectory = "/home/mridula";
     stateVersion = "25.11";
   };
-
-  services.vicinae = {
-    enable = true; # default: false
-    systemd = {
+  services = {
+    vicinae = {
       enable = true; # default: false
-      autoStart = true; # default: false
+      systemd = {
+        enable = true; # default: false
+        autoStart = true; # default: false
+      };
+      settings = {
+        close_on_focus_loss = true;
+        search_files_in_root = true;
+        pop_to_root_on_close = false;
+        launcher_window.opacity = 0.5;
+      };
+      extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+        bluetooth
+        nix
+        power-profile
+      ];
     };
-    settings = {
-      close_on_focus_loss = true;
-      search_files_in_root = true;
-      pop_to_root_on_close = false;
-      launcher_window.opacity = 0.5;
+    hyprpaper = {
+      enable = true;
+      settings = {
+        preload = ["~/nixos-config/Wallpaper.jpg"];
+        wallpaper = [",~/nixos-config/Wallpaper.jpg"];
+      };
     };
-    extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
-      bluetooth
-      nix
-      power-profile
-    ];
   };
 
   catppuccin.enable = true;
