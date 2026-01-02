@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.gnome-disks.enable = true;
 
   environment.systemPackages = with pkgs; [
