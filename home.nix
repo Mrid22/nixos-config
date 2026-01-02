@@ -67,14 +67,9 @@
           drag_3fg = 1;
         };
       };
-      decoration = {
-        rounding = 5;
-        blur = {
-          enabled = true;
-          size = 3;
-          passes = 5;
-        };
-      };
+
+      decoration.rounding = 5;
+
       exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
