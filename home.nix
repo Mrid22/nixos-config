@@ -108,8 +108,8 @@
         "ALT SHIFT, 9, split-movetoworkspace, 9"
         "ALT SHIFT, 0, split-movetoworkspace, 10"
 
-        "ALT, SHIFT, H, split-changemonitor, prev"
-        "ALT, SHIFT, L, split-changemonitor, next"
+        "ALT SHIFT, H, split-changemonitor, prev"
+        "ALT SHIFT, L, split-changemonitor, next"
       ];
     };
   };
