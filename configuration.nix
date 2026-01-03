@@ -31,8 +31,10 @@
     portable.configuration = {
       homelab.enable = false;
     };
+    homelab.configuration = {
+      homelab.enable = true;
+    };
   };
-  homelab.enable = lib.mkDefault true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
