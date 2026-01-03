@@ -7,7 +7,7 @@
   options = {
     homelab.enable = lib.mkEnableOption;
   };
-  config = lib.mkIf config.homelab.enable {
+  config = {
     programs.gnome-disks.enable = true;
 
     environment.systemPackages = with pkgs; [
@@ -15,7 +15,7 @@
       spotdl
     ];
 
-    fileSystems."/media" = {
+    fileSystems."/media" = lib.mkIf config.homelab.enable {
       device = "/dev/sda1";
       fsType = "ntfs";
       options = [
@@ -25,41 +25,21 @@
       ];
     };
 
-    virtualisation.oci-containers.containers.docker = {
-      image = "homeassistant/home-assistant:stable";
-      autoStart = true;
-      extraOptions = [
-        "--pull=newer"
-      ];
-      volumes = [
-        "/media/home/config/:/config"
-      ];
-      ports = [
-        "127.0.0.1:8123:8123"
-        "127.0.0.1:8124:80"
-      ];
-      environment = {
-        TZ = "Europe/Amsterdam";
-        PUID = toString 1000;
-        PGID = toString 1000;
-      };
-    };
-
     services = {
-      open-webui.enable = true;
+      open-webui.enable = lib.mkIf config.homelab.enable;
 
       jellyfin = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         openFirewall = true;
       };
 
       jellyseerr = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         openFirewall = true;
       };
 
       sonarr = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         openFirewall = true;
       };
 
@@ -74,12 +54,12 @@
       };
 
       flaresolverr = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         openFirewall = true;
       };
 
       transmission = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         openFirewall = true;
         package = pkgs.transmission_4;
         settings = {
@@ -90,7 +70,7 @@
       };
 
       cloudflared = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         tunnels = {
           "bf02bdab-9d2e-42b8-be31-f37c348ef23e" = {
             credentialsFile = "/etc/cloudflared/bf02bdab-9d2e-42b8-be31-f37c348ef23e.json";
@@ -105,7 +85,7 @@
       };
 
       immich = {
-        enable = true;
+        enable = lib.mkIf config.homelab.enable;
         openFirewall = true;
         host = "0.0.0.0";
         machine-learning.enable = true;
@@ -113,7 +93,7 @@
       };
 
       ollama = {
-        enable = true;
+        enable = config.homelab.enable;
         host = "0.0.0.0";
         package = pkgs.ollama-cuda;
         loadModels = ["llama3.2:1b" "gpt-oss:20b" "codellama:34b"];
