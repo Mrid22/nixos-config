@@ -26,40 +26,40 @@
     };
 
     services = {
-      open-webui.enable = lib.mkIf config.homelab.enable;
+      open-webui = {inherit (config.homelab) enable;};
 
       jellyfin = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         openFirewall = true;
       };
 
       jellyseerr = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         openFirewall = true;
       };
 
       sonarr = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         openFirewall = true;
       };
 
       radarr = {
-        enable = true;
+        inherit (config.homelab) enable;
         openFirewall = true;
       };
 
       prowlarr = {
-        enable = true;
+        inherit (config.homelab) enable;
         openFirewall = true;
       };
 
       flaresolverr = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         openFirewall = true;
       };
 
       transmission = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         openFirewall = true;
         package = pkgs.transmission_4;
         settings = {
@@ -70,7 +70,7 @@
       };
 
       cloudflared = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         tunnels = {
           "bf02bdab-9d2e-42b8-be31-f37c348ef23e" = {
             credentialsFile = "/etc/cloudflared/bf02bdab-9d2e-42b8-be31-f37c348ef23e.json";
@@ -85,7 +85,7 @@
       };
 
       immich = {
-        enable = lib.mkIf config.homelab.enable;
+        inherit (config.homelab) enable;
         openFirewall = true;
         host = "0.0.0.0";
         machine-learning.enable = true;
@@ -93,7 +93,7 @@
       };
 
       ollama = {
-        enable = config.homelab.enable;
+        inherit (config.homelab) enable;
         host = "0.0.0.0";
         package = pkgs.ollama-cuda;
         loadModels = ["llama3.2:1b" "gpt-oss:20b" "codellama:34b"];
