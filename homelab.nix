@@ -7,7 +7,7 @@
   options = {
     homelab.enable = lib.mkEnableOption;
   };
-  config = {
+  config = lib.mkIf config.homelab.enable {
     programs.gnome-disks.enable = true;
 
     environment.systemPackages = with pkgs; [
@@ -26,40 +26,40 @@
     };
 
     services = {
-      open-webui = {inherit (config.homelab) enable;};
+      open-webui.enable = true;
 
       jellyfin = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
       };
 
       jellyseerr = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
       };
 
       sonarr = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
       };
 
       radarr = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
       };
 
       prowlarr = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
       };
 
       flaresolverr = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
       };
 
       transmission = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
         package = pkgs.transmission_4;
         settings = {
@@ -70,7 +70,7 @@
       };
 
       cloudflared = {
-        inherit (config.homelab) enable;
+        enable = true;
         tunnels = {
           "bf02bdab-9d2e-42b8-be31-f37c348ef23e" = {
             credentialsFile = "/etc/cloudflared/bf02bdab-9d2e-42b8-be31-f37c348ef23e.json";
@@ -85,7 +85,7 @@
       };
 
       immich = {
-        inherit (config.homelab) enable;
+        enable = true;
         openFirewall = true;
         host = "0.0.0.0";
         machine-learning.enable = true;
@@ -93,7 +93,7 @@
       };
 
       ollama = {
-        inherit (config.homelab) enable;
+        enable = true;
         host = "0.0.0.0";
         package = pkgs.ollama-cuda;
         loadModels = ["llama3.2:1b" "gpt-oss:20b" "codellama:34b"];
