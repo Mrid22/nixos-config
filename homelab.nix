@@ -5,7 +5,7 @@
   ...
 }: {
   options = {
-    homelab.enable = lib.mkEnableOption;
+    homelab.enable = lib.mkEnableOption "homelab";
   };
   config = lib.mkIf config.homelab.enable {
     programs.gnome-disks.enable = true;
