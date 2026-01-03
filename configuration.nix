@@ -1,7 +1,6 @@
 {
   pkgs,
   inputs,
-  lib,
   ...
 }: {
   imports = [
@@ -25,6 +24,21 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+  };
+
+  hardware = {
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    nvidia = {
+      modesetting.enable = true;
+      powerManagement.finegrained = true;
+    };
   };
 
   specialisation = {
@@ -73,6 +87,7 @@
 
     xserver = {
       enable = true;
+      videoDrivers = ["nvidia"];
 
       xkb = {
         layout = "us";
