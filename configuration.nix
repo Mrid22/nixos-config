@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    #./homelab.nix
+    ./homelab.nix
   ];
 
   boot.loader = {
@@ -24,6 +24,15 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+  };
+
+  specialisation = {
+    homelab.configuration = {
+      homelab.enable = true;
+    };
+    portable.configuration = {
+      homelab.enable = false;
+    };
   };
 
   # Set your time zone.

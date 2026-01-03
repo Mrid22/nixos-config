@@ -10,7 +10,7 @@
               statusline.lualine.enable = true;
               filetree.nvimTree = {
                 enable = true;
-                mappings.focus = "<space>e";
+                mappings.toggle = "<space>e";
               };
               autocomplete.nvim-cmp.enable = true;
               treesitter = {
