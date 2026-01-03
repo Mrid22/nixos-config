@@ -37,6 +37,7 @@
     };
     nvidia = {
       modesetting.enable = true;
+      open = true;
       powerManagement.finegrained = true;
     };
   };
