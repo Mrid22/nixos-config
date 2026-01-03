@@ -27,13 +27,11 @@
   };
 
   specialisation = {
-    homelab.configuration = {
-      homelab.enable = true;
-    };
     portable.configuration = {
       homelab.enable = false;
     };
   };
+  homelab.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
