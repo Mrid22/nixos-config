@@ -164,6 +164,7 @@
             noscript
             firenvim
             snowflake
+            ctrl-number-to-switch-tab
           ];
         };
       };

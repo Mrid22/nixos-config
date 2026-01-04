@@ -6,6 +6,7 @@
         modules = [
           {
             vim = {
+              lineNumberMode = "none";
               git.enable = true;
               statusline.lualine.enable = true;
               filetree.nvimTree = {
