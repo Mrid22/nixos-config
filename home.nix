@@ -164,6 +164,7 @@
             proton-pass
             canvasblocker
             noscript
+            sponsorblock
             catppuccin-web-file-icons
             catppuccin-mocha-mauve
             censor-tracker
