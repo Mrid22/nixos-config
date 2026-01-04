@@ -111,6 +111,14 @@
 
   programs = {
     home-manager.enable = true;
+    nh = {
+      enable = true;
+      clean = {
+        enable = true;
+        extraArgs = "--keep-since 4d --keep 3";
+        flake = "~/nixos-config";
+      };
+    };
     kitty = {
       enable = true;
       settings.background_opacity = 0.5;
