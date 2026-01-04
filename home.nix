@@ -117,7 +117,7 @@
         enable = true;
         extraArgs = "--keep-since 4d --keep 3";
       };
-      flake = "~/nixos-config";
+      flake = "/home/mridula/nixos-config";
     };
     kitty = {
       enable = true;
