@@ -171,6 +171,7 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+    blender
   ];
 
   system.stateVersion = "25.11";

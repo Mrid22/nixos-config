@@ -127,6 +127,13 @@
       enable = true;
       enableZshIntegration = true;
     };
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+      options = [
+        "--cmd cd"
+      ];
+    };
     eza = {
       enable = true;
       git = true;
