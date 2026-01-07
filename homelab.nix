@@ -31,6 +31,9 @@
       tailscale = {
         enable = true;
         openFirewall = true;
+        disableTaildrop = true;
+        disableUpstreamLogging = true;
+        useRoutingFeatures = "both";
       };
 
       jellyfin = {
