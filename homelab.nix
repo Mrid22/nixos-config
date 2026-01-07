@@ -29,7 +29,6 @@
       #     open-webui.enable = true;
       home-assistant = {
         enable = true;
-        config.name = "Mridul's House";
       };
 
       tailscale = {
