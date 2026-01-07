@@ -35,7 +35,7 @@ virtualisation = {
               "--pull=newer"
             ];
             volumes = [
-              "${cfg.configDir}:/config"
+              "/media/home"
             ];
             ports = [
               "127.0.0.1:8123:8123"
