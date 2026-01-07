@@ -28,6 +28,11 @@
     services = {
       #     open-webui.enable = true;
 
+      tailscale = {
+        enable = true;
+        openFirewall = true;
+      };
+
       jellyfin = {
         enable = true;
         openFirewall = true;
