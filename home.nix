@@ -31,6 +31,7 @@
         bluetooth
         nix
         power-profile
+        player-pilot
       ];
     };
     hyprpaper = {

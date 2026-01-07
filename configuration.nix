@@ -172,6 +172,7 @@
   environment.systemPackages = with pkgs; [
     kitty
     blender
+    playerctl
   ];
 
   system.stateVersion = "25.11";
