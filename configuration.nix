@@ -81,7 +81,6 @@
   };
   services = {
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
     keyd = {
       enable = true;
       keyboards = {
