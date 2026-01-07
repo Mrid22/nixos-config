@@ -162,29 +162,6 @@
     librewolf = {
       enable = true;
       profiles.mridula = {
-        search = {
-          force = true;
-          default = "ddg";
-          engines = {
-            mynixos = {
-              name = "My NixOS";
-              urls = [
-                {
-                  template = "https://mynixos.com/search?q={searchTerms}";
-                  params = [
-                    {
-                      name = "query";
-                      value = "searchTerms";
-                    }
-                  ];
-                }
-              ];
-
-              icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-              definedAliases = ["@nx"];
-            };
-          };
-        };
         extensions = {
           force = true;
           packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
