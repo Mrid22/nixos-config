@@ -24,7 +24,7 @@
         "exec"
       ];
     };
-virtualisation = {
+    virtualisation = {
       podman.enable = true;
       oci-containers = {
         containers = {
@@ -49,6 +49,7 @@ virtualisation = {
           };
         };
       };
+    };
 
     services = {
       #     open-webui.enable = true;
