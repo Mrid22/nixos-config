@@ -7,6 +7,7 @@
           inherit pkgs;
           settings = {
             background_opacity = 0.5;
+            themeFile = "Catppuccin-Mocha";
           };
         }
       ).wrapper;
