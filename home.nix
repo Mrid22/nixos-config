@@ -122,7 +122,7 @@
     };
     kitty = {
       enable = true;
-      settings.background_opacity = 0.5;
+      package = inputs.self.packages.git;
     };
     oh-my-posh = {
       enable = true;
