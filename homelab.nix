@@ -13,6 +13,7 @@
     environment.systemPackages = with pkgs; [
       ntfs3g
       spotdl
+      yt-dlp
     ];
 
     fileSystems."/media" = lib.mkIf config.homelab.enable {
