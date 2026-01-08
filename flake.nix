@@ -58,6 +58,7 @@
       imports = [
         ./base.nix
         ./git.nix
+        ./kity.nix
         ./nvf.nix
       ];
       systems = ["x86_64-linux"];
