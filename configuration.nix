@@ -80,6 +80,11 @@
     };
   };
   services = {
+    upower = {
+      enable = true;
+      percentageLow = 20;
+      percentageCritical = 5;
+    };
     displayManager.gdm.enable = true;
     keyd = {
       enable = true;
