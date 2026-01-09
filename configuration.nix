@@ -173,6 +173,7 @@
     kitty
     blender
     playerctl
+    picard
   ];
 
   system.stateVersion = "25.11";
