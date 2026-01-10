@@ -152,7 +152,10 @@
         enable = true;
         plugins = ["git" "sudo"];
       };
-      shellAliases."hdon" = "hyprctl dispatch dpms on";
+      shellAliases = {
+        nvim = "nix run ~/nixos-config";
+        hdon = "hyprctl dispatch dpms on";
+      };
     };
     caelestia = {
       enable = true;
