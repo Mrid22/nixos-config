@@ -15,7 +15,10 @@
     enable = true;
     venv = {
       enable = true;
-      requirements = "aioshutil";
+      requirements = ''
+        aioshutil
+        yt-dlp
+      '';
     };
   };
 
