@@ -88,7 +88,10 @@
         openFirewall = true;
       };
 
-      flaresolverr.enable = true;
+      flaresolverr = {
+        enable = true;
+        openFirewall = true;
+      };
 
       transmission = {
         enable = true;
