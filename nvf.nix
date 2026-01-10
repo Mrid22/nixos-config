@@ -43,6 +43,7 @@
                 enableFormat = true;
                 enableTreesitter = true;
                 nix.enable = true;
+                python.enable = true;
               };
             };
           }
