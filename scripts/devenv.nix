@@ -10,11 +10,12 @@
 
   # https://devenv.sh/packages/
   packages = with pkgs; [git];
+
   languages.python = {
     enable = true;
     venv = {
       enable = true;
-      requirements = "shutil";
+      requirements = "aioshutil";
     };
   };
 
