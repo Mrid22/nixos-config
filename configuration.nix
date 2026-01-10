@@ -170,6 +170,7 @@
     neovim = {
       enable = true;
       defaultEditor = true;
+      package = inputs.self.packages.x86_64-linux.default;
     };
   };
   # Allow unfree packages
