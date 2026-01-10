@@ -177,6 +177,7 @@
 
   environment.systemPackages = with pkgs; [
     kitty
+    devenv
     blender
     playerctl
     picard
