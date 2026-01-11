@@ -187,6 +187,7 @@
     blender
     playerctl
     picard
+    finamp
   ];
 
   system.stateVersion = "25.11";
