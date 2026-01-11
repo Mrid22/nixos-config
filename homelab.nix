@@ -78,11 +78,6 @@
         openFirewall = true;
       };
 
-      lidarr = {
-        enable = true;
-        openFirewall = true;
-      };
-
       radarr = {
         enable = true;
         openFirewall = true;
