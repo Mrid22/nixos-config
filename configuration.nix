@@ -188,6 +188,7 @@
     playerctl
     picard
     finamp
+    playerctl
   ];
 
   system.stateVersion = "25.11";
