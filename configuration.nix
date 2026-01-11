@@ -189,6 +189,7 @@
     picard
     finamp
     playerctl
+    brightnessctl
   ];
 
   system.stateVersion = "25.11";
