@@ -16,6 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mrid-wrappers = {
+      url = "github:mrid22/wrappers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -60,6 +65,7 @@
         ./git.nix
         ./kitty.nix
         ./nvf.nix
+        ./zsh.nix
       ];
       systems = ["x86_64-linux"];
     };
