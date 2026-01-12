@@ -162,7 +162,10 @@
   };
 
   programs = {
-    zsh.enable = true;
+    zsh = {
+      enable = true;
+      package = inputs.self.packages.x86_64-linux.zsh;
+    };
     npm.enable = true;
     hyprland = {
       enable = true;
