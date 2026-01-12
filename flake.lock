@@ -570,6 +570,26 @@
         "type": "github"
       }
     },
+    "mrid-wrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1768247532,
+        "narHash": "sha256-rSTrqtYtI4FW6IBA3R1Ja6S5JM7eE6830uj79Jbi4Pg=",
+        "owner": "mrid22",
+        "repo": "wrappers",
+        "rev": "f2883f393d6f6bbf765401242fe1496e18d80b0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "mrid22",
+        "repo": "wrappers",
+        "type": "github"
+      }
+    },
     "ndg": {
       "inputs": {
         "nixpkgs": [
@@ -730,6 +750,7 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "mrid-wrappers": "mrid-wrappers",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "split-monitor-workspaces": "split-monitor-workspaces",
