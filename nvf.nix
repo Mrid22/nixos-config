@@ -8,6 +8,7 @@
             vim = {
               lineNumberMode = "none";
               git.enable = true;
+              telescope.enable = true;
               statusline.lualine.enable = true;
               filetree.nvimTree = {
                 enable = true;
