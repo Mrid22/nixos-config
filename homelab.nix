@@ -66,7 +66,7 @@
       nextcloud = {
         enable = true;
         hostName = "mridulcloud";
-        config.adminPassFile = "/etc/nextcloud/pass";
+        config.adminpassFile = "/etc/nextcloud/pass";
       };
 
       jellyfin = {
