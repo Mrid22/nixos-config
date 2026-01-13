@@ -37,8 +37,8 @@
     hyprpaper = {
       enable = true;
       settings = {
-        preload = ["~/nixos-config/Wallpaper.jp"];
-        wallpaper = [",~/nixos-config/Wallpaper.jp"];
+        preload = ["~/nixos-config/Wallpaper.jpg"];
+        wallpaper = [",~/nixos-config/Wallpaper.jpg"];
       };
     };
   };
