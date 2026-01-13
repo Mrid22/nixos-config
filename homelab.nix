@@ -53,6 +53,7 @@
     };
 
     services = {
+      syncthing.enable = true;
       open-webui.enable = true;
 
       tailscale = {
