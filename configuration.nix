@@ -190,6 +190,7 @@
     finamp
     playerctl
     brightnessctl
+    super-productivity
   ];
 
   system.stateVersion = "25.11";
