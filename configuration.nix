@@ -164,6 +164,13 @@
   programs = {
     zsh.enable = true;
     npm.enable = true;
+    gamescope.enable = true;
+    gamemode.enable = true;
+    steam = {
+      enable = true;
+      protontricks.enable = true;
+      gamescopeSession.enable = true;
+    };
     hyprland = {
       enable = true;
       package = inputs.hyprland.packages.x86_64-linux.hyprland;
