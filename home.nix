@@ -7,7 +7,6 @@
     vicinae.homeManagerModules.default
     catppuccin.homeModules.catppuccin
     caelestia-shell.homeManagerModules.default
-    stylix.homeModules.stylix
   ];
 
   home = {
@@ -15,8 +14,6 @@
     homeDirectory = "/home/mridula";
     stateVersion = "25.11";
   };
-
-  stylix.enable = true;
 
   services = {
     vicinae = {
@@ -47,7 +44,12 @@
     };
   };
 
-  catppuccin.enable = true;
+  catppuccin = {
+    enable = true;
+    accent = "mauve";
+    flavor = "mocha";
+    cache.enable = true;
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;
