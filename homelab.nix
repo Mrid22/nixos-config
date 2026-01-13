@@ -67,6 +67,7 @@
         enable = true;
         hostName = "mridulcloud";
         config.adminpassFile = "/etc/nextcloud/pass";
+        dbtype = "mysql";
       };
 
       jellyfin = {
