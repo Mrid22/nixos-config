@@ -66,7 +66,7 @@
       nextcloud = {
         enable = true;
         package = pkgs.nextcloud31;
-        hostName = "mridulcloud";
+        hostName = "localhost";
         config = {
           adminpassFile = "/etc/nextcloud/pass";
           dbtype = "mysql";
