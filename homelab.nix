@@ -63,6 +63,10 @@
         useRoutingFeatures = "both";
       };
 
+      nextcloud = {
+        enable = true;
+      };
+
       jellyfin = {
         enable = true;
         openFirewall = true;
