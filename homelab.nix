@@ -63,16 +63,6 @@
         useRoutingFeatures = "both";
       };
 
-      nextcloud = {
-        enable = true;
-        package = pkgs.nextcloud31;
-        hostName = "localhost";
-        config = {
-          adminpassFile = "/etc/nextcloud/pass";
-          dbtype = "mysql";
-        };
-      };
-
       jellyfin = {
         enable = true;
         openFirewall = true;
