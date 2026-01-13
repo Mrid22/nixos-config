@@ -54,6 +54,7 @@
 
     services = {
       syncthing.enable = true;
+      silverbullet.enable = true;
       open-webui.enable = true;
 
       tailscale = {
