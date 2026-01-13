@@ -65,6 +65,7 @@
         ./git.nix
         ./kitty.nix
         ./nvf.nix
+        ./hyprpaper.nix
       ];
       systems = ["x86_64-linux"];
     };
