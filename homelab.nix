@@ -65,6 +65,7 @@
 
       nextcloud = {
         enable = true;
+        package = pkgs.nextcloud31;
         hostName = "mridulcloud";
         config = {
           adminpassFile = "/etc/nextcloud/pass";
