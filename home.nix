@@ -161,17 +161,16 @@
     };
     zsh = {
       enable = true;
-      package = inputs.self.packages.x86_64-linux.zsh;
-      #  autosuggestion.enable = true;
-      #  syntaxHighlighting.enable = true;
-      #  oh-my-zsh = {
-      #    enable = true;
-      #    plugins = ["git" "sudo"];
-      #  };
-      #  shellAliases = {
-      #    nvim = "nix run ~/nixos-config";
-      #    hdon = "hyprctl dispatch dpms on";
-      #  };
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = ["git" "sudo"];
+      };
+      shellAliases = {
+        nvim = "nix run ~/nixos-config";
+        hdon = "hyprctl dispatch dpms on";
+      };
     };
     caelestia = {
       enable = true;
