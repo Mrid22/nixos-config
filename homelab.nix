@@ -65,6 +65,7 @@
 
       nextcloud = {
         enable = true;
+        hostName = "mridulcloud";
       };
 
       jellyfin = {
