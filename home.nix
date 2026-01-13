@@ -7,6 +7,7 @@
     vicinae.homeManagerModules.default
     catppuccin.homeModules.catppuccin
     caelestia-shell.homeManagerModules.default
+    stylix.homeModules.stylix
   ];
 
   home = {
@@ -14,6 +15,9 @@
     homeDirectory = "/home/mridula";
     stateVersion = "25.11";
   };
+
+  stylix.enable = true;
+
   services = {
     vicinae = {
       enable = true;
