@@ -1,6 +1,6 @@
 {inputs, ...}: {
   perSystem = {pkgs, ...}: {
-    packages.git =
+    packages.zsh =
       (
         inputs.wrappers.wrapperModules.zsh.apply
         {
