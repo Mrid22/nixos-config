@@ -9,7 +9,7 @@
             keyMap = "vi";
             shellAliases = {
               "hdon" = "hyprctl dispatch dpms on";
-              "hdoff" = "hyprctl dispatch dpms off"
+              "hdoff" = "hyprctl dispatch dpms off";
             };
           };
         }
