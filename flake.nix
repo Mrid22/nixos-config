@@ -11,10 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mridwrappers = {
-      url = "github:mrid22/wrappers";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     wrappers = {
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -64,7 +60,6 @@
         ./git.nix
         ./kitty.nix
         ./nvf.nix
-        ./zsh.nix
       ];
       systems = ["x86_64-linux"];
     };
