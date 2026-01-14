@@ -133,6 +133,7 @@
 
   programs = {
     home-manager.enable = true;
+    gh.enable = true;
     nh = {
       enable = true;
       clean = {
