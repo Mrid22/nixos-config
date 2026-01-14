@@ -7,6 +7,10 @@
           inherit pkgs;
           settings = {
             keyMap = "vi";
+            shellAliases = {
+              "hdon" = "hyprctl dispatch dpms on";
+              "hdoff" = "hyprctl dispatch dpms off"
+            };
           };
         }
       ).wrapper;
