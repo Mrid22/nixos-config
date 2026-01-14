@@ -577,11 +577,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768400739,
-        "narHash": "sha256-js8snCd+X8v3F0C8KvGkxvNz5APTNwGN8UXPwNncsT4=",
+        "lastModified": 1768410326,
+        "narHash": "sha256-vyEvcG6UA0yno/A1NNYIUc/bfQa3NP6BrzryG3TOmKA=",
         "owner": "mrid22",
         "repo": "wrappers",
-        "rev": "83030be77306601f369a7debc5aea5d163eee80b",
+        "rev": "5c4cf3d8c0581b1db1d36a20a0aee86d2fe5011e",
         "type": "github"
       },
       "original": {
