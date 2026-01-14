@@ -15,6 +15,7 @@
                 mappings.toggle = "<space>e";
               };
               autocomplete.nvim-cmp.enable = true;
+              autopairs.nvim-autopairs.enable = true;
               treesitter = {
                 enable = true;
                 fold = true;
