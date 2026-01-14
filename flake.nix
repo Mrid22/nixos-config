@@ -11,6 +11,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mridwrappers = {
+      url = "github:mrid22/wrappers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     wrappers = {
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
