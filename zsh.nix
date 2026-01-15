@@ -5,7 +5,6 @@
         inputs.mridwrappers.wrapperModules.zsh.apply
         {
           inherit pkgs;
-          settings = {
             keyMap = "vicmd";
 	    completion.enable = true;
             shellAliases = {
@@ -13,7 +12,6 @@
               "hdoff" = "hyprctl dispatch dpms off";
 	      "nvim" = "nix run ~/nixos-config";
             };
-          };
         }
       ).wrapper;
   };

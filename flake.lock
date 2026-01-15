@@ -577,11 +577,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768472910,
-        "narHash": "sha256-Nmr6w+bE+hcQCsEBkiHLWN8sWs9YCzYWZW4u6lfE5YA=",
+        "lastModified": 1768326700,
+        "narHash": "sha256-6A4yLRkTvqpt8bfz7xy1O7F9sPlMCgz3PlImj97KDX0=",
         "owner": "mrid22",
         "repo": "wrappers",
-        "rev": "0aefdbe27af48454c6c73579a122bfc8ca9667a6",
+        "rev": "4cce9f9c17658f36d378a14809ff59029f0dcfb4",
         "type": "github"
       },
       "original": {
@@ -847,11 +847,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1768039142,
-        "narHash": "sha256-/0CnNbAEdMgyPlaABtgwach+M9MDIHD+A2wr90jxcHU=",
+        "lastModified": 1768480078,
+        "narHash": "sha256-n1Knq5NgOm0cJ60JsvGHy2sayng7EDc6sZYCjw+/lac=",
         "owner": "vicinaehq",
         "repo": "vicinae",
-        "rev": "a4d6d7fa459ffe66192ff88276379246294b43c6",
+        "rev": "c61d4fbd9553d4dc5231251dc20e96f9b8972a49",
         "type": "github"
       },
       "original": {

@@ -17,7 +17,7 @@
     };
 
     mridwrappers = {
-      url = "github:mrid22/wrappers";
+      url = "path:/home/mridula/Coding/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
