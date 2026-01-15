@@ -142,10 +142,6 @@
       };
       flake = "/home/mridula/nixos-config";
     };
-    kitty = {
-      enable = true;
-      package = inputs.self.packages.x86_64-linux.kitty;
-    };
     oh-my-posh = {
       enable = true;
       enableZshIntegration = true;
