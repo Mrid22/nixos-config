@@ -189,7 +189,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    inputs.self.packages.x86_64-linux.kitty;
+    inputs.self.packages.x86_64-linux.kitty
     devenv
     blender
     playerctl
