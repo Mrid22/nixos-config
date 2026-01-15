@@ -80,6 +80,7 @@
       exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
+        "ALT SHIFT, Q, exec, kitty nix run ~/nixos-config#zsh"
         "ALT, F, exec, librewolf"
         "ALT, SPACE, exec, vicinae open"
         "ALT, C, killactive"
@@ -168,17 +169,17 @@
     };
     zsh = {
       enable = true;
-      package = inputs.self.packages.x86_64-linux.zsh;
-      # autosuggestion.enable = true;
-      # syntaxHighlighting.enable = true;
-      # oh-my-zsh = {
-      #   enable = true;
-      #   plugins = ["git" "sudo"];
-      # };
-      # shellAliases = {
-      #   nvim = "nix run ~/nixos-config";
-      #   hdon = "hyprctl dispatch dpms on";
-      # };
+      # package = inputs.self.packages.x86_64-linux.zsh;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = ["git" "sudo"];
+      };
+      shellAliases = {
+        nvim = "nix run ~/nixos-config";
+        hdon = "hyprctl dispatch dpms on";
+      };
     };
     caelestia = {
       enable = true;
