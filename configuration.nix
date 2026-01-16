@@ -139,7 +139,8 @@
   };
   security.rtkit.enable = true;
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell =  inputs.self.packages.x86_64-linux.zsh;
+
     users.mridula = {
       isNormalUser = true;
       description = "Mridul Agarwal";
@@ -162,7 +163,6 @@
   };
 
   programs = {
-    zsh.enable = true;
     npm.enable = true;
     gamescope.enable = true;
     gamemode.enable = true;

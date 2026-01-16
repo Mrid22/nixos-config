@@ -163,8 +163,8 @@
       enableZshIntegration = true;
     };
     zsh = {
-      enable = true;
-      package = inputs.self.packages.x86_64-linux.zsh;
+     # enable = true;
+     # package = inputs.self.packages.x86_64-linux.zsh;
       #autosuggestion.enable = true;
       #syntaxHighlighting.enable = true;
       #oh-my-zsh = {
