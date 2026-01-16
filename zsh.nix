@@ -5,13 +5,16 @@
         inputs.mridwrappers.wrapperModules.zsh.apply
         {
           inherit pkgs;
-            keyMap = "vicmd";
-	    completion.enable = true;
+          settings = {
+            keyMap = "emacs";
             shellAliases = {
-              "hdon" = "hyprctl dispatch dpms on";
-              "hdoff" = "hyprctl dispatch dpms off";
-	      "nvim" = "nix run ~/nixos-config";
+              nvim = "nix run ~/nixos-config";
+              hdon = "hyprctl dispatch dpms on";
             };
+          };
+          extraRC = ''
+            echo "works"
+          '';
         }
       ).wrapper;
   };

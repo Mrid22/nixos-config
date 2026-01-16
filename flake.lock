@@ -66,11 +66,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1768218535,
-        "narHash": "sha256-hu8b8JW28QGvH3lkVmIPltr5S8U6/hkRoJDlWA9kdcE=",
+        "lastModified": 1768490533,
+        "narHash": "sha256-Crf752Mpg956GHHUphH+WJn6yXfRCr9HY4jeNMSQSXE=",
         "owner": "caelestia-dots",
         "repo": "shell",
-        "rev": "3bb58e6da8f9bf465e6cd5517c46c4a0667c0e07",
+        "rev": "2d000c1052e50c6a1c36db91d998bc6fa4b1ba59",
         "type": "github"
       },
       "original": {
@@ -107,11 +107,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1768449815,
-        "narHash": "sha256-ldbEmjXbSZ3KRWgWAqBv7b0R6r/KE/Shdf7P2shLoHM=",
+        "lastModified": 1768500104,
+        "narHash": "sha256-Xa8XJaydHKAhDCLyjdKcDKjFrGgdahNcVo1boGUdZKY=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "8ab73ae7afde9968632293842cc546884b692c41",
+        "rev": "7e517454cd248c76046c3157b56662d223de29b1",
         "type": "gitlab"
       },
       "original": {
@@ -311,11 +311,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1768319076,
-        "narHash": "sha256-is65o80lB9tWMekx77O4+GCQxLeB2kiA60hejzpA+HA=",
+        "lastModified": 1768492847,
+        "narHash": "sha256-ZrCazve+KUM47OK5rey/3wp54n/M3f4pZ9dUEbOrNdI=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "e0cf88809de12c39ad8a1ad1c0194967b0029ec8",
+        "rev": "ac9df44788492fd1d12da8ec0fbbf691386c45a4",
         "type": "github"
       },
       "original": {
@@ -577,17 +577,14 @@
         ]
       },
       "locked": {
-        "lastModified": 1768326700,
-        "narHash": "sha256-6A4yLRkTvqpt8bfz7xy1O7F9sPlMCgz3PlImj97KDX0=",
-        "owner": "mrid22",
-        "repo": "wrappers",
-        "rev": "4cce9f9c17658f36d378a14809ff59029f0dcfb4",
-        "type": "github"
+        "lastModified": 1768579560,
+        "narHash": "sha256-nt2HG4hfep8/VnFyIpc0+52EHI7fH8dTmNZ66j3UWQo=",
+        "path": "/home/mridula/Coding/wrappers",
+        "type": "path"
       },
       "original": {
-        "owner": "mrid22",
-        "repo": "wrappers",
-        "type": "github"
+        "path": "/home/mridula/Coding/wrappers",
+        "type": "path"
       }
     },
     "ndg": {
