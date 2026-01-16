@@ -12,9 +12,6 @@
               hdon = "hyprctl dispatch dpms on";
             };
           };
-          extraRC = ''
-            echo "works"
-          '';
         }
       ).wrapper;
   };
