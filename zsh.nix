@@ -10,6 +10,17 @@
             shellAliases = {
               nvim = "nix run ~/nixos-config";
               hdon = "hyprctl dispatch dpms on";
+              ls = "eza --git";
+            };
+            env = {
+              NH_FLAKE = "~/nixos-config";
+            };
+            history = {
+              append = true;
+              expanded = true;
+              ignoreSpace = true;
+              saveNoDups = true;
+              ignoreDups = true;
             };
           };
         }

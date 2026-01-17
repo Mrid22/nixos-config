@@ -15,6 +15,12 @@
     stateVersion = "25.11";
   };
 
+  programs.zsh = {
+    enable = true;
+    oh-my-zsh.enable = true;
+    oh-my-zsh.plugins = ["git" "sudo"];
+  };
+
   services = {
     vicinae = {
       enable = true;
