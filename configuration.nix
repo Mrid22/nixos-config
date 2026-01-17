@@ -7,17 +7,19 @@
     ./hardware-configuration.nix
     ./homelab.nix
   ];
-
-  boot.loader = {
-    systemd-boot.enable = false;
-    grub = {
-      efiSupport = true;
-      enable = true;
-      devices = ["nodev"];
-    };
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
+  boot = {
+    kernelParams = ["nvidia_drm.fbdev=1"];
+    loader = {
+      systemd-boot.enable = false;
+      grub = {
+        efiSupport = true;
+        enable = true;
+        devices = ["nodev"];
+      };
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
     };
   };
 
@@ -180,10 +182,8 @@
       enable = true;
       package = inputs.self.packages.x86_64-linux.git;
     };
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-    };
+
+    neovim.defaultEditor = true;
   };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
