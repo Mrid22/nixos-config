@@ -139,7 +139,7 @@
   };
   security.rtkit.enable = true;
   users = {
-    defaultUserShell =  inputs.self.packages.x86_64-linux.zsh;
+    defaultUserShell = inputs.self.packages.x86_64-linux.zsh;
 
     users.mridula = {
       isNormalUser = true;
