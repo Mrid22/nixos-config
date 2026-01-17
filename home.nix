@@ -15,12 +15,6 @@
     stateVersion = "25.11";
   };
 
-  programs.zsh = {
-    enable = true;
-    oh-my-zsh.enable = true;
-    oh-my-zsh.plugins = ["git" "sudo"];
-  };
-
   services = {
     vicinae = {
       enable = true;
@@ -176,17 +170,6 @@
         extraArgs = "--keep-since 4d --keep 3";
       };
       flake = "/home/mridula/nixos-config";
-    };
-    oh-my-posh = {
-      enable = true;
-      enableZshIntegration = true;
-    };
-    zoxide = {
-      enable = true;
-      enableZshIntegration = true;
-      options = [
-        "--cmd cd"
-      ];
     };
     eza = {
       enable = true;

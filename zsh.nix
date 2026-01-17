@@ -23,6 +23,10 @@
               ignoreDups = true;
             };
           };
+          extraRC = ''
+            eval "$(zoxide init zsh --cmd cd)"
+            eval "$(oh-my-posh init zsh)"
+          '';
         }
       ).wrapper;
   };
