@@ -128,17 +128,28 @@
 
     openssh.enable = true;
   };
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-    extra-substituters = [
-      "https://vicinae.cachix.org"
-      "https://devenv.cachix.org"
-    ];
-    extra-trusted-public-keys = [
-      "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
-      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
-    ];
+
+  nix = {
+    optimise.automatic = true;
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+      extra-substituters = [
+        "https://vicinae.cachix.org"
+        "https://devenv.cachix.org"
+      ];
+      extra-trusted-public-keys = [
+        "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
+        "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+      ];
+    };
   };
+
   security.rtkit.enable = true;
   users = {
     defaultUserShell = inputs.self.packages.x86_64-linux.zsh;
@@ -209,6 +220,16 @@
     oh-my-posh
     brightnessctl
   ];
-
-  system.stateVersion = "25.11";
+  system = {
+    autoUpgrade = {
+      enable = true;
+      flake = inputs.self.outPath;
+      flags = [
+        "-L" # print build logs
+      ];
+      dates = "02:00";
+      randomizedDelaySec = "45min";
+    };
+    stateVersion = "25.11";
+  };
 }
