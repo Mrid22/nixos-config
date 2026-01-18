@@ -570,6 +570,23 @@
         "type": "github"
       }
     },
+    "mridwrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1768723798,
+        "narHash": "sha256-hhMM5Gj1Cxr4gdEoeUuflW0Dz5tOGvYBGIhYUjzfh2Y=",
+        "path": "/home/mridula/Coding/wrappers",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/mridula/Coding/wrappers",
+        "type": "path"
+      }
+    },
     "ndg": {
       "inputs": {
         "nixpkgs": [
@@ -731,6 +748,7 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "mridwrappers": "mridwrappers",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "split-monitor-workspaces": "split-monitor-workspaces",
