@@ -11,6 +11,9 @@
               nvim = "nix run ~/nixos-config";
               hdon = "hyprctl dispatch dpms on";
               ls = "eza --icons";
+              gaa = "git add .";
+              gcam = "git commit -a -m";
+              gp = "git push";
             };
             env = {
               NH_OS_FLAKE = "~/nixos-config";
