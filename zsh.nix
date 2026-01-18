@@ -14,6 +14,7 @@
               gaa = "git add .";
               gcam = "git commit -a -m";
               gp = "git push";
+              gd = "git diff";
             };
             env = {
               NH_OS_FLAKE = "~/nixos-config";
