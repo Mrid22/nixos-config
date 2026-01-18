@@ -13,7 +13,7 @@
               ls = "eza --icons";
             };
             env = {
-              NH_FLAKE = "~/nixos-config";
+              NH_OS_FLAKE = "~/nixos-config";
             };
             history = {
               append = true;
