@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  flakepkgs = inputs.self.packages;
+in {
   imports = [
     ./hardware-configuration.nix
     ./homelab.nix
@@ -152,7 +154,7 @@
 
   security.rtkit.enable = true;
   users = {
-    defaultUserShell = inputs.self.packages.x86_64-linux.zsh;
+    defaultUserShell = flakepkgs.x86_64-linux.zsh;
 
     users.mridula = {
       isNormalUser = true;
@@ -198,18 +200,14 @@
       flake = "/home/mridula/nixos-config";
     };
 
-    git = {
-      enable = true;
-      package = inputs.self.packages.x86_64-linux.git;
-    };
-
     neovim.defaultEditor = true;
   };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    inputs.self.packages.x86_64-linux.kitty
+    flakepkgs.x86_64-linux.kitty
+    flakepkgs.x86_64-linux.git
     devenv
     blender
     playerctl
