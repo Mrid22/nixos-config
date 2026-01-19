@@ -10,6 +10,7 @@
             shellAliases = {
               nvim = "nix run ~/nixos-config";
               hdon = "hyprctl dispatch dpms on";
+              hdoff = "hyprctl dispatch dpms off";
               ls = "eza --icons";
               gaa = "git add .";
               gcam = "git commit -a -m";
