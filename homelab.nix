@@ -138,7 +138,7 @@
         enable = true;
         host = "0.0.0.0";
         package = pkgs.ollama-cuda;
-        loadModels = ["gpt-oss:20b"];
+        loadModels = ["gpt-oss:20b" "whisper-tiny:latest"];
         models = "/media/models/";
       };
     };
