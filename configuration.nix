@@ -59,10 +59,6 @@ in {
       homelab.enable = false;
       environment.etc."specialisation".text = "portable";
     };
-    homelab.configuration = {
-      homelab.enable = true;
-      environment.etc."specialisation".text = "homelab";
-    };
   };
 
   # Set your time zone.
