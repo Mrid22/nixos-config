@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }: let
   flakepkgs = inputs.self.packages;
@@ -53,6 +54,7 @@ in {
       };
     };
   };
+  homelab.enable = lib.mkDefault true;
 
   specialisation = {
     portable.configuration = {
