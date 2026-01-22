@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  flakepkgs = inputs.self.packages;
+  wrappedpkgs = inputs.self.packages.x86_64-linux;
 in {
   imports = [
     ./hardware-configuration.nix
@@ -147,7 +147,7 @@ in {
 
   security.rtkit.enable = true;
   users = {
-    defaultUserShell = flakepkgs.x86_64-linux.zsh;
+    defaultUserShell = wrappedpkgs.zsh;
 
     users.mridula = {
       isNormalUser = true;
@@ -199,8 +199,8 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    flakepkgs.x86_64-linux.kitty
-    flakepkgs.x86_64-linux.git
+    wrappedpkgs.kitty
+    wrappedpkgs.git
     devenv
     blender
     playerctl
