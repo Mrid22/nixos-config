@@ -19,7 +19,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Frappe";
+      name = "catppuccin-frappe-blue-standard";
       package = pkgs.catppuccin-gtk;
     };
   };
@@ -201,7 +201,6 @@
             noscript
             firenvim
             snowflake
-            ctrl-number-to-switch-tabs
           ];
         };
         search = {
