@@ -206,7 +206,6 @@ in {
     finamp
     playerctl
     zoxide
-    oh-my-posh
     brightnessctl
   ];
   system = {
