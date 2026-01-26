@@ -304,7 +304,8 @@
         "nvf": "nvf",
         "vicinae": "vicinae",
         "vicinae-extensions": "vicinae-extensions",
-        "wrappers": "wrappers"
+        "wrappers": "wrappers",
+        "zen-browser": "zen-browser"
       }
     },
     "systems": {
@@ -435,6 +436,29 @@
       "original": {
         "owner": "lassulus",
         "repo": "wrappers",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769383295,
+        "narHash": "sha256-NPoMjIh57tDuRY6BG/SKwyxHicyICvQRLQgu9jHR46A=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "337d5df89d17caf32d39f3efc9a868beded6933a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
