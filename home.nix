@@ -163,6 +163,7 @@
   };
 
   programs = {
+    atuin.enable = true;
     hyprlock.enable = true;
     home-manager.enable = true;
     gh.enable = true;
