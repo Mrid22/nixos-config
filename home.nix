@@ -163,6 +163,7 @@
   };
 
   programs = {
+    hyprlock.enable = true;
     home-manager.enable = true;
     gh.enable = true;
     eza = {
