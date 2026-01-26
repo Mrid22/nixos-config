@@ -182,6 +182,24 @@
     };
     zen-browser = {
       enable = true;
+      policies = {
+        AutofillAddressEnabled = true;
+        AutofillCreditCardEnabled = false;
+        DisableAppUpdate = true;
+        DisableFeedbackCommands = true;
+        DisableFirefoxStudies = true;
+        DisablePocket = true;
+        DisableTelemetry = true;
+        DontCheckDefaultBrowser = true;
+        NoDefaultBookmarks = true;
+        OfferToSaveLogins = false;
+        EnableTrackingProtection = {
+          Value = true;
+          Locked = true;
+          Cryptomining = true;
+          Fingerprinting = true;
+        };
+      };
       profiles.mridula = {
         extensions = {
           force = true;
@@ -203,6 +221,79 @@
             snowflake
           ];
         };
+        keyboardShortcuts = [
+          {
+            id = "key_selectTab1";
+            key = "1";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab2";
+            key = "2";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab3";
+            key = "3";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab4";
+            key = "4";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab5";
+            key = "5";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab6";
+            key = "6";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab7";
+            key = "7";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab8";
+            key = "8";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab9";
+            key = "9";
+            modifiers = {
+              control = true;
+            };
+          }
+          {
+            id = "key_selectTab10";
+            key = "0";
+            modifiers = {
+              control = true;
+            };
+          }
+        ];
+        keyboardShortcutsVersion = 14;
         search = {
           force = true;
           default = "ddg";
