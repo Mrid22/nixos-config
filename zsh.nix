@@ -7,10 +7,6 @@
           inherit pkgs;
           settings = {
             keyMap = "emacs";
-            integrations = {
-              atuin.enable = true;
-              oh-my-posh.enable = true;
-            };
             shellAliases = {
               nvim = "nix run ~/nixos-config";
               hdon = "hyprctl dispatch dpms on";
@@ -34,6 +30,8 @@
           };
           extraRC = ''
             eval "$(zoxide init zsh --cmd cd)"
+            eval "$(oh-my-posh init zsh)"
+            eval "$(atuin init zsh)"
           '';
         }
       ).wrapper;

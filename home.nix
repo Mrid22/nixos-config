@@ -171,10 +171,6 @@
       git = true;
       enableZshIntegration = true;
     };
-    atuin = {
-      enable = true;
-      enableZshIntegration = true;
-    };
     caelestia = {
       enable = true;
       systemd.enable = true;
