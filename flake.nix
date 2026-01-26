@@ -17,7 +17,7 @@
     };
 
     mridwrappers = {
-      url = "file:~/Coding/wrappers";
+      url = "path:/home/mridula/Coding/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

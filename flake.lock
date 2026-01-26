@@ -178,6 +178,23 @@
         "type": "github"
       }
     },
+    "mridwrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769426820,
+        "narHash": "sha256-SjlD/7dgfYp0czFrQJydwP4t2d9s34Qb4Ojlui+LtjU=",
+        "path": "/home/mridula/Coding/wrappers",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/mridula/Coding/wrappers",
+        "type": "path"
+      }
+    },
     "ndg": {
       "inputs": {
         "nixpkgs": [
@@ -300,6 +317,7 @@
         "firefox-addons": "firefox-addons",
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
+        "mridwrappers": "mridwrappers",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "vicinae": "vicinae",
