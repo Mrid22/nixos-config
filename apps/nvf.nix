@@ -14,6 +14,10 @@
                 enable = true;
                 mappings.toggle = "<space>e";
               };
+              terminal.toggleterm = {
+                enable = true;
+                mappings.open = "<space>t";
+              };
               autocomplete.nvim-cmp.enable = true;
               autopairs.nvim-autopairs.enable = true;
               treesitter = {
@@ -46,6 +50,10 @@
                 enableTreesitter = true;
                 nix.enable = true;
                 python.enable = true;
+                ts = {
+                  enable = true;
+                  extensions.ts-error-translator.enable = true;
+                };
               };
             };
           }
