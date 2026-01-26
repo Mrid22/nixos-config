@@ -2,7 +2,7 @@
   perSystem = {pkgs, ...}: {
     packages.zsh =
       (
-        inputs.wrappers.wrapperModules.zsh.apply
+        inputs.mridwrappers.wrapperModules.zsh.apply
         {
           inherit pkgs;
           settings = {
