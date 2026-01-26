@@ -226,6 +226,8 @@
         mods = [
           "642854b5-88b4-4c40-b256-e035532109df" # Transparent Zen
           "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec" # Clean URL Bar
+          "f4866f39-cfd6-4498-ab92-54213b8279dc" # Animation Plus
+          "a6335949-4465-4b71-926c-4a52d34bc9c0" # Better find bar
         ];
         keyboardShortcuts = [
           {
