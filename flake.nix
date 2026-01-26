@@ -16,11 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mridwrappers = {
-      url = "path:/home/mridula/Coding/wrappers";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,15 +26,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #   hyprland = {
+    #     url = "github:hyprwm/Hyprland";
+    #     inputs.nixpkgs.follows = "nixpkgs";
+    #   };
 
-    split-monitor-workspaces = {
-      url = "github:Duckonaut/split-monitor-workspaces";
-      inputs.hyprland.follows = "hyprland";
-    };
 
     vicinae-extensions = {
       url = "github:vicinaehq/extensions";

@@ -15,6 +15,15 @@
     stateVersion = "25.11";
   };
 
+  wayland.windowManager.hyprland = {
+    enable = true;
+    settings = {
+      binds = [
+        "ALT,Q,exec,kitty"
+      ];
+    };
+  };
+
   services = {
     vicinae = {
       enable = true;
@@ -53,10 +62,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.hyprland;
-    plugins = [
-      inputs.split-monitor-workspaces.packages.${pkgs.stdenv.hostPlatform.system}.split-monitor-workspaces
-    ];
     settings = {
       general = {
         gaps_in = 5;
@@ -109,7 +114,7 @@
       exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
-        "ALT, F, exec, librewolf"
+        "ALT, F, exec,zen-browser"
         "ALT, SPACE, exec, vicinae open"
         "ALT, C, killactive"
         "ALT, H, movefocus, l"
@@ -178,7 +183,7 @@
       settings.paths.wallpaperDir = "~/nixos-config";
       cli.enable = true;
     };
-    librewolf = {
+    firefox = {
       enable = true;
       profiles.mridula = {
         extensions = {

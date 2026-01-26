@@ -89,6 +89,7 @@ in {
     };
     power-profiles-daemon.enable = true;
     displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
     keyd = {
       enable = true;
       keyboards = {
@@ -171,6 +172,7 @@ in {
   };
 
   programs = {
+    hyprland.enable = true;
     npm.enable = true;
     gamescope.enable = true;
     gamemode.enable = true;
@@ -178,10 +180,6 @@ in {
       enable = true;
       protontricks.enable = true;
       gamescopeSession.enable = true;
-    };
-    hyprland = {
-      enable = true;
-      package = inputs.hyprland.packages.x86_64-linux.hyprland;
     };
 
     nh = {
