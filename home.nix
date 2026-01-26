@@ -163,6 +163,7 @@
   };
 
   programs = {
+    hyprshot.enable = true;
     atuin.enable = true;
     hyprlock.enable = true;
     home-manager.enable = true;
