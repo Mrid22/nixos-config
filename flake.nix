@@ -65,10 +65,10 @@
     {
       imports = [
         ./base.nix
-        ./git.nix
-        ./kitty.nix
-        ./nvf.nix
-        ./zsh.nix
+        ./apps/git.nix
+        ./apps/kitty.nix
+        ./apps/nvf.nix
+        ./apps/zsh.nix
       ];
       systems = ["x86_64-linux"];
     };
