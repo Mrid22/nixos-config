@@ -7,6 +7,7 @@
     vicinae.homeManagerModules.default
     catppuccin.homeModules.catppuccin
     caelestia-shell.homeManagerModules.default
+    zen-browser.homeModules.twilight
   ];
 
   home = {
@@ -171,7 +172,7 @@
       settings.paths.wallpaperDir = "~/nixos-config";
       cli.enable = true;
     };
-    firefox = {
+    zen-browser = {
       enable = true;
       profiles.mridula = {
         extensions = {

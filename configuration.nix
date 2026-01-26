@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  wrappedpkgs = inputs.self.packages.x86_64-linux;
+  wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
 in {
   imports = [
     ./hardware-configuration.nix
