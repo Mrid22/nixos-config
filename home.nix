@@ -106,7 +106,7 @@
       exec-once = ["vicinae server"];
       bind = [
         "ALT, Q, exec, kitty"
-        "ALT, F, exec,zen"
+        "ALT, F, exec,zen-twilight"
         "ALT, SPACE, exec, vicinae open"
         "ALT, C, killactive"
         "ALT, H, movefocus, l"
