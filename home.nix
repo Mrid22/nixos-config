@@ -16,6 +16,14 @@
     stateVersion = "25.11";
   };
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Frappe";
+      package = pkgs.catppuccin-gtk;
+    };
+  };
+
   services = {
     vicinae = {
       enable = true;
