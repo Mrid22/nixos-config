@@ -7,6 +7,7 @@
           inherit pkgs;
           settings = {
             keyMap = "emacs";
+            integrations.atuin.enable = true;
             shellAliases = {
               nvim = "nix run ~/nixos-config";
               hdon = "hyprctl dispatch dpms on";
