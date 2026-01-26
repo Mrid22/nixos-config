@@ -31,6 +31,13 @@ in {
     networkmanager.enable = true;
   };
 
+  catppuccin = {
+    enable = true;
+    accent = "mauve";
+    flavor = "mocha";
+    cache.enable = true;
+  };
+
   hardware = {
     bluetooth = {
       enable = true;
@@ -162,13 +169,6 @@ in {
     users = {
       "mridula" = import ./home.nix;
     };
-  };
-
-  catppuccin = {
-    enable = true;
-    accent = "mauve";
-    flavor = "mocha";
-    cache.enable = true;
   };
 
   programs = {
