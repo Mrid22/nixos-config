@@ -179,7 +179,7 @@
       settings.paths.wallpaperDir = "~/nixos-config";
       cli.enable = true;
     };
-    zen-browser = {
+    floorp = {
       enable = true;
       policies = {
         AutofillAddressEnabled = true;
