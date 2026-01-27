@@ -205,8 +205,6 @@ in {
     picard
     finamp
     playerctl
-    zoxide
-    oh-my-posh
     brightnessctl
   ];
   system = {

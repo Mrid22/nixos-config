@@ -17,9 +17,21 @@
               gp = "git push";
               gd = "git diff";
             };
-            env = {
-              NH_OS_FLAKE = "~/nixos-config";
+
+            env.NH_OS_FLAKE = "~/nixos-config";
+
+            integrations = {
+              fzf.enable = false;
+              atuin.enable = true;
+              oh-my-posh.enable = true;
+              zoxide = {
+                enable = true;
+                flags = [
+                  "--cmd cd"
+                ];
+              };
             };
+
             history = {
               append = true;
               expanded = true;
@@ -28,11 +40,6 @@
               ignoreDups = true;
             };
           };
-          extraRC = ''
-            eval "$(zoxide init zsh --cmd cd)"
-            eval "$(oh-my-posh init zsh)"
-            eval "$(atuin init zsh)"
-          '';
         }
       ).wrapper;
   };
