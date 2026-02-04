@@ -1,5 +1,5 @@
 
-{
+{inputs,...}:{flake.nixosModules.myFirstDisk = {
   disko.devices = {
     disk = {
       main = {
@@ -38,4 +38,5 @@
       };
     };
   };
+};
 }

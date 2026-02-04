@@ -27,14 +27,6 @@
     };
   };
 
-  outputs = {flake-parts, ...} @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [
-        ./base.nix
-        ./apps/nvf.nix
-        ./apps/zsh.nix
-        ./apps/git.nix
-      ];
-      systems = ["x86_64-linux"];
-    };
+  outputs = inputs:
+    inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 }
