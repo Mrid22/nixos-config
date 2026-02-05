@@ -1,5 +1,8 @@
-{
-  flake.nixosModules.myFirstDisk = {
+{inputs, ...}: {
+  imports = [
+    inputs.disko.flakeModules.default
+  ];
+  flake.diskoConfigurations.myFirstDisk = {
     disko.devices = {
       disk = {
         main = {
