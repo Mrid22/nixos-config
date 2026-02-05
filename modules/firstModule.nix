@@ -1,10 +1,6 @@
 {inputs, ...}: {
-systems = ["x86_64-linux"];
+  systems = ["x86_64-linux"];
   flake.nixosModules.myFirstModule = {pkgs, ...}: {
-    #  imports = [
-    #    ./hardware-configuration.nix
-    #  ];
-
     boot.loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -42,20 +38,6 @@ systems = ["x86_64-linux"];
       };
     };
 
-    #hardware.nvidia = {
-    #  modesetting.enable = true;
-    #  open = true;
-    #  powerManagement.finegrained = true;
-    #  prime = {
-    #    intelBusId = "PCI:0:2:0";
-    #    nvidiaBusId = "PCI:1:0:0";
-    #    offload = {
-    #      enable = true;
-    #      enableOffloadCmd = true;
-    #    };
-    #  };
-    #};
-
     users.users.mridula = {
       isNormalUser = true;
       extraGroups = ["wheel"];
@@ -81,6 +63,7 @@ systems = ["x86_64-linux"];
       wget
       git
       eza
+      kitty
     ];
 
     system.stateVersion = "25.11";

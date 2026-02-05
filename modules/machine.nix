@@ -14,7 +14,7 @@
         self.nixosModules.myFirstDisk
       ];
     };
-    nixosModules.myMachineModule = {pkgs, ...}: {
+    nixosModules.myMachineModule = {
       networking.hostName = "nixos";
 
       hardware.nvidia = {
