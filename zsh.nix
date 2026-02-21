@@ -24,9 +24,10 @@
             enable = true;
             light = [
               "zsh-users/zsh-syntax-highlighting"
-            ];
-            load = [
               "Grafcube/zinit-git"
+            ];
+            oh-my-zsh.plugins = [
+              "sudo"
             ];
           };
 
