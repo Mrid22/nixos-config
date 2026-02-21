@@ -69,7 +69,7 @@ in {
   ];
 
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = wrappedpkgs.zsh;
     users.mridula = {
       isNormalUser = true;
       extraGroups = ["wheel"];
@@ -77,7 +77,6 @@ in {
   };
 
   programs = {
-    zsh.enable = true;
     neovim = {
       enable = true;
       defaultEditor = true;
