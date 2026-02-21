@@ -45,6 +45,7 @@
       bind = [
         "ALT, Q, exec, kitty"
         "ALT, F, exec, zen-twilight"
+        "ALT, SPACE, exec, vicinae toggle"
 
         "ALT, C, killactive"
         "ALT, H, movefocus, l"
