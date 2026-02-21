@@ -89,6 +89,7 @@ in {
   environment.systemPackages = with pkgs; [
     vim
     wget
+    zinit
     wrappedpkgs.git
     wrappedpkgs.kitty
     wrappedpkgs.starship
