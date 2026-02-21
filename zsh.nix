@@ -16,6 +16,7 @@
           shellAliases = {
             ls = "eza -lh --icons --git";
             lsa = "eza -lha --icons --git";
+            nvim = "nix run ~/nixos-config";
           };
           integrations = {
             zoxide = {
