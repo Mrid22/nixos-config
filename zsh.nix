@@ -13,6 +13,10 @@
             expireDupsFirst = true;
             saveNoDups = true;
           };
+          shellAliases = {
+            ls = "eza -lh --icons --git";
+            lsa = "eza -lha --icons --git";
+          };
           integrations = {
             zoxide = {
               enable = true;
