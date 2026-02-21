@@ -96,11 +96,11 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1771616655,
-        "narHash": "sha256-APFEjtfQf18WsP7wJRuda2dmz9W7Ur/xGyTBlWuvlgk=",
+        "lastModified": 1771669320,
+        "narHash": "sha256-LqmgIBpjpMQKkHKCSGJkluMVFFoBdkUhJnu+Cq+jgGc=",
         "owner": "rycee",
         "repo": "nur-expressions",
-        "rev": "55dba96bd37209fc595049a435284acbb79a5df2",
+        "rev": "496abb3aef244b896bf7cdd65e071cf624f16338",
         "type": "gitlab"
       },
       "original": {
@@ -244,11 +244,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771647911,
-        "narHash": "sha256-18liNHHwOmcaKCpOptE3wLW97fm5v7RTLiZBecX7km0=",
+        "lastModified": 1771683283,
+        "narHash": "sha256-WxAEkAbo8dP7qiyPM6VN4ZGAxfuBVlNBNPkrqkrXVEc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "436b27742c996b75e2baf8e835e3b3eae0c9fbd4",
+        "rev": "c6ed3eab64d23520bcbb858aa53fe2b533725d4a",
         "type": "github"
       },
       "original": {
@@ -279,8 +279,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1771618567,
-        "narHash": "sha256-7W+xrddUHeWs0Lq0kIV6mfuj+ZVwQnyXfTZtTZ6GTSU=",
+        "lastModified": 1771697018,
+        "narHash": "sha256-DXqzGTe/pBVw1EnbtOiRKpSa94G+dp1uPZT61ZX4AAw=",
         "path": "/home/mridula/Coding/wrappers",
         "type": "path"
       },
@@ -395,11 +395,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1771650101,
-        "narHash": "sha256-AJ/EHnBNDXCuiZQQBSh5K4rTCoxg9XSQHUH0mAd0F9c=",
+        "lastModified": 1771667684,
+        "narHash": "sha256-EED6YOg3DdRwaehpt4oS3xDESKaGRH202N0WZEkl9iY=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "2174c17a462646964c7cb8472456cc6082df13dc",
+        "rev": "39345e58341597b654c3331749b45e29686ca254",
         "type": "github"
       },
       "original": {
