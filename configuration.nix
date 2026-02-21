@@ -68,6 +68,12 @@ in {
   };
 
   services = {
+    btrfs.autoScrub = {
+      enable = true;
+      interval = "monthly";
+      fileSystems = ["/"];
+    };
+
     xserver = {
       enable = true;
       videoDrivers = ["nvidia"];
