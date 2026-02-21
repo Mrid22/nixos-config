@@ -18,6 +18,18 @@
             lsa = "eza -lha --icons --git";
             nvim = "nix run ~/nixos-config";
           };
+          autocd = true;
+
+          plugins.zinit = {
+            enable = true;
+            light = [
+              "zsh-users/zsh-syntax-highlighting"
+            ];
+            load = [
+              "Grafcube/zinit-git"
+            ];
+          };
+
           integrations = {
             zoxide = {
               enable = true;
