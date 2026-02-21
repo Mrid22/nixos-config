@@ -1,7 +1,7 @@
 {inputs, ...}: {
   perSystem = {pkgs, ...}: {
     packages.zsh =
-      (inputs.mridwrappers.wrapperModules.zsh.apply {
+      (inputs.wrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         settings = {
           autoSuggestions.enable = true;
