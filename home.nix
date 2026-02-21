@@ -301,6 +301,10 @@
           proton-pass
           zen-internet
           sponsorblock
+          noscript
+          decentraleyes
+          privacy-badger
+          duckduckgo-privacy-essentials
         ];
       };
     };
