@@ -77,6 +77,14 @@ in {
   };
 
   programs = {
+    nh = {
+      enable = true;
+      flake = "/home/mridula/nixos-config";
+      clean = {
+        enable = true;
+        extraArgs = "--keep 3 --keep-since 3d";
+      };
+    };
     neovim = {
       enable = true;
       defaultEditor = true;
