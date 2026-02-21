@@ -20,7 +20,8 @@
           };
           autocd = true;
 
-          plugins.zinit = {
+          /*
+             plugins.zinit = {
             enable = true;
             light = [
               "zsh-users/zsh-syntax-highlighting"
@@ -30,6 +31,7 @@
               "sudo"
             ];
           };
+          */
 
           integrations = {
             zoxide = {
