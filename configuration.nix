@@ -31,9 +31,25 @@ in {
   };
 
   hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
     bluetooth = {
       enable = true;
       powerOnBoot = true;
+    };
+    nvidia = {
+      modesetting.enable = true;
+      open = true;
+      powerManagement = {
+        enable = true;
+        finegrained = true;
+      };
+      prime = {
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
     };
   };
 
@@ -48,7 +64,10 @@ in {
   };
 
   services = {
-    xserver.enable = true;
+    xserver = {
+      enable = true;
+      videoDrivers = ["nvidia"];
+    };
     displayManager.gdm.enable = true;
     printing.enable = true;
     pipewire = {
