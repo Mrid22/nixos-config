@@ -131,7 +131,7 @@ in {
     wrappedpkgs.git
     wrappedpkgs.kitty
     wrappedpkgs.starship
-    wrappedpkgs.swayosd
+    swayosd
   ];
   system.stateVersion = "25.11";
 }

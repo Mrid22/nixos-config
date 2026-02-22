@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostplatform.system};
+in {
   imports = with inputs; [
     zen-browser.homeModules.twilight
     vicinae.homeManagerModules.default
@@ -11,8 +13,9 @@
   services = {
     swayosd = {
       enable = true;
-      package = inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.swayosd;
+      package = wrappedpkgs.swayosd;
     };
+
     vicinae = {
       enable = true; # default: false
       systemd = {
