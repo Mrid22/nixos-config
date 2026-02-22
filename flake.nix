@@ -55,10 +55,10 @@
       imports = [
         ./nvf.nix
         ./system.nix
-        ./kitty.nix
-        ./git.nix
-        ./zsh.nix
-        ./starship.nix
+        ./apps/kitty.nix
+        ./apps/git.nix
+        ./apps/zsh.nix
+        ./apps/starship.nix
       ];
     };
 }
