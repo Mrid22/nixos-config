@@ -69,6 +69,7 @@
                 enableDAP = true;
                 enableExtraDiagnostics = true;
                 nix.enable = true;
+                python.enable = true;
                 ts = {
                   enable = true;
                   extensions.ts-error-translator.enable = true;
