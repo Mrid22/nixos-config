@@ -129,8 +129,7 @@ in {
     };
   };
   environment.systemPackages = with pkgs; [
-    vim
-    wget
+    godot
     wrappedpkgs.git
     wrappedpkgs.kitty
     wrappedpkgs.starship

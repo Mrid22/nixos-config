@@ -5,7 +5,7 @@
     ...
   }: {
     packages.zsh =
-      (inputs.wrappers.wrapperModules.zsh.apply {
+      (inputs.mridwrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         settings = {
           autoSuggestions.enable = true;
@@ -24,8 +24,7 @@
           };
           autocd = true;
 
-          /*
-             plugins.zinit = {
+          plugins.zinit = {
             enable = true;
             light = [
               "zsh-users/zsh-syntax-highlighting"
@@ -35,7 +34,6 @@
               "sudo"
             ];
           };
-          */
 
           integrations = {
             starship = {
