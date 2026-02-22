@@ -23,9 +23,6 @@
           USE_LAYER_SHELL = 1;
         };
       };
-      launcher_window = {
-        opacity = 0.5;
-      };
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
         bluetooth
         nix

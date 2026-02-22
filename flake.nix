@@ -6,6 +6,11 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     vicinae.url = "github:vicinaehq/vicinae";
 
+    vicinae-extensions = {
+      url = "github:vicinaehq/extensions";
+      inputs.vicinae.follows = "vicinae";
+    };
+
     wrappers = {
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
