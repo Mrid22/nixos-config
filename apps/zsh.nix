@@ -40,7 +40,7 @@
           integrations = {
             starship = {
               enable = true;
-              packages = self'.packages.starship;
+              package = self'.packages.starship;
             };
             fzf.enable = true;
             zoxide = {
