@@ -17,7 +17,7 @@
     };
 
     mridwrappers = {
-      url = "path:/home/mridula/Coding/wrappers";
+      url = "git+file:////home/mridula/Coding/wrappers?ref=zsh-zinit";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
