@@ -53,11 +53,11 @@
     flake-parts.lib.mkFlake {inherit inputs;}
     {
       imports = [
-        ./nvf.nix
         ./system.nix
         ./apps/kitty.nix
         ./apps/git.nix
         ./apps/zsh.nix
+        ./apps/nvf.nix
         ./apps/starship.nix
       ];
     };
