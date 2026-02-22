@@ -66,6 +66,7 @@
         "ALT, J, movefocus, d"
         "ALT, K, movefocus, u"
         "ALT, L, movefocus, r"
+        "ALT, T, togglefloating"
 
         "ALT, 1, workspace, 1"
         "ALT, 2, workspace, 2"
