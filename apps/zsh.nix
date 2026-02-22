@@ -1,5 +1,9 @@
 {inputs, ...}: {
-  perSystem = {pkgs, ...}: {
+  perSystem = {
+    pkgs,
+    self',
+    ...
+  }: {
     packages.zsh =
       (inputs.wrappers.wrapperModules.zsh.apply {
         inherit pkgs;
@@ -34,7 +38,10 @@
           */
 
           integrations = {
-            starship.enable = true;
+            starship = {
+              enable = true;
+              packages = self'.packages.starship;
+            };
             fzf.enable = true;
             zoxide = {
               enable = true;
