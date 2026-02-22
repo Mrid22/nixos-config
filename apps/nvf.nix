@@ -36,6 +36,11 @@
                   mode = "n";
                   action = ":FzfLua lsp_code_actions<CR>";
                 }
+                {
+                  key = "<leader>t";
+                  mode = "n";
+                  action = ":ToggleTerm";
+                }
               ];
               visuals.nvim-web-devicons.enable = true;
               statusline.lualine.enable = true;
