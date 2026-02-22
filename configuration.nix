@@ -70,6 +70,7 @@ in {
   };
 
   services = {
+    power-profiles-daemon.enable = true;
     btrfs.autoScrub = {
       enable = true;
       interval = "monthly";

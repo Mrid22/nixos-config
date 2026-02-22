@@ -23,6 +23,7 @@
           USE_LAYER_SHELL = 1;
         };
       };
+      settings.bind.actions = "^K";
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
         bluetooth
         nix
