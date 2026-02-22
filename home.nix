@@ -8,13 +8,19 @@
     vicinae.homeManagerModules.default
   ];
 
-  services.vicinae = {
-    enable = true; # default: false
-    systemd = {
+  services = {
+    swayosd = {
+      enable = true;
+      package = inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.swayosd;
+    };
+    vicinae = {
       enable = true; # default: false
-      autoStart = true; # default: false
-      environment = {
-        USE_LAYER_SHELL = 1;
+      systemd = {
+        enable = true; # default: false
+        autoStart = true; # default: false
+        environment = {
+          USE_LAYER_SHELL = 1;
+        };
       };
     };
   };

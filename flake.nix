@@ -59,6 +59,7 @@
         ./apps/zsh.nix
         ./apps/nvf.nix
         ./apps/starship.nix
+        ./apps/swayosd.nix
       ];
     };
 }
