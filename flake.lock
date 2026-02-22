@@ -279,8 +279,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1771705985,
-        "narHash": "sha256-sKmPWSlDt7FsKx22cmOS/quem+QQ814WAa0rCwkIXA4=",
+        "lastModified": 1771766259,
+        "narHash": "sha256-Ci1X75G4Cxs2ogpIEW0A5ctRJLmgaFgTDES42IJbiL8=",
         "path": "/home/mridula/Coding/wrappers",
         "type": "path"
       },
@@ -609,11 +609,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771765221,
-        "narHash": "sha256-BMtYv5CD9fItBuGnOpK+qI8hIL2p0vS7TJLrxdgcWVA=",
+        "lastModified": 1771766397,
+        "narHash": "sha256-uhdORpONlznKq510BePw32rtiSKqtiDSwzssIJuc+gs=",
         "owner": "lassulus",
         "repo": "wrappers",
-        "rev": "c7e31a2094c5093502f5d867451fdee2c1405faf",
+        "rev": "ae4d2da695a53ec4a6546ed50f690f54361be887",
         "type": "github"
       },
       "original": {
