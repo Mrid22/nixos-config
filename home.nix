@@ -2,9 +2,7 @@
   pkgs,
   inputs,
   ...
-}: let
-  wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostplatform.system};
-in {
+}: {
   imports = with inputs; [
     zen-browser.homeModules.twilight
     vicinae.homeManagerModules.default
@@ -13,7 +11,7 @@ in {
   services = {
     swayosd = {
       enable = true;
-      package = wrappedpkgs.swayosd;
+      package = inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.swayosd;
     };
 
     vicinae = {
@@ -25,6 +23,15 @@ in {
           USE_LAYER_SHELL = 1;
         };
       };
+      launcher_window = {
+        opacity = 0.5;
+      };
+      extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+        bluetooth
+        nix
+        power-profile
+        wifi-commander
+      ];
     };
   };
 
