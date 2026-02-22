@@ -23,7 +23,7 @@
           USE_LAYER_SHELL = 1;
         };
       };
-      settings.bind.actions = "^K";
+      settings.keybinds.toggle-action-panel = "control+K";
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
         bluetooth
         nix
