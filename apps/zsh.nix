@@ -34,6 +34,8 @@
           */
 
           integrations = {
+            starship.enable = true;
+            fzf.enable = true;
             zoxide = {
               enable = true;
               flags = [
@@ -42,10 +44,6 @@
             };
           };
         };
-        extraRC = ''
-          source <(fzf --zsh)
-          eval "$(starship init zsh)"
-        '';
       }).wrapper;
   };
 }
