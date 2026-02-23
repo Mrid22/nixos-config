@@ -151,12 +151,6 @@
         load_direnv = "shell_hook";
         base_keymap = "VSCode";
 
-        theme = {
-          mode = "system";
-          light = "One Light";
-          dark = "One Dark";
-        };
-
         show_whitespaces = "all";
         ui_font_size = 16;
       };
