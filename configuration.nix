@@ -130,6 +130,7 @@ in {
   };
   environment.systemPackages = with pkgs; [
     godot
+    blender
     wrappedpkgs.git
     wrappedpkgs.kitty
     wrappedpkgs.starship
