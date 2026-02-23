@@ -102,7 +102,16 @@
     home-manager.enable = true;
     zed-editor = {
       enable = true;
-      extensions = ["nix" "javascript" "html" "python"];
+      extensions = [
+        "nix"
+        "emmet"
+        "javascript"
+        "html"
+        "javascript-snippets"
+        "nextjs-react-snippets"
+        "react-typescript-snippets"
+        "python-snippets"
+      ];
 
       userSettings = {
         telemetry = {
@@ -144,7 +153,7 @@
         };
 
         lsp = {
-          nixd.binary.path_lookup = true;
+          nixd.enable_lsp_tasks = true;
         };
 
         vim_mode = true;
