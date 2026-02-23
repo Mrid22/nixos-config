@@ -105,14 +105,15 @@
       extensions = ["nix" "javascript" "html" "python"];
 
       userSettings = {
-        assistant.enabled = false;
-
+        telemetry = {
+          diagnostics = false;
+          metrics = false;
+        };
         node = {
           path = lib.getExe pkgs.nodejs;
           npm_path = lib.getExe' pkgs.nodejs "npm";
         };
 
-        hour_format = "hour24";
         auto_update = false;
 
         terminal = {
@@ -143,7 +144,7 @@
         };
 
         lsp = {
-          nix.binary.path_lookup = true;
+          nixd.binary.path_lookup = true;
         };
 
         vim_mode = true;
