@@ -279,11 +279,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1771787861,
-        "narHash": "sha256-FBShglPtPhLffP4+78FaO82wpUwIDK5ULxGgLi+we4g=",
+        "lastModified": 1771853089,
+        "narHash": "sha256-YB1isjyCkF/J4cgFAUoUU8cZzv6x4sohMj4U7MzdRYk=",
         "ref": "zsh-zinit",
-        "rev": "6e1e26f8775bd49ee1922b994531ddc7328c5770",
-        "revCount": 205,
+        "rev": "73f7973ba8ba0f169c4d5ade4188f2191ad1d43b",
+        "revCount": 209,
         "type": "git",
         "url": "file:////home/mridula/Coding/wrappers"
       },

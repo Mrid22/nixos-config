@@ -69,7 +69,10 @@
                 enable = true;
                 mappings.toggle = "<leader>e";
               };
-              debugger.nvim-dap.enable = true;
+              debugger.nvim-dap = {
+                enable = true;
+                ui.enable = true;
+              };
               languages = {
                 enableFormat = true;
                 enableDAP = true;
