@@ -321,6 +321,8 @@
           decentraleyes
           privacy-badger
           duckduckgo-privacy-essentials
+          consent-o-matic
+          darkreader
         ];
       };
     };
