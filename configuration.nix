@@ -24,6 +24,9 @@ in {
 
   time.timeZone = "Asia/Famagusta";
 
+  xdg.portal = {
+    enable = true;
+  };
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     extra-substituters = ["https://vicinae.cachix.org"];
