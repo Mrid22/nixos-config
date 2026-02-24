@@ -323,6 +323,7 @@
           duckduckgo-privacy-essentials
           consent-o-matic
           darkreader
+          snowflake
         ];
       };
     };
