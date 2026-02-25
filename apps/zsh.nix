@@ -9,13 +9,18 @@
         inherit pkgs;
         settings = {
           autoSuggestions.enable = true;
-          completion.enable = true;
+          completion = {
+            enable = true;
+            #    caseInsensitive = true;
+            #colors = true;
+          };
           keyMap = "emacs";
           history = {
             append = true;
             ignoreDups = true;
             expireDupsFirst = true;
             saveNoDups = true;
+            # share = true;
           };
           shellAliases = {
             ls = "eza -lh --icons --git";
