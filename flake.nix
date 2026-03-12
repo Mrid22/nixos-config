@@ -3,41 +3,15 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    vicinae.url = "github:vicinaehq/vicinae";
+    hyprland.url = "github:hyprwm/Hyprland";
 
-    vicinae-extensions = {
-      url = "github:vicinaehq/extensions";
-      inputs.vicinae.follows = "vicinae";
-    };
-
-    wrappers = {
-      url = "github:lassulus/wrappers";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    mridwrappers = {
-      url = "git+file:////home/mridula/Coding/wrappers?ref=zsh-zinit";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    stylix = {
-      url = "github:nix-community/stylix";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nvf = {
       url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -54,17 +28,24 @@
       };
     };
   };
-  outputs = inputs @ {flake-parts, ...}:
-    flake-parts.lib.mkFlake {inherit inputs;}
-    {
-      imports = [
-        ./system.nix
-        ./apps/kitty.nix
-        ./apps/git.nix
-        ./apps/zsh.nix
-        ./apps/nvf.nix
-        ./apps/starship.nix
-        ./apps/swayosd.nix
+
+  outputs = {
+    self,
+    nixpkgs,
+    nvf,
+    ...
+  } @ inputs: {
+    packages."x86_64-linux".default =
+      (nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [./nvf-configuration.nix];
+      }).neovim;
+    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./configuration.nix
+        inputs.home-manager.nixosModules.default
       ];
     };
+  };
 }
