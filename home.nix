@@ -12,18 +12,73 @@
     stateVersion = "25.11";
   };
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Layan-Dark";
-      package = pkgs.layan-gtk-theme;
-    };
-  };
-
   programs = {
-    kitty = {
+    kitty.enable = true;
+    zsh.enable = true;
+
+    waybar = {
       enable = true;
-      settings.background_opacity = 0.5;
+      systemd.enable = true;
+      settings = {
+        mainBar = {
+          position = "top";
+          modules-left = [
+            "hyprland/workspaces"
+          ];
+          modules-center = [
+            "hyprland/window"
+          ];
+          modules-right = [
+            "network"
+            "pulseaudio"
+            "battery"
+            "clock"
+          ];
+          clock = {
+            format = "<span >   </span>{:%a %d %H:%M}";
+          };
+          battery = {
+            states = {
+              warning = 30;
+              critical = 15;
+            };
+            format = "<span size='13000' >{icon} </span> {capacity}%";
+            format-warning = "<span size='13000' >{icon} </span> {capacity}%";
+            format-critical = "<span size='13000' >{icon} </span> {capacity}%";
+            format-charging = "<span size='13000' > </span>{capacity}%";
+            format-plugged = "<span size='13000' > </span>{capacity}%";
+            format-alt = "<span size='13000' >{icon} </span> {time}";
+            format-full = "<span size='13000' > </span>{capacity}%";
+            format-icons = [
+              ""
+              ""
+              ""
+              ""
+              ""
+            ];
+            tooltip-format = "{time}";
+          };
+          network = {
+            format-wifi = "<span size='13000' >  </span>{essid}";
+            format-ethernet = "<span size='13000' >󰤭  </span> Disconnected";
+            format-linked = "{ifname} (No IP) ";
+            format-disconnected = "<span size='13000' >  </span>Disconnected";
+            tooltip-format-wifi = "Signal Strenght: {signalStrength}%";
+          };
+          pulseaudio = {
+            format = "{icon}  {volume}%";
+            format-muted = " ";
+            format-icons = {
+              default = [
+                ""
+                ""
+                " "
+              ];
+            };
+            on-click = "pavucontrol";
+          };
+        };
+      };
     };
 
     zen-browser = {
@@ -55,7 +110,67 @@
           dearrow
           proton-pass
           zen-internet
+          noscript
         ];
+        keyboardShortcuts = [
+          {
+            id = "key_quitApplication";
+            disabled = true;
+          }
+          {
+            id = "key_selectTab1";
+            key = "1";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab2";
+            key = "2";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab3";
+            key = "3";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab4";
+            key = "4";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab5";
+            key = "5";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab6";
+            key = "6";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab7";
+            key = "7";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab8";
+            key = "8";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab9";
+            key = "9";
+            modifiers.control = true;
+          }
+          {
+            id = "key_selectTab10";
+            key = "0";
+            modifiers.control = true;
+          }
+        ];
+        # Fails activation on schema changes to detect potential regressions
+        # Find this in about:config or prefs.js of your profile
+        keyboardShortcutsVersion = 16;
         mods = [
           "642854b5-88b4-4c40-b256-e035532109df"
           "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec"
@@ -68,11 +183,11 @@
               name = "My NixOS";
               urls = [
                 {
-                  template = "https://mynixos.com/search?q={searchTerms}";
+                  template = "https://mynixos.com/search";
                   params = [
                     {
-                      name = "query";
-                      value = "searchTerms";
+                      name = "q";
+                      value = "{searchTerms}";
                     }
                   ];
                 }
@@ -86,28 +201,26 @@
       };
     };
 
-    delta = {
-      enable = true;
-      enableGitIntegration = true;
-    };
-
-    git = {
-      enable = true;
-      settings = {
-        user = {
-          name = "Mrid22";
-          email = "mridulaga@outlook.com";
-        };
-        init.defaultBranch = "main";
-      };
-    };
-
     home-manager.enable = true;
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
+      bindel = [
+        ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+        ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
+        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+      ];
+      bindl = [
+        ", XF86AudioNext, exec, playerctl next"
+        ", XF86AudioPause, exec, playerctl play-pause"
+        ", XF86AudioPlay, exec, playerctl play-pause "
+        ", XF86AudioPrev, exec, playerctl previous   "
+      ];
       bind = [
         "ALT,Q,exec,kitty"
         "ALT,F,exec,zen-twilight"
@@ -140,6 +253,37 @@
         "ALT SHIFT,9,movetoworkspace,9"
         "ALT SHIFT,0,movetoworkspace,10"
       ];
+      animations = {
+        enabled = "yes, please :)";
+
+        bezier = [
+          "easeOutQuint,0.23,1,0.32,1"
+          "easeInOutCubic,0.65,0.05,0.36,1"
+          "linear,0,0,1,1"
+          "almostLinear,0.5,0.5,0.75,1.0"
+          "quick,0.15,0,0.1,1"
+        ];
+
+        animation = [
+          "global, 1, 10, default"
+          "border, 1, 5.39, easeOutQuint"
+          "windows, 1, 4.79, easeOutQuint"
+          "windowsIn, 1, 4.1, easeOutQuint, popin 87%"
+          "windowsOut, 1, 1.49, linear, popin 87%"
+          "fadeIn, 1, 1.73, almostLinear"
+          "fadeOut, 1, 1.46, almostLinear"
+          "fade, 1, 3.03, quick"
+          "layers, 1, 3.81, easeOutQuint"
+          "layersIn, 1, 4, easeOutQuint, fade"
+          "layersOut, 1, 1.5, linear, fade"
+          "fadeLayersIn, 1, 1.79, almostLinear"
+          "fadeLayersOut, 1, 1.39, almostLinear"
+          "workspaces, 1, 1.94, almostLinear, slide"
+          "workspacesIn, 1, 1.21, almostLinear, slide"
+          "workspacesOut, 1, 1.94, almostLinear, slide"
+        ];
+      };
+      input.touchpad.natural_scroll = true;
       general = {
         gaps_in = 5;
         gaps_out = 5;
