@@ -104,6 +104,8 @@
       wrappedpkgs.kitty
       wrappedpkgs.default
       wrappedpkgs.git
+      protonvpn-gui
+      wireguard-tools
     ];
 
     system.stateVersion = "26.05";
