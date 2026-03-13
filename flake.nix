@@ -10,7 +10,7 @@
     vicinae-extensions = {
       url = "github:vicinaehq/extensions";
       inputs.vicinae.follows = "vicinae";
-      inputs.nixpkgs.follows = "vicinae";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {

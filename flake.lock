@@ -1027,7 +1027,7 @@
     "vicinae-extensions": {
       "inputs": {
         "nixpkgs": [
-          "vicinae"
+          "nixpkgs"
         ],
         "systems": "systems_5",
         "vicinae": [
