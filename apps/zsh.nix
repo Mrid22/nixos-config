@@ -1,7 +1,7 @@
 {inputs, ...}: {
   perSystem = {pkgs, ...}: {
     packages.zsh =
-      (inputs.wrappers.wrapperModules.zsh.apply {
+      (inputs.mridwrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         settings = {
           autocd = true;
@@ -11,6 +11,7 @@
             colors = true;
             caseInsensitive = true;
             extraCompletions = true;
+            fuzzySearch = true;
           };
           history = {
             append = true;

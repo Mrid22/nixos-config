@@ -23,6 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    mridwrappers = {
+      url = "git+file:///home/mridula/Coding/wrappers?ref=fuzzy-completions";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
