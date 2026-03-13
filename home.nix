@@ -16,7 +16,10 @@
 
   services.vicinae = {
     enable = true;
-    autoStart = true;
+    systemd = {
+      enable = true;
+      autoStart = true;
+    };
     settings = {
       close_on_focus_loss = true;
       pop_to_root_on_close = false;
