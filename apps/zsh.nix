@@ -7,6 +7,7 @@
           autocd = true;
           env.EDITOR = "$(which nvim)";
           completion = {
+            enable = true;
             colors = true;
             caseInsensitive = true;
             extraCompletions = true;
