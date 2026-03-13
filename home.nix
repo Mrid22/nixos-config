@@ -234,6 +234,7 @@
       ];
       bind = [
         "ALT,Q,exec,kitty"
+        "ALT,SPACE,exec,vicinae toggle"
         "ALT,F,exec,zen-twilight"
 
         "ALT,H,movefocus,l"
