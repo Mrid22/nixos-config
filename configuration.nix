@@ -35,9 +35,11 @@
 
     networking = {
       hostName = "nixos";
+      firewall.checkReversePath = false;
       networkmanager.enable = true;
     };
     services = {
+      gnome.gnome-keyring.enable = true;
       xserver.enable = true;
       keyd = {
         enable = true;

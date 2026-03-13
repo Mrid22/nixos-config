@@ -31,6 +31,10 @@
   };
 
   programs = {
+    gh = {
+      hosts."github.com".user = "mridula";
+      settings.git_protocol = "ssh";
+    };
     waybar = {
       enable = true;
       systemd.enable = true;
