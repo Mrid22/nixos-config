@@ -126,6 +126,7 @@
           proton-pass
           zen-internet
           noscript
+          sponsorblock
         ];
         keyboardShortcuts = [
           {
