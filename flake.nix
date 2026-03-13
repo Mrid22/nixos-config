@@ -46,6 +46,7 @@
         ./apps/nvf.nix
         ./apps/git.nix
         ./apps/kitty.nix
+        ./apps/zsh.nix
         ./system.nix
         ./configuration.nix
       ];

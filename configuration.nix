@@ -83,10 +83,10 @@
         enable = true;
         flake = "/home/mridula/nixos-config";
       };
-      neovim = {
-        enable = true;
-        defaultEditor = true;
-      };
+      # neovim = {
+      #   enable = true;
+      #   defaultEditor = true;
+      # };
       hyprland = {
         enable = true;
         package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
@@ -98,8 +98,13 @@
       nerd-fonts.droid-sans-mono
     ];
 
+    environment.variables = {
+      EDITOR = "$(which nvim)";
+    };
+
     environment.systemPackages = with pkgs; [
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
+      inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.default
       inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.git
     ];
 
