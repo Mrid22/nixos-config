@@ -108,7 +108,6 @@
       wrappedpkgs.git
       protonvpn-gui
       wireguard-tools
-      gum
     ];
 
     system.stateVersion = "26.05";
