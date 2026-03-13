@@ -7,6 +7,11 @@
     vicinae.url = "github:vicinaehq/vicinae";
     flake-parts.url = "github:hercules-ci/flake-parts";
 
+    vicinae-extensions = {
+      url = "github:vicinaehq/extensions";
+      inputs.vicinae.follows = "vicinae";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
