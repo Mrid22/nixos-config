@@ -3,7 +3,9 @@
     pkgs,
     inputs,
     ...
-  }: {
+  }: let
+    wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
+  in {
     imports = [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
@@ -18,9 +20,12 @@
 
     nix.settings = {
       experimental-features = ["nix-command" "flakes"];
-      substituters = ["https://hyprland.cachix.org"];
+      substituters = ["https://hyprland.cachix.org" "https://vicinae.cachix.org"];
       trusted-substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
+      ];
     };
 
     hardware.bluetooth = {
@@ -70,7 +75,7 @@
       };
     };
     users = {
-      defaultUserShell = pkgs.zsh;
+      defaultUserShell = wrappedpkgs.zsh;
       users.mridula = {
         isNormalUser = true;
         extraGroups = ["wheel"];
@@ -78,15 +83,10 @@
     };
 
     programs = {
-      zsh.enable = true;
       nh = {
         enable = true;
         flake = "/home/mridula/nixos-config";
       };
-      # neovim = {
-      #   enable = true;
-      #   defaultEditor = true;
-      # };
       hyprland = {
         enable = true;
         package = inputs.hyprland.packages."${pkgs.stdenv.hostPlatform.system}".hyprland;
@@ -98,14 +98,10 @@
       nerd-fonts.droid-sans-mono
     ];
 
-    environment.variables = {
-      EDITOR = "$(which nvim)";
-    };
-
     environment.systemPackages = with pkgs; [
-      inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.kitty
-      inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.default
-      inputs.self.packages.${pkgs.stdenv.hostPlatform.system}.git
+      wrappedpkgs.kitty
+      wrappedpkgs.default
+      wrappedpkgs.git
     ];
 
     system.stateVersion = "26.05";
