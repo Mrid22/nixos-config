@@ -24,6 +24,10 @@
       close_on_focus_loss = true;
       pop_to_root_on_close = false;
     };
+    extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+      nix
+      wifi-commander
+    ];
   };
 
   programs = {
