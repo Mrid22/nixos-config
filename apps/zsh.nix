@@ -6,6 +6,11 @@
         settings = {
           autocd = true;
           env.EDITOR = "$(which nvim)";
+          shellAliases = {
+            gaa = "git add .";
+            gcam = "git commit -a -m";
+            gp = "git push";
+          };
           completion = {
             enable = true;
             colors = true;

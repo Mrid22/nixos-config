@@ -238,7 +238,7 @@
         ", XF86AudioPrev, exec, playerctl previous   "
       ];
       bind = [
-        "ALT,Q,exec,kitty"
+        "ALT,Q,exec,kitty zsh"
         "ALT,SPACE,exec,vicinae toggle"
         "ALT,F,exec,zen-twilight"
 
