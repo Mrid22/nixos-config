@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.hardware-config = {
+  flake.nixosModules.lenovo-laptop-hardware-config = {
     config,
     lib,
     modulesPath,
@@ -29,9 +29,7 @@
       };
     };
 
-    swapDevices = [
-      {device = "/dev/disk/by-uuid/ffdd9502-64e8-480c-bf5b-9425e5fef170";}
-    ];
+    swapDevices = [{device = "/dev/disk/by-uuid/ffdd9502-64e8-480c-bf5b-9425e5fef170";}];
 
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
     hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

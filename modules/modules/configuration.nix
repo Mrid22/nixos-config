@@ -7,12 +7,6 @@
     wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
   in {
     imports = [inputs.stylix.nixosModules.stylix];
-    boot.loader = {
-      systemd-boot.enable = true;
-      efi.canTouchEfiVariables = true;
-    };
-
-    time.timeZone = "Europe/Nicosia";
 
     nix.settings = {
       experimental-features = ["nix-command" "flakes"];
@@ -29,28 +23,18 @@
       powerOnBoot = true;
     };
 
-    networking = {
-      hostName = "nixos";
-      firewall.checkReversePath = false;
-      networkmanager.enable = true;
-    };
+    networking.networkmanager.enable = true;
+
     services = {
       gnome.gnome-keyring.enable = true;
       xserver.enable = true;
       keyd = {
         enable = true;
-        keyboards = {
-          default = {
-            ids = ["*"];
-            settings = {
-              main = {
-                capslock = "overload(control,escape)";
-              };
-            };
-          };
+        keyboards.default = {
+          ids = ["*"];
+          settings.main.capslock = "overload(control,escape)";
         };
       };
-
       displayManager.gdm.enable = true;
     };
 
