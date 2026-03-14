@@ -63,13 +63,13 @@
               format-charging = "<span size='13000' > </span>{capacity}%";
               format-plugged = "<span size='13000' > </span>{capacity}%";
               format-alt = "<span size='13000' >{icon} </span> {time}";
-              format-full = "<span size='13000' > </span>{capacity}%";
+              format-full = "<span size='13000' > </span>{capacity}%";
               format-icons = [
-                ""
-                ""
-                ""
-                ""
-                ""
+                " "
+                " "
+                " "
+                " "
+                " "
               ];
               tooltip-format = "{time}";
             };
@@ -86,7 +86,7 @@
               format-icons = {
                 default = [
                   ""
-                  ""
+                  " "
                   " "
                 ];
               };
