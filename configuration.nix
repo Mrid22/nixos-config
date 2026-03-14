@@ -6,10 +6,7 @@
   }: let
     wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
   in {
-    imports = [
-      inputs.home-manager.nixosModules.default
-      inputs.stylix.nixosModules.stylix
-    ];
+    imports = [inputs.stylix.nixosModules.stylix];
     boot.loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -55,15 +52,6 @@
       };
 
       displayManager.gdm.enable = true;
-    };
-
-    home-manager = {
-      extraSpecialArgs = {inherit inputs;};
-      users = {
-        "mridula" = import ./home.nix;
-      };
-      useUserPackages = true;
-      useGlobalPkgs = true;
     };
 
     stylix = {

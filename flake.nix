@@ -62,6 +62,7 @@
         ./apps/starship.nix
         ./system.nix
         ./configuration.nix
+        ./home.nix
         ./hardware-configuration.nix
         inputs.home-manager.flakeModules.home-manager
       ];

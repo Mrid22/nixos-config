@@ -6,6 +6,15 @@
       modules = [
         inputs.self.nixosModules.config
         inputs.self.nixosModules.hardware-config
+        inputs.home-manager.nixosModules.default
+        {
+          home-manager = {
+            extraSpecialArgs = {inherit inputs;};
+            users.mridula = inputs.self.homeModules.home-config;
+            useUserPackages = true;
+            useGlobalPkgs = true;
+          };
+        }
       ];
     };
 }
