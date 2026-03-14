@@ -15,6 +15,8 @@
             gcam = "git commit -a -m";
             gp = "git push";
             gd = "git diff";
+            ls = "eza --icons --git -lh";
+            lsa = "eza --icons --git -lah";
           };
           completion = {
             enable = true;
