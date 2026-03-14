@@ -59,6 +59,7 @@
         ./apps/git.nix
         ./apps/kitty.nix
         ./apps/zsh.nix
+        ./apps/starship.nix
         ./system.nix
         ./configuration.nix
       ];

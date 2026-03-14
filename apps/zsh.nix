@@ -1,5 +1,9 @@
 {inputs, ...}: {
-  perSystem = {pkgs, ...}: {
+  perSystem = {
+    pkgs,
+    self',
+    ...
+  }: {
     packages.zsh =
       (inputs.mridwrappers.wrapperModules.zsh.apply {
         inherit pkgs;
@@ -32,7 +36,10 @@
           integrations = {
             pay-respects.enable = true;
             fzf.enable = true;
-            starship.enable = true;
+            starship = {
+              enable = true;
+              package = self'.packages.starship;
+            };
             zoxide = {
               enable = true;
               flags = ["--cmd cd"];
