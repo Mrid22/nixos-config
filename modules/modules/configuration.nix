@@ -53,6 +53,7 @@
       defaultUserShell = wrappedpkgs.zsh;
       users.mridula = {
         isNormalUser = true;
+        description = "Mridul Agarwal";
         extraGroups = ["wheel"];
       };
     };
