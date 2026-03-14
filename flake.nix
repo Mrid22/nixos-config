@@ -6,11 +6,14 @@
     hyprland.url = "github:hyprwm/Hyprland";
     vicinae.url = "github:vicinaehq/vicinae";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
 
     vicinae-extensions = {
       url = "github:vicinaehq/extensions";
-      inputs.vicinae.follows = "vicinae";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        vicinae.follows = "vicinae";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     home-manager = {
@@ -53,18 +56,6 @@
   };
 
   outputs = inputs:
-    inputs.flake-parts.lib.mkFlake {inherit inputs;} {
-      imports = [
-        ./apps/nvf.nix
-        ./apps/git.nix
-        ./apps/kitty.nix
-        ./apps/zsh.nix
-        ./apps/starship.nix
-        ./system.nix
-        ./configuration.nix
-        ./home.nix
-        ./hardware-configuration.nix
-      ];
-      systems = ["x86_64-linux"];
-    };
+    inputs.flake-parts.lib.mkFlake {inherit inputs;}
+    (inputs.import-tree ./modules);
 }
