@@ -649,16 +649,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1773403253,
-        "narHash": "sha256-xAAJKBsl5dJguDdhi8fjTPr2xxdX2a0/dPIHyRZbJ9M=",
-        "ref": "fuzzy-completions",
-        "rev": "6cc6821ec13a70ebb92a21a4f0c689f155036003",
-        "revCount": 212,
+        "lastModified": 1773429194,
+        "narHash": "sha256-b+sBzAEzXRgORCQPKAe4KR9bQk6XZmY+c5hBi8pHBNA=",
+        "ref": "pay-respects",
+        "rev": "48afdcd805c32ed94eb5ad3395d0d39c2038b614",
+        "revCount": 209,
         "type": "git",
         "url": "file:///home/mridula/Coding/wrappers"
       },
       "original": {
-        "ref": "fuzzy-completions",
+        "ref": "pay-respects",
         "type": "git",
         "url": "file:///home/mridula/Coding/wrappers"
       }

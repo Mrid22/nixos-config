@@ -10,13 +10,14 @@
             gaa = "git add .";
             gcam = "git commit -a -m";
             gp = "git push";
+            gd = "git diff";
           };
           completion = {
             enable = true;
             colors = true;
             caseInsensitive = true;
             extraCompletions = true;
-            fuzzySearch = true;
+            # fuzzySearch = true;
           };
           history = {
             append = true;
@@ -29,6 +30,7 @@
           };
           autoSuggestions.enable = true;
           integrations = {
+            pay-respects.enable = true;
             fzf.enable = true;
             starship.enable = true;
             zoxide = {
