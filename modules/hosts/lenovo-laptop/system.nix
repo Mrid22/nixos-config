@@ -1,7 +1,7 @@
 {inputs, ...}: {
   systems = ["x86_64-linux"];
   flake = {
-    nixosConfigurations.nixos =
+    nixosConfigurations.lenovo-laptop =
       inputs.nixpkgs.lib.nixosSystem
       {
         specialArgs = {inherit inputs;};
