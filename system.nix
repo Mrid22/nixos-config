@@ -5,6 +5,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         inputs.self.nixosModules.config
+        inputs.self.nixosModules.hardware-config
       ];
     };
 }

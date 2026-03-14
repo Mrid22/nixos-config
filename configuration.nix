@@ -7,7 +7,7 @@
     wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
   in {
     imports = [
-      ./hardware-configuration.nix
+      #   ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       inputs.stylix.nixosModules.stylix
     ];
