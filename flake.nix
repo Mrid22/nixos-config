@@ -62,6 +62,7 @@
         ./apps/starship.nix
         ./system.nix
         ./configuration.nix
+        ./hardware-configuration.nix
       ];
       systems = ["x86_64-linux"];
     };
