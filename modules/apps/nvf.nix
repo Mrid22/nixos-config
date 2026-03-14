@@ -55,9 +55,11 @@
               };
               languages = {
                 enableFormat = true;
+                enableTreeSitter = true;
                 enableDAP = true;
                 nix.enable = true;
                 bash.enable = true;
+                rust.enable = true;
               };
               statusline.lualine.enable = true;
               autopairs.nvim-autopairs.enable = true;
