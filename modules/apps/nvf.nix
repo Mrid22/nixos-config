@@ -55,7 +55,6 @@
               };
               languages = {
                 enableFormat = true;
-                enableTreeSitter = true;
                 enableDAP = true;
                 nix.enable = true;
                 bash.enable = true;
