@@ -78,6 +78,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      file
       protonvpn-gui
       wireguard-tools
     ];
