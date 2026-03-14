@@ -64,7 +64,6 @@
         ./configuration.nix
         ./home.nix
         ./hardware-configuration.nix
-        inputs.home-manager.flakeModules.home-manager
       ];
       systems = ["x86_64-linux"];
     };

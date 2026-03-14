@@ -1,9 +1,8 @@
-{
-  flake.homeModules.home-config = {
-    pkgs,
-    inputs,
-    ...
-  }: {
+{inputs, ...}: {
+  imports = [
+    inputs.home-manager.flakeModules.home-manager
+  ];
+  flake.homeModules.home-config = {pkgs, ...}: {
     imports = with inputs; [
       zen-browser.homeModules.twilight
       vicinae.homeManagerModules.default
