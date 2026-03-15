@@ -59,6 +59,10 @@
                 nix.enable = true;
                 bash.enable = true;
                 rust.enable = true;
+                markdown = {
+                  enable = true;
+                  extensions.markview.enable = true;
+                };
               };
               statusline.lualine.enable = true;
               autopairs.nvim-autopairs.enable = true;
