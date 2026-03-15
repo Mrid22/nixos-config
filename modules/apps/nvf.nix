@@ -39,7 +39,7 @@
                   action = ":FzfLua lsp_code_actions<CR>";
                 }
               ];
-              assistant.codecompnion-nvim = {
+              assistant.codecompanion-nvim = {
                 enable = true;
 
                 setupOpts.providers.ollama = {
