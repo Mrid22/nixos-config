@@ -23,6 +23,8 @@
       settings = {
         close_on_focus_loss = true;
         pop_to_root_on_close = false;
+        keybinding = "emacs";
+        keynids.toggle-action-panel = "control+K";
       };
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
         nix

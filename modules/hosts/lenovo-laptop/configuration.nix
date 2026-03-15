@@ -6,5 +6,8 @@
     };
     networking.hostName = "lenovo-laptop";
     time.timeZone = "Europe/Nicosia";
+
+    hardware.nvidia.open = true;
+    services.xserver.videoDrivers = ["nvidia"];
   };
 }

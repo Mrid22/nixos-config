@@ -2,6 +2,7 @@
   flake.nixosModules.config = {
     pkgs,
     inputs,
+    lib,
     ...
   }: let
     wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
@@ -24,10 +25,12 @@
     };
 
     networking.networkmanager.enable = true;
-
+    nixpkgs.config.allowUnfree = true;
     services = {
       gnome.gnome-keyring.enable = true;
+
       xserver.enable = true;
+
       keyd = {
         enable = true;
         keyboards.default = {
