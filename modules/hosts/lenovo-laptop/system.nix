@@ -8,6 +8,7 @@
         modules = [
           inputs.self.nixosModules.config
           inputs.self.nixosModules.lenovo-laptop-config
+          inputs.self.nixosModules.homelab
           inputs.self.nixosModules.lenovo-laptop-hardware-config
           inputs.home-manager.nixosModules.default
           {
