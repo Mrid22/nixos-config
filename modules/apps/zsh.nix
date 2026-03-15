@@ -18,7 +18,6 @@
             ls = "eza --icons --git -lh";
             lsa = "eza --icons --git -lah";
           };
-          syntaxHighlighting.enable = true;
           completion = {
             enable = true;
             colors = true;
