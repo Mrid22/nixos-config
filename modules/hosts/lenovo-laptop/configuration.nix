@@ -7,6 +7,7 @@
     nixpkgs.config.allowUnfreePredicate = pkg:
       builtins.elem (lib.getName pkg) [
         "nvidia-x11"
+        "nvidia-settings"
       ];
     boot.loader = {
       systemd-boot.enable = true;
