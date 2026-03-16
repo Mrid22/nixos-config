@@ -86,6 +86,11 @@
       nerd-fonts.droid-sans-mono
     ];
 
+    nixpkgs.config.allowUnfreePredicate = pkg:
+      builtins.elem (lib.getName pkg) [
+        "steam"
+      ];
+
     environment.systemPackages = with pkgs; [
       wrappedpkgs.kitty
       wrappedpkgs.default
