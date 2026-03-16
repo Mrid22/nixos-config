@@ -100,6 +100,7 @@
       wrappedpkgs.git
       eza
       file
+      android-tools
       protonvpn-gui
       wireguard-tools
     ];
