@@ -6,7 +6,6 @@
     ...
   }: {
     services = {
-      jellyfin.enable = true;
     };
   };
 }
