@@ -23,9 +23,9 @@
         enable = true;
         powerOnBoot = true;
       };
-      opengl = {
+      graphics = {
         enable = true;
-        support32Bit = true;
+        enable32Bit = true;
       };
     };
 
