@@ -25,7 +25,6 @@
     };
 
     networking.networkmanager.enable = true;
-    nixpkgs.config.allowUnfree = true;
     services = {
       gnome.gnome-keyring.enable = true;
 
