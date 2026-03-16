@@ -44,7 +44,7 @@
 
                 setupOpts.providers.ollama = {
                   endpoint = "http://127.0.0.1:11434";
-                  model = "qwen3:latest";
+                  model = "gemma3:1b";
                   timeout = 30000; # Timeout in milliseconds
                   extra_request_body = {
                     options = {
