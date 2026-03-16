@@ -91,6 +91,7 @@
         "steam"
         "steam-unwrapped"
         "nvidia-x11"
+        "nvidia-settings"
       ];
 
     environment.systemPackages = with pkgs; [
