@@ -34,6 +34,11 @@
                   action = ":FzfLua files<CR>";
                 }
                 {
+                  key = "<leader>fg";
+                  mode = "n";
+                  action = ":FzfLua live_grep_native<CR>";
+                }
+                {
                   key = "<leader>la";
                   mode = "n";
                   action = ":FzfLua lsp_code_actions<CR>";
