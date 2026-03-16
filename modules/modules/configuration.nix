@@ -18,10 +18,15 @@
         "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
       ];
     };
-
-    hardware.bluetooth = {
-      enable = true;
-      powerOnBoot = true;
+    hardware = {
+      bluetooth = {
+        enable = true;
+        powerOnBoot = true;
+      };
+      opengl = {
+        enable = true;
+        support32Bit = true;
+      };
     };
 
     networking.networkmanager.enable = true;
