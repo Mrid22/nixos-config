@@ -6,11 +6,7 @@
     ...
   }: {
     services = {
-      ollama = {
-        enable = true;
-        package = pkgs.ollama-cuda;
-      };
-      open-webui.enable = true;
+      jellyfin.enable = true;
     };
   };
 }
