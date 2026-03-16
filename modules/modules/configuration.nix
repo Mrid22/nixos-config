@@ -66,9 +66,14 @@
     };
 
     programs = {
+      gamemode.enable = true;
       nh = {
         enable = true;
         flake = "/home/mridula/nixos-config";
+      };
+      steam = {
+        enable = true;
+        gamescopeSession.enable = true;
       };
       hyprland = {
         enable = true;
