@@ -123,6 +123,7 @@
             ublock-origin
             decentraleyes
             privacy-badger
+            improved-tube
             duckduckgo-privacy-essentials
             dearrow
             proton-pass
