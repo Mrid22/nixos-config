@@ -19,11 +19,6 @@
       stateVersion = "25.11";
     };
 
-    nixpkgs.config.allowUnfreePredicate = pkg:
-      builtins.elem (lib.getName pkg) [
-        "improved-tube"
-      ];
-
     services.vicinae = {
       enable = true;
       systemd = {
@@ -39,6 +34,7 @@
       extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
         nix
         wifi-commander
+        github
       ];
     };
 
