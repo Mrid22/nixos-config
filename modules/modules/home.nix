@@ -1,7 +1,12 @@
-{inputs, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: {
   imports = [
     inputs.home-manager.flakeModules.home-manager
   ];
+
   flake.homeModules.home-config = {pkgs, ...}: {
     imports = with inputs; [
       zen-browser.homeModules.twilight
@@ -13,6 +18,11 @@
       homeDirectory = "/home/mridula";
       stateVersion = "25.11";
     };
+
+    nixpkgs.config.allowUnfreePredicate = pkg:
+      builtins.elem (lib.getName pkg) [
+        "improved-tube"
+      ];
 
     services.vicinae = {
       enable = true;
