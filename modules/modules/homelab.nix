@@ -11,7 +11,7 @@
         syncModels = true;
         package = pkgs.ollama-cuda;
         loadModels = [
-          "qwen3-coder:30b"
+          "codegemma:2b"
         ];
       };
     };
