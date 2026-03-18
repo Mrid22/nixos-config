@@ -11,7 +11,7 @@
         syncModels = true;
         package = pkgs.ollama-cuda;
         loadModels = [
-          "codegemma:2b"
+          "codegemma:7b"
         ];
       };
     };
