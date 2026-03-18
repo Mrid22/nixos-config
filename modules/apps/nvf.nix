@@ -49,7 +49,7 @@
 
                 setupOpts.providers.ollama = {
                   endpoint = "http://127.0.0.1:11434";
-                  model = "codegemma:7b";
+                  model = "devstral-small-2:24b";
                   timeout = 30000; # Timeout in milliseconds
                   extra_request_body = {
                     options = {
