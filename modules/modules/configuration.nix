@@ -92,6 +92,10 @@
         "steam-unwrapped"
         "nvidia-x11"
         "nvidia-settings"
+        "cuda_cudart"
+        "cuda_nvcc"
+        "cuda_cccl"
+        "libcublas"
       ];
 
     environment.systemPackages = with pkgs; [
