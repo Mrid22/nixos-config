@@ -20,7 +20,7 @@
             gd = "git diff";
             ls = "eza --icons --git -lh";
             lsa = "eza --icons --git -lah";
-            devsh = "nix shell -c zsh";
+            devsh = "nix develop -c zsh";
           };
           completion = {
             enable = true;
