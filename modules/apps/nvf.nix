@@ -51,6 +51,7 @@
               lsp = {
                 enable = true;
                 formatOnSave = true;
+                mappings.codeAction = "ca";
                 lspsaga.enable = true;
                 inlayHints.enable = true;
               };
