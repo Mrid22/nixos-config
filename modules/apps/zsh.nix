@@ -27,7 +27,7 @@
             colors = true;
             caseInsensitive = true;
             extraCompletions = true;
-            # fuzzySearch = true;
+            fuzzySearch = true;
           };
           history = {
             append = true;
