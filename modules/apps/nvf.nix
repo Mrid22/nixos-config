@@ -51,7 +51,7 @@
               lsp = {
                 enable = true;
                 formatOnSave = true;
-                mappings.codeAction = "ca";
+                mappings.codeAction = "<leader>ca";
                 lspsaga.enable = true;
                 inlayHints.enable = true;
               };
