@@ -664,16 +664,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1773480096,
-        "narHash": "sha256-XFywGv8ZZcdOSU8XUtJ3pWi5aAyKAAbPXT5NyuetnaA=",
-        "ref": "pay-respects",
-        "rev": "a4a1e4b7b446d282fd471dd9bc1e6cd1c22ff4ce",
-        "revCount": 211,
+        "lastModified": 1774022565,
+        "narHash": "sha256-PBkWEEmbov407Wjlq16CM/8tQWWHiOlZhtBkYol+Kw8=",
+        "ref": "fuzzy-completions",
+        "rev": "3764178c3071a2576ab5d11c22588f583e33474e",
+        "revCount": 212,
         "type": "git",
         "url": "file:///home/mridula/Coding/wrappers"
       },
       "original": {
-        "ref": "pay-respects",
+        "ref": "fuzzy-completions",
         "type": "git",
         "url": "file:///home/mridula/Coding/wrappers"
       }
@@ -1093,11 +1093,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772137435,
-        "narHash": "sha256-dqkfxxpIiIs4wdWhT4lfQi1lfA0CgIftPiYGvw0tUOk=",
+        "lastModified": 1774021895,
+        "narHash": "sha256-v5oW5bDKPSled8EY2oKbC7gg0qdY254h2R6QyifC7lw=",
         "owner": "lassulus",
         "repo": "wrappers",
-        "rev": "4e12f430ae705d9bbb591ca9c51cbccbee050a23",
+        "rev": "95c6cb309ea633272fc4201c4539dd6cd7dd699b",
         "type": "github"
       },
       "original": {

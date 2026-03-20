@@ -27,7 +27,7 @@
     };
 
     mridwrappers = {
-      url = "git+file:///home/mridula/Coding/wrappers?ref=pay-respects";
+      url = "git+file:///home/mridula/Coding/wrappers?ref=fuzzy-completions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
