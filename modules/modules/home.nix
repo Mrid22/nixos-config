@@ -84,7 +84,7 @@
             };
             network = {
               format-wifi = "<span size='13000' >  </span>{essid}";
-              format-ethernet = "<span size='13000' >󰤭  </span> Disconnected";
+              format-ethernet = "<span size='13000' > </span> Wired";
               format-linked = "{ifname} (No IP) ";
               format-disconnected = "<span size='13000' >  </span>Disconnected";
               tooltip-format-wifi = "Signal Strenght: {signalStrength}%";
