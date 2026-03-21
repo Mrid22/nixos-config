@@ -17,15 +17,25 @@
         "exec" # Permit execution of binaries and other executable files
       ];
     };
-    services.ollama = {
-      package = pkgs.ollama-cuda;
-      enable = true;
-      syncModels = true;
-      loadModels = ["qwen3-coder-next:cloud"];
-    };
-    services.navidrome = {
-      enable = true;
-      settings.MusicFolder = "/media/music/";
+    services = {
+      ollama = {
+        package = pkgs.ollama-cuda;
+        enable = true;
+        syncModels = true;
+        loadModels = ["qwen3-coder-next:cloud"];
+      };
+      navidrome = {
+        enable = true;
+        settings.MusicFolder = "/media/music/";
+      };
+      cloudflared = {
+        enable = true;
+        tunnel = {
+          "f489f917-1174-4010-8171-ea1c08b6d166" = {
+            credentialFile = "/etc/cloudflared/f489f917-1174-4010-8171-ea1c08b6d166.json";
+          };
+        };
+      };
     };
   };
 }
