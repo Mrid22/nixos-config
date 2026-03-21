@@ -104,6 +104,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      cloudflared
       wl-clipboard
       android-tools
       protonvpn-gui
