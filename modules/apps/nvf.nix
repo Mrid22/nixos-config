@@ -64,7 +64,7 @@
                 enableDAP = true;
                 nix.enable = true;
                 bash.enable = true;
-                rust.enable = true;
+                python.enable = true;
                 markdown = {
                   enable = true;
                   extensions.markview-nvim.enable = true;
