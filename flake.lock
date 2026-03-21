@@ -664,16 +664,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1774022565,
+        "lastModified": 1774023241,
         "narHash": "sha256-PBkWEEmbov407Wjlq16CM/8tQWWHiOlZhtBkYol+Kw8=",
-        "ref": "fuzzy-completions",
-        "rev": "3764178c3071a2576ab5d11c22588f583e33474e",
+        "ref": "refs/heads/main",
+        "rev": "0fe3161f35de2f7a4c894fdbaa1b681f5a62b617",
         "revCount": 212,
         "type": "git",
         "url": "file:///home/mridula/Coding/wrappers"
       },
       "original": {
-        "ref": "fuzzy-completions",
         "type": "git",
         "url": "file:///home/mridula/Coding/wrappers"
       }

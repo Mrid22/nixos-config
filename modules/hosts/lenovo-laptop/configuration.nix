@@ -5,7 +5,10 @@
     ...
   }: {
     boot.loader = {
-      grub.enable = true;
+      grub = {
+        enable = true;
+        devices = "nodev";
+      };
       efi.canTouchEfiVariables = true;
     };
     networking.hostName = "lenovo-laptop";
