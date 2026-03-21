@@ -7,7 +7,6 @@
   }: {
     environment.systemPackages = with pkgs; [
       spotdl
-      cloudflared
     ];
     fileSystems."/media" = {
       device = "/dev/sda1";

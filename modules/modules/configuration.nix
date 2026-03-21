@@ -104,7 +104,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
-      file
+      wl-clipboard
       android-tools
       protonvpn-gui
       wireguard-tools
