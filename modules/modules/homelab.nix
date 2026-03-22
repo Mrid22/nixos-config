@@ -18,21 +18,24 @@
       ];
     };
     services = {
-      ollama = {
-        package = pkgs.ollama-cuda;
+      # ollama = {
+      #   package = pkgs.ollama-cuda;
+      #   enable = true;
+      #   syncModels = true;
+      #   loadModels = ["qwen3-coder-next:cloud"];
+      # };
+
+      jellyfin = {
         enable = true;
-        syncModels = true;
-        loadModels = ["qwen3-coder-next:cloud"];
+        hardwareAcceleration.device = "/dev/dri/renderD128";
       };
-      navidrome = {
-        enable = true;
-        settings.MusicFolder = "/media/music/";
-      };
+
       cloudflared = {
         enable = true;
-        tunnel = {
+        tunnels = {
           "f489f917-1174-4010-8171-ea1c08b6d166" = {
-            credentialFile = "/etc/cloudflared/f489f917-1174-4010-8171-ea1c08b6d166.json";
+            credentialsFile = "/etc/cloudflared/f489f917-1174-4010-8171-ea1c08b6d166.json";
+            default = "http_status:404";
           };
         };
       };
