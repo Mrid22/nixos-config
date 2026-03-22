@@ -29,6 +29,7 @@
       sonarr.enable = true;
       prowlarr.enable = true;
       bazarr.enable = true;
+      flaresolverr.enable = true;
 
       transmission = {
         enable = true;
