@@ -104,6 +104,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      finamp
       picard
       cloudflared
       wl-clipboard
