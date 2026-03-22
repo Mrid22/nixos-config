@@ -25,6 +25,19 @@
       #   loadModels = ["qwen3-coder-next:cloud"];
       # };
 
+      #Arr
+      sonarr.enable = true;
+      bazarr.enable = true;
+
+      transmission = {
+        enable = true;
+        settings = {
+          download-dir = "/media/downloads/complete/";
+          incomplete-dir = "/media/downloads/incomplete/";
+          incomplete-dir-enabled = true;
+        };
+      };
+
       jellyfin = {
         enable = true;
         hardwareAcceleration.device = "/dev/dri/renderD128";
