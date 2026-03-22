@@ -104,6 +104,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      picard
       cloudflared
       wl-clipboard
       android-tools
