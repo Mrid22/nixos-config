@@ -30,6 +30,8 @@
         hardwareAcceleration.device = "/dev/dri/renderD128";
       };
 
+      jellyseerr.enable = true;
+
       cloudflared = {
         enable = true;
         tunnels = {
