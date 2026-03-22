@@ -109,6 +109,7 @@
       android-tools
       protonvpn-gui
       wireguard-tools
+      finamp
     ];
 
     system.stateVersion = "26.05";
