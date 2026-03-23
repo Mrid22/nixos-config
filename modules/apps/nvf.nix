@@ -65,6 +65,7 @@
                 enableDAP = true;
                 nix.enable = true;
                 bash.enable = true;
+                tailwind.enable = true;
                 python.enable = true;
                 ts.enable = true;
                 markdown = {
