@@ -58,6 +58,7 @@
               treesitter = {
                 enable = true;
                 indent.enable = false;
+                autotagHtml = true;
               };
               languages = {
                 enableFormat = true;
