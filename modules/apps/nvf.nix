@@ -65,6 +65,7 @@
                 nix.enable = true;
                 bash.enable = true;
                 python.enable = true;
+                ts.enable = true;
                 markdown = {
                   enable = true;
                   extensions.markview-nvim.enable = true;

@@ -104,6 +104,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      pnpm
       nodejs
       finamp
       picard
