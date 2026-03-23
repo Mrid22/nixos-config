@@ -1,8 +1,4 @@
-{
-  inputs,
-  lib,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.home-manager.flakeModules.home-manager
   ];
@@ -251,6 +247,7 @@
           "ALT,Q,exec,kitty"
           "ALT,SPACE,exec,vicinae toggle"
           "ALT,F,exec,zen-twilight"
+          "ALT SHIFT,S,exec,hyprshot -m region"
 
           "ALT,H,movefocus,l"
           "ALT,J,movefocus,d"
