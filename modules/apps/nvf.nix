@@ -15,7 +15,10 @@
               git.gitsigns.enable = true;
               globals.mapleader = " ";
               fzf-lua.enable = true;
-              visuals.nvim-web-devicons.enable = true;
+              visuals = {
+                nvim-web-devicons.enable = true;
+                colorizer.enable = true;
+              };
               theme = {
                 enable = true;
                 name = "tokyonight";
