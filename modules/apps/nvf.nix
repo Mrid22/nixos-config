@@ -76,6 +76,7 @@
                 tailwind.enable = true;
                 python.enable = true;
                 ts.enable = true;
+                rust.enable = true;
                 markdown = {
                   enable = true;
                   extensions.markview-nvim.enable = true;
