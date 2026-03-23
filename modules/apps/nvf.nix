@@ -12,6 +12,7 @@
                 tabstop = 2;
                 shiftwidth = 2;
               };
+              terminal.toggleterm.enable = true;
               git.gitsigns.enable = true;
               globals.mapleader = " ";
               fzf-lua.enable = true;
@@ -29,6 +30,11 @@
                   key = "<leader>e";
                   mode = "n";
                   action = ":Oil<CR>";
+                }
+                {
+                  key = "<leader>t";
+                  mode = "n";
+                  action = ":ToggleTerm";
                 }
                 {
                   key = "<leader>ff";
