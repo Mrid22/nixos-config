@@ -39,7 +39,10 @@
     };
 
     programs = {
-      zed-editor.enable = true;
+      hyprshot = {
+        enable = true;
+        saveLocation = "$HOME/Pictures/Screenshots";
+      };
       waybar = {
         enable = true;
         systemd.enable = true;
