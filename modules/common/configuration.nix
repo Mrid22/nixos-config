@@ -104,7 +104,6 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
-      kdePackages.dolphin
       finamp
       picard
       cloudflared
