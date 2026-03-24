@@ -35,7 +35,13 @@
     };
 
     programs = {
-      zed-editor.enable = true;
+      zed-editor = {
+        enable = true;
+        userSettings = {
+          telemetry.metrics = false;
+          vim_mode = true;
+        };
+      };
       hyprshot = {
         enable = true;
         saveLocation = "$HOME/Pictures/Screenshots";
