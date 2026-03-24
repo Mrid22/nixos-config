@@ -12,7 +12,7 @@
                 tabstop = 2;
                 shiftwidth = 2;
               };
-              comments.commentary-nvim.enable = true;
+              comments.comment-nvim.enable = true;
               terminal.toggleterm.enable = true;
               git.gitsigns.enable = true;
               globals.mapleader = " ";
