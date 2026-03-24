@@ -12,6 +12,7 @@
                 tabstop = 2;
                 shiftwidth = 2;
               };
+              comments.commentary-nvim.enable = true;
               terminal.toggleterm.enable = true;
               git.gitsigns.enable = true;
               globals.mapleader = " ";
@@ -72,6 +73,7 @@
                 enableFormat = true;
                 enableDAP = true;
                 nix.enable = true;
+                html.enable = true;
                 bash.enable = true;
                 tailwind.enable = true;
                 python.enable = true;
