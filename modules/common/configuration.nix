@@ -105,8 +105,6 @@
       wrappedpkgs.git
       eza
       kdePackages.dolphin
-      pnpm
-      nodejs
       finamp
       picard
       cloudflared
