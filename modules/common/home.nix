@@ -18,24 +18,47 @@
       homeDirectory = "/home/mridula";
       stateVersion = "25.11";
     };
-
-    services.vicinae = {
-      enable = true;
-      systemd = {
+    services = {
+      hypridle = {
         enable = true;
-        autoStart = true;
+        settings = {
+          general = {
+            after_sleep_cmd = "hyprctl dispatch dpms on";
+            ignore_dbus_inhibit = false;
+            lock_cmd = "hyprlock";
+          };
+
+          listener = [
+            {
+              timeout = 180;
+              on-timeout = "hyprlock";
+            }
+            {
+              timeout = 300;
+              on-timeout = "hyprctl dispatch dpms off";
+              on-resume = "hyprctl dispatch dpms on";
+            }
+          ];
+        };
       };
-      settings = {
-        close_on_focus_loss = true;
-        pop_to_root_on_close = false;
-        keybinding = "emacs";
-        keynids.toggle-action-panel = "control+K";
+      vicinae = {
+        enable = true;
+        systemd = {
+          enable = true;
+          autoStart = true;
+        };
+        settings = {
+          close_on_focus_loss = true;
+          pop_to_root_on_close = false;
+          keybinding = "emacs";
+          keynids.toggle-action-panel = "control+K";
+        };
+        extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+          nix
+          wifi-commander
+          github
+        ];
       };
-      extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
-        nix
-        wifi-commander
-        github
-      ];
     };
 
     programs = {
