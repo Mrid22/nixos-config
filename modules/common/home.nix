@@ -49,6 +49,13 @@
             path = lib.getExe pkgs.nodejs;
             npm_path = lib.getExe' pkgs.nodejs "npm";
           };
+          lsp = {
+            typecscript-language-server = {
+              binary = {
+                path_lookkup = true;
+              };
+            };
+          };
         };
       };
       hyprshot = {
