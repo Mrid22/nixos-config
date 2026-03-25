@@ -40,6 +40,7 @@
         userSettings = {
           telemetry.metrics = false;
           vim_mode = true;
+          load_dirent = "shell_hook"; # nix devshell support
         };
       };
       hyprshot = {
