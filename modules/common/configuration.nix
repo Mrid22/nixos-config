@@ -67,6 +67,7 @@
     };
 
     programs = {
+      nix-ld.enable = true;
       gamemode.enable = true;
       nh = {
         enable = true;
