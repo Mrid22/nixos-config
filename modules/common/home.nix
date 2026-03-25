@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  lib,
+  inputs,
+  ...
+}: {
   imports = [
     inputs.home-manager.flakeModules.home-manager
   ];
@@ -41,6 +45,10 @@
           telemetry.metrics = false;
           vim_mode = true;
           load_dirent = "shell_hook"; # nix devshell support
+          node = {
+            path = lib.getExe pkgs.nodejs;
+            npm_path = lib.getExe' pkgs.nodejs "npm";
+          };
         };
       };
       hyprshot = {
