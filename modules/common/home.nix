@@ -44,17 +44,10 @@
         userSettings = {
           telemetry.metrics = false;
           vim_mode = true;
-          load_dirent = "shell_hook"; # nix devshell support
+          load_direnv = "shell_hook"; # nix devshell support
           node = {
             path = lib.getExe pkgs.nodejs;
             npm_path = lib.getExe' pkgs.nodejs "npm";
-          };
-          lsp = {
-            typecscript-language-server = {
-              binary = {
-                path_lookkup = true;
-              };
-            };
           };
         };
       };
