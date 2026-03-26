@@ -63,6 +63,28 @@
     };
 
     programs = {
+      noctalia-shell = {
+        enable = true;
+        settings = {
+          bar = {
+            position = "right";
+            widgets = {
+              left = [
+                {
+                  id = "ControlCenter";
+                  useDistroLogo = true;
+                }
+                {
+                  id = "Network";
+                }
+                {
+                  id = "Bluetooth";
+                }
+              ];
+            };
+          };
+        };
+      };
       zed-editor = {
         enable = true;
         userSettings = {
