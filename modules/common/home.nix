@@ -86,18 +86,6 @@
           };
         };
       };
-      zed-editor = {
-        enable = true;
-        userSettings = {
-          telemetry.metrics = false;
-          vim_mode = true;
-          load_direnv = "shell_hook"; # nix devshell support
-          node = {
-            path = lib.getExe pkgs.nodejs;
-            npm_path = lib.getExe' pkgs.nodejs "npm";
-          };
-        };
-      };
       hyprshot = {
         enable = true;
         saveLocation = "$HOME/Pictures/Screenshots";
