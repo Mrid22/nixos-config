@@ -11,6 +11,7 @@
     imports = with inputs; [
       zen-browser.homeModules.twilight
       vicinae.homeManagerModules.default
+      noctalia.homeModules.default
     ];
 
     home = {
