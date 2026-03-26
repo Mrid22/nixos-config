@@ -57,6 +57,7 @@
           nix
           wifi-commander
           github
+          player-pilot
         ];
       };
     };
