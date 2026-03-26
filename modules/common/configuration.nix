@@ -32,6 +32,7 @@
     networking.networkmanager.enable = true;
     services = {
       udisks2.enable = true;
+      playerctld.enable = true;
       gnome.gnome-keyring.enable = true;
 
       xserver.enable = true;
