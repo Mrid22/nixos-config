@@ -64,6 +64,7 @@
     };
 
     programs = {
+      zed-editor.enable = true;
       noctalia-shell = {
         enable = true;
         settings = {
