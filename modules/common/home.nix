@@ -64,7 +64,17 @@
     };
 
     programs = {
-      zed-editor.enable = true;
+      zed-editor = {
+        enable = true;
+        userSettings = {
+          assistant.enabled = false;
+          vim_mode = true;
+          node = {
+            path = lib.getExe pkgs.nodejs;
+            npm_path = lib.getExe' pkgs.nodejs "npm";
+          };
+        };
+      };
       noctalia-shell = {
         enable = true;
         settings = {
