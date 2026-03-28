@@ -288,7 +288,7 @@
           "ALT,SPACE,exec,vicinae toggle"
           "ALT,F,exec,zen-twilight"
           "ALT SHIFT,S,exec,hyprshot -m region"
-          "ALT SHIFT,V,exec,vicinae://launch/clipboard/history"
+          "ALT SHIFT,V,exec,vicinae vicinae://launch/clipboard/history"
 
           "ALT,H,movefocus,l"
           "ALT,J,movefocus,d"
