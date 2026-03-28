@@ -128,6 +128,7 @@
               format-linked = "{ifname} (No IP) ";
               format-disconnected = "<span size='13000' >  </span>Disconnected";
               tooltip-format-wifi = "Signal Strenght: {signalStrength}%";
+              on-click= "vicinae vicinae://launch/@dagimg-dot/vicinae-extension-wifi-commander-0/scan-wifi"
             };
             pulseaudio = {
               format = "{icon}  {volume}%";
