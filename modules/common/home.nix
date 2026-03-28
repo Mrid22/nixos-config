@@ -52,6 +52,17 @@
           pop_to_root_on_close = false;
           keybinding = "emacs";
           keynids.toggle-action-panel = "control+K";
+          providers = {
+            "@Gelei/vicinae-extension-bluetooth-0" = {
+              preferences = {
+                connectionToggleable = true;
+              };
+              entrypoints.devices.alias = "btd";
+            };
+            "@knoopx/vicinae-extension-nix-0" = {
+              entrypoints.options.alias = "nxo";
+            };
+          };
         };
         extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
           nix
