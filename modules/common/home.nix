@@ -58,7 +58,7 @@
           wifi-commander
           github
           bluetooth
-          kill-process
+          process-manager
           player-pilot
         ];
       };
