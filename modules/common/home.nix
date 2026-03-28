@@ -11,7 +11,6 @@
     imports = with inputs; [
       zen-browser.homeModules.twilight
       vicinae.homeManagerModules.default
-      noctalia.homeModules.default
     ];
 
     home = {
@@ -58,6 +57,8 @@
           nix
           wifi-commander
           github
+          bluetooth
+          kill-process
           player-pilot
         ];
       };
@@ -75,33 +76,74 @@
           };
         };
       };
-      noctalia-shell = {
-        enable = true;
-        settings = {
-          bar = {
-            position = "right";
-            widgets = {
-              left = [
-                {
-                  id = "ControlCenter";
-                  useDistroLogo = true;
-                }
-                {
-                  id = "Network";
-                }
-                {
-                  id = "Bluetooth";
-                }
-              ];
-            };
-          };
-        };
-      };
       hyprshot = {
         enable = true;
         saveLocation = "$HOME/Pictures/Screenshots";
       };
-
+      waybar = {
+        enable = true;
+        systemd.enable = true;
+        settings = {
+          mainBar = {
+            position = "top";
+            modules-left = [
+              "hyprland/workspaces"
+            ];
+            modules-center = [
+              "hyprland/window"
+            ];
+            modules-right = [
+              "network"
+              "pulseaudio"
+              "battery"
+              "clock"
+            ];
+            clock = {
+              format = "<span >   </span>{:%a %d %H:%M}";
+            };
+            battery = {
+              states = {
+                warning = 30;
+                critical = 15;
+              };
+              format = "<span size='13000' >{icon} </span> {capacity}%";
+              format-warning = "<span size='13000' >{icon} </span> {capacity}%";
+              format-critical = "<span size='13000' >{icon} </span> {capacity}%";
+              format-charging = "<span size='13000' > </span>{capacity}%";
+              format-plugged = "<span size='13000' > </span>{capacity}%";
+              format-alt = "<span size='13000' >{icon} </span> {time}";
+              format-full = "<span size='13000' > </span>{capacity}%";
+              format-icons = [
+                " "
+                " "
+                " "
+                " "
+                " "
+              ];
+              tooltip-format = "{time}";
+            };
+            network = {
+              format-wifi = "<span size='13000' >  </span>{essid}";
+              format-ethernet = "<span size='13000' > </span> Wired";
+              format-linked = "{ifname} (No IP) ";
+              format-disconnected = "<span size='13000' >  </span>Disconnected";
+              tooltip-format-wifi = "Signal Strenght: {signalStrength}%";
+            };
+            pulseaudio = {
+              format = "{icon}  {volume}%";
+              format-muted = " ";
+              format-icons = {
+                default = [
+                  ""
+                  " "
+                  " "
+                ];
+              };
+              on-click = "pavucontrol";
+            };
+          };
+        };
+      };
       zen-browser = {
         enable = true;
         policies = {
@@ -227,9 +269,6 @@
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
-        exec-once = [
-          "noctalia-shell"
-        ];
         bindel = [
           ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
           ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
@@ -249,6 +288,7 @@
           "ALT,SPACE,exec,vicinae toggle"
           "ALT,F,exec,zen-twilight"
           "ALT SHIFT,S,exec,hyprshot -m region"
+          "ALT SHIFT,V,exec,vicinae://launch/clipboard/history"
 
           "ALT,H,movefocus,l"
           "ALT,J,movefocus,d"
