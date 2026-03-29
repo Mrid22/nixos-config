@@ -79,7 +79,7 @@
       zed-editor = {
         enable = true;
         userSettings = {
-          assistant.enabled = false;
+          assistant.enabled = true;
           vim_mode = true;
           node = {
             path = lib.getExe pkgs.nodejs;

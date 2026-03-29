@@ -18,6 +18,10 @@
       ];
     };
     services = {
+      ollama = {
+        enable = true;
+        loadModels = ["qwen3-coder-next:cloud"];
+      };
       #Arr
       sonarr.enable = true;
       prowlarr.enable = true;
