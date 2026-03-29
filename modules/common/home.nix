@@ -79,7 +79,14 @@
       zed-editor = {
         enable = true;
         userSettings = {
-          assistant.enabled = true;
+          assistant = {
+            enabled = true;
+            default_model = {
+              provider = "ollama";
+              model = "qwen3-coder-next:cloud";
+              enable_thinking = false;
+            };
+          };
           vim_mode = true;
           node = {
             path = lib.getExe pkgs.nodejs;
