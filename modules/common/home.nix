@@ -71,6 +71,7 @@
           bluetooth
           process-manager
           player-pilot
+          power-profiles-daemon
         ];
       };
     };
