@@ -35,7 +35,7 @@
     services = {
       udisks2.enable = true;
       upower.enable = true;
-      tuned.enable = true;
+      power-profiles-daemon.enable = true;
       playerctld.enable = true;
       gnome.gnome-keyring.enable = true;
 
