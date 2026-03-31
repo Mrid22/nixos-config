@@ -22,6 +22,7 @@
             ls = "eza --icons --git -lh";
             lsa = "eza --icons --git -lah";
             devsh = "nix develop -c zsh";
+            shadcn-add = "pnpm dlx shadcn@latest add";
           };
           completion = {
             enable = true;
