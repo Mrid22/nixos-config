@@ -72,6 +72,7 @@
     };
 
     programs = {
+      localsend.enable = true;
       nix-ld.enable = true;
       gamemode.enable = true;
       nh = {
