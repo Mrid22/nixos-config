@@ -120,6 +120,7 @@
       android-tools
       protonvpn-gui
       wireguard-tools
+      penpot-desktop
     ];
 
     system.stateVersion = "26.05";
