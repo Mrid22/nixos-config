@@ -42,7 +42,7 @@
         hardwareAcceleration.device = "/dev/dri/renderD128";
       };
 
-      jellyseerr.enable = true;
+      seerr.enable = true;
 
       cloudflared = {
         enable = true;

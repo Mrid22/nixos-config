@@ -118,7 +118,7 @@
       cloudflared
       wl-clipboard
       android-tools
-      protonvpn-gui
+      proton-vpn
       wireguard-tools
       penpot-desktop
     ];
