@@ -857,11 +857,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1774109759,
-        "narHash": "sha256-Ksvw+R+kwCr+liA4h+TtQaYSW/0Jl+NDMThU5TBsJIY=",
+        "lastModified": 1775122065,
+        "narHash": "sha256-ZlowJNkQOhpsXDuWbHgB1xY6W8kyzYn9coK9nJsqqNg=",
         "owner": "notashelf",
         "repo": "nvf",
-        "rev": "4f1074084eb86e8d8a32e19e78f3cf2adba0213e",
+        "rev": "d3304af3d5771e8d5bac6ee9bbdbce56086d54f7",
         "type": "github"
       },
       "original": {
