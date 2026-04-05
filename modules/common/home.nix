@@ -140,6 +140,7 @@
                 " "
               ];
               tooltip-format = "{time}";
+              on-click = "vicinae vicinae://launch/@botkooper/vicinae-extension-power-profile-0/power-profile";
             };
             network = {
               format-wifi = "<span size='13000' >  </span>{essid}";
