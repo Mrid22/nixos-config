@@ -5,6 +5,7 @@
         inherit pkgs;
         settings = {
           background_opacity = 0.5;
+          confirm_os_window_close = 0;
 
           # Tokyonight
           background = "#1a1b26";
