@@ -77,7 +77,6 @@
     };
 
     programs = {
-      localsend.ednable = true;
       zed-editor = {
         enable = true;
         userSettings = {
