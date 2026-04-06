@@ -104,6 +104,7 @@
         "cuda_nvcc"
         "cuda_cccl"
         "libcublas"
+        "vscode"
       ];
 
     environment.systemPackages = with pkgs; [
@@ -111,6 +112,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      audacity
       nodejs
       pnpm
       finamp
