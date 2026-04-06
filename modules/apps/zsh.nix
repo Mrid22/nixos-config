@@ -8,7 +8,7 @@
       (inputs.wrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         extraRC = ''
-          HIST_FILE = "~/.zsh_history";
+          HISTFILE="~/.zsh_history";
         '';
         settings = {
           autocd = true;

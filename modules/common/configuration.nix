@@ -30,8 +30,10 @@
         enable32Bit = true;
       };
     };
-
-    networking.networkmanager.enable = true;
+    networking = {
+      networkmanager.enable = true;
+      firewall.checkReversePath = false;
+    };
     services = {
       udisks2.enable = true;
       upower.enable = true;
