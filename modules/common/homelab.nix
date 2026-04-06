@@ -37,10 +37,7 @@
         };
       };
 
-      jellyfin = {
-        enable = true;
-        hardwareAcceleration.device = "/dev/dri/renderD128";
-      };
+      jellyfin.enable = true;
 
       seerr.enable = true;
 
