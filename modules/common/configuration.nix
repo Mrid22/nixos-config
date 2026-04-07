@@ -7,7 +7,10 @@
   }: let
     wrappedpkgs = inputs.self.packages.${pkgs.stdenv.hostPlatform.system};
   in {
-    imports = [inputs.stylix.nixosModules.stylix];
+    imports = with inputs; [
+      stylix.nixosModules.stylix
+      musnix.nixosModules.musnix
+    ];
 
     nix.settings = {
       experimental-features = ["nix-command" "flakes"];

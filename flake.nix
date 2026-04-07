@@ -22,6 +22,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    musnix = {
+      url = "github:musnix/musnix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     wrappers = {
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
