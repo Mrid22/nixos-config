@@ -23,6 +23,7 @@
         "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
       ];
     };
+
     hardware = {
       bluetooth = {
         enable = true;
@@ -37,6 +38,14 @@
       networkmanager.enable = true;
       firewall.checkReversePath = false;
     };
+
+    musnix = {
+      enable = true;
+      kernel.realtime = true;
+      soundcardPciId = "00:1f.3";
+      rtirq.enable = true;
+    };
+
     services = {
       pipewire = {
         enable = true;
