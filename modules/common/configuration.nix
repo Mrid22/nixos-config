@@ -41,7 +41,6 @@
 
     musnix = {
       enable = true;
-      kernel.realtime = true;
       soundcardPciId = "00:1f.3";
       rtirq.enable = true;
     };
@@ -90,7 +89,7 @@
       users.mridula = {
         isNormalUser = true;
         description = "Mridul Agarwal";
-        extraGroups = ["wheel"];
+        extraGroups = ["wheel" "audio"];
       };
     };
 
@@ -136,6 +135,7 @@
       wrappedpkgs.git
       eza
       audacity
+      qjackctl
       nodejs
       pnpm
       finamp
