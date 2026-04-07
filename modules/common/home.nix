@@ -80,7 +80,7 @@
       vscode = {
         enable = true;
         profiles.default = {
-          enableMCPIntegration = true;
+          enableMcpIntegration = true;
           extensions = with pkgs.vscode-extensions; [
             vscodevim.vim
           ];
