@@ -136,6 +136,10 @@
       eza
       audacity
       qjackctl
+      calf
+      helm
+      tap-plugings
+      x42-plugins
       nodejs
       pnpm
       finamp
