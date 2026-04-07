@@ -134,6 +134,7 @@
       wrappedpkgs.default
       wrappedpkgs.git
       eza
+      openvino
       audacity
       qjackctl
       calf
