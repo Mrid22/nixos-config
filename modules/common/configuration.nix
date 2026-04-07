@@ -140,6 +140,7 @@
       calf
       helm
       tap-plugins
+      lmms
       x42-plugins
       nodejs
       pnpm
