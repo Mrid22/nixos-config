@@ -138,7 +138,7 @@
       qjackctl
       calf
       helm
-      tap-plugings
+      tap-plugins
       x42-plugins
       nodejs
       pnpm
