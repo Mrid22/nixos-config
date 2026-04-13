@@ -77,6 +77,7 @@
       enable = true;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
       image = ./Wallpaper.jpg;
+      polarity = "dark";
       opacity = {
         desktop = 0.5;
         terminal = 0.5;
