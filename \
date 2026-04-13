@@ -86,14 +86,7 @@
           ];
         };
       };
-      obs-studio = {
-        enable = true;
-        plugins = with pkgs.obs-studio-plugins; [
-          wlrobs
-          obs-backgroundremoval
-          obs-pipewire-audio-capture
-        ];
-      };
+      obs-studio = {};
       gh = {
         enable = true;
         settings.git_protocol = "ssh";
