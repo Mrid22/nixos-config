@@ -44,9 +44,13 @@
       cloudflared = {
         enable = true;
         tunnels = {
-          "f489f917-1174-4010-8171-ea1c08b6d166" = {
-            credentialsFile = "/etc/cloudflared/f489f917-1174-4010-8171-ea1c08b6d166.json";
+          "7d156d9b-5d67-4cb5-9a7e-c25ae2f708ce" = {
+            credentialsFile = "/etc/cloudflared/7d156d9b-5d67-4cb5-9a7e-c25ae2f708ce.json";
             default = "http_status:404";
+            ingress = {
+              "jf.shmanju.org" = "http://localhost:8096";
+              "js.shmanju.org" = "http://localhost:5055";
+            };
           };
         };
       };

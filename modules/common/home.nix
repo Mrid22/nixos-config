@@ -267,7 +267,7 @@
               modifiers.control = true;
             }
           ];
-          keyboardShortcutsVersion = 16;
+          keyboardShortcutsVersion = 17;
           mods = [
             "642854b5-88b4-4c40-b256-e035532109df"
             "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec"
@@ -319,7 +319,7 @@
           ", XF86AudioPrev, exec, playerctl previous   "
         ];
         bind = [
-          "ALT,Q,exec,kitty"
+          "ALT,Q,exec,kitty zsh"
           "ALT,SPACE,exec,vicinae toggle"
           "ALT,F,exec,vicinae vicinae://launch/applications/zen-twilight"
           "ALT SHIFT,S,exec,hyprshot -m region"

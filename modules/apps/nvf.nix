@@ -73,6 +73,7 @@
                 enableFormat = true;
                 enableDAP = true;
                 nix.enable = true;
+                json.enable = true;
                 html.enable = true;
                 bash.enable = true;
                 tailwind.enable = true;
