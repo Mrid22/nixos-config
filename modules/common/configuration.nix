@@ -137,6 +137,7 @@
       wrappedpkgs.git
       wrappedpkgs.file-finder
       eza
+      davinci-resolve
       alsa-utils
       pavucontrol
       openvino
