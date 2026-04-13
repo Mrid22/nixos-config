@@ -25,6 +25,7 @@
             lsa = "eza --icons --git -lah";
             devsh = "nix develop -c zsh";
             shadcn-add = "pnpm dlx shadcn@latest add";
+            ff = "file-finder";
           };
           completion = {
             enable = true;
