@@ -133,6 +133,7 @@
       wrappedpkgs.kitty
       wrappedpkgs.default
       wrappedpkgs.git
+      wrappedpkgs.file-finder
       eza
       openvino
       audacity
@@ -146,12 +147,10 @@
       pnpm
       finamp
       picard
-      cloudflared
       wl-clipboard
       android-tools
       proton-vpn
       wireguard-tools
-      penpot-desktop
     ];
 
     system.stateVersion = "26.05";

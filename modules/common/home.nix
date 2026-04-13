@@ -321,6 +321,7 @@
         bind = [
           "ALT,Q,exec,kitty zsh"
           "ALT,SPACE,exec,vicinae toggle"
+          "ALT,E,exec,kitty file-finder"
           "ALT,F,exec,vicinae vicinae://launch/applications/zen-twilight"
           "ALT SHIFT,S,exec,hyprshot -m region"
           "ALT SHIFT,V,exec,vicinae vicinae://launch/clipboard/history"
