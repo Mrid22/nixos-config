@@ -128,6 +128,7 @@
         "cuda_cccl"
         "libcublas"
         "vscode"
+        "davinci-resolve"
       ];
 
     environment.systemPackages = with pkgs; [
@@ -136,6 +137,8 @@
       wrappedpkgs.git
       wrappedpkgs.file-finder
       eza
+      alsa-utils
+      pavucontrol
       openvino
       audacity
       qjackctl
@@ -148,6 +151,7 @@
       pnpm
       finamp
       picard
+      vlc
       wl-clipboard
       android-tools
       proton-vpn

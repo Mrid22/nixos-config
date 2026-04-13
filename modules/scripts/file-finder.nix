@@ -11,7 +11,7 @@
             ${wrappedpkgs.default}/bin/nvim "$selected"
             ;;
           *)
-            ${pkgs.xdg-utils}/bin/xdg-open "$selected"& disown
+            ${pkgs.xdg-utils}/bin/xdg-open "$selected"
             ;;
         esac
       }
