@@ -128,7 +128,6 @@
         "cuda_cccl"
         "libcublas"
         "vscode"
-        "davinci-resolve"
       ];
 
     environment.systemPackages = with pkgs; [
@@ -137,7 +136,7 @@
       wrappedpkgs.git
       wrappedpkgs.file-finder
       eza
-      davinci-resolve
+      kdePackages.kdenlive
       alsa-utils
       pavucontrol
       openvino

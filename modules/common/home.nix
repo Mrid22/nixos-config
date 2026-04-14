@@ -326,6 +326,10 @@
           ", XF86AudioPlay, exec, playerctl play-pause "
           ", XF86AudioPrev, exec, playerctl previous   "
         ];
+        bindm = [
+          "ALT, mouse:272, movewindow"
+          "ALT, mouse:273, resizewindow"
+        ];
         bind = [
           "ALT,Q,exec,kitty zsh"
           "ALT,SPACE,exec,vicinae toggle"

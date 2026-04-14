@@ -27,6 +27,8 @@
       prowlarr.enable = true;
       bazarr.enable = true;
       flaresolverr.enable = true;
+      jellyfin.enable = true;
+      seerr.enable = true;
 
       transmission = {
         enable = true;
@@ -37,9 +39,7 @@
         };
       };
 
-      jellyfin.enable = true;
-
-      seerr.enable = true;
+      immich.enable = true;
 
       cloudflared = {
         enable = true;
