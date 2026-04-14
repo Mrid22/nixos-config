@@ -30,7 +30,6 @@
       jellyfin.enable = true;
       seerr.enable = true;
 
-      n8n.enable = true;
       open-webui.enable = true;
       home-assistant = {
         enable = true;
