@@ -32,7 +32,7 @@
 
       n8n.enable = true;
       open-webui.enable = true;
-      services.home-assistant = {
+      home-assistant = {
         enable = true;
         extraComponents = [
           "analytics"
