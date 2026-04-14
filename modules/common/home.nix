@@ -77,6 +77,7 @@
     };
 
     programs = {
+      opencode.enable = true;
       vscode = {
         enable = true;
         profiles.default = {
