@@ -20,7 +20,7 @@
     services = {
       ollama = {
         enable = true;
-        loadModels = ["qwen3-coder-next:cloud"];
+        loadModels = ["qwen3-coder-next:cloud" "gemma4"];
       };
       #Arr
       sonarr.enable = true;
@@ -29,6 +29,23 @@
       flaresolverr.enable = true;
       jellyfin.enable = true;
       seerr.enable = true;
+
+      n8n.enable = true;
+      open-webui.enable = true;
+      services.home-assistant = {
+        enable = true;
+        extraComponents = [
+          "analytics"
+          "google_translate"
+          "met"
+          "radio_browser"
+          "shopping_list"
+          "isal"
+        ];
+        config = {
+          default_config = {};
+        };
+      };
 
       transmission = {
         enable = true;
