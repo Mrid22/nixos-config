@@ -17,6 +17,21 @@
         "exec" # Permit execution of binaries and other executable files
       ];
     };
+
+    virtualisation.oci-containers = {
+      backend = "podman";
+      containers.homeassistant = {
+        volumes = ["home-assistant:/config"];
+        environment.TZ = "Asia/Nicosia";
+        # Note: The image will not be updated on rebuilds, unless the version label changes
+        image = "ghcr.io/home-assistant/home-assistant:stable";
+        extraOptions = [
+          # Use the host network namespace for all sockets
+          "--network=host"
+        ];
+      };
+    };
+
     services = {
       ollama = {
         enable = true;
@@ -30,23 +45,9 @@
       jellyfin.enable = true;
       seerr.enable = true;
 
-      home-assistant = {
-        enable = true;
-        extraComponents = [
-          "analytics"
-          "google_translate"
-          "met"
-          "radio_browser"
-          "shopping_list"
-          "isal"
-        ];
-        config = {
-          default_config = {};
-        };
-      };
-
       transmission = {
         enable = true;
+        openRPCPort = true;
         settings = {
           download-dir = "/media/downloads/complete/";
           incomplete-dir = "/media/downloads/incomplete/";
