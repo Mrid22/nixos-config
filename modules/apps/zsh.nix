@@ -21,7 +21,7 @@
             gcam = "git commit -a -m";
             gp = "git push";
             gd = "git diff";
-            ls = "eza --icons --git -lh";
+            ls = "eza --icons --git -lh --sort date -r";
             lsa = "eza --icons --git -lah";
             devsh = "nix develop -c zsh";
             shadcn-add = "pnpm dlx shadcn@latest add";
