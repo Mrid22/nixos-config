@@ -34,6 +34,7 @@
 
     services = {
       ollama = {
+        package = pkgs.ollama-cuda;
         enable = true;
         loadModels = ["qwen3-coder-next:cloud" "gemma4"];
       };
