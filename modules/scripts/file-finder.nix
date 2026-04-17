@@ -11,7 +11,7 @@
             ${wrappedpkgs.default}/bin/nvim "$selected"
             ;;
           *)
-            ${pkgs.xdg-utils}/bin/xdg-open "$selected"& disown& hyprctl dispatch killactive
+            ${pkgs.xdg-utils}/bin/xdg-open "$selected"& disown
             ;;
         esac
       }
