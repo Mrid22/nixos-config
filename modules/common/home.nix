@@ -216,6 +216,7 @@
             duckduckgo-privacy-essentials
             dearrow
             proton-pass
+            unhook
             zen-internet
             noscript
             sponsorblock
