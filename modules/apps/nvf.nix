@@ -40,7 +40,7 @@
                 {
                   key = "<leader>ff";
                   mode = "n";
-                  action = ":FzfLua files<CR>";
+                  action = ":FzfLua git_files<CR>";
                 }
                 {
                   key = "<leader>fg";
