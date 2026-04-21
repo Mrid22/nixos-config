@@ -137,6 +137,7 @@
       wrappedpkgs.git
       wrappedpkgs.file-finder
       eza
+      blender
       kdePackages.kdenlive
       alsa-utils
       pavucontrol
