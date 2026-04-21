@@ -62,7 +62,7 @@
                 formatOnSave = true;
                 mappings.codeAction = "<leader>ca";
                 lspsaga.enable = true;
-                presets.tailwindcss-langauge-server.enable = true;
+                presets.tailwindcss-language-server.enable = true;
                 inlayHints.enable = true;
               };
               treesitter = {
