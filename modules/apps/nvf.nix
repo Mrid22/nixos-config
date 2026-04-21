@@ -62,6 +62,7 @@
                 formatOnSave = true;
                 mappings.codeAction = "<leader>ca";
                 lspsaga.enable = true;
+                presets.tailwindcss-langauge-server.enable = true;
                 inlayHints.enable = true;
               };
               treesitter = {
@@ -76,9 +77,8 @@
                 json.enable = true;
                 html.enable = true;
                 bash.enable = true;
-                tailwind.enable = true;
                 python.enable = true;
-                ts.enable = true;
+                typescript.enable = true;
                 rust.enable = true;
                 markdown = {
                   enable = true;
