@@ -77,6 +77,7 @@
     };
 
     programs = {
+      claude-clode.enable = true;
       opencode.enable = true;
       vscode = {
         enable = true;

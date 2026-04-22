@@ -128,6 +128,7 @@
         "cuda_nvcc"
         "cuda_cccl"
         "libcublas"
+        "claude-code"
         "vscode"
       ];
 
