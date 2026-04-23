@@ -135,7 +135,6 @@
       wrappedpkgs.kitty
       wrappedpkgs.default
       wrappedpkgs.git
-      wrappedpkgs.file-finder
       eza
       blender
       kdePackages.kdenlive
