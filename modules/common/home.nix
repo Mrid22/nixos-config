@@ -51,7 +51,7 @@
           close_on_focus_loss = true;
           pop_to_root_on_close = false;
           keybinding = "emacs";
-          keynids.toggle-action-panel = "control+K";
+          keybinds.toggle-action-panel = "control+K";
           providers = {
             "@Gelei/vicinae-extension-bluetooth-0" = {
               preferences = {
