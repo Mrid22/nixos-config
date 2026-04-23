@@ -32,7 +32,7 @@
     };
 
     mridwrappers = {
-      url = "git+file:///home/mridula/wrappers";
+      url = "git+file:///home/mridula/Work/Coding/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
