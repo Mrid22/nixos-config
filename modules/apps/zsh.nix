@@ -5,10 +5,10 @@
     ...
   }: {
     packages.zsh =
-      (inputs.wrappers.wrapperModules.zsh.apply {
+      (inputs.mridwrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         extraRC = ''
-          HISTFILE="~/.zsh_history";
+          HISTFILE="$HOME/.zsh_history";
         '';
         settings = {
           autocd = true;
