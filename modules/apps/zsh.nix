@@ -5,7 +5,7 @@
     ...
   }: {
     packages.zsh =
-      (inputs.mridwrappers.wrapperModules.zsh.apply {
+      (inputs.wrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         extraRC = ''
           HISTFILE="$HOME/.zsh_history";
