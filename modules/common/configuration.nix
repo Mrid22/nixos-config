@@ -11,17 +11,22 @@
       stylix.nixosModules.stylix
       musnix.nixosModules.musnix
     ];
-
-    nix.settings = {
-      experimental-features = ["nix-command" "flakes"];
-      substituters = ["https://hyprland.cachix.org" "https://vicinae.cachix.org"];
-      trusted-substituters = ["https://hyprland.cachix.org"];
-      extra-substituters = ["https://noctalia.cachix.org"];
-      extra-trusted-public-keys = ["noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="];
-      trusted-public-keys = [
-        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-        "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
-      ];
+    nix = {
+      optimise = {
+        automatic = true;
+        dates = ["03:45"];
+      };
+      settings = {
+        experimental-features = ["nix-command" "flakes"];
+        substituters = ["https://hyprland.cachix.org" "https://vicinae.cachix.org"];
+        trusted-substituters = ["https://hyprland.cachix.org"];
+        extra-substituters = ["https://noctalia.cachix.org"];
+        extra-trusted-public-keys = ["noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="];
+        trusted-public-keys = [
+          "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+          "vicinae.cachix.org-1:1kDrfienkGHPYbkpNj1mWTr7Fm1+zcenzgTizIcI3oc="
+        ];
+      };
     };
 
     hardware = {
@@ -102,6 +107,10 @@
       nh = {
         enable = true;
         flake = "/home/mridula/nixos-config";
+        clean = {
+          enable = true;
+          extraArgs = "--keep 3";
+        };
       };
       steam = {
         enable = true;
