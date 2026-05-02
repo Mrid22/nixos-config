@@ -167,7 +167,6 @@
       android-tools
       proton-vpn
       wireguard-tools
-      jellyfin-desktop
     ];
 
     system.stateVersion = "26.05";
