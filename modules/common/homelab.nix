@@ -40,6 +40,7 @@
       };
       #Arr
       sonarr.enable = true;
+      readarr.enable = true;
       prowlarr.enable = true;
       bazarr.enable = true;
       flaresolverr.enable = true;
