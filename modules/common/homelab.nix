@@ -41,6 +41,7 @@
       #Arr
       sonarr.enable = true;
       prowlarr.enable = true;
+      radarr.enable = true;
       bazarr.enable = true;
       flaresolverr.enable = true;
       jellyfin.enable = true;
