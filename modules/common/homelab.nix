@@ -48,7 +48,7 @@
         enable = true;
         hardwareAcceleration = {
           enable = true;
-          type = "vaapi";
+          type = "nvenc";
           device = "/dev/dri/renderD128";
         };
       };
