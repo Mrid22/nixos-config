@@ -44,7 +44,14 @@
       radarr.enable = true;
       bazarr.enable = true;
       flaresolverr.enable = true;
-      jellyfin.enable = true;
+      jellyfin = {
+        enable = true;
+        hardwareAcceleration = {
+          enable = true;
+          type = "vaapi";
+          device = "/dev/dri/renderD128";
+        };
+      };
       seerr.enable = true;
 
       transmission = {
