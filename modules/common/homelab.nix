@@ -69,8 +69,8 @@
       cloudflared = {
         enable = true;
         tunnels = {
-          "05ed54b5-8f4c-4b90-9ad7-3ad0d25f6bb3" = {
-            credentialsFile = "/etc/cloudflared/05ed54b5-8f4c-4b90-9ad7-3ad0d25f6bb3.json";
+          "539e1bd7-c008-45a1-9014-6c0693c01174" = {
+            credentialsFile = "/etc/cloudflared/539e1bd7-c008-45a1-9014-6c0693c01174.json";
             default = "http_status:404";
             ingress = {
               "jf.shmanju.org" = "http://localhost:8096";
