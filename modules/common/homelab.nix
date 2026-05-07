@@ -33,11 +33,6 @@
     };
 
     services = {
-      ollama = {
-        package = pkgs.ollama-cuda;
-        enable = true;
-        loadModels = ["qwen3-coder-next:cloud" "gemma4"];
-      };
       #Arr
       sonarr.enable = true;
       prowlarr.enable = true;
