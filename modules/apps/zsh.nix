@@ -7,9 +7,6 @@
     packages.zsh =
       (inputs.wrappers.wrapperModules.zsh.apply {
         inherit pkgs;
-        extraRC = ''
-          HISTFILE="$HOME/.zsh_history";
-        '';
         settings = {
           autocd = true;
           env = {
