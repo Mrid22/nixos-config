@@ -77,16 +77,6 @@
     };
 
     programs = {
-      opencode.enable = true;
-      vscode = {
-        enable = true;
-        profiles.default = {
-          enableMcpIntegration = true;
-          extensions = with pkgs.vscode-extensions; [
-            vscodevim.vim
-          ];
-        };
-      };
       obs-studio = {
         enable = true;
         plugins = with pkgs.obs-studio-plugins; [
@@ -99,24 +89,6 @@
         enable = true;
         settings.git_protocol = "ssh";
         gitCredentialHelper.enable = true;
-      };
-      zed-editor = {
-        enable = true;
-        userSettings = {
-          assistant = {
-            enabled = true;
-            default_model = {
-              provider = "ollama";
-              model = "qwen3-coder-next:cloud";
-              enable_thinking = false;
-            };
-          };
-          vim_mode = true;
-          node = {
-            path = lib.getExe pkgs.nodejs;
-            npm_path = lib.getExe' pkgs.nodejs "npm";
-          };
-        };
       };
       hyprshot = {
         enable = true;
