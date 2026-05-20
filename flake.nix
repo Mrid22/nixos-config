@@ -21,6 +21,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    jellyfin-flake = {
+      url = "github:matt1432/nixos-jellyfin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     musnix = {
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";

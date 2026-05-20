@@ -5,8 +5,8 @@
     lib,
     ...
   }: {
-    environment.systemPackages = with pkgs; [
-      spotdl
+    imports = with inputs; [
+      jellyfin-flake.nixosModules.default
     ];
     fileSystems."/media" = {
       device = "/dev/sda1";
@@ -41,6 +41,38 @@
       flaresolverr.enable = true;
       jellyfin = {
         enable = true;
+        settings = {
+          system = {
+            serverName = "MridulJelly";
+            quickConnectAvailable = false;
+            isStartupWizardCompleted = true;
+            enableExternalContentInSuggestions = true;
+            pluginRepositories = [
+              {
+                name = "Jellyfin Stable";
+                url = "https://repo.jellyfin.org/files/plugin/manifest.json";
+              }
+              {
+                name = "Intro Skipper";
+                url = "https://intro-skipper.org/manifest.json";
+              }
+              {
+                name = "I Am Paradox";
+                url = "https://www.iamparadox.dev/jellyfin/plugins/manifest.json";
+              }
+              {
+                name = "Editor's Choice";
+                url = "https://github.com/lachlandcp/jellyfin-editors-choice-plugin/raw/main/manifest.json";
+              }
+              {
+                name = "Jellyfin Enhanced";
+                url = "https://raw.githubusercontent.com/n00bcodr/jellyfin-plugins/main/10.11/manifest.json";
+              }
+            ];
+          };
+          branding.customCss = ''@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");'';
+          encoding.hardwareAccelerationType = "nvenc";
+        };
         hardwareAcceleration = {
           enable = true;
           type = "nvenc";
@@ -70,6 +102,7 @@
             ingress = {
               "jf.shmanju.org" = "http://localhost:8096";
               "js.shmanju.org" = "http://localhost:5055";
+              "pg.shmanju.org" = "http://localhost:2283";
             };
           };
         };
