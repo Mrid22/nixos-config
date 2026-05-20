@@ -73,7 +73,7 @@
           settings.main.capslock = "overload(control,escape)";
         };
       };
-      displayManager.gdm.enable = true;
+      displayManager.sddm.enable = true;
     };
 
     stylix = {
