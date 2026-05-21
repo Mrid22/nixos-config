@@ -31,6 +31,20 @@
         nvidiaBusId = "PCI:1:0:0";
       };
     };
-    services.xserver.videoDrivers = ["nvidia"];
+    services = {
+      xserver.videoDrivers = ["nvidia"];
+      rsync = {
+        enable = true;
+        jobs.music = {
+          destination = "/home/mridula/backups";
+          group = "users";
+          user = "mridula";
+          sources = [
+            "/home/mridula/Documents/Music"
+          ];
+        };
+      };
+      rsyncd.enable = true;
+    };
   };
 }
