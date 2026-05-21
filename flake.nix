@@ -41,6 +41,11 @@
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
 
+    mridjellyfin = {
+      url = "git+file:///home/mridula/Documents/Coding/nix-jellyfin";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";

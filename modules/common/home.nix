@@ -257,7 +257,6 @@
           ];
           search = {
             force = true;
-            default = "ecosia";
             engines = {
               mynixos = {
                 name = "My NixOS";
