@@ -186,6 +186,7 @@
             decentraleyes
             privacy-badger
             duckduckgo-privacy-essentials
+            ecosia
             dearrow
             proton-pass
             zen-internet
@@ -256,7 +257,7 @@
           ];
           search = {
             force = true;
-            default = "ddg";
+            default = "ecosia";
             engines = {
               mynixos = {
                 name = "My NixOS";
