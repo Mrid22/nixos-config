@@ -135,6 +135,7 @@
         "steam-unwrapped"
         "nvidia-x11"
         "nvidia-settings"
+        "unityhub"
       ];
 
     environment.systemPackages = with pkgs; [
