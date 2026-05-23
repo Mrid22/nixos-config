@@ -136,6 +136,7 @@
         "nvidia-x11"
         "nvidia-settings"
         "unityhub"
+        "corefonts"
       ];
 
     environment.systemPackages = with pkgs; [
