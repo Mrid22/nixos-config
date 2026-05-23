@@ -161,7 +161,7 @@
       finamp
       picard
       vlc
-      unity-hub
+      unityhub
       wl-clipboard
       android-tools
       proton-vpn
