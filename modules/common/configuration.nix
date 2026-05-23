@@ -135,8 +135,9 @@
 
     environment.systemPackages = with pkgs; [
       wrappedpkgs.kitty
-      wrappedpkgs.default
+      wrappedpkgs.default # Neovim
       wrappedpkgs.git
+      cliamp
       eza
       blender
       kdePackages.kdenlive
