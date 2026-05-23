@@ -49,6 +49,10 @@
     };
 
     services = {
+      hypridle = {
+        enable = true;
+        package = wrappedpkgs.hypridle;
+      };
       pipewire = {
         enable = true;
         alsa = {
