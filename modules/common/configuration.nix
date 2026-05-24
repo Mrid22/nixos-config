@@ -170,6 +170,7 @@
       android-tools
       proton-vpn
       wireguard-tools
+      dotnet-sdk
     ];
 
     system.stateVersion = "26.05";
