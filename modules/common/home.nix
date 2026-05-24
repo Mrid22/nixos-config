@@ -53,7 +53,9 @@
     programs = {
       vscode = {
         enable = true;
-        mutableExtensionsDir = true;
+        profiles.default.extensions = with pkgs; [
+          vscode-extensions.visualstudiotoolsforunity.vstuc
+        ];
       };
       obs-studio = {
         enable = true;
