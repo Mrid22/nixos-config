@@ -51,12 +51,6 @@
     };
 
     programs = {
-      vscode = {
-        enable = true;
-        profiles.default.extensions = with pkgs; [
-          vscode-extensions.visualstudiotoolsforunity.vstuc
-        ];
-      };
       obs-studio = {
         enable = true;
         plugins = with pkgs.obs-studio-plugins; [
@@ -65,6 +59,13 @@
           obs-pipewire-audio-capture
         ];
       };
+      vscode = {
+        enable = true;
+        profiles.default.extensions = with pkgs; [
+          vscode-extensions.visualstudiotoolsforunity.vstuc
+        ];
+      };
+
       gh = {
         enable = true;
         settings.git_protocol = "ssh";
