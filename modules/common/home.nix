@@ -53,6 +53,7 @@
     programs = {
       vscode = {
         enable = true;
+        mutableExtensionsDir = true;
         profiles.mridula.extensions = with pkgs.vscode-extensions; [
           visualstudiotoolsforunity.vstuc
         ];
