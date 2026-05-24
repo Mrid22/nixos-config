@@ -137,6 +137,7 @@
         "nvidia-settings"
         "unityhub"
         "corefonts"
+        "code"
         "vscode"
         "vscode-extension-VisualStudioToolsForUnity-vstuc"
       ];
