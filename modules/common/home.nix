@@ -51,6 +51,12 @@
     };
 
     programs = {
+      vscode = {
+        enable = true;
+        profiles.mridula.extensions = with pkgs.vscode-extensions; [
+          visualstudiotoolsforunity.vstuc
+        ];
+      };
       obs-studio = {
         enable = true;
         plugins = with pkgs.obs-studio-plugins; [
