@@ -137,6 +137,8 @@
         "nvidia-settings"
         "unityhub"
         "corefonts"
+        "vscode"
+        "vscode-extension-VisualStudioToolsForUnity-vstuc"
       ];
 
     environment.systemPackages = with pkgs; [
