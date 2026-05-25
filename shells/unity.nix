@@ -1,6 +1,5 @@
 {
-  description = "Unity flake";
-
+  description = "Unity shell";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
