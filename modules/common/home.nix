@@ -61,7 +61,7 @@
       };
       vscode = {
         enable = true;
-        package = pkgs.vscode-fhs;
+        package = pkgs.vscode.fhs;
         profiles.default.extensions = with pkgs; [
           vscode-extensions.visualstudiotoolsforunity.vstuc
           vscode-extensions.vscodevim.vim
