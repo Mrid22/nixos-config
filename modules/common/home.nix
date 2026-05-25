@@ -62,10 +62,25 @@
       vscode = {
         enable = true;
         package = pkgs.vscode.fhs;
-        profiles.default.extensions = with pkgs; [
-          vscode-extensions.visualstudiotoolsforunity.vstuc
-          vscode-extensions.vscodevim.vim
-        ];
+        profiles.default = {
+          extensions = with pkgs; [
+            vscode-extensions.visualstudiotoolsforunity.vstuc
+            vscode-extensions.vscodevim.vim
+          ];
+          userSettings = {
+            dotnet = {
+              acquisitionExtension.enable = false;
+              server.useOmnisharp = true;
+              enablePackageRestore = false;
+              automaticallyInstallRuntime = false;
+              dotnetPath = "/run/current-system/sw/bin/dotnet";
+            };
+            omnisharp = {
+              dotnetPath = "/run/current-system/sw/bin/dotnet";
+              path = "latest";
+            };
+          };
+        };
       };
 
       gh = {
