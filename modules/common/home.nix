@@ -71,9 +71,9 @@
             dotnet = {
               acquisitionExtension.enable = false;
               server.useOmnisharp = true;
-              enablePackageRestore = false;
-              automaticallyInstallRuntime = false;
-              dotnetPath = "/run/current-system/sw/bin/dotnet";
+              enablePackageRestore = true;
+              automaticallyInstallRuntime = true;
+              serverPath = "/run/current-system/sw/bin/dotnet";
             };
             omnisharp = {
               dotnetPath = "/run/current-system/sw/bin/dotnet";
