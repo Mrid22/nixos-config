@@ -14,8 +14,8 @@
   in {
     devShells.x86_64-linux.default = pkgs.mkShell {
       buildInputs = with pkgs; [
-        dotnet-sdk_9
-        dotnet-runtime_9
+        dotnet-sdk_10
+        dotnet-runtime_10
         mono
         omnisharp-roslyn
         msbuild
