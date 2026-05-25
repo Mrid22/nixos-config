@@ -254,6 +254,7 @@
             "a6335949-4465-4b71-926c-4a52d34bc9c0"
           ];
           search = {
+            force = true;
             engines = {
               mynixos = {
                 name = "My NixOS";
