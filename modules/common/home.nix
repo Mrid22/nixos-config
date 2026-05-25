@@ -71,13 +71,15 @@
             dotnet = {
               acquisitionExtension.enable = false;
               server.useOmnisharp = true;
+              serverPath = "${pkgs.dotnet-sdk}/bin/dotnet";
               enablePackageRestore = true;
               automaticallyInstallRuntime = true;
-              serverPath = "/run/current-system/sw/bin/dotnet";
             };
+            ".NET".runtime.dotnet.path = "${pkgs.dotnet-sdk}/bin/dotnet";
             omnisharp = {
-              dotnetPath = "/run/current-system/sw/bin/dotnet";
-              path = "latest";
+              dotnetPath = "${pkgs.dotnet-sdk}/bin/dotnet";
+              useModernNet = true;
+              path = "OmniSharp";
             };
           };
         };
