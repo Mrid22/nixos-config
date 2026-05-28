@@ -49,6 +49,7 @@
     };
 
     services = {
+      gnome.at-spi2-core.enable = true;
       hypridle = {
         enable = true;
         package = wrappedpkgs.hypridle;
@@ -172,6 +173,8 @@
       proton-vpn
       wireguard-tools
       dotnet-sdk
+      orca
+      speechd
     ];
 
     system.stateVersion = "26.05";
