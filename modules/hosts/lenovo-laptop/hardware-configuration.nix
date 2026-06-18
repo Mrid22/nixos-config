@@ -1,41 +1,31 @@
+{ config, lib, pkgs, modulesPath, ... }: { flake.nixosModules.lenovo-laptop-hardware-config = {config,lib,modulesPath,...}:
+
 {
-  config,
-  lib,
-  pkgs,
-  modulesPath,
-  ...
-}: {
-  flake.nixosModules.lenovo-laptop-hardware-config = {
-    config,
-    lib,
-    modulesPath,
-    ...
-  }: {
-    imports = [
-      (modulesPath + "/installer/scan/not-detected.nix")
+  imports =
+    [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-    boot.initrd.availableKernelModules = ["xhci_pci" "thunderbolt" "nvme" "uas" "sd_mod" "rtsx_pci_sdmmc"];
-    boot.initrd.kernelModules = [];
-    boot.kernelModules = ["kvm-intel"];
-    boot.extraModulePackages = [];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "uas" "sd_mod" "rtsx_pci_sdmmc" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
 
-    fileSystems."/" = {
-      device = "/dev/disk/by-uuid/a5254418-9f9b-43ec-9b3c-ba9e68e9fd73";
+  fileSystems."/" =
+    { device = "/dev/disk/by-uuid/1e42bddc-25cd-4b56-9957-da0664acf1ed";
       fsType = "ext4";
     };
 
-    fileSystems."/boot" = {
-      device = "/dev/disk/by-uuid/9CC1-857F";
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/78BD-E3EC";
       fsType = "vfat";
-      options = ["fmask=0077" "dmask=0077"];
+      options = [ "fmask=0022" "dmask=0022" ];
     };
 
-    swapDevices = [
-      {device = "/dev/disk/by-uuid/73fcf9a0-c61a-4de8-863f-b263a40650d0";}
+  swapDevices =
+    [ { device = "/dev/disk/by-uuid/6a3332f9-f183-4972-8f2e-055887eecb3d"; }
     ];
 
-    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-    hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  };
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+};
 }

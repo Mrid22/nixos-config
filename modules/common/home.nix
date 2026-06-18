@@ -187,7 +187,7 @@
             decentraleyes
             privacy-badger
             duckduckgo-privacy-essentials
-            ecosia
+            consent-o-matic
             dearrow
             proton-pass
             zen-internet
