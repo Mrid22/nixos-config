@@ -4,27 +4,16 @@
     lib,
     ...
   }: {
-    boot = {
-      kernel.extraModuleConfig = {
-        "snd_hda_intel" = {
-          options = "model=alc287-headset";
-          #"model=auto";
-          #"model=generic";
-          #"model=dell-headset";
-          #"model=hp-mic-headset";
-        };
+    boot.loader = {
+      systemd-boot.enable = false;
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
       };
-
-      loader = {
-        systemd-boot.enable = false;
-        grub = {
-          enable = true;
-          device = "nodev";
-          efiSupport = true;
-        };
-        efi.canTouchEfiVariables = true;
-      };
+      efi.canTouchEfiVariables = true;
     };
+
     networking.hostName = "lenovo-laptop";
     time.timeZone = "Europe/Nicosia";
     hardware.nvidia = {

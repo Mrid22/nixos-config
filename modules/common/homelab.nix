@@ -6,7 +6,7 @@
     ...
   }: {
     imports = with inputs; [
-      #    jellyfin-flake.nixosModules.default
+      jellyfin-flake.nixosModules.default
     ];
     fileSystems."/media" = {
       device = "/dev/sda1";
@@ -20,27 +20,35 @@
 
     virtualisation.oci-containers = {
       backend = "podman";
-      containers.homeassistant = {
-        volumes = ["home-assistant:/config"];
-        environment.TZ = "Asia/Nicosia";
-        # Note: The image will not be updated on rebuilds, unless the version label changes
-        image = "ghcr.io/home-assistant/home-assistant:stable";
-        extraOptions = [
-          # Use the host network namespace for all sockets
-          "--network=host"
-        ];
+      containers = {
+        jellyfin = {
+          volumes = [
+            "jellyfin/config:/config"
+            "/data/media:/media"
+          ];
+          image = "jellyfin/jellyfin:latest";
+          extraOptions = [
+            # Use the host network namespace for all sockets
+            "--network=host"
+          ];
+        };
+        homeassistant = {
+          volumes = ["home-assistant:/config"];
+          environment.TZ = "Asia/Nicosia";
+          # Note: The image will not be updated on rebuilds, unless the version label changes
+          image = "ghcr.io/home-assistant/home-assistant:stable";
+          extraOptions = [
+            # Use the host network namespace for all sockets
+            "--network=host"
+          ];
+        };
       };
     };
 
     services = {
       #Arr
-      sonarr.enable = true;
-      prowlarr.enable = true;
-      radarr.enable = true;
-      bazarr.enable = true;
-      flaresolverr.enable = true;
       jellyfin = {
-        enable = true;
+        # enable = true;
         #settings = {
         # system = {
         #   serverName = "MridulJelly";
@@ -79,6 +87,12 @@
         #  device = "/dev/dri/renderD128";
         #};
       };
+
+      sonarr.enable = true;
+      prowlarr.enable = true;
+      radarr.enable = true;
+      bazarr.enable = true;
+      flaresolverr.enable = true;
       seerr.enable = true;
 
       transmission = {
