@@ -23,8 +23,8 @@
       containers = {
         jellyfin = {
           volumes = [
-            "jellyfin/config:/config"
-            "/data/media:/media"
+            "/var/lib/podjelly/config:/config"
+            "/media:/media"
           ];
           image = "jellyfin/jellyfin:latest";
           extraOptions = [
