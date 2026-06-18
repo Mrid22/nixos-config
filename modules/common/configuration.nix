@@ -152,6 +152,7 @@
       blender
       kdePackages.kdenlive
       alsa-utils
+      alsa-tools
       pavucontrol
       openvino
       audacity
