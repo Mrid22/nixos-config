@@ -36,7 +36,50 @@
 
     services = {
       #Arr
-      declarative-jellyfin.enable = true;
+      declarative-jellyfin = {
+        enable = true;
+        system = {
+          pluginRepositories = [
+            {
+              content = {
+                Name = "Jellyfin Stable";
+                Url = "https://repo.jellyfin.org/files/plugin/manifest.json";
+              };
+              tag = "RepositoryInfo"; # Needed to generate the correct XML
+            }
+
+            {
+              content = {
+                Name = "Intro Skipper";
+                Url = "https://intro-skipper.org/manifest.json";
+              };
+              tag = "RepositoryInfo"; # Needed to generate the correct XML
+            }
+          ];
+          libraries = {
+            Movies = {
+              enabled = true;
+              contentType = "movies";
+              pathInfos = ["/media/movies"];
+            };
+            Shows = {
+              enabled = true;
+              contentType = "tvshows";
+              pathInfos = ["/media/tv"];
+            };
+            Music = {
+              enabled = true;
+              contentType = "music";
+              pathInfos = ["/media/music"];
+            };
+          };
+          serverName = "Mridjelly";
+          trickplayOptions = {
+            enableHwAcceleration = true;
+            enableHwEncoding = true;
+          };
+        };
+      };
       sonarr.enable = true;
       prowlarr.enable = true;
       radarr.enable = true;
