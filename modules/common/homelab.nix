@@ -6,7 +6,7 @@
     ...
   }: {
     imports = with inputs; [
-      jellyfin-flake.nixosModules.default
+      declarative-jellyfin.nixosModules.default
     ];
     fileSystems."/media" = {
       device = "/dev/sda1";
@@ -36,52 +36,7 @@
 
     services = {
       #Arr
-      jellyfin = {
-        enable = true;
-        dataDir = "/var/lib/jellyfin/data";
-        settings = {
-          system = {
-            serverName = "MridulJelly";
-            quickConnectAvailable = false;
-            isStartupWizardCompleted = true;
-            enableExternalContentInSuggestions = true;
-            pluginRepositories = [
-              {
-                name = "Apple Music Metadata";
-                url = "https://repo.xkrivo.net/jellyfin/manifest.json";
-              }
-              {
-                name = "Jellyfin Stable";
-                url = "https://repo.jellyfin.org/files/plugin/manifest.json";
-              }
-              {
-                name = "Intro Skipper";
-                url = "https://intro-skipper.org/manifest.json";
-              }
-              {
-                name = "I Am Paradox";
-                url = "https://www.iamparadox.dev/jellyfin/plugins/manifest.json";
-              }
-              {
-                name = "Editor's Choice";
-                url = "https://github.com/lachlandcp/jellyfin-editors-choice-plugin/raw/main/manifest.json";
-              }
-              {
-                name = "Jellyfin Enhanced";
-                url = "https://raw.githubusercontent.com/n00bcodr/jellyfin-plugins/main/10.11/manifest.json";
-              }
-            ];
-          };
-          branding.customCss = ''@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");'';
-          encoding.hardwareAccelerationType = "nvenc";
-        };
-        hardwareAcceleration = {
-          enable = true;
-          type = "nvenc";
-          device = "/dev/dri/renderD128";
-        };
-      };
-
+      declarative-jellyfin.enable = true;
       sonarr.enable = true;
       prowlarr.enable = true;
       radarr.enable = true;

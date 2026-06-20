@@ -8,21 +8,13 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
-    vicinae-extensions = {
-      url = "github:vicinaehq/extensions";
-      inputs = {
-        vicinae.follows = "vicinae";
-        nixpkgs.follows = "nixpkgs";
-      };
+    declarative-jellyfin = {
+      url = "github:Sveske-Juice/declarative-jellyfin";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    jellyfin-flake = {
-      url = "github:matt1432/nixos-jellyfin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -35,11 +27,6 @@
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    #   mridwrappers = {
-    #     url = "git+file:///home/mridula/Documents/Coding/wrappers";
-    #     inputs.nixpkgs.follows = "nixpkgs";
-    #   };
 
     stylix = {
       url = "github:nix-community/stylix";
@@ -54,6 +41,14 @@
     firefox-addons = {
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    vicinae-extensions = {
+      url = "github:vicinaehq/extensions";
+      inputs = {
+        vicinae.follows = "vicinae";
+        nixpkgs.follows = "nixpkgs";
+      };
     };
 
     zen-browser = {
