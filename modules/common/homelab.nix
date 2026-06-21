@@ -8,6 +8,11 @@
     imports = with inputs; [
       declarative-jellyfin.nixosModules.default
     ];
+
+    environment.systemPackages = with pkgs; [
+      cloudflared
+    ];
+
     fileSystems."/media" = {
       device = "/dev/sda1";
       fsType = "ntfs";
@@ -38,6 +43,7 @@
       #Arr
       declarative-jellyfin = {
         enable = true;
+        branding.customCss = ''@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");'';
         system = {
           pluginRepositories = [
             {
@@ -55,24 +61,28 @@
               };
               tag = "RepositoryInfo"; # Needed to generate the correct XML
             }
+            {
+              content = {
+                Name = "Apple Music Metadata";
+                Url = "https://repo.xkrivo.net/jellyfin/manifest.json";
+              };
+              tag = "RepositoryInfo"; # Needed to generate the correct XML
+            }
+            {
+              content = {
+                Name = "IAmParadox";
+                Url = "https://www.iamparadox.dev/jellyfin/plugins/manifest.json";
+              };
+              tag = "RepositoryInfo"; # Needed to generate the correct XML
+            }
+            {
+              content = {
+                Name = "Jellyfin Enhanced";
+                Url = "https://raw.githubusercontent.com/n00bcodr/jellyfin-plugins/main/10.11/manifest.json";
+              };
+              tag = "RepositoryInfo"; # Needed to generate the correct XML
+            }
           ];
-          libraries = {
-            Movies = {
-              enabled = true;
-              contentType = "movies";
-              pathInfos = ["/media/movies"];
-            };
-            Shows = {
-              enabled = true;
-              contentType = "tvshows";
-              pathInfos = ["/media/tv"];
-            };
-            Music = {
-              enabled = true;
-              contentType = "music";
-              pathInfos = ["/media/music"];
-            };
-          };
           serverName = "Mridjelly";
           trickplayOptions = {
             enableHwAcceleration = true;
