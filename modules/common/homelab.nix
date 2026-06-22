@@ -4,7 +4,9 @@
     inputs,
     lib,
     ...
-  }: {
+  }: let
+    tunnel-uuid = "12cc9059-ad16-4831-93b0-ca365f528209";
+  in {
     imports = with inputs; [
       declarative-jellyfin.nixosModules.default
     ];
@@ -111,15 +113,14 @@
 
       cloudflared = {
         enable = true;
-        tunnels = {
-          "917c719c-abbf-4959-b32d-c0bb6d9b9939" = {
-            credentialsFile = "/etc/cloudflared/917c719c-abbf-4959-b32d-c0bb6d9b9939.json";
-            default = "http_status:404";
-            ingress = {
-              "jf.shmanju.org" = "http://localhost:8096";
-              "js.shmanju.org" = "http://localhost:5055";
-              "pg.shmanju.org" = "http://localhost:2283";
-            };
+
+        tunnels."${tunnel-uuid}" = {
+          credentialsFile = "/etc/cloudflared/${tunnel-uuid}.json";
+          default = "http_status:404";
+          ingress = {
+            "jf.shmanju.org" = "http://localhost:8096";
+            "js.shmanju.org" = "http://localhost:5055";
+            "pg.shmanju.org" = "http://localhost:2283";
           };
         };
       };
