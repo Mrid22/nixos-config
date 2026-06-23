@@ -14,7 +14,8 @@
       homeDirectory = "/home/mridula";
       stateVersion = "25.11";
     };
-    services = {
+
+    programs = {
       vicinae = {
         enable = true;
         systemd = {
@@ -48,9 +49,6 @@
           power-profile
         ];
       };
-    };
-
-    programs = {
       obs-studio = {
         enable = true;
         plugins = with pkgs.obs-studio-plugins; [

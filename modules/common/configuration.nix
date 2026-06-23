@@ -150,6 +150,7 @@
       cliamp
       eza
       blender
+      itch
       kdePackages.kdenlive
       alsa-utils
       alsa-tools
