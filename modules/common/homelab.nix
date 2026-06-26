@@ -14,7 +14,7 @@
     environment.systemPackages = with pkgs; [
       cloudflared
     ];
-    specialisation.homelab = {
+    specialisation.homelab.configuration = {
       # Mount the drive
       fileSystems."/media" = {
         device = "/dev/sda1";
