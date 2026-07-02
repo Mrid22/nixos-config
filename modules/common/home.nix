@@ -28,12 +28,12 @@
           keybinding = "emacs";
           keybinds.toggle-action-panel = "control+K";
           providers = {
-            "@Gelei/vicinae-extension-bluetooth-0" = {
-              preferences = {
-                connectionToggleable = true;
-              };
-              entrypoints.devices.alias = "btd";
-            };
+            # "@Gelei/vicinae-extension-bluetooth-0" = {
+            #   preferences = {
+            #     connectionToggleable = true;
+            #   };
+            #   entrypoints.devices.alias = "btd";
+            # };
             "@knoopx/vicinae-extension-nix-0" = {
               entrypoints.options.alias = "nxo";
             };
@@ -43,7 +43,7 @@
           nix
           wifi-commander
           github
-          bluetooth
+          # bluetooth
           process-manager
           player-pilot
           power-profile
