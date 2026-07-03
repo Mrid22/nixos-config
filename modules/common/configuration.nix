@@ -178,7 +178,19 @@
       orca
       speechd
     ];
-
-    system.stateVersion = "26.05";
+    system = {
+      autoUpgrade = {
+        enable = true;
+        flake = "/home/mridula/nixos-config";
+        flags = [
+          "--print-build-logs"
+          "--commit-lock-file"
+        ];
+        dates = "02:00";
+        randomizedDelaySec = "45min";
+        allowReboot = false; # Set to true if you want automatic reboots
+      };
+      stateVersion = "26.05";
+    };
   };
 }
