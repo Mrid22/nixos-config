@@ -16,6 +16,7 @@
     };
 
     programs = {
+      btop.enable = true;
       vicinae = {
         enable = true;
         systemd = {
