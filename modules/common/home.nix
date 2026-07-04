@@ -1,6 +1,6 @@
 {inputs, ...}: {
   imports = [
-    #   inputs.home-manager.flakeModules.home-manager
+    inputs.home-manager.flakeModules.home-manager
   ];
 
   flake.homeModules.home-config = {pkgs, ...}: {

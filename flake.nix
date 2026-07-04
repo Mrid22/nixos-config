@@ -7,6 +7,10 @@
     vicinae.url = "github:vicinaehq/vicinae";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     declarative-jellyfin = {
       url = "github:Sveske-Juice/declarative-jellyfin";

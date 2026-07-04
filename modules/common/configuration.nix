@@ -129,24 +129,27 @@
       nerd-fonts.fira-code
       nerd-fonts.droid-sans-mono
     ];
-
-    nixpkgs.config.allowUnfreePredicate = pkg:
-      builtins.elem (lib.getName pkg) [
-        "steam"
-        "steam-unwrapped"
-        "nvidia-x11"
-        "nvidia-settings"
-        "unityhub"
-        "corefonts"
-        "code"
-        "vscode"
-        "vscode-extension-VisualStudioToolsForUnity-vstuc"
-      ];
+    nixpkgs = {
+      overlays = [(import inputs.emacs-overlay)];
+      config.allowUnfreePredicate = pkg:
+        builtins.elem (lib.getName pkg) [
+          "steam"
+          "steam-unwrapped"
+          "nvidia-x11"
+          "nvidia-settings"
+          "unityhub"
+          "corefonts"
+          "code"
+          "vscode"
+          "vscode-extension-VisualStudioToolsForUnity-vstuc"
+        ];
+    };
 
     environment.systemPackages = with pkgs; [
       wrappedpkgs.kitty
       wrappedpkgs.default # Neovim
       wrappedpkgs.git
+      emacs-git
       cliamp
       eza
       blender
