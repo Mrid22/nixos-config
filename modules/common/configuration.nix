@@ -130,7 +130,6 @@
       nerd-fonts.droid-sans-mono
     ];
     nixpkgs = {
-      overlays = [(import inputs.emacs-overlay)];
       config.allowUnfreePredicate = pkg:
         builtins.elem (lib.getName pkg) [
           "steam"
