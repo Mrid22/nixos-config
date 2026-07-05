@@ -149,8 +149,6 @@
       wrappedpkgs.kitty
       wrappedpkgs.default # Neovim
       wrappedpkgs.git
-      emacs-git
-      emacsPackages.tokyo-night
       cliamp
       eza
       blender
