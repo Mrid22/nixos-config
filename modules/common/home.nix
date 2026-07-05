@@ -44,7 +44,7 @@
           nix
           wifi-commander
           github
-          # bluetooth
+          #bluetooth
           process-manager
           player-pilot
           power-profile
