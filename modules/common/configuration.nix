@@ -151,6 +151,7 @@
       cliamp
       eza
       blender
+      ffmpeg
       itch
       kdePackages.kdenlive
       alsa-utils
