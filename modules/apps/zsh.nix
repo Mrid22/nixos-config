@@ -11,12 +11,10 @@
           autocd = true;
           env = {
             EDITOR = "$(which nvim)";
-            PATH = "$HOME/.emacs.d/bin:$PATH";
           };
           shellAliases = {
             gaa = "git add .";
             gcam = "git commit -a -m";
-            emacs = "doom emacs -nw";
             gp = "git push";
             gd = "git diff";
             ls = "eza --icons --git -lh --sort date -r";
