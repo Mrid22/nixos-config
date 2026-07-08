@@ -35,7 +35,7 @@
                 {
                   key = "<leader>t";
                   mode = "n";
-                  action = ":ToggleTerm";
+                  action = ":ToggleTerm<CR>";
                 }
                 {
                   key = "<leader>ff";
