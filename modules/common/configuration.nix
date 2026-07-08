@@ -49,11 +49,11 @@
     };
 
     services = {
-      gnome.at-spi2-core.enable = true;
       hypridle = {
         enable = true;
         package = wrappedpkgs.hypridle;
       };
+      syncthing.enable = true;
       pipewire = {
         enable = true;
         alsa = {
