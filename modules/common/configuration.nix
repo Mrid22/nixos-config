@@ -138,6 +138,7 @@
           "nvidia-settings"
           "unityhub"
           "corefonts"
+          "obsidian"
           "code"
           "vscode"
           "vscode-extension-VisualStudioToolsForUnity-vstuc"

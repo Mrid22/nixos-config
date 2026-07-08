@@ -16,6 +16,7 @@
     };
 
     programs = {
+      obsidian.enable = true;
       btop.enable = true;
       vicinae = {
         enable = true;
