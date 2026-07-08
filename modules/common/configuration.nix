@@ -148,6 +148,7 @@
       wrappedpkgs.kitty
       wrappedpkgs.default # Neovim
       wrappedpkgs.git
+      prismlauncher
       cliamp
       eza
       blender
