@@ -53,11 +53,7 @@
         enable = true;
         package = wrappedpkgs.hypridle;
       };
-      syncthing = {
-        enable = true;
-        user = "mridula";
-        group = "user";
-      };
+      syncthing.enable = true;
       pipewire = {
         enable = true;
         alsa = {
