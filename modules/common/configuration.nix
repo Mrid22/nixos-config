@@ -49,11 +49,17 @@
     };
 
     services = {
+      syncthing = {
+        enable = true;
+        user = "mridula";
+        dataDir = "/home/mridula/.config/syncthing";
+        configDir = "/home/mridula/.config/syncthing";
+        openDefaultPorts = true;
+      };
       hypridle = {
         enable = true;
         package = wrappedpkgs.hypridle;
       };
-      syncthing.enable = true;
       pipewire = {
         enable = true;
         alsa = {
