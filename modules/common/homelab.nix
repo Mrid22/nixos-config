@@ -110,7 +110,10 @@
           };
         };
 
-        immich.enable = true;
+        immich = {
+          enable = true;
+          mediaLocation = "/media/photos";
+        };
 
         cloudflared = {
           enable = true;
