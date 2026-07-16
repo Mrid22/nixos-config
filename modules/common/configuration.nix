@@ -53,7 +53,7 @@
         enable = true;
         config.devices = [
           {
-            name = "Wireless Mouse MX Master 3S";
+            name = "MX Master 3S";
             dpi = 10000;
             smartshift = {
               on = true;
