@@ -112,6 +112,7 @@
 
         immich = {
           enable = true;
+          port = 2283;
           mediaLocation = "/media/photos";
         };
 
