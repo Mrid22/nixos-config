@@ -49,20 +49,6 @@
     };
 
     services = {
-      logiops = {
-        enable = true;
-        devices = [
-          {
-            name = "Wireless Mouse MX Master 3S";
-            dpi = 1000;
-            smartshift = {
-              on = false;
-              threshold = 30;
-              torque = 50;
-            };
-          }
-        ];
-      };
       syncthing = {
         enable = true;
         user = "mridula";
