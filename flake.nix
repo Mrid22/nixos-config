@@ -27,6 +27,10 @@
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    mridwrappers = {
+      url = "git+file:///home/mridula/Documents/Coding/wrappers";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     stylix = {
       url = "github:nix-community/stylix";

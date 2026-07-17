@@ -673,6 +673,26 @@
         "type": "github"
       }
     },
+    "mridwrappers": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1784219440,
+        "narHash": "sha256-JP7ENcoQJvoCapLODjOFyvATABZsbxVKEhypujimUlE=",
+        "ref": "refs/heads/main",
+        "rev": "8c7dcf4609826bcaed12cb45346e4cbe127dbe14",
+        "revCount": 277,
+        "type": "git",
+        "url": "file:///home/mridula/Documents/Coding/wrappers"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/mridula/Documents/Coding/wrappers"
+      }
+    },
     "musnix": {
       "inputs": {
         "nixpkgs": [
@@ -888,6 +908,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "import-tree": "import-tree",
+        "mridwrappers": "mridwrappers",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_2",
         "nvf": "nvf",
