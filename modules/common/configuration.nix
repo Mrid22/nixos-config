@@ -49,6 +49,7 @@
     };
 
     services = {
+      nohang.enable = true;
       logiops = {
         enable = true;
         config.devices = [
