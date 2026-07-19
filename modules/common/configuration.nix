@@ -203,8 +203,8 @@
     ];
     system = {
       autoUpgrade = {
-        enable = false;
-        flake = "/home/mridula/nixos-config";
+        enable = true;
+        flake = inputs.self.outPath;
         flags = [
           "--print-build-logs"
           "--commit-lock-file"
