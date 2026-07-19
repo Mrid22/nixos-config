@@ -203,7 +203,7 @@
     ];
     system = {
       autoUpgrade = {
-        enable = true;
+        enable = false;
         flake = "/home/mridula/nixos-config";
         flags = [
           "--print-build-logs"
