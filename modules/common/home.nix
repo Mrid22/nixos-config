@@ -30,16 +30,16 @@
           keybinding = "emacs";
           keybinds = {
             toggle-action-panel = "control+K";
-            action.new = "control+A";
+            "action.new" = "control+A";
             open-search-filter = "control+F";
           };
           providers = {
-            # "@Gelei/vicinae-extension-bluetooth-0" = {
-            #   preferences = {
-            #     connectionToggleable = true;
-            #   };
-            #   entrypoints.devices.alias = "btd";
-            # };
+            "@Gelei/vicinae-extension-bluetooth-0" = {
+              preferences = {
+                connectionToggleable = true;
+              };
+              entrypoints.devices.alias = "btd";
+            };
             "@knoopx/vicinae-extension-nix-0" = {
               entrypoints.options.alias = "nxo";
             };
@@ -49,7 +49,6 @@
           nix
           wifi-commander
           github
-          #bluetooth
           process-manager
           player-pilot
           power-profile
