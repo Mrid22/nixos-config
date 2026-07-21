@@ -71,6 +71,7 @@
             vscodevim.vim
           ];
           userSettings = {
+            "chat.disableAIFeatures" = true;
             dotnet = {
               acquisitionExtension.enable = false;
               server.useOmnisharp = true;
