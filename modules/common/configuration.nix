@@ -49,6 +49,7 @@
     };
 
     services = {
+      fwupd.enable = true;
       nohang.enable = true;
       logiops = {
         enable = true;
