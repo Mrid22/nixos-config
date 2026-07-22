@@ -1,6 +1,5 @@
 {
   flake.nixosModules.config = {
-    config,
     pkgs,
     inputs,
     lib,
@@ -39,7 +38,6 @@
       };
     };
     networking = {
-      timeServers = config.networking.timeServers.default ++ ["1.cy.pool.ntp.org"];
       networkmanager.enable = true;
       firewall.checkReversePath = false;
     };
@@ -51,6 +49,7 @@
     };
 
     services = {
+      ntp.servers = ["1.cy.pool.ntp.org"];
       fwupd.enable = true;
       nohang.enable = true;
       logiops = {
