@@ -167,6 +167,7 @@
       };
       zen-browser = {
         enable = true;
+        setAsDefaultBrowser = true;
         policies = {
           AutofillAddressEnabled = true;
           AutofillCreditCardEnabled = false;

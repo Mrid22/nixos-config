@@ -123,6 +123,10 @@
       };
     };
 
+    xdg.mime.defaultApplications = {
+      "application/pdf" = "zen-twilight.desktop";
+    };
+
     programs = {
       bat.enable = true;
       localsend.enable = true;
