@@ -293,7 +293,7 @@
 
     wayland.windowManager.hyprland = {
       enable = true;
-      configType = "hyprlang";
+      configType = "lua";
       settings = {
         bindel = [
           ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
