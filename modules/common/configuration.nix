@@ -27,6 +27,8 @@
       };
     };
 
+    virtualization.docker.enable = true;
+
     hardware = {
       bluetooth = {
         enable = true;
