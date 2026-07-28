@@ -27,7 +27,10 @@
       };
     };
 
-    virtualisation.docker.enable = true;
+    virtualisation = {
+      docker.enable = true;
+      virtualbox.host.enable = true;
+    };
 
     hardware = {
       bluetooth = {
@@ -121,7 +124,7 @@
       users.mridula = {
         isNormalUser = true;
         description = "Mridul Agarwal";
-        extraGroups = ["wheel" "audio" "networkmanager"];
+        extraGroups = ["wheel" "audio" "networkmanager" "vboxusers"];
       };
     };
 
