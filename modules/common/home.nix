@@ -1,6 +1,6 @@
 {
   inputs,
-  lib,
+  self,
   ...
 }: {
   imports = [
@@ -11,6 +11,7 @@
     imports = with inputs; [
       zen-browser.homeModules.twilight
       vicinae.homeManagerModules.default
+      ags.homeManagerModules.default
     ];
 
     home = {
@@ -22,11 +23,10 @@
     programs = {
       obsidian.enable = true;
       btop.enable = true;
-      quickshell = {
+      ags = {
         enable = true;
+        configDir = "${self}+/ags";
       };
-      configs = ["custom"];
-      activeConfig = "custom";
       vicinae = {
         enable = true;
         systemd = {
