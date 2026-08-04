@@ -76,6 +76,7 @@
                 nix.enable = true;
                 json.enable = true;
                 html.enable = true;
+                css.enable = true;
                 bash.enable = true;
                 python.enable = true;
                 typescript.enable = true;

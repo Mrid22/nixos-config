@@ -26,6 +26,9 @@
       ags = {
         enable = true;
         configDir = "${self}+/ags";
+        extraPackages = with inputs.astal; [
+          packages.${pkgs.system}.battery
+        ];
       };
       vicinae = {
         enable = true;
