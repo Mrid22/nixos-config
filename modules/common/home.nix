@@ -22,6 +22,11 @@
     programs = {
       obsidian.enable = true;
       btop.enable = true;
+      quickshell = {
+        enable = true;
+      };
+      configs = ["custom"];
+      activeConfig = "custom";
       vicinae = {
         enable = true;
         systemd = {
