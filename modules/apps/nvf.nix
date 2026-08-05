@@ -80,6 +80,7 @@
                 bash.enable = true;
                 python.enable = true;
                 typescript.enable = true;
+                tsx.enable = true;
                 rust.enable = true;
                 markdown = {
                   enable = true;

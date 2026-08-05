@@ -1,11 +1,14 @@
-$fg-color: "#FFFFFF";
-window.Bar {
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+$fg-color: #{"@theme_fg_color"};
+$bg-color: #{"@theme_bg_color"};
+
+window#bar {
   background: transparent;
   color: $fg-color;
   font-weight: bold;
 
-  > centerbox {
-    background: "#000000";
+  > box {
+    background: $bg-color;
     border-radius: 10px;
     margin: 8px;
   }
@@ -13,5 +16,7 @@ window.Bar {
   button {
     border-radius: 8px;
     margin: 2px;
+    min-height: 0;
+    padding: 4px 8px;
   }
 }

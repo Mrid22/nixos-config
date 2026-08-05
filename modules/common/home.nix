@@ -26,8 +26,14 @@
       ags = {
         enable = true;
         configDir = "${self}+/ags";
-        extraPackages = with inputs.astal; [
-          packages.${pkgs.system}.battery
+        extraPackages = with inputs.astal.packages.${pkgs.stdenv.hostPlatform.system}; [
+          battery
+          powerprofiles
+          network
+          wireplumber
+          mpris
+          tray
+          apps
         ];
       };
       vicinae = {
