@@ -197,6 +197,7 @@
       helm
       tap-plugins
       lmms
+      adwaita-icon-theme
       x42-plugins
       nodejs
       pnpm
