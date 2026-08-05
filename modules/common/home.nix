@@ -34,6 +34,7 @@
           mpris
           tray
           apps
+          hyprland
         ];
       };
       vicinae = {
