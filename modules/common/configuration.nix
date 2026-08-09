@@ -219,7 +219,6 @@
         flake = inputs.self.outPath;
         flags = [
           "--print-build-logs"
-          "--commit-lock-file"
         ];
         dates = "02:00";
         randomizedDelaySec = "45min";
