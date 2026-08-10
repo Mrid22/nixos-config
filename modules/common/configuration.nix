@@ -161,6 +161,9 @@
       nerd-fonts.droid-sans-mono
     ];
     nixpkgs = {
+      overlays = [
+        inputs.obsidian-extensions.overlays.default
+      ];
       config.allowUnfreePredicate = pkg:
         builtins.elem (lib.getName pkg) [
           "steam"

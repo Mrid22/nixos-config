@@ -24,6 +24,13 @@
       obsidian = {
         enable = true;
         vaults.notes.target = "Notes";
+        defaultSettings.communityPlugins = with pkgs.obsidianPlugins; [
+          omnisearch
+          obsidian-excalidraw-plugin
+          attachment-management
+          text-extractor
+          pdf-plus
+        ];
       };
       btop.enable = true;
       ags = {
