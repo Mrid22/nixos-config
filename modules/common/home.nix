@@ -21,7 +21,10 @@
     };
 
     programs = {
-      obsidian.enable = true;
+      obsidian = {
+        enable = true;
+        vaults.notes.target = "Notes";
+      };
       btop.enable = true;
       ags = {
         enable = true;
