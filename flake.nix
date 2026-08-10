@@ -27,6 +27,7 @@
       url = "github:lassulus/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     mridwrappers = {
       url = "git+file:///home/mridula/Documents/Coding/wrappers";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -72,6 +73,11 @@
       url = "github:aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.astal.follows = "astal";
+    };
+
+    obsidian-extensions = {
+      url = "github:karaolidis/nix-obsidian-extensions";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
