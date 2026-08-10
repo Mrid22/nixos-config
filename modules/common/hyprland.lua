@@ -109,7 +109,7 @@ hl.animation({
     style = "slide",
 })
 
-hl.bind("ALT + Q", hl.dsp.exec_cmd("kitty zsh"))
+hl.bind("ALT + Q", hl.dsp.exec_cmd("kitty"))
 hl.bind("ALT + SPACE", hl.dsp.exec_cmd("vicinae toggle"))
 hl.bind("ALT + F", hl.dsp.exec_cmd("vicinae vicinae://launch/applications/zen-twilight"))
 hl.bind("ALT + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))

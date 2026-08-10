@@ -725,11 +725,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785825298,
-        "narHash": "sha256-EhYAjGMslrkTKba5iJ3vS70ufAKlR/YoaJ4pkJDB3rg=",
-        "ref": "refs/heads/fzf-extra",
-        "rev": "2ed60ca35659878295a273aaae2aeb11cf25e353",
-        "revCount": 273,
+        "lastModified": 1786342105,
+        "narHash": "sha256-q7SX7E3KYNmrZrC7sO+QwVzt5gxAyFl4TEpEWbSCxTk=",
+        "ref": "refs/heads/fix-zsh-paths",
+        "rev": "20bc9725c36217a37e356a503a686a2c4775c46a",
+        "revCount": 289,
         "type": "git",
         "url": "file:///home/mridula/Documents/Coding/wrappers"
       },
