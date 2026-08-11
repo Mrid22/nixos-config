@@ -127,7 +127,6 @@
           github
           process-manager
           player-pilot
-          power-profile
         ];
       };
       obs-studio = {
