@@ -124,7 +124,6 @@
         extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
           nix
           wifi-commander
-          github
           process-manager
           player-pilot
         ];
