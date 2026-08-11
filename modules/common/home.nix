@@ -24,13 +24,60 @@
       obsidian = {
         enable = true;
         vaults.notes.target = "Notes";
-        defaultSettings.communityPlugins = with pkgs.obsidianPlugins; [
-          omnisearch
-          obsidian-excalidraw-plugin
-          attachment-management
-          text-extractor
-          pdf-plus
-        ];
+        defaultSettings = {
+          app = {
+            spellCheck = true;
+            alwaysUpdateLinks = true;
+            attachmentFolderPath = "Attachements";
+            vimMode = true;
+          };
+          hotkeys = {
+            "omnisearch:show-modal-infile" = [
+              {
+                modifiers = [
+                  "Mod"
+                  "Shift"
+                ];
+                key = "P";
+              }
+            ];
+            "omnisearch:show-modal" = [
+              {
+                modifiers = [
+                  "Mod"
+                ];
+                key = "P";
+              }
+            ];
+          };
+          corePlugins = [
+            "file-explorer"
+            "global-search"
+            "switcher"
+            "graph"
+            "backlink"
+            "outgoing-link"
+            "tag-pane"
+            "properties"
+            "page-preview"
+            "daily-notes"
+            "templates"
+            "note-composer"
+            "slash-command"
+            "editor-status"
+            "bookmarks"
+            "outline"
+            "file-recovery"
+            "bases"
+          ];
+          communityPlugins = with pkgs.obsidianPlugins; [
+            omnisearch
+            obsidian-excalidraw-plugin
+            attachment-management
+            text-extractor
+            pdf-plus
+          ];
+        };
       };
       btop.enable = true;
       ags = {
