@@ -5,7 +5,7 @@
     ...
   }: {
     packages.zsh =
-      (inputs.mridwrappers.wrapperModules.zsh.apply {
+      (inputs.wrappers.wrapperModules.zsh.apply {
         inherit pkgs;
         settings = {
           autocd = true;
