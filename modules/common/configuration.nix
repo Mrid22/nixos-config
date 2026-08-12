@@ -206,6 +206,7 @@
       nodejs
       pnpm
       finamp
+      hyprpicker
       picard
       vlc
       unityhub
