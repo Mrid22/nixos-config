@@ -11,7 +11,6 @@
     imports = with inputs; [
       zen-browser.homeModules.twilight
       vicinae.homeManagerModules.default
-      ags.homeManagerModules.default
     ];
 
     home = {
@@ -80,20 +79,6 @@
         };
       };
       btop.enable = true;
-      ags = {
-        enable = true;
-        configDir = "${self}+/ags";
-        extraPackages = with inputs.astal.packages.${pkgs.stdenv.hostPlatform.system}; [
-          battery
-          powerprofiles
-          network
-          wireplumber
-          mpris
-          tray
-          apps
-          hyprland
-        ];
-      };
       vicinae = {
         enable = true;
         systemd = {
