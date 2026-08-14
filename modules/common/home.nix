@@ -19,6 +19,8 @@
       stateVersion = "25.11";
     };
 
+    sefvices.swaync.enable = true;
+
     programs = {
       obsidian = {
         enable = true;
