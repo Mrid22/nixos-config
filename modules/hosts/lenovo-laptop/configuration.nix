@@ -30,7 +30,7 @@
 
     '';
 
-    powerManagement.powerTop.enable = true;
+    powerManagement.powertop.enable = true;
     networking.hostName = "lenovo-laptop";
     time.timeZone = "Europe/Nicosia";
     hardware = {
