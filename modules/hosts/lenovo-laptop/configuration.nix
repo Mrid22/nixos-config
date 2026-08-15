@@ -50,18 +50,18 @@
     };
     services = {
       xserver.videoDrivers = ["nvidia"];
-      rsync = {
-        enable = true;
-        jobs.music = {
-          destination = "/home/mridula/backups";
-          group = "users";
-          user = "mridula";
-          sources = [
-            "/home/mridula/Documents/Music"
-          ];
-        };
-      };
-      rsyncd.enable = true;
+      # rsync = {
+      #   enable = true;
+      #   jobs.music = {
+      #     destination = "/home/mridula/backups";
+      #     group = "users";
+      #     user = "mridula";
+      #     sources = [
+      #       "/home/mridula/Documents/Music"
+      #     ];
+      #   };
+      # };
+      # rsyncd.enable = true;
     };
   };
 }
