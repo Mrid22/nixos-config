@@ -30,26 +30,31 @@
 
     '';
 
+    powerManagement.powerTop.enable = true;
     networking.hostName = "lenovo-laptop";
     time.timeZone = "Europe/Nicosia";
-    hardware.nvidia = {
-      open = true;
-      modesetting.enable = true;
-      powerManagement = {
-        enable = true;
-        finegrained = true;
-      };
-      prime = {
-        offload = {
+    hardware = {
+      cpu.intel.updateMicrocode = true;
+      nvidia = {
+        open = true;
+        modesetting.enable = true;
+        powerManagement = {
           enable = true;
-          enableOffloadCmd = true;
+          finegrained = true;
         };
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:1:0:0";
+        prime = {
+          offload = {
+            enable = true;
+            enableOffloadCmd = true;
+          };
+          intelBusId = "PCI:0:2:0";
+          nvidiaBusId = "PCI:1:0:0";
+        };
       };
     };
     services = {
       xserver.videoDrivers = ["nvidia"];
+      auto-cpufreq.enable = true;
       # rsync = {
       #   enable = true;
       #   jobs.music = {
