@@ -219,6 +219,7 @@
         dotnet-sdk
         orca
         speechd
+        devenv
       ];
     };
     system = {
