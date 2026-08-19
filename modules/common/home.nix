@@ -113,6 +113,7 @@
           wifi-commander
           process-manager
           player-pilot
+          color-converter
         ];
       };
       obs-studio = {
