@@ -5,7 +5,7 @@
     lib,
     ...
   }: let
-    tunnel-uuid = "12cc9059-ad16-4831-93b0-ca365f528209";
+    tunnel-uuid = "6e3140e1-2a88-4614-b632-541ceef037fe";
   in {
     imports = with inputs; [
       declarative-jellyfin.nixosModules.default
