@@ -62,7 +62,10 @@
                 formatOnSave = true;
                 mappings.codeAction = "<leader>ca";
                 lspsaga.enable = true;
-                presets.tailwindcss-language-server.enable = true;
+                presets = {
+                  emmet-ls.enable = true;
+                  tailwindcss-language-server.enable = true;
+                };
                 inlayHints.enable = true;
               };
               treesitter = {
