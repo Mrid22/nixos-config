@@ -43,7 +43,6 @@
       };
 
       services = {
-        tailscale.enable = true;
         declarative-jellyfin = {
           enable = true;
           branding.customCss = ''@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");'';
