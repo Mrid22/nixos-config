@@ -186,7 +186,6 @@
         wrappedpkgs.git
         prismlauncher
         lm_sensors
-        cliamp
         eza
         blender
         ffmpeg
