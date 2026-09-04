@@ -80,6 +80,14 @@
           ];
         };
       };
+      quickshell = {
+        enable = true;
+        systemd.enable = true;
+        configs = {
+          "default" = inputs.self.outPath + "/quickshell/default";
+        };
+        activeConfig = "default";
+      };
       btop.enable = true;
       vicinae = {
         enable = true;
