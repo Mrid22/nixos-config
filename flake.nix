@@ -8,11 +8,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
-    muse-sounds-manager = {
-      url = "github:thilobillerbeck/muse-sounds-manager-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     declarative-jellyfin = {
       url = "github:Sveske-Juice/declarative-jellyfin";
       inputs.nixpkgs.follows = "nixpkgs";
