@@ -184,6 +184,7 @@
         wrappedpkgs.kitty
         wrappedpkgs.default # Neovim
         wrappedpkgs.git
+        inputs.muse-sounds-manager.packages.${pkgs.stdenv.hostPlatform.system}.muse-sounds-manager
         prismlauncher
         lm_sensors
         eza
