@@ -77,6 +77,7 @@
                 enableFormat = true;
                 enableDAP = true;
                 nix.enable = true;
+                qml.enable = true;
                 json.enable = true;
                 html.enable = true;
                 css.enable = true;
