@@ -10,6 +10,7 @@ Scope {
     property string musTitle
     property string musArtist
     property color bg: "#b57786"
+    property color text_col: "#ffffff"
 
     Music {
         id: musicWidget
@@ -43,15 +44,11 @@ Scope {
                             property var isActive: Hyprland.focusedWorkspace?.id === (index + 1)
                             text: index + 1
 
-                            color: isActive ? "#ffffff" : (ws ? "#ffffff" : "#444b6a")
+                            color: isActive ? text_col : (ws ? text_col : "#444b6a")
+                            opacity: isActive ? 1 : 0.5
                             font {
                                 pixelSize: 14
                                 bold: true
-                                underline: isActive ? true : false
-                            }
-                            MouseArea {
-                                anchors.fill: parent
-                                onClicked: Hyprland.dispatch("workspace" + (index + 1))
                             }
                         }
                     }
@@ -63,6 +60,7 @@ Scope {
                     anchors.centerIn: parent
                     maximumLineCount: 1
                     elide: Text.ElideRight
+                    color: text_col
                     text: {
                         var str = musicWidget.musInfo;
                         return str.length > 29 ? str.substring(0, 29) + "…" : str;
