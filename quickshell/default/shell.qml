@@ -7,6 +7,8 @@ Scope {
     id: root
     property string musTitle
     property string musArtist
+    property color bg: "#b57786"
+
     Music {
         id: musicWidget
     }
@@ -16,6 +18,7 @@ Scope {
         delegate: Component {
             PanelWindow {
                 required property var modelData
+                color: bg
                 screen: modelData
 
                 anchors {
