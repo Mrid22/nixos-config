@@ -66,6 +66,16 @@ Scope {
                         return str.length > 29 ? str.substring(0, 29) + "…" : str;
                     }
                 }
+
+                Text {
+                    id: date
+                    wrapMode: Text.NoWrap
+                    anchors.right: parent
+                    maximumLineCount: 1
+                    elide: Text.ElideRight
+                    color: text_col
+                    text: "date"
+                }
             }
         }
     }
