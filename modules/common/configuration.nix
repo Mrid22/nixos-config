@@ -50,7 +50,7 @@
     musnix = {
       enable = true;
       soundcardPciId = "00:1f.3";
-      rtirq.enable = true;
+      rtirq.enable = false;
     };
 
     services = {
