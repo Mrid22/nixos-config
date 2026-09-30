@@ -134,6 +134,10 @@
     };
 
     programs = {
+      appimage = {
+        enable = true;
+        binfmt = true;
+      };
       bat.enable = true;
       localsend.enable = true;
       nix-ld.enable = true;
