@@ -85,6 +85,7 @@
         enable = true;
         systemd = {
           enable = true;
+          environment.QSG_RHI_BACKEND = "vulkan";
           autoStart = true;
         };
         settings = {
