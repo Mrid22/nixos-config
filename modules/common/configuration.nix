@@ -202,6 +202,7 @@
           "obsidian"
           "code"
           "vscode"
+          "reaper"
           "vscode-extension-VisualStudioToolsForUnity-vstuc"
         ];
     };
@@ -215,6 +216,7 @@
         lm_sensors
         eza
         blender
+        reaper
         ffmpeg
         itch
         kdePackages.kdenlive
