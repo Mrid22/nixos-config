@@ -25,7 +25,7 @@
     programs = {
       reaper = {
         enable = true;
-        repack.enable = true;
+        reapack.enable = true;
       };
       obsidian = {
         enable = true;
