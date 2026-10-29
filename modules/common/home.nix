@@ -11,6 +11,7 @@
     imports = with inputs; [
       zen-browser.homeModules.twilight
       vicinae.homeManagerModules.default
+      reaper-flake.homeModules.reaper
     ];
 
     home = {
@@ -22,6 +23,10 @@
     services.swaync.enable = true;
 
     programs = {
+      reaper = {
+        enable = true;
+        repack.enable = true;
+      };
       obsidian = {
         enable = true;
         vaults.notes.target = "Notes";

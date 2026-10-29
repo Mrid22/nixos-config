@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     hyprland.url = "github:hyprwm/Hyprland";
     vicinae.url = "github:vicinaehq/vicinae";
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -23,6 +22,7 @@
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    reaper-flake.url = "github:9Prestidigitator/reaper-flake";
 
     wrappers = {
       url = "github:lassulus/wrappers";

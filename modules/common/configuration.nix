@@ -203,6 +203,7 @@
           "code"
           "vscode"
           "reaper"
+          "reaper-config-wrapper"
           "vscode-extension-VisualStudioToolsForUnity-vstuc"
         ];
     };
@@ -216,7 +217,7 @@
         lm_sensors
         eza
         blender
-        reaper
+        # reaper
         ffmpeg
         itch
         kdePackages.kdenlive
