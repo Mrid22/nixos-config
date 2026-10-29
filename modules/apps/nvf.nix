@@ -62,6 +62,7 @@
                 formatOnSave = true;
                 mappings.codeAction = "<leader>ca";
                 lspsaga.enable = true;
+                servers.emmet-ls.filetypes = "html";
                 presets = {
                   emmet-ls.enable = true;
                   tailwindcss-language-server.enable = true;
