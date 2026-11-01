@@ -10,6 +10,7 @@
     imports = with inputs; [
       stylix.nixosModules.stylix
       musnix.nixosModules.musnix
+      flatpaks.nixosModules.default
     ];
     nix = {
       optimise = {
@@ -54,7 +55,13 @@
     };
 
     services = {
-      flatpak.enable = true;
+      flatpak = {
+        enable = true;
+        remotes.flathub = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+        packages = [
+          "flathub:app/org.vinegarhq.Sober"
+        ];
+      };
       ntp.servers = ["1.cy.pool.ntp.org"];
       fwupd.enable = true;
       nohang.enable = true;

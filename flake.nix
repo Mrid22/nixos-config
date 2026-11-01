@@ -18,6 +18,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    flatpaks = {
+      url = "github:in-a-dil-emma/declarative-flatpak/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     musnix = {
       url = "github:musnix/musnix";
       inputs.nixpkgs.follows = "nixpkgs";
