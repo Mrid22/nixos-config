@@ -54,6 +54,7 @@
     };
 
     services = {
+      flatpak.enable = true;
       ntp.servers = ["1.cy.pool.ntp.org"];
       fwupd.enable = true;
       nohang.enable = true;
