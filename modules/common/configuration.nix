@@ -59,7 +59,7 @@
         enable = true;
         remotes.flathub = "https://dl.flathub.org/repo/flathub.flatpakrepo";
         packages = [
-          "flathub:app/org.vinegarhq.Sober"
+          "flathub:app/org.vinegarhq.Sober/x86_64/stable"
         ];
       };
       ntp.servers = ["1.cy.pool.ntp.org"];
