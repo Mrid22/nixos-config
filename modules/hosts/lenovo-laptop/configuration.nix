@@ -6,6 +6,9 @@
   }: {
     boot = {
       kernelModules = ["coretemp"];
+      extraModprobeConfig = ''
+        options ideapad_laptop no_bt_rfkill=1
+      '';
       loader = {
         systemd-boot.enable = false;
         grub = {
