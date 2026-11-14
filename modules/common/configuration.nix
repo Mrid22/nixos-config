@@ -246,6 +246,7 @@
         x42-plugins
         nodejs
         pnpm
+        opencode
         finamp
         hyprpicker
         picard
