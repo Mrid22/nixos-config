@@ -98,6 +98,11 @@
           syncModels = true;
           loadModels = ["qwen3:8b"];
           modelsDir = "/media/ai/";
+          environmentVariables = {
+            OLLAMA_KEEP_ALIVE = "-1";
+            OLLAMA_KV_CACHE_TYPE = "q8_0";
+            OLLAMA_FLASH_ATTENTION = "1";
+          };
         };
         sonarr.enable = true;
         prowlarr.enable = true;
