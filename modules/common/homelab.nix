@@ -93,7 +93,12 @@
           };
         };
         # ai
-        ollama.enable = true;
+        ollama = {
+          enable = true;
+          syncModels = true;
+          loadModels = ["qwen3:8b"];
+          modelsDir = "/media/ai/";
+        };
         sonarr.enable = true;
         prowlarr.enable = true;
         radarr.enable = true;
