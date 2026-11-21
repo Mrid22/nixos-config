@@ -26,6 +26,7 @@
       reaper = {
         enable = true;
         extensions.reapack.enable = true;
+        theme.swell.colortheme.enable = true;
       };
       obsidian = {
         enable = true;
