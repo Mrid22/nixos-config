@@ -26,7 +26,10 @@
       reaper = {
         enable = true;
         extensions.reapack.enable = true;
-        theme.swell.colortheme.enable = true;
+        swell.colortheme = {
+          enable = true;
+          preset = inputs.reaper-flake.packages.${pkgs.system}.reapertips-theme;
+        };
       };
       obsidian = {
         enable = true;
