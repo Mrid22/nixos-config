@@ -28,7 +28,7 @@
         extensions.reapack.enable = true;
         swell.colortheme = {
           enable = true;
-          preset = inputs.reaper-flake.packages.${pkgs.system}.reapertips-theme;
+          preset = inputs.reaper-flake.packages.${pkgs.stdenv.hostPlatform.system}.reapertips-theme;
         };
       };
       obsidian = {
@@ -262,7 +262,6 @@
               modifiers.control = true;
             }
           ];
-          keyboardShortcutsVersion = 21;
           mods = [
             "642854b5-88b4-4c40-b256-e035532109df"
             "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec"
